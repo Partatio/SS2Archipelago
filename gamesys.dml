@@ -74,7 +74,7 @@ CreateArch "APLocation" "APLLovesense1"
 {
 	+ObjProp "VoiceIdx"
 	{
-	"" 1901
+	"" 3
 	}
 	+ObjProp "ObjShort"
 	{
@@ -86,7 +86,7 @@ CreateArch "APLocation" "APLLovesense2"
 {
 	+ObjProp "VoiceIdx"
 	{
-	"" 1902
+	"" 4
 	}
 	+ObjProp "ObjShort"
 	{
@@ -98,7 +98,7 @@ CreateArch "APLocation" "APLLovesense3"
 {
 	+ObjProp "VoiceIdx"
 	{
-	"" 1903
+	"" 5
 	}
 	+ObjProp "ObjShort"
 	{
@@ -110,7 +110,7 @@ CreateArch "APLocation" "APLLovesense4"
 {
 	+ObjProp "VoiceIdx"
 	{
-	"" 1904
+	"" 6
 	}
 	+ObjProp "ObjShort"
 	{
@@ -122,7 +122,7 @@ CreateArch "APLocation" "APLCommand1"
 {
 	+ObjProp "VoiceIdx"
 	{
-	"" 1905
+	"" 7
 	}
 	+ObjProp "ObjShort"
 	{

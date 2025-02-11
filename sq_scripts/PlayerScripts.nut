@@ -14,9 +14,10 @@ class PlayerScripts extends SqRootScript
 	{
 		local NewTracker = Object.Create("APLocationTracker");
 		local CommandListTable = VariousDataTables.mapinstructions.rawget(mapname);
+		local settings = Property.Get(self, "Modify1")
 		foreach(command, data in CommandListTable)
 		{
-			if (!Property.Get(self, "Modify1").find(data[0]))#check if settings doesn't contain the appropriate setting for the command
+			if (!settings.find(data[0]))#check if settings doesn't contain the appropriate setting for the command
 				continue;
 			switch (command)
 				{
@@ -37,7 +38,7 @@ class PlayerScripts extends SqRootScript
 						Object.Destroy(data[3]);
 					continue;
 					}
-				case "replaceCybModShop":
+				case "replacecybmodshop":
 					{
 					foreach (Terminal in data[1])
 						Object.Destroy(Terminal);
@@ -139,7 +140,7 @@ class PlayerScripts extends SqRootScript
 					Property.Set(300, "RepHacked", "Obj 1 Cost", ShockGame.RandRange(35, 65));
 					continue;
 					}
-				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire, required to not have tutorial setting on
+				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire
 					{
 					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0))
 					continue;
@@ -243,16 +244,6 @@ class PlayerScripts extends SqRootScript
 					Property.Set(data[1], "Spawn", "Rarity 4", 25);
 					continue;
 					}
-				case "monstercontainsaplocation":#add an APlocation with id[2] to a monster[1] and delete [3] if it isn't 0
-					{
-					local NewAPLocation =  Object.Create("APLocation");
-					Property.Set(NewAPLocation, "VoiceIdx", "", data[2]);
-					Link.Create("Mutate", NewTracker, NewAPLocation); #Link to object, EveryLoad send a message called CollectedItemsUpdate to whatever the tracker is linked to with the data being the sent items string
-					Link.Create("Contains", data[1], NewAPLocation);
-					if(data[3])
-						Object.Destroy(data[3]);
-					continue;
-					}
 				}
 		}
 	}
@@ -320,17 +311,13 @@ class PlayerScripts extends SqRootScript
 				{
 				Property.SetSimple(self, "Modify1", settings); #store the settings
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
-				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived could just be changed to the amount of items received
+				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
 				Property.SetSimple(self, "AI_PtrlRnd", TRUE); #Whether player has not left airlock
 
-				if (settings.find("Stats"))
-					{
-					Property.SetSimple(self, "LockMsg", "");
-					local shoparray = "";
-					for (local i = 1000; i < 1139; i++)
-						shoparray += i + "," + (ceil((i - 1000) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
-					Property.SetSimple(self, "LockMsg", shoparray);
-					}
+				local shoparray = "";
+				for (local i = 1000; i < 1139; i++)
+					shoparray += i + "," + (ceil((i - 1000) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
+				Property.SetSimple(self, "LockMsg", shoparray);
 				}
 			local storedseed = Property.Get(self, "CurWpnDmg");
 			if (runseed != storedseed)
@@ -355,7 +342,12 @@ class PlayerScripts extends SqRootScript
 					return;
 				}
 			local itemsreceived = split(ReceivedItemsfile, ",");
-			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
+			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"));
+				{
+					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, likely because you are not connected to the correct slot.", self)
+					return;
+				}
+			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg") + 1;
 			local receiveditems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
 			foreach (itemid in receiveditems)
 				ItemReceived(itemid);
@@ -401,6 +393,7 @@ class PlayerScripts extends SqRootScript
 	{
 		local item = VariousDataTables.ItemTable.rawget(itemid);
 		Property.SetSimple(self, "BaseWpnDmg", Property.Get(self, "BaseWpnDmg") + 1) #add 1 to storeditemsreceived
+		ShockGame.AddText("Got Item!", self);
 		switch (item[0])
 		{
 		case "StatUpgrade":
