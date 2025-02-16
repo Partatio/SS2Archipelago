@@ -299,7 +299,7 @@ class PlayerScripts extends SqRootScript
 		{
 			local curmap = string();
 			Version.GetMap(curmap);
-			curmap = curmap.tostring();
+			curmap = curmap.tostring().tolower();
 			local settings = ParseFile("DMM\\Archipelago\\data\\Settings.txt");
 			local runseed = split(settings, ",")[0].tointeger();
 			if (!settings)

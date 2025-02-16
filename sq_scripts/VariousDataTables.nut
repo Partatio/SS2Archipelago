@@ -155,7 +155,7 @@ mapinstructions =
         "directmonstergenrando": ["", 81, "0"],
         "directmonstergenrando": ["", 1315, "0"],
         "randomizerepl": ["", 1001],
-        "replacecybmodshop": ["", (1354, 1355, 1317, 1352), vector(36.08, -135.07, -18.32)],
+        "replacecybmodshop": ["", [1354, 1355, 1317, 1352], vector(36.08, -135.07, -18.32)],
         "randomizeenemy": ["", 1015, "0", vector(-46.99, 23.68, -1.11)],
         "randomizeenemy": ["", 427, "0", vector(-32.07, -15.06, -0.05)],
         "randomizeenemy": ["", 87, "2", vector(-30.44, -125.38, -6.04)],#maint robot
@@ -171,7 +171,104 @@ mapinstructions =
         "randomizeenemy": ["", 163, "0", vector(24.91, 106.07, -12.05)]
     }
     "medsci2.MIS": {
-
+        "placeaploc": ["", vector(-82.09, -116.52, -2.22), 101, 94], #101:Under counter in snack room with replicator medsci2crew
+        "placeaploc": ["", vector(-53.78, -61.25, -3.5), 102, 1372], #102:On ground in armory near entrance medsci2crew
+        "placeaploc": ["", vector(-40.1, -56.49, -0.3), 103, 587], #103:On bench in armory near entrance medsci2crew
+        "placeaploc": ["", vector(-36.35, -56.52, -1.22), 104, 1377], #104:On bench in armory near entrance 2 medsci2crew
+        "placeaploc": ["", [418], 105, 1351], #105:In desk in flooded room next to information panel medsci2crew
+        "placeaploc": ["", vector(-119.41, 47.20, 3.75), 106, 1431], #106:On high ledge near camera in flooded hallway medsci2crew
+        "placeaploc": ["", vector(-124.19, 121.55, -2.72), 107, 607], #107:On ground near body in maintenance alcove above room accross from Watts room in flooded area medsci2crew
+        "placeaploc": ["", vector(-117.85, -140.89, 0.3), 108, 291], #108:In wall cutout in closet in room next to med entrance medsci2crew
+        "placeaploc": ["", [159], 109, 249], #109:In desk in closet in room next to med entrance medsci2crew
+        "placeaploc": ["", [415], 110, 285], #110:In desk in room opposite snack room medsci2crew
+        "placeaploc": ["", vector(-75.87, -72.69, -0.92), 111, 329], #111:On metal desk near armory medsci2crew
+        "placeaploc": ["", [417], 112, 191], #112:In desk in flooded room underneath camera medsci2crew
+        "placeaploc": ["", vector(-135.9, 31.26, -12.62), 113, 250], #113:On desk in flooded room underneath camera medsci2crew
+        "placeaploc": ["", [1339], 114, 904], #114:In body in flooded room with broken door in front medsci2crew
+        "placeaploc": ["", vector(-136.76, 121.88, -2.87), 115, 949], #115:On ledge in maintenance alcove above room accross from Watts room in flooded area medsci2crew
+        "placeaploc": ["", [641], 116, 637], #116:In body in maintenance alcove above room accross from Watts room in flooded area medsci2crew
+        "placeaploc": ["", vector(-109.52, 111.29, 4.95), 117, 828], #117:On pipe above Watts room in flooded hallway medsci2crew
+        "placeaploc": ["", [503], 118, 72], #118:In desk in Watts room medsci2crew
+        "placeaploc": ["", vector(-132.84, 22.36, -13.29), 119, 303], #119:On bench in flooded room next to information panel medsci2crew
+        "placeaploc": ["", [712], 120, 341], #120:In body in flooded hallway near ramp medsci2crew
+        "placeaploc": ["", [2241], 121, 1133], #121:In waste barrel in flooded bathroom medsci2crew
+        "placeaploc": ["", [150], 122, 284], #122:In security crate in room with forcefield in walkway above flooded hallway medsci2crew
+        "placeaploc": ["", [416], 123, 286], #123:In desk in room with forcefield in walkway above flooded hallway medsci2crew
+        "placeaploc": ["", vector(-89.82, 22.29, -1.21), 124, 1764], #124:Behind forcefield in wall cutout in room in walkway above flooded hallway medsci2crew
+        "placeaploc": ["", vector(-89.82, 22.29, -1.21), 125, 1764], #125:Behind forcefield in wall cutout in room in walkway above flooded hallway 2 medsci2crew
+        "placeaploc": ["", [646], 126, 1375], #126:In body in armory near entrance medsci2crew
+        "placeaploc": ["", [595, 604], 127, 603], #127:In crates in armory near entrance medsci2crew
+        "placeaploc": ["", [595, 604], 128, 601], #128:In crates in armory near entrance 2 medsci2crew
+        "placeaploc": ["", [595, 604], 129, 593], #129:In crates in armory near entrance 3 medsci2crew
+        "placeaploc": ["", [595, 604], 130, 596], #130:In crates in armory near entrance 4 medsci2crew
+        "placeaploc": ["", [595, 604], 131, 598], #131:In crates in armory near entrance 5 medsci2crew
+        "placeaploc": ["", vector(-49.85, -70.76, -1.6), 132, 1379], #132:On ground in armory near entrance 2 medsci2crew
+        "placeaploc": ["", [503], 133, 772], #133:In desk in Watts room 2 medsci2crew
+        "randomizeenemy": ["", 1392, "1", vector(-113.71, 110.08, -11.63)],
+        "randomizeenemy": ["", 1661, "1", vector(-116.66, 20.54, -11.95)],
+        "randomizeenemy": ["", 705, "1", vector(-129.4, -59.42, -0.05)],
+        "directmonstergenrando": ["", 1210, "1"],
+        "directmonstergenrando": ["", 214, "1"],
+        "directmonstergenrando": ["", 201, "1"],
+        "replacecybmodshop": ["", [1358, 254, 1367, 1366], vector(-112.6, -87.87, 10.68)],
+        "destroy": ["", 133],
+        "placeaploc": ["OSUpgrades", vector(-93.3, -57.02, 1.93), 134, 0], #134:On wall across from lounge near information panel and entrance medsci2crew
+        "placeaploc": ["OSUpgrades", vector(-93.3, -53.74, 0.87), 135, 0], #135:On wall across from lounge near information panel and entrance 2 medsci2crew
+        "placeaploc": ["OSUpgrades", vector(-93.3, -53.43, -1.85), 136, 0], #136:On wall across from lounge near information panel and entrance 3 medsci2crew
+        "placeaploc": ["OSUpgrades", vector(-93.3, -56.27, -1.92), 137, 0], #137:On wall across from lounge near information panel and entrance 4 medsci2crew
+        "randomizerepl": ["", 682],
+        "randomizerepl": ["", 147],
+        "placeaploc": ["", [666], 138, 912], #138:In body in recovery room with monkeys on lower floor medsci2med
+        "placeaploc": ["", [135], 139, 414], #139:In security crate on top level in 3 level room near biopsy sign medsci2med
+        "placeaploc": ["", [1289], 140, 1325], #140:In body in room with shelves and security crate near camera medsci2med
+        "placeaploc": ["", [143], 141, 145], #141:In security crate in room with shelves and security crate near camera medsci2med
+        "placeaploc": ["", vector(-127.59, -269.19, 1.75), 142, 332], #142:On desk in recovery upper level medsci2med
+        "placeaploc": ["", [1189], 143, 429], #143:In desk in recovery upper level medsci2med
+        "placeaploc": ["", [1189], 144, 215], #144:In desk in recovery upper level 2 medsci2med
+        "placeaploc": ["", vector(-109.84, -227.7, -2.22), 145, 1221], #145:On ledge accross from recovery upper level medsci2med
+        "placeaploc": ["", vector(-92.63, -230.12, -12.64), 146, 271], #146:On desk in recovery lower level medsci2med
+        "placeaploc": ["", [666], 147, 700], #147:In body in recovery room with monkeys on lower floor 2 medsci2med
+        "placeaploc": ["", [1501], 148, 1009], #148:In desk in room with resurrection station medsci2med
+        "placeaploc": ["", [1365], 149, 194], #149:In desk in recovery lower level medsci2med
+        "placeaploc": ["", [664, 678], 150, 1349], #150:In crates in recovery lower area medsci2med
+        "placeaploc": ["", [664, 678], 151, 1285], #151:In crates in recovery lower area 2 medsci2med
+        "placeaploc": ["", [211, 339, 1225], 152, 688], #152:In crates or corpse in radiated area with radiation barrel medsci2med
+        "placeaploc": ["", [211, 339, 1225], 153, 1034], #153:In crates or corpse in radiated area with radiation barrel 2 medsci2med
+        "placeaploc": ["", [211, 339, 1225], 154, 1451], #154:In crates or corpse in radiated area with radiation barrel 3 medsci2med
+        "placeaploc": ["", vector(-34.88, -248.86, 0.31), 155, 322], #155:On counter near sink in radiated area with radiation barrel medsci2med
+        "placeaploc": ["", vector(-37.13, -247.16, 0.16), 156, 1495], #156:On counter near sink in radiated area with radiation barrel 2 medsci2med
+        "placeaploc": ["", [1613], 157, 311], #157:In desk in radiated icu area medsci2med
+        "placeaploc": ["", [137], 158, 70], #158:In security crate in radiated icu area medsci2med
+        "placeaploc": ["", [137], 159, 139], #159:In security crate in radiated icu area 2 medsci2med
+        "placeaploc": ["", [137], 160, 200], #160:In security crate in radiated icu area 3 medsci2med
+        "placeaploc": ["", [471], 161, 1054], #161:In desk near 3 level room near biopsy sign medsci2med
+        "placeaploc": ["", [497], 162, 1529], #162:In body in closet near bloody RUN sign and radiated room with radiation barrels medsci2med
+        "placeaploc": ["", vector(12.25, -239.83, 0.08), 163, 537], #163:On shelf in closet near bloody RUN sign and radiated room with radiation barrels medsci2med
+        "placeaploc": ["", vector(21.5, -258.14, -12.39), 164, 1569], #164:On counter on bottom level in 3 level room near biopsy sign medsci2med
+        "placeaploc": ["", vector(31.52, -256.68, -13.19), 165, 327], #165:On counter on bottom level in 3 level room near biopsy sign 2 medsci2med
+        "placeaploc": ["", [635, 465], 166, 838], #166:In crates on top level in 3 level room near biopsy sign medsci2med
+        "placeaploc": ["", [635, 465], 167, 190], #167:In crates on top level in 3 level room near biopsy sign 2 medsci2med
+        "placeaploc": ["", [135], 168, 362], #168:In security crate on top level in 3 level room near biopsy sign 2 medsci2med
+        "placeaploc": ["", [1475, 1476], 169, 498], #169:In body or crate in closet next to information panel near biopsy sign medsci2med
+        "placeaploc": ["", [1475, 1476], 170, 206], #170:In body or crate in closet next to information panel near biopsy sign 2 medsci2med
+        "placeaploc": ["", [1475, 1476], 171, 1201], #171:In body or crate in closet next to information panel near biopsy sign 3 medsci2med
+        "placeaploc": ["", [105], 172, 1904], #172:In body on bottom level in 3 level room near biopsy sign 2 medsci2med
+        "randomizeenemy": ["", 668, "1", vector(-121.19, -208.08, 0.05)],
+        "randomizeenemy": ["", 714, "1Ranged", vector(-124.17, -294.02, -13.11)],
+        "randomizeenemy": ["", 280, "1", vector(-109.61, -297.36, -11.97)],
+        "randomizeenemy": ["", 821, "1", vector(-99.86, -296.47, -12.08)],
+        "randomizeenemy": ["", 437, "1", vector(-42.99, -263.08, -0.08)],
+        "randomizeenemy": ["", 1293, "1", vector(-25.77, -182.3, -0.08)],
+        "randomizeenemy": ["", 296, "1", vector(7.67, -210.02, -0.08)],
+        "randomizeenemy": ["", 519, "1", vector(32.73, -281.14, -0.08)],
+        "randomizeenemy": ["", 543, "1", vector(70.51, -202.02, -0.08)],
+        "randomizeenemy": ["", 629, "1Ranged", vector(70.02, -293.99, -1.12)],
+        "directmonstergenrando": ["", 219, "1"],
+        "directmonstergenrando": ["", 1161, "1"],
+        "directmonstergenrando": ["", 1248, "1"],
+        "directmonstergenrando": ["", 1238, "1"],
+        "directmonstergenrando": ["", 226, "1"],
+        "directmonstergenrando": ["", 476, "1"],
     }
     "eng1.mis": {
 
