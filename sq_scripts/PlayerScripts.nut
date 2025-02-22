@@ -15,73 +15,76 @@ class PlayerScripts extends SqRootScript
 		local NewTracker = Object.Create("APLocationTracker");
 		local CommandListTable = VariousDataTables.mapinstructions.rawget(mapname);
 		local settings = Property.Get(self, "Modify1")
-		foreach(command, data in CommandListTable)
+		foreach(command in CommandListTable)
 		{
-			if (!settings.find(data[0]))#check if settings doesn't contain the appropriate setting for the command
+			if (command[1].len() != 0 && !settings.find(command[1])) #check if settings doesn 't contain the appropriate setting for the command
 				continue;
-			switch (command)
+			switch (command[0])
 				{
 				case "placeaploc":
 					{
 					local NewAPLocation = Object.Create("APLocation");
-					Property.Set(NewAPLocation, "VoiceIdx", "", data[2]);
-					if (type(data[1]) == type([]))
+					Property.Set(NewAPLocation, "VoiceIdx", "", command[3]);
+					if (type(command[2]) == type([]))
 					{
-						local chosencontainer = data[1][ShockGame.RandRange(0, data[1].len() - 1)];
+						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
 						Property.SetSimple(NewAPLocation, "HasRefs", FALSE);
 						Link.Create(linkkind("Contains"), chosencontainer, NewAPLocation);
 					}
 					else
-						Object.Teleport(NewAPLocation, data[1], vector());
+						{
+						local raisedpos = command[2] + vector(0, 0, 0.5);
+						Object.Teleport(NewAPLocation, raisedpos, vector());
+						}
 					Link.Create("Mutate", NewTracker, NewAPLocation); #Link to object, EveryLoad send a message called CollectedItemsUpdate to whatever the tracker is linked to with the data being the sent items string
-					if (data[3])
-						Object.Destroy(data[3]);
+					if (command[4])
+						Object.Destroy(command[4]);
 					continue;
 					}
 				case "replacecybmodshop":
 					{
-					foreach (Terminal in data[1])
+					foreach (Terminal in command[2])
 						Object.Destroy(Terminal);
 					local CybModShop = Object.Create("CybModShop");
-					Object.Teleport(CybModShop, data[2], vector(0, 0, 0));
+					Object.Teleport(CybModShop, command[3], vector(0, 0, 0));
 					continue;
 					}
 				case "destroy":
 					{
-					Object.Destroy(data[1]);
+					Object.Destroy(command[2]);
 					continue;
 					}
 				case "slayvictoryprop": #add script to last script slot on many or shodan that on slay sends a victory location out.  both bosses have scripts in slot 0 and 1.
 					{
-					Property.Set(data[1], "Scripts", "Script 3", "OnSlayVictory");
+					Property.Set(command[2], "Scripts", "Script 3", "OnSlayVictory");
 					continue;
 					}
 				case "randomizerepl": #randomize a repl with random items and costs.
 					{
 					local ReplItem = PickUnhackedReplItem();
-					Property.Set(data[1], "RepContents", "Obj 1 Name", ReplItem[0]);
-					Property.Set(data[1], "RepContents", "Obj 1 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepContents", "Obj 1 Name", ReplItem[0]);
+					Property.Set(command[2], "RepContents", "Obj 1 Cost", ReplItem[1]);
 					ReplItem = PickUnhackedReplItem();
-					Property.Set(data[1], "RepContents", "Obj 2 Name", ReplItem[0]);
-					Property.Set(data[1], "RepContents", "Obj 2 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepContents", "Obj 2 Name", ReplItem[0]);
+					Property.Set(command[2], "RepContents", "Obj 2 Cost", ReplItem[1]);
 					ReplItem = PickUnhackedReplItem();
-					Property.Set(data[1], "RepContents", "Obj 3 Name", ReplItem[0]);
-					Property.Set(data[1], "RepContents", "Obj 3 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepContents", "Obj 3 Name", ReplItem[0]);
+					Property.Set(command[2], "RepContents", "Obj 3 Cost", ReplItem[1]);
 					ReplItem = PickUnhackedReplItem();
-					Property.Set(data[1], "RepContents", "Obj 4 Name", ReplItem[0]);
-					Property.Set(data[1], "RepContents", "Obj 4 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepContents", "Obj 4 Name", ReplItem[0]);
+					Property.Set(command[2], "RepContents", "Obj 4 Cost", ReplItem[1]);
 					ReplItem = PickHackedReplItem();
-					Property.Set(data[1], "RepHacked", "Obj 1 Name", ReplItem[0]);
-					Property.Set(data[1], "RepHacked", "Obj 1 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepHacked", "Obj 1 Name", ReplItem[0]);
+					Property.Set(command[2], "RepHacked", "Obj 1 Cost", ReplItem[1]);
 					ReplItem = PickHackedReplItem();
-					Property.Set(data[1], "RepHacked", "Obj 2 Name", ReplItem[0]);
-					Property.Set(data[1], "RepHacked", "Obj 2 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepHacked", "Obj 2 Name", ReplItem[0]);
+					Property.Set(command[2], "RepHacked", "Obj 2 Cost", ReplItem[1]);
 					ReplItem = PickHackedReplItem();
-					Property.Set(data[1], "RepHacked", "Obj 3 Name", ReplItem[0]);
-					Property.Set(data[1], "RepHacked", "Obj 3 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepHacked", "Obj 3 Name", ReplItem[0]);
+					Property.Set(command[2], "RepHacked", "Obj 3 Cost", ReplItem[1]);
 					ReplItem = PickHackedReplItem();
-					Property.Set(data[1], "RepHacked", "Obj 4 Name", ReplItem[0]);
-					Property.Set(data[1], "RepHacked", "Obj 4 Cost", ReplItem[1]);
+					Property.Set(command[2], "RepHacked", "Obj 4 Name", ReplItem[0]);
+					Property.Set(command[2], "RepHacked", "Obj 4 Cost", ReplItem[1]);
 					continue;
 					}
 				case "lovesense": #changes lovesense objects to aplocations with set ids.  ids can be changed in the gamesys
@@ -117,6 +120,7 @@ class PlayerScripts extends SqRootScript
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPowerDesc",0);
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPower2Desc",0);
 					ShockGame.RecalcStats(Networking.FirstPlayer());
+					ShockGame.DestroyInvObj(1593);
 					continue; #taken from RoSoDudes alternate start mod
 					}
 				case "skipstation":
@@ -124,11 +128,11 @@ class PlayerScripts extends SqRootScript
 					Object.Teleport(self, vector(56.5, -20, -9), vector(0, 0, 0));
 					continue; #teleport player to level end tripwire, only do after "setcareer"
 					}
-				case "itemrestrictorapl": #creates an APLocation at location data[1], with Locid data[2], and a script that sends a message to the player to start sending items.  does not link to APlocationTracker.  Used on medsci1 to stop items from spawning.
+				case "itemrestrictorapl": #creates an APLocation at location command[2], with Locid command[3], and a script that sends a message to the player to start sending items.  does not link to APlocationTracker.  Used on medsci1 to stop items from spawning.
 					{
 					local NewAPLocation = Object.Create("APLocation");
-					Property.Set(NewAPLocation, "VoiceIdx", "", data[2]);
-					Object.Teleport(NewAPLocation, data[1], vector());
+					Property.Set(NewAPLocation, "VoiceIdx", "", command[3]);
+					Object.Teleport(NewAPLocation, command[2], vector());
 					Property.Set(NewAPLocation, "Scripts", "Script 0", "ItemUnrestrict");
 					continue;
 					}
@@ -138,6 +142,24 @@ class PlayerScripts extends SqRootScript
 					Property.Set(300, "RepContents", "Obj 1 Cost", ShockGame.RandRange(50, 90));
 					Property.Set(300, "RepHacked", "Obj 1 Name", "Psi Booster");
 					Property.Set(300, "RepHacked", "Obj 1 Cost", ShockGame.RandRange(35, 65));
+					local ReplItem = PickUnhackedReplItem();
+					Property.Set(300, "RepContents", "Obj 2 Name", ReplItem[0]);
+					Property.Set(300, "RepContents", "Obj 2 Cost", ReplItem[1]);
+					ReplItem = PickUnhackedReplItem();
+					Property.Set(300, "RepContents", "Obj 3 Name", ReplItem[0]);
+					Property.Set(300, "RepContents", "Obj 3 Cost", ReplItem[1]);
+					ReplItem = PickUnhackedReplItem();
+					Property.Set(300, "RepContents", "Obj 4 Name", ReplItem[0]);
+					Property.Set(300, "RepContents", "Obj 4 Cost", ReplItem[1]);
+					ReplItem = PickHackedReplItem();
+					Property.Set(300, "RepHacked", "Obj 2 Name", ReplItem[0]);
+					Property.Set(300, "RepHacked", "Obj 2 Cost", ReplItem[1]);
+					ReplItem = PickHackedReplItem();
+					Property.Set(300, "RepHacked", "Obj 3 Name", ReplItem[0]);
+					Property.Set(300, "RepHacked", "Obj 3 Cost", ReplItem[1]);
+					ReplItem = PickHackedReplItem();
+					Property.Set(300, "RepHacked", "Obj 4 Name", ReplItem[0]);
+					Property.Set(300, "RepHacked", "Obj 4 Cost", ReplItem[1]);
 					continue;
 					}
 				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire
@@ -145,29 +167,28 @@ class PlayerScripts extends SqRootScript
 					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0))
 					continue;
 					}
-				case "randomizeenemy": #destroy data[1] enemy if that field isnt set to 0.  Get the correct tier array based on data[2].  choose a random enemy from that, then create it and teleport it to data[3] with the original enemies properties if there was one.
+				case "randomizeenemy": #destroy command[2] enemy if that field isnt set to 0.  Get the correct tier array based on command[3].  choose a random enemy from that, then create it and teleport it to command[4] with the original enemies properties if there was one.
 					{
-					local enemytier = VariousDataTables.enemytables.rawget(data[2]); #array of enemies based on spawn tier
-					local chosenenemy = enemytier[ShockGame.RandRange(0, enemytier.len() - 1)];
+					local chosenenemy = PickEnemy(command[3],  FALSE)
 					local newenemy = Object.Create(chosenenemy);
 					local enemyfacing = vector();
-					if (data[1] != 0)#lots of this was taken from Sarge945s rando
+					if (command[2] != 0)#lots of this was taken from Sarge945s rando
 					{
-						enemyfacing = Property.Get(data[1], "PhysState", "Facing");
+						enemyfacing = Property.Get(command[2], "PhysState", "Facing");
 
-						CopyMetaProp(data[1], newenemy, "Docile");
-						CopyMetaProp(data[1], newenemy, "Patrolling");
-						CopyMetaProp(data[1], newenemy, "Silent");
-						CopyMetaProp(data[1], newenemy, "Deaf");
-						CopyMetaProp(data[1], newenemy, "Posing");
-						CopyMetaProp(data[1], newenemy, "Blind");
+						CopyMetaProp(command[2], newenemy, "Docile");
+						CopyMetaProp(command[2], newenemy, "Patrolling");
+						CopyMetaProp(command[2], newenemy, "Silent");
+						CopyMetaProp(command[2], newenemy, "Deaf");
+						CopyMetaProp(command[2], newenemy, "Posing");
+						CopyMetaProp(command[2], newenemy, "Blind");
 
-						Property.CopyFrom(newenemy, "EcoType", data[1]);
+						Property.CopyFrom(newenemy, "EcoType", command[2]);
 
 						#For turrets, copy over hack difficulty
-						Property.CopyFrom(newenemy, "HackDiff", data[1]);
-						Property.CopyFrom(newenemy, "RepairDiff", data[1]);
-						Property.CopyFrom(newenemy, "AmbientHacked", data[1]);
+						Property.CopyFrom(newenemy, "HackDiff", command[2]);
+						Property.CopyFrom(newenemy, "RepairDiff", command[2]);
+						Property.CopyFrom(newenemy, "AmbientHacked", command[2]);
 
 						//Remove friendly (fixes issue with Repairman)
 						Object.RemoveMetaProperty(newenemy, "Good Guy");
@@ -176,72 +197,62 @@ class PlayerScripts extends SqRootScript
 						Property.SetSimple(newenemy, "HitPoints", Property.Get(newenemy, "MAX_HP"));
 
 						//Copy over AI Properties
-						Property.CopyFrom(newenemy, "AI_Fidget", data[1]);
-						Property.CopyFrom(newenemy, "AI_Patrol", data[1]);
-						Property.CopyFrom(newenemy, "AI_PtrlRnd", data[1]);
-						Property.CopyFrom(newenemy, "AI_Mode", data[1]);
-						Property.CopyFrom(newenemy, "AI_Alertness", data[1]);
-						Property.CopyFrom(newenemy, "AI_Efficiency", data[1]);
+						Property.CopyFrom(newenemy, "AI_Fidget", command[2]);
+						Property.CopyFrom(newenemy, "AI_Patrol", command[2]);
+						Property.CopyFrom(newenemy, "AI_PtrlRnd", command[2]);
+						Property.CopyFrom(newenemy, "AI_Mode", command[2]);
+						Property.CopyFrom(newenemy, "AI_Alertness", command[2]);
+						Property.CopyFrom(newenemy, "AI_Efficiency", command[2]);
 
 						//Copy Multiplayer Handoff (maybe not needed)
-						Property.CopyFrom(newenemy, "AI_NoHandoff", data[1]);
+						Property.CopyFrom(newenemy, "AI_NoHandoff", command[2]);
 
 						//Set Idling Directions (maybe not needed)
-						Property.CopyFrom(newenemy, "AI_IdleDirs", data[1]);
+						Property.CopyFrom(newenemy, "AI_IdleDirs", command[2]);
 
 						//Set Idling Return to Origin (maybe not needed)
-						Property.CopyFrom(newenemy, "AI_IdlRetOrg", data[1]);
+						Property.CopyFrom(newenemy, "AI_IdlRetOrg", command[2]);
 
 						//Copying Signal and Alert Responses
-						Property.CopyFrom(newenemy, "AI_SigRsp", data[1]);
-						Property.CopyFrom(newenemy, "AI_AlrtRsp", data[1]);
+						Property.CopyFrom(newenemy, "AI_SigRsp", command[2]);
+						Property.CopyFrom(newenemy, "AI_AlrtRsp", command[2]);
 
 						//Copy transparency (for Shodan level)
-						Property.CopyFrom(newenemy, "LBAlpha", data[1]);
-						Property.CopyFrom(newenemy, "ExtraLight", data[1]);
+						Property.CopyFrom(newenemy, "LBAlpha", command[2]);
+						Property.CopyFrom(newenemy, "ExtraLight", command[2]);
 
-						CopyLinks(data[1], newenemy,"SwitchLink");
-						CopyLinks(data[1], newenemy,"~SwitchLink");
-						CopyLinks(data[1], newenemy,"Target");
-						CopyLinks(data[1], newenemy,"~Target");
-						CopyLinks(data[1], newenemy,"Contains");
-						CopyLinks(data[1], newenemy,"~Contains");
+						CopyLinks(command[2], newenemy,"SwitchLink");
+						CopyLinks(command[2], newenemy,"~SwitchLink");
+						CopyLinks(command[2], newenemy,"Target");
+						CopyLinks(command[2], newenemy,"~Target");
+						CopyLinks(command[2], newenemy,"Contains");
+						CopyLinks(command[2], newenemy,"~Contains");
 
 						FixProjectiles(newenemy);
 
-						local enemyname = Object.GetName(data[1]);
-						Object.SetName(data[1], "temp" + data[1]);
-						Object.Destroy(data[1]);
+						local enemyname = Object.GetName(command[2]);
+						Object.SetName(command[2], "temp" + command[2]);
+						Object.Destroy(command[2]);
 						Object.SetName(newenemy, enemyname)
 					}
-					Object.Teleport(newenemy, data[3], enemyfacing);
-					if (chosenenemy == "Wall Pod" || chosenenemy == "Swarmer Floor Pod" || chosenenemy == "Grub Floor Pod")
+					Object.Teleport(newenemy, command[4], enemyfacing);
+					if (chosenenemy == "Floor Pod" || chosenenemy == "Swarmer Floor Pod" || chosenenemy == "Grub Floor Pod")
 						{
-						local podtrip = Object.Create("Floor Egg Tripwire");
-						Property.SetSimple(podtrip, "Scale", vector(3, 3, 2));
-						Link.Create("SwitchLink", podtrip, newenemy);
-						Object.Teleport(podtrip, data[3], vector(0, 0, 0));
+						Property.Set(newenemy, "PhysControl", "Controls Active", 0);
+						SetOneShotTimer(newenemy, "CreateTripwire", 3);
 						}
 					continue;
 					}
-				case "directmonstergenrando":#change the enemies a DirectMonsterGen gotten from data[1] spawns to enemies chosen randomly from a tier table based on data[2]
+				case "directmonstergenrando":#change the enemies a DirectMonsterGen gotten from command[2] spawns to enemies chosen randomly from a tier table based on command[3]
 					{
-					local enemytier = VariousDataTables.enemytables.rawget(data[2]); #array of enemies based on spawn tier
-					local chosenenemy = enemytier[ShockGame.RandRange(0, enemytier.len() - 1)];
-					Property.Set(data[1], "Spawn", "Type 1", chosenenemy);
-					local enemytier = VariousDataTables.enemytables.rawget(data[2]);
-					local chosenenemy = enemytier[ShockGame.RandRange(0, enemytier.len() - 1)];
-					Property.Set(data[1], "Spawn", "Type 2", chosenenemy);
-					local enemytier = VariousDataTables.enemytables.rawget(data[2]);
-					local chosenenemy = enemytier[ShockGame.RandRange(0, enemytier.len() - 1)];
-					Property.Set(data[1], "Spawn", "Type 3", chosenenemy);
-					local enemytier = VariousDataTables.enemytables.rawget(data[2]);
-					local chosenenemy = enemytier[ShockGame.RandRange(0, enemytier.len() - 1)];
-					Property.Set(data[1], "Spawn", "Type 4", chosenenemy);
-					Property.Set(data[1], "Spawn", "Rarity 1", 25);
-					Property.Set(data[1], "Spawn", "Rarity 2", 25);
-					Property.Set(data[1], "Spawn", "Rarity 3", 25);
-					Property.Set(data[1], "Spawn", "Rarity 4", 25);
+					Property.Set(command[2], "Spawn", "Type 1", PickEnemy(command[3],  TRUE));
+					Property.Set(command[2], "Spawn", "Type 2", PickEnemy(command[3],  TRUE));
+					Property.Set(command[2], "Spawn", "Type 3", PickEnemy(command[3],  TRUE));
+					Property.Set(command[2], "Spawn", "Type 4", PickEnemy(command[3],  TRUE));
+					Property.Set(command[2], "Spawn", "Rarity 1", 25);
+					Property.Set(command[2], "Spawn", "Rarity 2", 25);
+					Property.Set(command[2], "Spawn", "Rarity 3", 25);
+					Property.Set(command[2], "Spawn", "Rarity 4", 25);
 					continue;
 					}
 				}
@@ -252,6 +263,22 @@ class PlayerScripts extends SqRootScript
 	{
 		Property.SetSimple(self, "AI_PtrlRnd", FALSE);
 		SetOneShotTimer("ItemReceiver", 1);
+	}
+
+	function PickEnemy(tier, boolgen)
+	{
+		local enemytable = VariousDataTables.enemytables.rawget(tier);
+		local chosenenemy = enemytable[ShockGame.RandRange(0, enemytable.len() - 1)];
+		if(boolgen)
+			{
+			local attempts = 0;
+			while ((chosenenemy.find("Pod") || chosenenemy.find("Turret")) && attempts < 15) #We don 't want stationary enemies spawning from gens
+				{
+					attempts += 1;
+					chosenenemy = enemytable[ShockGame.RandRange(0, enemytable.len() - 1)];
+				}
+			}
+		return chosenenemy;
 	}
 
 	function PickUnhackedReplItem()
