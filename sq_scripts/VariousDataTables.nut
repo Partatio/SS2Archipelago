@@ -275,7 +275,149 @@ mapinstructions =
         ["directmonstergenrando", "", 476, "1"],
     ]
     "eng1.mis": [
-
+        ["placeaploc", "", vector(-96.27, -34.57, -57.14), 177, 1894], #177:In tunnel in port nacelle near engine core eng1
+        ["placeaploc", "", [1203], 178, 862], #178:In body in recessed area behind engine core eng1
+        ["placeaploc", "", vector(92.63, -36.1, -58.78), 179, 1570], #179:In tunnel in stbd nacelle near engine core eng1
+        ["placeaploc", "", [1158], 180, 1276], #180:In crate in tunnel in stbd nacelle near engine core eng1
+        ["placeaploc", "", [1158], 181, 303], #181:In crate in tunnel in stbd nacelle near engine core 2 eng1
+        ["placeaploc", "", [1158], 182, 1587], #182:In crate in tunnel in stbd nacelle near engine core 3 eng1
+        ["placeaploc", "", vector(102.71, -46.35, -54.75), 183, 1157], #183:On ground near body in stbd nacelle near outer back of tunnel eng1
+        ["placeaploc", "", vector(11.2, -105.55, -93.97), 184, 1162], #184:On ground near body in lower walkway eng1
+        ["placeaploc", "", vector(14.23, -109.58, -43.53), 185, 1558], #185:On ground near body crushed by pipe in open room with keypad eng1
+        ["placeaploc", "", [1499, 1507, 1552, 1551], 186, 1567], #186:In crates or body crushed by pipe in open room with keypad eng1
+        ["placeaploc", "", [1499, 1507, 1552, 1551], 187, 1179], #187:In crates or body crushed by pipe in open room with keypad 2 eng1
+        ["placeaploc", "", vector(-67.24, -150.39, -41.72), 188, 1576], #188:On ground near body in radiated hallways along shuttle bay arrows eng1
+        ["placeaploc", "", vector(-23.58, -236.24, -41.78), 189, 1495], #189:On ground near body in radiated hallways near aux storage eng1
+        ["placeaploc", "", vector(-17.37, -321.56, -32.33), 190, 1618], #190:On ground near bodies on stairs that lead to cargo bay eng1
+        ["placeaploc", "", vector(0.13, -386.05, -31.78), 191, 1630], #191:On ground near body near engineering control grav shafts eng1
+        ["placeaploc", "", vector(9.07, -408.57, -31.78), 192, 1646], #192:On ground near bodies in room after engineering control grav shafts eng1
+        ["placeaploc", "", vector(1.33, -418.8, -5.75), 193, 1061], #193:On ground outside fluidics controls room near engineering control gravshafts eng1
+        ["placeaploc", "", [925], 194, 1411], #194:In body in control room in port nacelle near engine core eng1
+        ["placeaploc", "", [1203], 195, 1206], #195:In body in recessed area behind engine core 2 eng1
+        ["placeaploc", "", vector(31.44, -0.02, -31.9), 196, 1453], #196:On ground near grate to the right of the engine core eng1
+        ["placeaploc", "", [959], 197, 1514], #197:In body in control room in stbd nacelle near engine core eng1
+        ["placeaploc", "", vector(87.79, 45.15, -36.84), 198, 1330], #198:On desk in control room in stbd nacelle near engine core eng1
+        ["placeaploc", "", [1515], 199, 831], #199:In body in stbd nacelle near outer back of tunnel eng1
+        ["placeaploc", "", vector(-111, -89.86, -38.51), 200, 1482], #200:On shelf directly next to entrance eng1
+        ["placeaploc", "", [545], 201, 1935], #201:In desk directly next to entrance eng1
+        ["placeaploc", "", [545], 202, 491], #202:In desk directly next to entrance 2 eng1
+        ["placeaploc", "", [545], 203, 1398], #203:In desk directly next to entrance 3 eng1
+        ["placeaploc", "", [545], 204, 1318], #204:In desk directly next to entrance 4 eng1
+        ["placeaploc", "", [1670], 205, 812], #205:In enemy near body in radiated hallways along shuttle bay arrows eng1
+        ["placeaploc", "", [1063], 206, 1277], #206:In body in radiated hallways along shuttle bay arrows eng1
+        ["placeaploc", "", vector(-73.19, -197.86, -36.36), 207, 1427], #207:On raised side of hallway in radiated hallways along shuttle bay arrows eng1
+        ["placeaploc", "", [1164], 208, 829], #208:In other body in radiated hallways along shuttle bay arrows eng1
+        ["placeaploc", "", [1580], 209, 1496], #209:In body in radiated hallways near aux storage eng1
+        ["placeaploc", "", vector(-65.4, -49.18, 11.26), 210, 701], #210:On desk in office near engine core computer eng1
+        ["placeaploc", "", [69], 211, 1170], #211:In desk in office near engine core computer eng1
+        ["placeaploc", "", [69], 212, 1494], #212:In desk in office near engine core computer 2 eng1
+        ["placeaploc", "", [851], 213, 1303], #213:In security crate in lower walkway next to elevator eng1
+        ["placeaploc", "", [851], 214, 1160], #214:In security crate in lower walkway next to elevator 2 eng1
+        ["placeaploc", "", [840], 215, 1068], #215:In body in radiated hallways along engine core arrows eng1
+        ["placeaploc", "", [855, 836], 216, 893], #216:In enemies in lower walkway eng1
+        ["placeaploc", "", [823], 217, 845], #217:In security crate in radiated hallways along engine core signs eng1
+        ["placeaploc", "", [823], 218, 1116], #218:In security crate in radiated hallways along engine core signs 2 eng1
+        ["placeaploc", "", [906, 1180, 1159], 219, 1167], #219:In bodies in lower walkway eng1
+        ["placeaploc", "", [906, 1180, 1159], 220, 1079], #220:In bodies in lower walkway 2 eng1
+        ["placeaploc", "", [906, 1180, 1159], 221, 1434], #221:In bodies in lower walkway 3 eng1
+        ["placeaploc", "", [906, 1180, 1159], 222, 913], #222:In bodies in lower walkway 4 eng1
+        ["placeaploc", "", [906, 1180, 1159], 223, 909], #223:In bodies in lower walkway 5 eng1
+        ["placeaploc", "", [836, 855], 224, 866], #224:In enemies in lower walkway 2 eng1
+        ["placeaploc", "", [1011], 225, 820], #225:In desk in room connected to chemical storage eng1
+        ["placeaploc", "", [1011], 226, 1321], #226:In desk in room connected to chemical storage 2 eng1
+        ["placeaploc", "", vector(132.63, -136.58, -36.95), 227, 289], #227:In chemical storage room on shelves eng1
+        ["placeaploc", "", vector(129.39, -135.19, -37.39), 228, 286], #228:In chemical storage room on shelves 2 eng1
+        ["placeaploc", "", vector(121.77, -129.76, -36.88), 229, 547], #229:In chemical storage room on shelves 3 eng1
+        ["placeaploc", "", vector(123.08, -129.76, -36.88), 230, 551], #230:In chemical storage room on shelves 4 eng1
+        ["placeaploc", "", vector(124.42, -129.77, -36.87), 231, 552], #231:In chemical storage room on shelves 5 eng1
+        ["placeaploc", "", vector(125.74, -129.77, -36.87), 232, 553], #232:In chemical storage room on shelves 6 eng1
+        ["placeaploc", "", vector(127.07, -129.77, -36.87), 233, 554], #233:In chemical storage room on shelves 7 eng1
+        ["placeaploc", "", vector(128.4, -129.77, -36.87), 234, 555], #234:In chemical storage room on shelves 8 eng1
+        ["placeaploc", "", vector(129.72, -129.78, -36.87), 235, 556], #235:In chemical storage room on shelves 9 eng1
+        ["placeaploc", "", vector(131.08, -129.76, -36.87), 236, 557], #236:In chemical storage room on shelves 10 eng1
+        ["placeaploc", "", vector(132.42, -129.76, -36.87), 237, 558], #237:In chemical storage room on shelves 11 eng1
+        ["placeaploc", "", vector(134.77, -143.22, -36.87), 238, 528], #238:In chemical storage room on shelves 12 eng1
+        ["placeaploc", "", vector(133.44, -143.22, -36.87), 239, 533], #239:In chemical storage room on shelves 13 eng1
+        ["placeaploc", "", vector(132.12, -143.21, -36.87), 240, 542], #240:In chemical storage room on shelves 14 eng1
+        ["placeaploc", "", vector(130.83, -143.22, -36.87), 241, 543], #241:In chemical storage room on shelves 15 eng1
+        ["placeaploc", "", vector(129.54, -143.22, -36.87), 242, 524], #242:In chemical storage room on shelves 16 eng1
+        ["placeaploc", "", vector(128.23, -143.22, -36.87), 243, 525], #243:In chemical storage room on shelves 17 eng1
+        ["placeaploc", "", vector(126.89, -143.21, -36.87), 244, 544], #244:In chemical storage room on shelves 18 eng1
+        ["placeaploc", "", [1672], 245, 811], #245:In enemy in radiated hallways near chemical storage eng1
+        ["placeaploc", "", [819], 246, 1176], #246:In body outside chemical storage eng1
+        ["placeaploc", "", [819], 247, 821], #247:In body outside chemical storage 2 eng1
+        ["placeaploc", "", vector(79.83, -149.99, -41.9), 248, 1334], #248:On ground in radiated hallways near chemical storage eng1
+        ["placeaploc", "", [1175], 249, 1423], #249:In body in radiated hallways somewhat near chemical storage eng1
+        ["placeaploc", "", vector(58.2, -172.02, -36.6), 250, 822], #250:On raised side of hallway in radiated hallways somewhat near chemical storage near shuttle bay arrow eng1
+        ["placeaploc", "", vector(31.24, -190.6, -41.9), 251, 875], #251:On ground in radiated hallway somewhat near chemical storage eng1
+        ["placeaploc", "", [1438, 1440, 1439, 1420, 1422], 252, 1450], #252:In crates in aux storage eng1
+        ["placeaploc", "", [1438, 1440, 1439, 1420, 1422], 253, 1452], #253:In crates in aux storage 2 eng1
+        ["placeaploc", "", [1438, 1440, 1439, 1420, 1422], 254, 1460], #254:In crates in aux storage 3 eng1
+        ["placeaploc", "", [1438, 1440, 1439, 1420, 1422], 255, 1459], #255:In crates in aux storage 4 eng1
+        ["placeaploc", "", [1438, 1440, 1439, 1420, 1422], 252, 1466], #256:In crates in aux storage 5 eng1
+        ["placeaploc", "", vector(-0.58, -243.52, -41.9), 257, 450], #257:On ground in radiated hallways outside aux storage eng1
+        ["placeaploc", "", [874], 258, 1030], #258:In body in bottom of central room near elevator eng1
+        ["placeaploc", "", [874], 259, 1161], #259:In body in bottom of central room near elevator 2 eng1
+        ["placeaploc", "", vector(6.12, -283, -32.16), 260, 988], #260:On ground at top of central room near elevator eng1
+        ["placeaploc", "", vector(15.18, -297.69, -41.42), 261, 1400], #261:On ground in room with elevator near door to ramp eng1
+        ["placeaploc", "", [521], 262, 1430], #262:In body in room with elevator eng1
+        ["placeaploc", "", [1594, 1600], 263, 782], #263:In bodies in room after ramp near elevator eng1
+        ["placeaploc", "", vector(12.27, -333.83, -11.42), 264, 1888], #264:Above on ledge in room with xerxes face after ramp near elevator eng1
+        ["placeaploc", "", vector(-8.67, -381.69, -5.86), 265, 1418], #265:Under grate in area above engineering control grav shaft eng1
+        ["placeaploc", "", [1667], 266, 1635], #266:In body near engineering control grav shaft eng1
+        ["placeaploc", "", [1667], 267, 1634], #267:In body near engineering control grav shaft 2 eng1
+        ["placeaploc", "", [1801, 1643], 268, 1869], #268:In bodies in room after engineering control grav shaft eng1
+        ["placeaploc", "", [1801, 1643], 269, 1648], #269:In bodies in room after engineering control grav shaft 2 eng1
+        ["placeaploc", "", [1801, 1643], 270, 188], #270:In bodies in room after engineering control grav shaft 3 eng1
+        ["placeaploc", "", vector(-1.96, -417.3, -5.92), 271, 451], #271:On ground outside fluidics controls room near engineering control gravshafts 2 eng1
+        ["placeaploc", "", [1169], 272, 1679], #272:In body in fluidics control room above engineering control grav shaft eng1
+        ["placeaploc", "", vector(-4.49, -443.22, -6.89), 273, 1421], #273:On ground in fluidics control room above engineering control grav shaft eng1
+        ["placeaploc", "", vector(3.53, -432.87, -31.92), 274, 936], #274:On ground in room with bodies after engineering control grav shaft eng1
+        ["placeaploc", "", [1042, 894, 854], 275, 1275], #275:In body or lockers in security office after engineering control grav shaft eng1
+        ["placeaploc", "", [1042, 894, 854], 276, 1416], #276:In body or lockers in security office after engineering control grav shaft 2 eng1
+        ["placeaploc", "", [1042, 894, 854], 277, 1168], #277:In body or lockers in security office after engineering control grav shaft 3 eng1
+        ["placeaploc", "", [1042, 894, 854], 278, 190], #278:In body or lockers in security office after engineering control grav shaft 4 eng1
+        ["placeaploc", "", vector(34.32, -447.54, -29.24), 279, 1352], #279:In cutout in wall in security office after engineering control grav shaft eng1
+        ["placeaploc", "", [1331], 280, 784], #280:In body outside security office after engineering control grav shaft eng1
+        ["placeaploc", "", [1331], 281, 901], #281:In body outside security office after engineering control grav shaft 2 eng1
+        ["placeaploc", "", vector(128.61, -127.61, -36.85), 282, 1710], #282:In chemical storage room on shelves 19 eng1
+        ["randomizeenemy", "", 1670, "1", vector(-84.98, -166.23, -38.05)],
+        ["randomizeenemy", "", 1668, "1", vector(-37.18, -142.92, -38.05)],
+        ["randomizeenemy", "", 1672, "1", vector(56.52, -114.89, -37.92)],
+        ["randomizeenemy", "", 1671, "1", vector(82.53, -200.53, -38.05)],
+        ["randomizeenemy", "", 1666, "1", vector(-16.43, -213.09, -37.55)],
+        ["randomizeenemy", "", 924, "1", vector(-29.65, -78.96, -38.05)],
+        ["randomizeenemy", "", 1811, "1", vector(-20.47, -325.45, -28.05)],
+        ["randomizeenemy", "", 942, "1", vector(-9.25, -429.27, -29.15)],
+        ["randomizeenemy", "", 500, "1", vector(-14.26, -473.09, -29.15)],
+        ["randomizeenemy", "", 522, "1", vector(15.27, -472.3, -29.15)],
+        ["randomizeenemy", "", 1056, "1", vector(17.65, -296.47, -37.75)],
+        ["randomizeenemy", "", 794, "1", vector(-9.16, -277.81, -30.47)],
+        ["randomizeenemy", "", 1, "809", vector(146.95, -124.67, -39.47)],
+        ["randomizeenemy", "", 781, "2", vector(94.25, -38.46, -56.97)],
+        ["randomizeenemy", "", 164, "2", vector(4.13, 32.28, -37.97)],
+        ["randomizeenemy", "", 154, "2", vector(-20.49, 27.99, -34.55)],
+        ["randomizeenemy", "", 1201, "2", vector(1.03, -18.08, 11.95)],
+        ["randomizeenemy", "", 728, "2", vector(-103.31, -51.06, -35.52)],
+        ["randomizeenemy", "", 855, "2", vector(-8.59, -93.86, -90.53)],
+        ["randomizeenemy", "", 904, "2", vector(-10.58, -131.37, -91.58)],
+        ["randomizeenemy", "", 836, "2", vector(13.3, -216.41, -90.53)],
+        ["randomizeenemy", "", 643, "2", vector(14.29, -334.53, -90.49)],
+        ["randomizeenemy", "", 1273, "2", vector(-9.61, -338.38, -90.53)],
+        ["directmonstergenrando", "", 870, "1"],
+        ["directmonstergenrando", "", 343, "1"],
+        ["directmonstergenrando", "", 366, "1"],
+        ["directmonstergenrando", "", 869, "1"],
+        ["directmonstergenrando", "", 448, "1"],
+        ["directmonstergenrando", "", 962, "1"],
+        ["directmonstergenrando", "", 1905, "2"],
+        ["directmonstergenrando", "", 871, "2"],
+        ["directmonstergenrando", "", 943, "2"],
+        ["directmonstergenrando", "", 322, "2"],
+        ["directmonstergenrando", "", 1154, "2"],
+        ["randomizerepl", "", 973],
+        ["randomizerepl", "", 887],
+        ["replacecybmodshop", "", [1112, 1113], vector(42.03, -459.37, -31.5)],
     ]
     "eng2.mis": [
 
@@ -1083,7 +1225,7 @@ ItemTable = {
     "25": ["Maintenance Tool", []],
     "25": ["Med Patch", []],
     "26": ["20 Nanites", []],
-    "27": ["Audio Log", [["Logs2", "Logs", 18]]],
+    "27": ["Audio Log", [["Logs2", "Logs", 4]]],
     "28": ["Psi Booster", []],
     "29": ["Audio Log", [["Logs2", "Logs", 1]]],
     "30": ["Research Soft V1", []],
@@ -1097,7 +1239,7 @@ ItemTable = {
     "38": ["Audio Log", [["Logs2", "Logs", 23]]],
     "39": ["Detox Patch", []],
     "40": ["Audio Log", [["Logs2", "Logs", 11]]],
-    "41": ["Audio Log", [["Logs2", "Logs", 14]]],
+    "41": ["Audio Log", [["Logs2", "Logs", 14], ["Questbit", "wattsy"], ["QBVal", 1]]],
     "42": ["Audio Log", [["Logs2", "Logs", 2]]],
     "43": ["Audio Log", [["Logs2", "Logs", 5]]],
     "44": ["Strength Boost", []],
@@ -1123,5 +1265,56 @@ ItemTable = {
     "64": ["Chem #19", []],
     "65": ["Dead Power Cell", []],
     "66": ["Science Card", [["KeySrc", "RegionID", "SCI"]]],
+    "67": ["Gren Launcher", [["GunState", "Ammo", 12], ["GunState", "Condition (%)", 0], ["ObjState", "Broken"]]],
+    "68": ["Assault Rifle", [["GunState", "Ammo", 72], ["GunState", "Condition (%)", 50]]],
+    "69": ["Stasis Field Generator", [["GunState", "Ammo", 24], ["GunState", "Condition (%)", 50]]],
+    "70": ["EMP Rifle", [["GunState", "Ammo", 200]]],
+    "71": ["Audio Log", [["Logs2", "Logs", 6]]],
+    "72": ["Audio Log", [["Logs2", "Logs", 16]]],
+    "73": ["Audio Log", [["Logs2", "Logs", 12]]],
+    "74": ["Audio Log", [["Logs2", "Logs", 19]]],
+    "75": ["Prox. Grenade", []],
+    "76": ["Medical Kit", []],
+    "77": ["Light Armor", []],
+    "78": ["Timed Grenade", []],
+    "79": ["Portable Battery", []],
+    "80": ["HE Clip", []],
+    "81": ["Medium Armor", []],
+    "82": ["R and D Card", [["KeySrc", "RegionID", "R&D"]]],
+    "83": ["Med Bed Key", []],
+    "84": ["Audio Log", [["Logs2", "Logs", 24]]],
+    "85": ["Audio Log", [["Logs2", "Logs", 8], ["Questbit", "note_2_6"], ["QBVal", 1]]],
+    "86": ["Audio Log", [["Logs2", "Logs", 15]]],
+    "87": ["Audio Log", [["Logs2", "Logs", 9]]],
+    "88": ["Audio Log", [["Logs2", "Logs", 22]]],
+    "89": ["Audio Log", [["Logs2", "Logs", 10]]],
+    "90": ["Medium Nanite Pile", [["StackCount", 30]]],
+    "91": ["Deck 2 crew access card", [["KeySrc", "RegionID", "CREW"], ["Questbit", "grassicard"], ["QBVal", 1]]],
+    "92": ["Small Beaker", []],
+    "93": ["Assault Rifle", [["GunState", "Ammo", 72], ["GunState", "Condition (%)", 0], ["ObjState", "Broken"]]],
+    "94": ["Electro Shock", []],
+    "95": ["INT Boost", []],
+    "96": ["Shotgun", [["GunState", "Ammo", 12], ["GunState", "Condition (%)", 0], ["ObjState", "Broken"]]],
+    "97": ["Audio Log", [["Logs1", "Logs", 8]]],
+    "98": ["Audio Log", [["Logs1", "Logs", 11]]],
+    "99": ["Audio Log", [["Logs1", "Logs", 1]]],
+    "100": ["Audio Log", [["Logs1", "Logs", 9]]],
+    "101": ["SmartBoost", []],
+    "102": ["Small HE Clip", []],
+    "103": ["Manifest", [["Logs1", "Logs", 32]]],
+    "104": ["Repair Soft V1", []],
+    "105": ["Audio Log", [["Logs1", "Logs", 3]]],
+    "106": ["Audio Log", [["Logs1", "Logs", 16]]],
+    "107": ["vacc suit", []],
+    "108": ["Audio Log", [["Logs1", "Logs", 17]]],
+    "109": ["AP Clip", []],
+    "110": ["Audio Log", [["Logs1", "Logs", 4]]],
+    "111": ["Audio Log", [["Logs1", "Logs", 13]]],
+    "112": ["Audio Log", [["Logs1", "Logs", 7], ["QBName", "Note_1_9"], ["QBVal", 1]]],
+    "113": ["Audio Log", [["Logs1", "Logs", 14]]],
+    "114": ["Audio Log", [["Logs1", "Logs", 22]]],
+    "115": ["Annelid_Medpatch", []],
+    "116": ["Security Card", [["KeySrc", "RegionID", "SECURITY"]]],
+    "117": ["RadKey Card", []],
     }
 }
