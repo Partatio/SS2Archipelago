@@ -420,7 +420,125 @@ mapinstructions =
         ["replacecybmodshop", "", [1112, 1113], vector(42.03, -459.37, -31.5)],
     ]
     "eng2.mis": [
-
+        ["placeaploc", "", vector(99.78, -449.6, -31.23), 283, 1042], #283:On ground near body in cargo bay 1b near security control station eng2
+        ["placeaploc", "", vector(80.6, -428.82, -12), 284, 28], #284:On ground near body on second floor in cargo bay 1b eng2
+        ["placeaploc", "", vector(84.3, -407.99, 5.73), 285, 323], #285:On ground near body on 3rd floor in cargo bay 1b eng2
+        ["placeaploc", "", vector(-78.34, -421.31, -12.62), 286, 715], #286:On ground near body on second floor in cargo bay 2b eng2
+        ["placeaploc", "", [426], 287, 401], #287:In body on broken elevator on 3rd floor in cargo bay 2b eng2
+        ["placeaploc", "", [507, 508], 288, 515], #288:In bodies on 3rd floor in cargo bay 2b eng2
+        ["placeaploc", "", [507, 508], 289, 1426], #289:In bodies on 3rd floor in cargo bay 2b 2 eng2
+        ["placeaploc", "", [507, 508], 290, 220], #290:In bodies on 3rd floor in cargo bay 2b 3 eng2
+        ["placeaploc", "", vector(-82.1, -674.85, -29.62), 291, 43], #291:On top of body in cargo bay 2a eng2
+        ["placeaploc", "", [233], 292, 520], #292:In body in cargo bay 1a eng2
+        ["placeaploc", "", [233], 293, 938], #293:In body in cargo bay 1a 2 eng2
+        ["placeaploc", "", [390], 294, 1724], #294:In body in cargo bay 2a eng2
+        ["placeaploc", "", vector(-7.78, -504.72, -33.18), 295, 653], #295:On ground under removed panel near entrance eng2
+        ["placeaploc", "", vector(7.62, -574.41, -31.92), 296, 591], #296:On ground near crates along main hallway before room with 4 doors eng2
+        ["placeaploc", "", [655], 297, 1550], #297:In body along main hallway before room with 4 doors eng2
+        ["placeaploc", "", [655], 298, 657], #298:In body along main hallway before room with 4 doors 2 eng2
+        ["placeaploc", "", [44, 64], 299, 930], #299:In bodies in command control eng2
+        ["placeaploc", "", [44, 64], 300, 917], #300:In bodies in command control 2 eng2
+        ["placeaploc", "", vector(-11.13, -724.65, 20.08), 301, 1028], #301:On desk in command control eng2
+        ["placeaploc", "", [843], 302, 645], #302:In enemy in command control eng2
+        ["placeaploc", "", [1676], 303, 1680], #303:In crate in lower area under removed flooring panel in shuttle bay eng2
+        ["placeaploc", "", [1676], 304, 1682], #304:In crate in lower area under removed flooring panel in shuttle bay 2 eng2
+        ["placeaploc", "", [1029, 1032, 1030, 176, 83, 84, 953, 136, 87, 126], 305, 1033], #305:In crates in shuttle bay eng2
+        ["placeaploc", "", [1029, 1032, 1030, 176, 83, 84, 953, 136, 87, 126], 306, 1169], #306:In crates in shuttle bay 2 eng2
+        ["placeaploc", "", [1029, 1032, 1030, 176, 83, 84, 953, 136, 87, 126], 307, 1168], #307:In crates in shuttle bay 3 eng2
+        ["placeaploc", "", [1029, 1032, 1030, 176, 83, 84, 953, 136, 87, 126], 308, 1170], #308:In crates in shuttle bay 4 eng2
+        ["placeaploc", "", [1029, 1032, 1030, 176, 83, 84, 953, 136, 87, 126], 309, 602], #309:In crates in shuttle bay 5 eng2
+        ["placeaploc", "", [923], 310, 936], #310:In body on 2nd floor in cargo bay 1a eng2
+        ["placeaploc", "", [923], 311, 987], #311:In body on 2nd floor in cargo bay 1a 2 eng2
+        ["placeaploc", "", [352], 312, 373], #312:In body on 3rd floor in cargo bay 1a eng2
+        ["placeaploc", "", vector(81.48, -603.57, -22.22), 313, 796], #313:On boxes behind droid containers in cargo bay 1a eng2
+        ["placeaploc", "", vector(82.44, -606.23, -22.6), 314, 846], #314:On boxes behind droid containers in cargo bay 1a 2 eng2
+        ["placeaploc", "", vector(94.62, -607.06, -18.84), 315, 988], #315:Hidden out of reach behind boxes on top of area behind droid containers in cargo bay 1a eng2
+        ["placeaploc", "", vector(89.28, -577.94, -22.6), 316, 1686], #316:On top of droid container in cargo bay 1a eng2
+        ["placeaploc", "", [1524, 1522, 1523, 1526, 1536], 317, 89], #317:In container near replicator in cargo bay 1a eng2
+        ["placeaploc", "", vector(92.33, -670.2, -4.67), 318, 918], #318:On top of boxes near 2 droid containers on second floor in cargo bay 1a eng2
+        ["placeaploc", "", vector(73.48, -686.61, -4.32), 319, 922], #319:On top of boxes near 2 droid containers on second floor in cargo bay 1a 2 eng2
+        ["placeaploc", "", vector(94.27, -673.8, 13.08), 320, 934], #320:On top of boxes near security crate on third floor in cargo bay 1a eng2
+        ["placeaploc", "", [168], 321, 850], #321:In security crate on third floor in cargo bay 1a eng2
+        ["placeaploc", "", [168], 322, 169], #322:In security crate on third floor in cargo bay 1a 2 eng2
+        ["placeaploc", "", [168], 323, 347], #323:In security crate on third floor in cargo bay 1a 3 eng2
+        ["placeaploc", "", [1531, 360], 324, 545], #324:In bodies on 3rd floor in cargo bay 1b
+        ["placeaploc", "", vector(93.34, -511.52, -22.62), 325, 1678], #325:On top of boxes near security crate in cargo bay 1b
+        ["placeaploc", "", [205], 326, 25], #326:In security crate in cargo bay 1b eng2
+        ["placeaploc", "", [205], 327, 228], #327:In security crate in cargo bay 1b 2 eng2
+        ["placeaploc", "", vector(86.94, -501.54, -4.73), 328, 538], #328:On top of boxes on second floor in cargo bay 1b eng2
+        ["placeaploc", "", [1531, 360], 329, 931], #329:In bodies on 3rd floor in cargo bay 1b 2 eng2
+        ["placeaploc", "", [21], 330, 658], #330:In body near security control station in cargo bay 1b eng2
+        ["placeaploc", "", [21], 331, 659], #331:In body near security control station in cargo bay 1b 2 eng2
+        ["placeaploc", "", vector(113.14, -478.82, -23.36), 332, 949], #332:On top of boxes near data wheel storage sign in cargo bay 1b eng2
+        ["placeaploc", "", [31], 333, 935], #333:In desk near security control station in cargo bay 1b eng2
+        ["placeaploc", "", [31], 334, 32], #334:In desk near security control station in cargo bay 1b 2 eng2
+        ["placeaploc", "", [1041], 335, 1043], #335:In body near ftl sequencer storage sign in cargo bay 1b eng2
+        ["placeaploc", "", [24], 336, 982], #336:In body on 2nd floor in cargo bay 1b eng2
+        ["placeaploc", "", [24], 337, 924], #337:In body on 2nd floor in cargo bay 1b 2 eng2
+        ["placeaploc", "", vector(83.42, -411.16, -20.97), 338, 317], #338:On top of boxes in cargo bay 1b eng2
+        ["placeaploc", "", vector(100.56, -392.74, -22), 339, 939], #339:On top of boxes in cargo bay 1b 2 eng2
+        ["placeaploc", "", [1357], 340, 928], #340:In body on 3rd floor in cargo bay 1b eng2
+        ["placeaploc", "", [1357], 341, 984], #341:In body on 3rd floor in cargo bay 1b 2 eng2
+        ["placeaploc", "", [57], 342, 913], #342:In body on 3rd floor in cargo bay 2a eng2
+        ["placeaploc", "", vector(-57.65, -569.42, -4.68), 343, 975], #343:On top of crate on 2nd floor in cargo bay 2a eng2
+        ["placeaploc", "", [390], 344, 392], #344:In body in cargo bay 2a eng2
+        ["placeaploc", "", [45], 345, 921], #345:In body near hygenic storage sign in cargo bay 2a
+        ["placeaploc", "", [45], 346, 49], #346:In body near hygenic storage sign in cargo bay 2 2a
+        ["placeaploc", "", [45], 347, 48], #347:In body near hygenic storage sign in cargo bay 3 2a
+        ["placeaploc", "", vector(-95.59, -669.81, -12.29), 348, 1516], #348:In niche on 2nd floor next to elevator in cargo bay 2a eng2
+        ["placeaploc", "", [332], 349, 932], #349:In body next to security crate on 3rd floor in cargo bay 2a eng2
+        ["placeaploc", "", [67], 350, 985], #350:In headless body in cargo bay 2a eng2
+        ["placeaploc", "", vector(-78.02, -681.3, -4.78), 351, 1598], #351:On top of boxes on 2nd floor in cargo bay 2a eng2
+        ["placeaploc", "", [339], 352, 238], #352:In security crate on 3rd floor in cargo bay 2a eng2
+        ["placeaploc", "", [339], 353, 343], #353:In security crate on 3rd floor in cargo bay 2a 2 eng2
+        ["placeaploc", "", vector(-67.32, -669.62, -12.14), 354, 1515], #354:In niche on 2nd floor next to broken elevator in cargo bay 2a eng2
+        ["placeaploc", "", vector(-57.62, -685.02, 6.18), 355, 391], #355:On broken elevator on 3rd floor in cargo bay 2a eng2
+        ["placeaploc", "", [426], 356, 400], #356:In body on broken elevator on 3rd floor in cargo bay 2b
+        ["placeaploc", "", [428], 357, 433], #357:In security crate on 3rd floor in cargo bay 2b eng2
+        ["placeaploc", "", [428], 358, 950], #358:In security crate on 3rd floor in cargo bay 2b 2 eng2
+        ["placeaploc", "", [906], 359, 909], #359:In desk in cargo bay 2b eng2
+        ["placeaploc", "", [906], 360, 926], #360:In desk in cargo bay 2b 2 eng2
+        ["placeaploc", "", vector(-105.14, -433.95, -31.92), 361, 1154], #361:On ground near elevator in cargo bay 2b eng2
+        ["placeaploc", "", [1424], 362, 1777], #362:In body in cargo bay 2b eng2
+        ["placeaploc", "", [413], 363, 585], #363:In body on 2nd floor in cargo bay 2b eng2
+        ["placeaploc", "", [413], 364, 983], #364:In body on 2nd floor in cargo bay 2b 2 eng2
+        ["placeaploc", "", [501], 365, 239], #365:In body surrounded by crates on third floor in cargo bay 2b eng2
+        ["destroy", "", 833],
+        ["randomizerepl", "", 485],
+        ["randomizerepl", "", 346],
+        ["replacecybmodshop", "", [966, 973], vector(-38.89, -708.08, 21.68)],
+        ["directmonstergenrando", "", 589, "2"],
+        ["directmonstergenrando", "", 150, "2"],
+        ["directmonstergenrando", "", 867, "2"],
+        ["directmonstergenrando", "", 552, "3"],
+        ["directmonstergenrando", "", 395, "3"],
+        ["directmonstergenrando", "", 863, "2"],
+        ["randomizeenemy", "", 232, "2", vector(-0.19, -637.95, -29.97)],
+        ["randomizeenemy", "", 1143, "2", vector(-16.59, -707.49, -37.05)],
+        ["randomizeenemy", "", 100, "2", vector(0.23, -729.31, 23.95)],
+        ["randomizeenemy", "", 843, "2", vector(-43.65, -709.49, 23.95)],
+        ["randomizeenemy", "", 128, "2ranged", vector(-35.55, -711.03, -14.97)],
+        ["randomizeenemy", "", 808, "3", vector(12.03, -724.84, -29.15)],
+        ["randomizeenemy", "", 854, "2", vector(31.85, -717.96, -31.05)],
+        ["randomizeenemy", "", 660, "3", vector(79.59, -696.32, 7.85)],
+        ["randomizeenemy", "", 528, "3", vector(74.21, -615.15, -27.52)],
+        ["randomizeenemy", "", 267, "3", vector(83.93, -540.84, 7.03)],
+        ["randomizeenemy", "", 240, "3", vector(105.37, -521.16, -28.97)],
+        ["randomizeenemy", "", 259, "3", vector(81.17, -508.57, -6.97)],
+        ["randomizeenemy", "", 140, "3", vector(54.32, -466.46, -25.47)],
+        ["randomizeenemy", "", 300, "3", vector(80.89, -418.62, 7.03)],
+        ["randomizeenemy", "", 294, "3", vector(92.54, -419.9, -9.69)],
+        ["randomizeenemy", "", 308, "3", vector(86.28, -418.16, -28.97)],
+        ["randomizeenemy", "", 249, "3", vector(108.29, -433.01, -29.97)],
+        ["randomizeenemy", "", 553, "3", vector(-68.31, -398.24, 8.18)],
+        ["randomizeenemy", "", 492, "3", vector(-60.61, -434.26, -24.84)],
+        ["randomizeenemy", "", 431, "3", vector(-55.75, -481, -29.02)],
+        ["randomizeenemy", "", 70, "3", vector(-82.82, -510.44, -27.05)],
+        ["randomizeenemy", "", 386, "3", vector(-105.79, -575.89, 10.83)],
+        ["randomizeenemy", "", 388, "3", vector(-86.64, -595.38, -26.05)],
+        ["randomizeenemy", "", 427, "3", vector(-106.48, -662.88, -28.97)],
+        ["randomizeenemy", "", 50, "3", vector(-75.89, -675.99, -9.05)],
+        ["randomizeenemy", "", 376, "3", vector(-60.67, -691.69, 8.95)],
     ]
     "hydro2.mis": [
 
@@ -551,7 +669,7 @@ enemytables =
     "Protocol Droid",
     "Protocol Droid",
     "Slug Turret",
-    "Midwife"
+    "Maintenance Robot"
     ],
 
     "2Ranged": [
@@ -578,7 +696,7 @@ enemytables =
     "Protocol Droid",
     "Protocol Droid",
     "Midwife",
-    "Midwife",
+    "Maintenance Robot",
     "Maintenance Robot",
     "Slug Turret",
     "Slug Turret",
@@ -590,7 +708,7 @@ enemytables =
     "Blue Monkey",
     "Blue Monkey",
     "Midwife",
-    "Midwife",
+    "Maintenance Robot",
     "Maintenance Robot",
     "Slug Turret",
     "Slug Turret",
@@ -1316,5 +1434,21 @@ ItemTable = {
     "115": ["Annelid_Medpatch", []],
     "116": ["Security Card", [["KeySrc", "RegionID", "SECURITY"]]],
     "117": ["RadKey Card", []],
+    "118": ["Laser Pistol", [["GunState", "Condition (%)", 0], ["ObjState", "Broken"]]],
+    "119": ["French-Epstein Device", []],
+    "120": ["Audio Log", [["Logs1", "Logs", 5], ["QBName", "Note_1_8"], ["QBVal", 1]]],
+    "121": ["Cargo Bay 2A/2B", [["KeySrc", "RegionID", "CARGO2"]]],
+    "122": ["Audio Log", [["Logs1", "Logs", 6]]],
+    "123": ["Overworld Cart", []],
+    "124": ["Audio Log", [["Logs1", "Logs", 19]]],
+    "125": ["Audio Log", [["Logs1", "Logs", 12]]],
+    "126": ["Small BP Pile", [["StackCount", 3]]],
+    "127": ["SwitftBoost", []],
+    "128": ["Audio Log", [["Logs1", "Logs", 18]]],
+    "129": ["Audio Log", [["Logs1", "Logs", 21]]],
+    "130": ["Hack Soft V1", []],
+    "131": ["Audio Log", [["Logs1", "Logs", 23]]],
+    "132": ["Audio Log", [["Logs1", "Logs", 20]]],
+    "133": ["Audio Log", [["Logs1", "Logs", 2]]],
     }
 }
