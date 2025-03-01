@@ -213,7 +213,7 @@ mapinstructions =
         ["directmonstergenrando", "", 214, "1"],
         ["directmonstergenrando", "", 201, "1"],
         ["replacecybmodshop", "", [1358, 254, 1367, 1366], vector(-112.6, -87.87, 10.68)],
-        ["destroy", "", 133],
+        ["destroy", "OSUpgrades", 133],
         ["placeaploc", "OSUpgrades", vector(-93.3, -57.02, 1.93), 136, 0], #136:On wall across from lounge near entrance medsci2crew
         ["placeaploc", "OSUpgrades", vector(-93.3, -53.74, 0.87), 137, 0], #137:On wall across from lounge near entrance 2 medsci2crew
         ["placeaploc", "OSUpgrades", vector(-93.3, -53.43, -1.85), 138, 0], #138:On wall across from lounge near entrance 3 medsci2crew
@@ -481,7 +481,7 @@ mapinstructions =
         ["placeaploc", "", [1357], 341, 984], #341:In body on 3rd floor in cargo bay 1b 2 eng2
         ["placeaploc", "", [57], 342, 913], #342:In body on 3rd floor in cargo bay 2a eng2
         ["placeaploc", "", vector(-57.65, -569.42, -4.68), 343, 975], #343:On top of crate on 2nd floor in cargo bay 2a eng2
-        ["placeaploc", "", [390], 344, 392], #344:In body in cargo bay 2a eng2
+        ["placeaploc", "", [390], 344, 392], #344:In different body in cargo bay 2a eng2
         ["placeaploc", "", [45], 345, 921], #345:In body near hygenic storage sign in cargo bay 2a
         ["placeaploc", "", [45], 346, 49], #346:In body near hygenic storage sign in cargo bay 2 2a
         ["placeaploc", "", [45], 347, 48], #347:In body near hygenic storage sign in cargo bay 3 2a
@@ -541,7 +541,174 @@ mapinstructions =
         ["randomizeenemy", "", 376, "3", vector(-60.67, -691.69, 8.95)],
     ]
     "hydro2.mis": [
-
+        ["placeaploc", "", vector(-46.02, 51.17, -4.85), 366, 1013], #366:On ground near body and desk in room with charger hydro2
+        ["placeaploc", "", vector(-58.37, -7.75, -4.74), 367, 140], #367:On ground near body and pipes in room with xerxes hydro2
+        ["placeaploc", "", vector(-75.67, -41.31, -4.25), 368, 1012], #368:On ground behind sector b door hydro2
+        ["placeaploc", "", vector(-75.09, -36.92, -4.22), 369, 1037], #369:On ground behind sector b door 2 hydro2
+        ["placeaploc", "", vector(-75.62, -34.15, -4.22), 370, 1038], #370:On ground behind sector b door 3 hydro2
+        ["placeaploc", "", vector(-144, -25, -5.76), 371, 1014], #371:On ground near body in room with glass above hydro2
+        ["placeaploc", "", vector(-172.44, -52.07, -7.6), 372, 755], #372:On ground near lots of blood near water in biological survey area hydro2
+        ["placeaploc", "", vector(-144.4, -66.57, -7.70), 373, 1011], #373:On ground near body med beds hydro2
+        ["placeaploc", "", vector(-146.63, 139.22, 2.5), 374, 1034], #374:On ground behind sector d door hydro2
+        ["placeaploc", "", [801], 375, 2018], #375:In enemy in room with broken replicator in research area hydro2
+        ["placeaploc", "", vector(-49.53, 118.84, -1.32), 376, 809], #376:On desk in room with broken replicator in research area hydro2
+        ["placeaploc", "", [483, 629, 619, 695], 377, 441], #377:In bodies/desks in room in research area hydro2
+        ["placeaploc", "", [483, 629, 619, 695], 378, 862], #378:In bodies/desks in room in research area 2 hydro2
+        ["placeaploc", "", [483, 629, 619, 695], 379, 1586], #379:In bodies/desks in room in research area 3 hydro2
+        ["placeaploc", "", [483, 629, 619, 695], 380, 978], #380:In bodies/desks in room in research area 4 hydro2
+        ["placeaploc", "", [744], 381, 2183], #381:In desk in room in research area hydro2
+        ["placeaploc", "", [744], 382, 2184], #382:In desk in room in research area 2 hydro2
+        ["placeaploc", "", vector(-14.99, 80.27, -4.78), 383, 1063], #383:On ground under desk in room in research area hydro2
+        ["placeaploc", "", [713, 675], 384, 547], #384:In desks in room connected to room with broken replicator hydro2
+        ["placeaploc", "", [713, 675], 385, 1185], #385:In desks in room connected to room with broken replicator 2 hydro2
+        ["placeaploc", "", vector(-64, 103, -1), 386, 1036], #386:On desk in room connected to room with broken replicator hydro2
+        ["placeaploc", "", vector(-63.95, 89.69, -1.62), 387, 1064], #387:On desk in room connected to room with broken replicator 2 hydro2
+        ["placeaploc", "", [311, 210, 138, 139, 143, 1215, 1230, 1229], 388, 1065], #388:In desks/crates/body in room with charger hydro2
+        ["placeaploc", "", [311, 210, 138, 139, 143, 1215, 1230, 1229], 389, 1019], #389:In desks/crates/body in room with charger 2 hydro2
+        ["placeaploc", "", [311, 210, 138, 139, 143, 1215, 1230, 1229], 390, 1016], #390:In desks/crates/body in room with charger 3 hydro2
+        ["placeaploc", "", [311, 210, 138, 139, 143, 1215, 1230, 1229], 391, 1017], #391:In desks/crates/body in room with charger 4 hydro2
+        ["placeaploc", "", vector(-35.72, 42.1, -1.92), 392, 818], #392:On desk in room with charger hydro2
+        ["placeaploc", "", vector(-39.56, 23.29, -4.79), 393, 1588], #393:Near worms in with charger hydro2
+        ["placeaploc", "", [355], 394, 1049], #394:In body next to pipes in room with xerxes hydro2
+        ["placeaploc", "", [355], 395, 485], #395:In body next to pipes in room with xerxes 2 hydro2
+        ["placeaploc", "", vector(-44.87, -19.71, -4.9), 396, 822], #396:On ground near elevator hydro2
+        ["placeaploc", "", vector(-77, 37.5, 8.63), 397, 407], #397:On ground in ceiling connected through vent to room with glass floors hydro2
+        ["placeaploc", "", vector(-76.5, 39.5, 8.3), 398, 1048], #398:On ground in ceiling connected through vent to room with glass floors 2 hydro2
+        ["placeaploc", "", [598], 399, 1024], #399:In desk in room at end of hallway in admin area hydro2
+        ["placeaploc", "", [598], 400, 823], #400:In desk in room at end of hallway in admin area 2 hydro2
+        ["placeaploc", "", [709], 401, 2017], #401:In enemy in room with window in admin area hydro2
+        ["placeaploc", "", vector(-31.99, -133.1, -0.41), 402, 2140], #402:On desk in room with window in admin area hydro2
+        ["placeaploc", "", [751], 403, 1026], #403:In body near sector a hydro2
+        ["placeaploc", "", [751], 404, 1505], #404:In body near sector a 2 hydro2
+        ["placeaploc", "", [805], 405, 1347], #405:In enemy near sector d hydro2
+        ["placeaploc", "", vector(89.5, 88.34, -4.46), 406, 1025], #406:Under bench in white hallway with glass next to sector d hydro2
+        ["placeaploc", "", vector(-106.02, 104.17, -4.37), 407, 861], #407:Under bench in white hallway with glass next to sector d 2 hydro2
+        ["placeaploc", "", vector(-133.03, 109.22, -4.9), 408, 812], #408:On ground in room with replicator next to room with resurrection station hydro2
+        ["placeaploc", "", [722], 409, 1010], #409:In body in room with replicator next to room with resurrection station hydro2
+        ["placeaploc", "", [806], 410, 1469], #410:In body in room with resurrection station hydro2
+        ["placeaploc", "", vector(-134, 64, -4.9), 411, 813], #411:On ground in room with resurrection station hydro2
+        ["placeaploc", "", [1413], 412, 1330], #412:In body in room with glass floors hydro2
+        ["placeaploc", "", [1413], 413, 1031], #413:In body in room with glass floors 2 hydro2
+        ["placeaploc", "", vector(-196.5, 94.5, -7.47), 414, 1067], #414:On ground in biohazard room with environmental regulator hydro2
+        ["placeaploc", "", [406], 415, 761], #415:In body in biohazard room with environmental regulator hydro2
+        ["placeaploc", "", vector(-195, 84, 6.11), 416, 632], #416:On ground near desk and headless body in room above biohazard room with environmental regulator hydro2
+        ["placeaploc", "", [1237, 314, 89, 338], 417, 1066], #417:In crate/desks/body in room above biohazard room with environmental regulator hydro2
+        ["placeaploc", "", [1237, 314, 89, 338], 418, 814], #418:In crate/desks/body in room above biohazard room with environmental regulator 2 hydro2
+        ["placeaploc", "", vector(-201.96, -110.74, -13.56), 419, 1106], #419:In pool near chemical storeroom hydro2
+        ["placeaploc", "", [2078, 2143], 420, 1227], #420:In lockers near pool and chemical storeroom hydro2
+        ["placeaploc", "", [2078, 2143], 421, 1226], #421:In lockers near pool and chemical storeroom 2 hydro2
+        ["placeaploc", "", [1296], 422, 760], #422:In body near chemical storeroom and pool hydro2
+        ["placeaploc", "", vector(-181.18, -19.55, -21.52), 423, 634], #423:In water in biological survey area hydro2
+        ["placeaploc", "", [754], 424, 1047], #424:In body near lots of blood near water in biological survey area hydro2
+        ["placeaploc", "", [1294], 425, 677], #425:In body near med beds hydro2
+        ["placeaploc", "", [1294], 426, 1040], #426:In body near med beds 2 hydro2
+        ["placeaploc", "", [1294], 427, 1044], #427:In body near med beds 3 hydro2
+        ["placeaploc", "", vector(-124.38, -72.71, -4.48), 428, 1207], #428:On med bed hydro2
+        ["placeaploc", "", vector(-124.34, -70.03, -4.48), 429, 2079], #429:On med bed 2 hydro2
+        ["placeaploc", "", vector(-128.67, -73.84, -7.84), 430, 1154], #430:Under med bed hydro2
+        ["placeaploc", "", vector(-81, -60.5, -18.89), 431, 269], #431:On ground near body in snowy area hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 432, 1029], #432:In bodies in snowy area hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 433, 1045], #433:In bodies in snowy area 2 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 434, 824], #434:In bodies in snowy area 3 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 435, 185], #435:In bodies in snowy area 4 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 436, 1039], #436:In bodies in snowy area 5 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 437, 1329], #437:In bodies in snowy area 6 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 438, 766], #438:In bodies in snowy area 7 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 439, 1028], #439:In bodies in snowy area 8 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 440, 1317], #440:In bodies in snowy area 9 hydro2
+        ["placeaploc", "", [1705], 441, 2019], #441:In enemy above snowy area hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 442, 1315], #442:In bodies in snowy area 10 hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 443, 762], #443:In bodies in snowy area 11 hydro2
+        ["placeaploc", "", [1711], 444, 816], #444:In enemy in chemical storeroom hydro2
+        ["placeaploc", "", [354, 325], 445, 545], #445:In desks in chemical storeroom hydro2
+        ["placeaploc", "", [354, 325], 446, 544], #446:In desks in chemical storeroom 2 hydro2
+        ["placeaploc", "", [354, 325], 447, 1186], #447:In desks in chemical storeroom 3 hydro2
+        ["placeaploc", "", [354, 325], 448, 665], #448:In desks in chemical storeroom 4 hydro2
+        ["placeaploc", "", [1596], 449, 633], #449:In waste barrel in chemical storeroom hydro2
+        ["placeaploc", "", [354, 325], 450, 1221], #450:In desks in chemical storeroom 5 hydro2
+        ["placeaploc", "", vector(-136, -125.5, -0.88), 451, 796], #451:On chemical storeroom shelves hydro2
+        ["placeaploc", "", vector(-136, -127.5, -0.87), 452, 877], #452:On chemical storeroom shelves 2 hydro2
+        ["placeaploc", "", vector(-136.5, -130, -0.88), 453, 878], #453:On chemical storeroom shelves 3 hydro2
+        ["placeaploc", "", vector(-138, -131.5, -0.87), 454, 973], #454:On chemical storeroom shelves 4 hydro2
+        ["placeaploc", "", vector(-148.49, -131.81, -1.32), 455, 1377], #455:On chemical storeroom shelves 5 hydro2
+        ["placeaploc", "", vector(-150.46, -130.9, -0.88), 456, 1062], #456:On chemical storeroom shelves 6 hydro2
+        ["placeaploc", "", vector(-151.8, -129.77, -0.88), 457, 1082], #457:On chemical storeroom shelves 7 hydro2
+        ["placeaploc", "", vector(-151.77, -127.7, -0.88), 458, 1376], #458:On chemical storeroom shelves 8 hydro2
+        ["placeaploc", "", vector(-151.92, -125.17, -0.85), 459, 546], #459:On chemical storeroom shelves 9 hydro2
+        ["placeaploc", "", vector(-136, -125, -3.38), 460, 974], #460:On chemical storeroom shelves 10 hydro2
+        ["placeaploc", "", vector(-136.14, -126.78, -3.38), 461, 1725], #461:On chemical storeroom shelves 11 hydro2
+        ["placeaploc", "", vector(-136.32, -128.37, -3.38), 462, 1008], #462:On chemical storeroom shelves 12 hydro2
+        ["placeaploc", "", vector(-137.64, -130.05, -3.38), 463, 375], #463:On chemical storeroom shelves 13 hydro2
+        ["placeaploc", "", vector(-139.49, -131.55, -3.38), 464, 1018], #464:On chemical storeroom shelves 14 hydro2
+        ["placeaploc", "", vector(-147.93, -131.93, -3.38), 465, 1020], #465:On chemical storeroom shelves 15 hydro2
+        ["placeaploc", "", vector(-149.84, -131.3, -3.38), 466, 1021], #466:On chemical storeroom shelves 16 hydro2
+        ["placeaploc", "", vector(-151.77, -129.17, -3.38), 467, 1033], #467:On chemical storeroom shelves 17 hydro2
+        ["placeaploc", "", vector(-152.12, -127.6, -3.38), 468, 1041], #468:On chemical storeroom shelves 18 hydro2
+        ["placeaploc", "", vector(-151.9, -125.97, -3.38), 469, 1050], #469:On chemical storeroom shelves 19 hydro2
+        ["placeaploc", "", vector(-11.96, 100.78, -4.75), 470, 1112], #470:On ground under desk in room with bodies in research area hydro2
+        ["placeaploc", "", [935, 1298, 1297, 936], 471, 934], #471:In bodies in snowy area 12 hydro2
+        ["placeaploc", "", [754], 472, 942], #472:In body near lots of blood near water in biological survey area 2 hydro2
+        ["randomizerepl", "", 1035],
+        ["randomizerepl", "", 718],
+        ["randomizerepl", "", 1435],
+        ["replacecybmodshop", "", [966, 967], vector(-63.42, 55.17, -3.32)],
+        ["destroy", "OSUpgrades", 879],
+        ["placeaploc", "OSUpgrades", vector(-53.89, 65.63, -3.32), 473, 0], #473:On ground in room with charger hydro2
+        ["placeaploc", "OSUpgrades", vector(-48.77, 66.52, -3.32), 474, 0], #474:On ground in room with charger 2 hydro2
+        ["placeaploc", "OSUpgrades", vector(-53.89, 59.21, -3.32), 475, 0], #475:On ground in room with charger 3 hydro2
+        ["placeaploc", "OSUpgrades", vector(-53.39, 54.44, -3.32), 476, 0], #476:On ground in room with charger 4 hydro2
+        ["randomizeenemy", "", 727, "3", vector(-39, -186, -1)],
+        ["randomizeenemy", "", 709, "3", vector(-39, -163, -1)],
+        ["randomizeenemy", "", 992, "3", vector(-24, 24, -2.96)],
+        ["randomizeenemy", "", 999, "3", vector(-34, 30, -2.96)],
+        ["randomizeenemy", "", 1673, "3", vector(-21.5, 32, -0.15)],
+        ["randomizeenemy", "", 991, "3", vector(-20, 37.5, -2.96)],
+        ["randomizeenemy", "", 1000, "3", vector(-26, 47, -2.96)],
+        ["randomizeenemy", "", 1671, "3", vector(-21.5, 56, -0.15)],
+        ["randomizeenemy", "", 801, "3", vector(-56, 126, -1.05)],
+        ["randomizeenemy", "", 1678, "3", vector(-84, 99, -1.05)],
+        ["randomizeenemy", "", 805, "3", vector(-110, 118, 5)],
+        ["randomizeenemy", "", 287, "3", vector(-188, 92, -6.03)],
+        ["randomizeenemy", "", 70, "3", vector(-201.5, 88.5, -6.03)],
+        ["randomizeenemy", "", 1676, "3", vector(-200, 80, -4.09)],
+        ["randomizeenemy", "", 80, "3", vector(-185, 71, -6.04)],
+        ["randomizeenemy", "", 772, "3", vector(-178.5, -119, -5.97)],
+        ["randomizeenemy", "", 732, "3", vector(-176, -111, -5.97)],
+        ["randomizeenemy", "", 1711, "3", vector(-144, -99.5, -4.09)],
+        ["randomizeenemy", "", 1698, "3", vector(-166, -52, -5.97)],
+        ["randomizeenemy", "", 1693, "3", vector(-167.05, -19.5, -11.72)],
+        ["randomizeenemy", "", 905, "3", vector(-115.5, 30.5, -3.99)],
+        ["randomizeenemy", "", 952, "3", vector(-120, 23, -4.04)],
+        ["randomizeenemy", "", 904, "3", vector(-135.5, 20.5, -3.99)],
+        ["randomizeenemy", "", 875, "3", vector(-168.5, 23, -3.99)],
+        ["randomizeenemy", "", 874, "3", vector(-177, 21, -3.99)],
+        ["randomizeenemy", "", 1687, "3", vector(-125.13, -23.15, -11.75)],
+        ["randomizeenemy", "", 1680, "3", vector(-121, -44, -2.97)],
+        ["randomizeenemy", "", 1354, "3", vector(-100, -74.5, -20)],
+        ["randomizeenemy", "", 1355, "3", vector(-107, -80, -20)],
+        ["randomizeenemy", "", 1352, "3", vector(-89.5, -78.5, -19.59)],
+        ["randomizeenemy", "", 1353, "3", vector(-99, -97, -19)],
+        ["randomizeenemy", "", 1356, "3", vector(-118, -93, -20)],
+        ["randomizeenemy", "", 1713, "3", vector(-110, -92, -1)],
+        ["randomizeenemy", "", 1705, "3", vector(-103, -92.5, -1.05)],
+        ["randomizeenemy", "", 1709, "3", vector(-99, -111, -16.09)],
+        ["randomizeenemy", "", 1358, "3", vector(-88.54, -120.08, -18.04)],
+        ["randomizeenemy", "", 1363, "3", vector(-101.5, -129.5, -18)],
+        ["randomizeenemy", "", 1707, "3", vector(-116.03, -131.64, -18.05)],
+        ["randomizeenemy", "", 1360, "3", vector(-112, -140.5, -20)],
+        ["randomizeenemy", "", 1359, "3", vector(-105.5, -135.5, -18)],
+        ["randomizeenemy", "", 1362, "3", vector(-97.5, -137.5, -18)],
+        ["directmonstergenrando", "", 1715, "3"],
+        ["directmonstergenrando", "", 265, "3"],
+        ["directmonstergenrando", "", 525, "3"],
+        ["directmonstergenrando", "", 474, "3"],
+        ["directmonstergenrando", "", 701, "3"],
+        ["directmonstergenrando", "", 686, "3"],
+        ["directmonstergenrando", "", 616, "3"],
+        ["directmonstergenrando", "", 1647, "3"],
+        ["directmonstergenrando", "", 1646, "3"],
+        ["directmonstergenrando", "", 1645, "3"],
+        ["directmonstergenrando", "", 1489, "3"],
     ]
     "hydro1.mis": [
 
@@ -1340,7 +1507,6 @@ ItemTable = {
     "22": ["Small AP Clip", []],
     "23": ["Audio Log", [["Logs2", "Logs", 18]]],
     "24": ["Pellet Shot Box", []],
-    "25": ["Maintenance Tool", []],
     "25": ["Med Patch", []],
     "26": ["20 Nanites", []],
     "27": ["Audio Log", [["Logs2", "Logs", 4]]],
@@ -1450,5 +1616,29 @@ ItemTable = {
     "131": ["Audio Log", [["Logs1", "Logs", 23]]],
     "132": ["Audio Log", [["Logs1", "Logs", 20]]],
     "133": ["Audio Log", [["Logs1", "Logs", 2]]],
+    "134": ["Gren Launcher", [["GunState", "Ammo", 12], ["GunState", "Condition (%)", 100]]],
+    "135": ["Laser Pistol", [["GunState", "Condition (%)", 100]]],
+    "136": ["EMP Grenade", []],
+    "137": ["Audio Log", [["Logs3", "Logs", 14]]],
+    "138": ["Audio Log", [["Logs3", "Logs", 15]]],
+    "139": ["SwineHunter Cart", []],
+    "140": ["Anti-Annelid Toxin", []],
+    "141": ["LabAssistant", []],
+    "142": ["Audio Log", [["Logs3", "Logs", 2]]],
+    "143": ["Audio Log", [["Logs3", "Logs", 3]]],
+    "144": ["Medium Nanite Pile", [["StackCount", 40]]],
+    "145": ["Audio Log", [["Logs3", "Logs", 11]]],
+    "146": ["Hydro Card B", [["KeySrc", "RegionID", "HYD B"]]],
+    "147": ["Audio Log", [["Logs3", "Logs", 6]]],
+    "148": ["Audio Log", [["Logs3", "Logs", 1]]],
+    "149": ["Hydro Card A", [["KeySrc", "RegionID", "HYD A"]]],
+    "150": ["Molec. Analyzer", []],
+    "151": ["Audio Log", [["Logs3", "Logs", 4]]],
+    "152": ["Maintenance Tool", []],
+    "153": ["Audio Log", [["Logs3", "Logs", 10]]],
+    "154": ["Audio Log", [["Logs3", "Logs", 8]]],
+    "155": ["Modify Soft V1", []],
+    "156": ["Audio Log", [["Logs3", "Logs", 5]]],
+    "157": ["Manifest", [["Logs3", "Logs", 32]]],
     }
 }
