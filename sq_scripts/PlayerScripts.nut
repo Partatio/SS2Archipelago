@@ -241,6 +241,13 @@ class PlayerScripts extends SqRootScript
 						Property.Set(newenemy, "PhysControl", "Controls Active", 0);
 						SetOneShotTimer(newenemy, "CreateTripwire", 3);
 						}
+					if (chosenenemy == "Greater Over." || chosenenemy == "Overlord")
+						{
+							local brainstem = Object.Create("Overlord Brain");
+							Object.teleport(brainstem, Object.Position(newenemy));
+							Link.Create("AIWatchObj", newenemy, brainstem);
+							Property.Set(brainstem, "PhysControl", "Controls Active", 0);
+						}
 					continue;
 					}
 				case "directmonstergenrando":#change the enemies a DirectMonsterGen gotten from command[2] spawns to enemies chosen randomly from a tier table based on command[3]
@@ -340,6 +347,7 @@ class PlayerScripts extends SqRootScript
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
 				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
 				Property.SetSimple(self, "AI_PtrlRnd", TRUE); #Whether player has not left airlock
+				Property.SetSimple(self, "WeaponDamge", 1); #current osupgrade slot
 
 				local shoparray = "";
 				for (local i = 1000; i < 1139; i++)
@@ -452,28 +460,37 @@ class PlayerScripts extends SqRootScript
 			}
 		case "OsUnlock":
 			{
-			if (Property.Get(self, "TraitsDesc", "Trait 1") == 0)
+				local curosslot = Property.Get(self, "WeaponDamge");
+				switch (curosslot)
 				{
-				Property.Set(self, "TraitsDesc", "Trait 1", item[1]);
-				break;
-				}
-			if (Property.Get(self, "TraitsDesc", "Trait 2") == 0)
-				{
-				Property.Set(self, "TraitsDesc", "Trait 2", item[1]);
-				break;
-				}
-			if (Property.Get(self, "TraitsDesc", "Trait 3") == 0)
-				{
-				Property.Set(self, "TraitsDesc", "Trait 3", item[1]);
-				break;
-				}
-			if (Property.Get(self, "TraitsDesc", "Trait 4") == 0)
-				{
-				Property.Set(self, "TraitsDesc", "Trait 4", item[1]);
-				break;
-				}
-			print("An OS upgrade was attempted to be obtained while all slots are full.")
-			break;
+					case 1:
+						{
+						Property.Set(self, "TraitsDesc", "Trait 1", item[1]);
+						break;
+						}
+					case 2:
+						{
+						Property.Set(self, "TraitsDesc", "Trait 2", item[1]);
+						break;
+						}
+					case 3:
+						{
+						Property.Set(self, "TraitsDesc", "Trait 3", item[1]);
+						break;
+						}
+					case 4:
+						{
+						Property.Set(self, "TraitsDesc", "Trait 4", item[1]);
+						break;
+						}
+					}
+				if (curosslot == 4)
+					curosslot = 1;
+				else
+					curosslot = curosslot + 1;
+				Property.SetSimple(self, "WeaponDamge", curosslot);
+				if (item[1] == 6)
+					ShockGame.AddExp(self, 20, TRUE);
 			}
 		default:
 			{

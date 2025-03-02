@@ -961,7 +961,7 @@ enemytables =
     "OG-Grenade"
     ],
 
-    "5": [
+    "5ranged": [
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",

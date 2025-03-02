@@ -223,6 +223,16 @@ CreateArch "Misc Metaprops" "CybModShopScripts"
 }
 +MetaProp "CybModShop" "CybModShopScripts"
 
+CreateArch "Misc Metaprops" "UnlootableEnemyScript"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "UnlootableEnemy"
+	}
+}
++MetaProp "Protocol Droid" "UnlootableEnemyScript"
++MetaProp "Overlord" "UnlootableEnemyScript"
+
 -ObjProp "Experience Trap" "Scripts"
 
 //RoSoDudes repairable crates
