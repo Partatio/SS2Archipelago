@@ -711,7 +711,81 @@ mapinstructions =
         ["directmonstergenrando", "", 1489, "3"],
     ]
     "hydro1.mis": [
-
+        ["placeaploc", "", vector(-81.73, 123.66, -0.76), 477, 77], #477:On ground in storage room hydro1
+        ["placeaploc", "", vector(-72.82, 60.27, -0.74), 478, 545], #478:Under bench near security control station in hallways near entrance hydro1
+        ["placeaploc", "", vector(-68.82, 46.77, -0.74), 479, 544], #479:On ground near security control station in hallways near entrance hydro1
+        ["placeaploc", "", vector(-94.5, 18.5, -0.65), 480, 961], #480:On ground near body in hallways near entrance hydro1
+        ["placeaploc", "", [472], 481, 983], #481:In body in hallway between hallways near entrance and cultivation hydro1
+        ["placeaploc", "", [466, 465], 482, 1199], #482:In bodies near entrance hydro1
+        ["placeaploc", "", vector(-60.75, 140.62, 9.61), 483, 969], #483:In cieling near charger hydro1
+        ["placeaploc", "", [466, 465], 484, 998], #484:In bodies near entrance 2 hydro1
+        ["placeaploc", "", [466, 465], 485, 1079], #485:In bodies near entrance 3 hydro1
+        ["placeaploc", "", vector(-53.17, 106.38, -0.91), 486, 1083], #486:On ground outside entrance room hydro1
+        ["placeaploc", "", [1245, 1241], 487, 620], #487:In crates next to security crate in hallway near entrance hydro1
+        ["placeaploc", "", [1245, 1241], 488, 1096], #488:In crates next to security crate in hallway near entrance 2 hydro1
+        ["placeaploc", "", [1233], 489, 999], #489:In security crate in hallway near entrance hydro1
+        ["placeaploc", "", [1003], 490, 1008], #490:In enemy in entrance room that spawns after inserting toxin-a in this level hydro1
+        ["placeaploc", "", [1003], 491, 996], #491:In enemy in entrance room that spawns after inserting toxin-a in this level 2 hydro1
+        ["placeaploc", "", vector(-102, 128.5, 3.35), 492, 85], #492:Hidden between boxes in storage room hydro1
+        ["placeaploc", "", [325], 493, 1094], #493:In security crate in storage room hydro1
+        ["placeaploc", "", [98, 103], 494, 997], #494:In bodies in storage room hydro1
+        ["placeaploc", "", [1248, 1247, 1246, 1250, 1249, 1251], 495, 1052], #495:In crates in storage room hydro1
+        ["placeaploc", "", [1248, 1247, 1246, 1250, 1249, 1251], 496, 1032], #496:In crates in storage room 2 hydro1
+        ["placeaploc", "", vector(-85.95, 78, 2.19), 497, 621], #497:In between plants in hallways near entrance hydro1
+        ["placeaploc", "", vector(-54.05, 73.46, 3.13), 498, 976], #498:On ledge near plants in hallways near entrance hydro1
+        ["placeaploc", "", [473, 482], 499, 483], #499:In bodies near security control station in hallways near entrance hydro1
+        ["placeaploc", "", [473, 482], 500, 478], #500:In bodies near security control station in hallways near entrance 2 hydro1
+        ["placeaploc", "", [473, 482], 501, 993], #501:In bodies near security control station in hallways near entrance 3 hydro1
+        ["placeaploc", "", [473, 482], 502, 1105], #502:In bodies near security control station in hallways near entrance 4 hydro1
+        ["placeaploc", "", vector(-37.92, 49.99, 2.14), 503, 1082], #503:In between plants in hallways near entrance 2 hydro1
+        ["placeaploc", "", [471], 504, 79], #504:In body near door in hallways near entrance hydro1
+        ["placeaploc", "", [471], 505, 1090], #505:In body near door in hallways near entrance 2 hydro1
+        ["placeaploc", "", [471], 506, 1000], #506:In body near door in hallways near entrance 3 hydro1
+        ["placeaploc", "", [471], 507, 975], #507:In body near door in hallways near entrance 4 hydro1
+        ["placeaploc", "", [472], 508, 1020], #508:In body in hallway between hallways near entrance and cultivation 2 hydro1
+        ["placeaploc", "", vector(-48.2, -27.29, 10.73), 509, 1142], #509:On ledge near plants up ladder in first left room in cultivation hydro1
+        ["placeaploc", "", vector(-21.7, -38.74, -4.49), 510, 1086], #510:On ground in first left room in cultivation hydro1
+        ["placeaploc", "", vector(-122.49, -93.71, -4.89), 511, 90], #511:On ground in second right room in cultivation hydro1
+        ["placeaploc", "", [1146, 1147], 512, 995], #512:In crates up ladder in second right room in cultivation hydro1
+        ["placeaploc", "", [1146, 1147], 513, 1145], #513:In crates in second right room in cultivation 2 hydro1
+        ["placeaploc", "", vector(-96.41, -108.55, 10.68), 514, 1144], #514:On ledge near plants up ladder in second right room in cultivation hydro1
+        ["placeaploc", "", vector(-66.76, -105.13, -5), 515, 1143], #515:In water in second part of hallway in cultivation hydro1
+        ["placeaploc", "", vector(-43.5, -105.81, 7.71), 516, 994], #516:On ground up ladder in second left room in cultivation hydro1
+        ["placeaploc", "", vector(-48. -88, 7.39), 517, 1055], #517:On ground up ladder in second left room in cultivation 2 hydro1
+        ["placeaploc", "", vector(-24.28, -103.8, -4.93), 518, 490], #518:On ground in water in second left room in cultivation hydro1
+        ["placeaploc", "", vector(-23.46, -99.89, -4.74), 519, 1141], #519:On ground in water in second left room in cultivation 2 hydro1
+        ["randomizerepl", "", 1084],
+        ["replacecybmodshop", "", [97, 1256], vector(-56.05, 136.12, 0.68)],
+        ["randomizeenemy", "", 328, "3", vector(-38.5, 144.67, 1.16)],
+        ["randomizeenemy", "", 326, "3", vector(-38.54, 117.78, 1.16)],
+        ["randomizeenemy", "", 1003, "3", vector(-115, 136, -12)],
+        ["randomizeenemy", "", 168, "3", vector(-123, 136, -12)],
+        ["randomizeenemy", "", 139, "3", vector(-123.5, 144.5, -15.84)],
+        ["randomizeenemy", "", 407, "3", vector(-96, 64, 2.23)],
+        ["randomizeenemy", "", 403, "3", vector(-48, 48, 2.23)],
+        ["randomizeenemy", "", 373, "3", vector(-30, -36.5, -2.88)],
+        ["randomizeenemy", "", 378, "3", vector(-24.5, -48, -2.78)],
+        ["randomizeenemy", "", 364, "3", vector(-115, -45, -2.88)],
+        ["randomizeenemy", "", 1089, "3", vector(-106.5, -40, 0.45)],
+        ["randomizeenemy", "", 376, "3", vector(-100, -49.5, -2.78)],
+        ["randomizeenemy", "", 374, "3", vector(-49.5, -88.5, -2.91)],
+        ["randomizeenemy", "", 377, "3", vector(-44, -104.5, -2.78)],
+        ["randomizeenemy", "", 399, "3", vector(-72, -108, 0.23)],
+        ["randomizeenemy", "", 362, "3", vector(-95.5, -104.5, -2.88)],
+        ["randomizeenemy", "", 375, "3", vector(-100, -88.5, -2.99)],
+        ["randomizeenemy", "", 363, "3", vector(-117.5, -91.5, -2.88)],
+        ["randomizeenemy", "", 154, "3", vector(-98, -159, 0.99)],
+        ["randomizeenemy", "", 135, "3", vector(-82, -163, 1.16)],
+        ["randomizeenemy", "", 156, "3", vector(-64, -151.5, 1)],
+        ["randomizeenemy", "", 634, "3", vector(-63, -164, 2.91)],
+        ["randomizeenemy", "", 148, "3", vector(-51, -160, 1.16)],
+        ["randomizeenemy", "", 391, "3", vector(-35.96, -183.64, 0.23)],
+        ["directmonstergenrando", "", 1155, "3"],
+        ["directmonstergenrando", "", 1314, "3"],
+        ["directmonstergenrando", "", 337, "3"],
+        ["directmonstergenrando", "", 94, "3"],
+        ["directmonstergenrando", "", 172, "3"],
+        ["directmonstergenrando", "", 151, "3"],
     ]
     "hydro3.mis": [
 
@@ -1609,7 +1683,7 @@ ItemTable = {
     "124": ["Audio Log", [["Logs1", "Logs", 19]]],
     "125": ["Audio Log", [["Logs1", "Logs", 12]]],
     "126": ["Small BP Pile", [["StackCount", 3]]],
-    "127": ["SwitftBoost", []],
+    "127": ["SwifttBoost", []],
     "128": ["Audio Log", [["Logs1", "Logs", 18]]],
     "129": ["Audio Log", [["Logs1", "Logs", 21]]],
     "130": ["Hack Soft V1", []],
@@ -1640,5 +1714,11 @@ ItemTable = {
     "155": ["Modify Soft V1", []],
     "156": ["Audio Log", [["Logs3", "Logs", 5]]],
     "157": ["Manifest", [["Logs3", "Logs", 32]]],
+    "158": ["Assault Rifle", [["GunState", "Ammo", 72], ["GunState", "Condition (%)", 100]]],
+    "159": ["Audio Log", [["Logs3", "Logs", 7]]],
+    "160": ["Audio Log", [["Logs3", "Logs", 9]]],
+    "161": ["Incend. Grenade", []],
+    "162": ["Hack Soft V2", []],
+    "163": ["Hydro Card D", [["KeySrc", "RegionID", "HYD D"]]],
     }
 }
