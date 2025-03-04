@@ -751,7 +751,7 @@ mapinstructions =
         ["placeaploc", "", vector(-96.41, -108.55, 10.68), 514, 1144], #514:On ledge near plants up ladder in second right room in cultivation hydro1
         ["placeaploc", "", vector(-66.76, -105.13, -5), 515, 1143], #515:In water in second part of hallway in cultivation hydro1
         ["placeaploc", "", vector(-43.5, -105.81, 7.71), 516, 994], #516:On ground up ladder in second left room in cultivation hydro1
-        ["placeaploc", "", vector(-48. -88, 7.39), 517, 1055], #517:On ground up ladder in second left room in cultivation 2 hydro1
+        ["placeaploc", "", vector(-48, -88, 7.39), 517, 1055], #517:On ground up ladder in second left room in cultivation 2 hydro1
         ["placeaploc", "", vector(-24.28, -103.8, -4.93), 518, 490], #518:On ground in water in second left room in cultivation hydro1
         ["placeaploc", "", vector(-23.46, -99.89, -4.74), 519, 1141], #519:On ground in water in second left room in cultivation 2 hydro1
         ["randomizerepl", "", 1084],
@@ -788,7 +788,54 @@ mapinstructions =
         ["directmonstergenrando", "", 151, "3"],
     ]
     "hydro3.mis": [
-
+        ["placeaploc", "", vector(-68.36, -32.64, 1.19), 520, 103], #520:On ground near body near entrance hydro3
+        ["placeaploc", "", vector(-65, 43.17, 1.25), 521, 101], #521:On desk in room with 3 windows across from entrance hydro3
+        ["placeaploc", "", vector(-135, -83.5, -11.24), 522, 102], #522:On ground near body near environmental regulator hydro3
+        ["placeaploc", "", vector(-129.37, -77.37, -10.84), 523, 261], #523:On ground near body near environmental 2 regulator hydro3
+        ["placeaploc", "", [192, 207], 524, 95], #524:In bodies near environmental regulator hydro3
+        ["placeaploc", "", [192, 207], 525, 108], #525:In bodies near environmental regulator 2 hydro3
+        ["placeaploc", "", [192, 207], 526, 121], #526:In bodies near environmental regulator 3 hydro3
+        ["placeaploc", "", [192, 207], 527, 114], #527:In bodies near environmental regulator 4 hydro3
+        ["placeaploc", "", [192, 207], 528, 94], #528:In bodies near environmental regulator 5 hydro3
+        ["placeaploc", "", [192, 207], 529, 271], #529:In bodies near environmental regulator 6 hydro3
+        ["placeaploc", "", [189], 530, 124], #530:In body to the right of bottom of ramp hydro3
+        ["placeaploc", "", [189], 531, 96], #531:In body to the right of bottom of ramp 2 hydro3
+        ["placeaploc", "", [189], 532, 97], #532:In body to the right of bottom of ramp 3 hydro3
+        ["placeaploc", "", vector(-115.66, 19.11, -14.92), 533, 118], #533:In cutout in floor to far right of bottom of ramp hydro3
+        ["placeaploc", "", [2116], 534, 99], #534:In desk near replicator in entrance area hydro3
+        ["placeaploc", "", [2116], 535, 116], #535:In desk near replicator in entrance area 2 hydro3
+        ["placeaploc", "", [2116], 536, 200], #536:In desk near replicator in entrance area 3 hydro3
+        ["placeaploc", "", vector(-60.28, -42.07, 1.08), 537, 967], #537:On ground to right of entrance hydro3
+        ["placeaploc", "", [190], 538, 122], #538:In body near entrance hydro3
+        ["placeaploc", "", [190], 539, 100], #539:In body near entrance 2 hydro3
+        ["placeaploc", "", [190], 540, 105], #540:In body near entrance 3 hydro3
+        ["placeaploc", "", vector(-47.99, 10.74, 7.59), 541, 382], #541:On desk in raised room with glass near replicator hydro3
+        ["placeaploc", "", vector(-27.31, 8.53, 5.33), 542, 119], #542:Behind crates in raised room with glass near replicator hydro3
+        ["placeaploc", "", [212, 214], 543, 131], #543:In crates in raised room with glass near replicator hydro3
+        ["placeaploc", "", [215], 544, 115], #544:In security Crate in raised room with glass near replicator hydro3
+        ["placeaploc", "", vector(-52.4, 37.67, 15.88), 545, 753], #545:In secret wall cutout accessible by jumping on pipes in room with 3 windows across from entrance hydro3
+        ["placeaploc", "", vector(-52, 38.5, 15.58), 546, 120], #546:In secret wall cutout accessible by jumping on pipes in room with 3 windows across from entrance 2 hydro3
+        ["placeaploc", "", vector(-53.42, 38.65, 15.61), 547, 283], #547:In secret wall cutout accessible by jumping on pipes in room with 3 windows across from entrance 3 hydro3
+        ["placeaploc", "", [191], 548, 130], #548:In body in room with 3 windows across from entrance hydro3
+        ["placeaploc", "", [191], 549, 104], #549:In body in room with 3 windows across from entrance 2 hydro3
+        ["placeaploc", "", [191], 550, 113], #550:In body in room with 3 windows across from entrance 3 hydro3
+        ["placeaploc", "", [191], 551, 106], #551:In body in room with 3 windows across from entrance 4 hydro3
+        ["randomizerepl", "", 1084],
+        ["randomizeenemy", "", 374, "3", vector(-128, -92, -9.66)],
+        ["randomizeenemy", "", 373, "3", vector(-126, -73, -9.69)],
+        ["randomizeenemy", "", 372, "3", vector(-127, -60, -9.69)],
+        ["randomizeenemy", "", 168, "3", vector(-127, -37.5, -8.99)],
+        ["randomizeenemy", "", 167, "3", vector(-130.5, -18.5, -8.99)],
+        ["randomizeenemy", "", 162, "3", vector(-110.5, -35.5, -8.69)],
+        ["randomizeenemy", "", 164, "3", vector(-104, -45.5, -8.96)],
+        ["randomizeenemy", "", 165, "3", vector(-110, -8.5, -8.96)],
+        ["randomizeenemy", "", 140, "3", vector(-110, -0.5, -7)],
+        ["randomizeenemy", "", 166, "3", vector(-106, 7.5, -8.96)],
+        ["randomizeenemy", "", 169, "3", vector(-69, -23.5, 3.06)],
+        ["randomizeenemy", "", 170, "3", vector(-71, 5.5, 3.06)],
+        ["randomizeenemy", "", 171, "3", vector(-59.5, 1, 3.06)],
+        ["randomizeenemy", "", 138, "3", vector(-45, -6, 7.66)],
+        ["directmonstergenrando", "", 145, "3"],
     ]
     "ops2.mis": [
 
@@ -1683,7 +1730,7 @@ ItemTable = {
     "124": ["Audio Log", [["Logs1", "Logs", 19]]],
     "125": ["Audio Log", [["Logs1", "Logs", 12]]],
     "126": ["Small BP Pile", [["StackCount", 3]]],
-    "127": ["SwifttBoost", []],
+    "127": ["SwiftBoost", []],
     "128": ["Audio Log", [["Logs1", "Logs", 18]]],
     "129": ["Audio Log", [["Logs1", "Logs", 21]]],
     "130": ["Hack Soft V1", []],

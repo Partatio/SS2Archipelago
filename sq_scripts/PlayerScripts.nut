@@ -28,6 +28,7 @@ class PlayerScripts extends SqRootScript
 					if (type(command[2]) == type([]))
 					{
 						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
+						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  vector());
 						Property.SetSimple(NewAPLocation, "HasRefs", FALSE);
 						Link.Create(linkkind("Contains"), chosencontainer, NewAPLocation);
 					}
