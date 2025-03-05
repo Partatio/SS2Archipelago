@@ -838,13 +838,214 @@ mapinstructions =
         ["directmonstergenrando", "", 145, "3"],
     ]
     "ops2.mis": [
-
+        ["placeaploc", "", vector(-166.1, 80.62, -23.72), 552, 1494], #552:On ground near body near crew quarters entrance ops2
+        ["placeaploc", "", [519], 553, 522], #553:In desk in first left room coming from conference room in system admin area ops2
+        ["placeaploc", "", vector(-188.21, 174.55, -39.82), 554, 981], #554:On ground near body in room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", vector(-58.99, 25.2, -19.83), 555, 816], #555:On top of crates in room with elevator and xerxes ops2
+        ["placeaploc", "", [507, 503, 504, 505, 506], 556, 509], #556:In crates in room with elevator and xerxes ops2
+        ["placeaploc", "", [507, 503, 504, 505, 506], 557, 508], #557:In crates in room with elevator and xerxes 2 ops2
+        ["placeaploc", "", vector(-114.76, 11.36, -23.92), 558, 544], #558:On ground near door in room with elevator and xerxes ops2
+        ["placeaploc", "", vector(-166.35, -6.87, -22.36), 559, 479], #559:In trap down ladder in room on upper floor close to entrance in system admin area ops2
+        ["placeaploc", "", vector(-170.52, -6.5, -22.92), 560, 1097], #560:In trap down ladder in room on upper floor close to entrance in system admin area 2 ops2
+        ["placeaploc", "", [383], 561, 545], #561:In desk in room closest to entrance to the left in system admin area ops2
+        ["placeaploc", "", [383], 562, 478], #562:In desk in room closest to entrance to the left in system admin area 2 ops2
+        ["placeaploc", "", [763], 563, 471], #563:In desk in room on upper floor close to entrance in system admin area ops2
+        ["placeaploc", "", [398], 564, 459], #564:In desk in room closest to entrance to the right in system admin area ops2
+        ["placeaploc", "", [519], 565, 521], #565:In desk in first left room coming from conference room in system admin area 2 ops2
+        ["placeaploc", "", [483, 756], 566, 523], #566:In desks in first right room coming from conference room in system admin area ops2
+        ["placeaploc", "", [158, 454], 567, 486], #567:In desks in room overlooking conference room in system admin area ops2
+        ["placeaploc", "", [158, 454], 568, 487], #568:In desks in room overlooking conference room in system admin area 2 ops2
+        ["placeaploc", "", [483, 756], 569, 485], #569:In desks in first right room coming from conference room in system admin area 2 ops2
+        ["placeaploc", "", vector(-171.11, 60.32, -23.92), 570, 1093], #570:On ground outside entrance to crew quarters ops2
+        ["placeaploc", "", [672], 571, 1492], #571:In body near entrance to crew quarters ops2
+        ["placeaploc", "", vector(-166.03, 90.77, -39.49), 572, 845], #572:On ground near piano in room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", [495], 573, 496], #573:In locker in room with piano in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", [495], 574, 1109], #574:In locker in room with piano in lower area near pool with support in middle in crew quarters 2 ops2
+        ["placeaploc", "", [500], 575, 502], #575:In locker in room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", [500], 576, 501], #576:In locker in room in lower area near pool with support in middle in crew quarters 2 ops2
+        ["placeaploc", "", [497], 577, 482], #577:In locker in room in lower area near pool with support in middle in crew quarters 3 ops2
+        ["placeaploc", "", [638], 578, 1108], #578:In body near charger in upper area in crew quarters ops2
+        ["placeaploc", "", vector(-169.88, 137.47, -27.24), 579, 1463], #579:On ledge under overlooking room near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", [546], 580, 547], #580:In locker in room in lower area near pool with support in middle in crew quarters 4 ops2
+        ["placeaploc", "", [546], 581, 458], #581:In locker in room in lower area near pool with support in middle in crew quarters 5 ops2
+        ["placeaploc", "", vector(-128.55, 148.14, -37.8), 582, 475], #582:On ground in room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", vector(-119.27, 173.69, -39.92), 583, 1495], #583:On ground near body in meat room in room in lower area near pool with support in middle in crew quarters
+        ["placeaploc", "", [552], 584, 1496], #584:In locker in meat room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "", [492], 585, 494], #585:In locker in room in lower area near pool without support crew quarters ops2
+        ["placeaploc", "", [492], 586, 493], #586:In locker in room in lower area near pool without support crew quarters 2 ops2
+        ["placeaploc", "", [526], 587, 535], #587:In locker in room in lower area near pool without support crew quarters 3 ops2
+        ["placeaploc", "", [526], 588, 1102], #588:In locker in room in lower area near pool without support crew quarters 4 ops2
+        ["placeaploc", "", [1485], 589, 1488], #589:In body near replicator ops2
+        ["placeaploc", "", [472], 590, 469], #590:In locker in room in lower area near pool without support crew quarters 5 ops2
+        ["placeaploc", "", [472], 591, 473], #591:In locker in room in lower area near pool without support crew quarters 6 ops2
+        ["placeaploc", "", [1540], 592, 491], #592:In security crate in room in lower area near pool without support crew quarters ops2
+        ["placeaploc", "", [1540], 593, 474], #593:In security crate in room in lower area near pool without support crew quarters 2 ops2
+        ["placeaploc", "", [290], 594, 476], #594:In locker in room in lower area near pool without support crew quarters 7 ops2
+        ["placeaploc", "", [490], 595, 520], #595:In locker in room in lower area near pool without support crew quarters 8 ops2
+        ["placeaploc", "", [490], 596, 514], #596:In locker in room in lower area near pool without support crew quarters 9 ops2
+        ["placeaploc", "", [685], 597, 1017], #597:In locker in room in lower area near pool without support crew quarters 10 ops2
+        ["placeaploc", "", vector(-134.78, 258.56, -37.75), 598, 1491], #598:On ground in room in lower area near pool without support crew quarters 11 ops2
+        ["placeaploc", "", [524], 599, 525], #599:In locker in room in lower area near pool without support crew quarters 11 ops2
+        ["placeaploc", "", [702], 600, 460], #600:In locker in room in lower area near pool without support crew quarters 12 ops2
+        ["placeaploc", "", [702], 601, 481], #601:In locker in room in lower area near pool without support crew quarters 13 ops2
+        ["placeaploc", "", [1541], 602, 498], #602:In security crate near chemical storeroom ops2
+        ["placeaploc", "", [1541], 603, 477], #603:In security crate near chemical storeroom 2 ops2
+        ["placeaploc", "", vector(-163.08, 303.59, -24.92), 604, 1090], #604:On ground near chemical storeroom ops2
+        ["placeaploc", "", vector(-146.42, 344.82, -21.42), 605, 1125], #605:On shelf in chemical storeroom ops2
+        ["placeaploc", "", vector(-149.9, 350.88, -20.88), 606, 737], #606:On shelf in chemical storeroom 2 ops2
+        ["placeaploc", "", vector(-148.24, 350.54, -20.88), 607, 738], #607:On shelf in chemical storeroom 3 ops2
+        ["placeaploc", "", vector(-149.49, 350.44, -17.86), 608, 732], #608:On shelf in chemical storeroom 4 ops2
+        ["placeaploc", "", vector(-147.86, 350.2, -17.86), 609, 733], #609:On shelf in chemical storeroom 5 ops2
+        ["placeaploc", "", vector(-145.86, 347.88, -17.87), 610, 530], #610:On shelf in chemical storeroom 6 ops2
+        ["placeaploc", "", vector(-146.07, 346.32, -18.86), 611, 529], #611:On shelf in chemical storeroom 7 ops2
+        ["placeaploc", "", vector(-145.57, 343.02, -17.87), 612, 531], #612:On shelf in chemical storeroom 8 ops2
+        ["placeaploc", "", vector(-145.71, 341.32, -17.86), 613, 716], #613:On shelf in chemical storeroom 9 ops2
+        ["placeaploc", "", vector(-149.55, 337.42, -17.86), 614, 723], #614:On shelf in chemical storeroom 10 ops2
+        ["placeaploc", "", vector(-150.13, 350.12, -14.87), 615, 719], #615:On shelf in chemical storeroom 11 ops2
+        ["placeaploc", "", vector(-148.57, 350.89, -14.87), 616, 722], #616:On shelf in chemical storeroom 12 ops2
+        ["placeaploc", "", vector(-145.42, 345.4, -14.87), 617, 735], #617:On shelf in chemical storeroom 13 ops2
+        ["placeaploc", "", vector(-145.16, 343.95, -14.87), 618, 734], #618:On shelf in chemical storeroom 14 ops2
+        ["placeaploc", "", vector(-145.4, 341.84, -14.87), 619, 718], #619:On shelf in chemical storeroom 15 ops2
+        ["placeaploc", "", vector(-148.36, 337.54, -14.87), 620, 730], #620:On shelf in chemical storeroom 16 ops2
+        ["placeaploc", "", vector(-150.13, 337.09, -14.87), 621, 729], #621:On shelf in chemical storeroom 17 ops2
+        ["placeaploc", "", [254], 690, 554], #690:In enemy that runs to conference room ops2
+        ["randomizerepl", "", 461],
+        ["replacecybmodshop", "", [373, 374, 375, 376], vector(-176.46, 121.68, -8.32)],
+        ["randomizeenemy", "", 815, "4", vector(-193.37, -84.07, -20.05)],
+        ["randomizeenemy", "", 960, "4", vector(-171.4, -30.55, -5.1)],
+        ["randomizeenemy", "", 958, "4", vector(-165.79, -30.38, -5.1)],
+        ["randomizeenemy", "", 1016, "4", vector(-190.43, 4, -7.68)],
+        ["randomizeenemy", "", 254, "4", vector(-158.48, 27.46, -20.05)],
+        ["randomizeenemy", "", 883, "4", vector(-179.59, 109.63, -6.05)],
+        ["randomizeenemy", "", 817, "4", vector(-146.31, 105.43, -7.97)],
+        ["randomizeenemy", "", 1006, "4", vector(-148.08, 111.56, -37.37)],
+        ["randomizeenemy", "", 837, "4", vector(-152.66, 109.99, -6.05)],
+        ["randomizeenemy", "", 986, "4", vector(-134.3, 130.51, -27.75)],
+        ["randomizeenemy", "", 394, "4", vector(-167.25, 133.74, -20.05)],
+        ["randomizeenemy", "", 984, "4", vector(-199.05, 154.69, -36.05)],
+        ["randomizeenemy", "", 352, "4", vector(-141.11, 202.46, -36.09)],
+        ["randomizeenemy", "", 878, "4", vector(-157.03, 200.26, -40)],
+        ["randomizeenemy", "", 875, "4", vector(-151.74, 207.23, -40.05)],
+        ["randomizeenemy", "", 144, "4", vector(-149.22, 212.49, -40.05)],
+        ["randomizeenemy", "", 880, "4", vector(-192.92, 225.01, -39.91)],
+        ["randomizeenemy", "", 861, "4", vector(-182.8, 251.15, -37.66)],
+        ["randomizeenemy", "", 859, "4", vector(-178.46, 258.75, -37.66)],
+        ["randomizeenemy", "", 868, "4", vector(-172.19, 259.07, -41.35)],
+        ["randomizeenemy", "", 867, "4", vector(-165.38, 254.31, -39.73)],
+        ["randomizeenemy", "", 863, "4", vector(-165.17, 248.66, -37.66)],
+        ["randomizeenemy", "", 866, "4", vector(-170.25, 245.74, -39.73)],
+        ["randomizeenemy", "", 226, "4", vector(-173.42, 248.8, -39.73)],
+        ["randomizeenemy", "", 893, "4", vector(-220.07, 284.9, -36.05)],
+        ["randomizeenemy", "", 355, "4", vector(-200.91, 318.2, -35.97)],
+        ["randomizeenemy", "", 354, "4", vector(-163.78, 354.64, -20.44)],
+        ["randomizeenemy", "", 873, "4", vector(-143.17, 318.18, -37.94)],
+        ["randomizeenemy", "", 870, "4", vector(-135.61, 302.51, -39.86)],
+        ["randomizeenemy", "", 869, "4", vector(-136, 298.37, -39.86)],
+        ["randomizeenemy", "", 871, "4", vector(-132.69, 296.33, -37.94)],
+        ["directmonstergenrando", "", 130, "4"],
+        ["directmonstergenrando", "", 1048, "4"],
+        ["directmonstergenrando", "", 342, "4"],
     ]
     "ops1.mis": [
-
+        ["placeaploc", "", vector(39.64, 17.19, -23.9), 622, 19], #622:On ground near polito ops1
+        ["destroy", "", 132], #forcefield that stops you from leaving, sounds horrible though with overlapping emails.  Potentially hard code a solution later.
     ]
     "ops3.mis": [
-
+        ["placeaploc", "", vector(-66.37, 88.08, -23.75), 623, 1263], #623:On ground next to body next to entrance ops3
+        ["placeaploc", "", vector(-63.1, 123.38, -23.7), 624, 748], #624:On ground near body in lounge ops3
+        ["placeaploc", "", vector(-20.73, 135.99, -20.05), 625, 1804], #625:In body in hallway towards data storage ops3
+        ["placeaploc", "", vector(36.17, 129.22, -23.75), 626, 731], #626:On ground in data storage ops3
+        ["placeaploc", "", vector(36.23, 132.96, -23.8), 627, 1811], #627:On ground in data storage 2 ops3
+        ["placeaploc", "", vector(36.24, 124.44, -23.82), 628, 775], #628:On ground in data storage 3 ops3
+        ["placeaploc", "", vector(-61.81, 190.98, -22.9), 629, 734], #629:On ground on ramp near charger ops3
+        ["placeaploc", "", vector(44.65, 196.6, -23.88), 630, 765], #630:On ground near body in bathroom ops3
+        ["placeaploc", "", [1173], 631, 730], #631:In body in cafeteria ops3
+        ["placeaploc", "", vector(7.34, 246.01, -23.77), 632, 1176], #632:On ground near body in front of bathroom ops3
+        ["placeaploc", "", vector(-55.31, 315.33, -23.88), 633, 785], #633:On ground near body near replicator ops3
+        ["placeaploc", "", vector(-92.56, 359.67, -23.71), 634, 773], #634:On ground near body in 2nd room on right in power admin near entrance ops3
+        ["placeaploc", "", vector(46.31, 432.32, -28.61), 635, 1125], #635:On ground near body in freezer area ops3
+        ["placeaploc", "", [1124, 1136], 636, 784], #636:In bodies in freezer area ops3
+        ["placeaploc", "", [1124, 1136], 637, 787], #637:In bodies in freezer area 2 ops3
+        ["placeaploc", "", vector(14.31, 394.96, -29.69), 638, 1803], #638:On ground in freezer near freezer with body ops3
+        ["placeaploc", "", [231], 639, 729], #639:In desk in office in kitchen ops3
+        ["placeaploc", "", [231], 640, 1350], #640:In desk in office in kitchen 2 ops3
+        ["placeaploc", "", vector(41.17, 322.04, -32.92), 641, 1357], #641:On ground in cafeteria near security control station ops3
+        ["placeaploc", "", [1173, 1168], 642, 786], #642:In bodies in cafetaria on side further from kitchen ops3
+        ["placeaploc", "", [749], 643, 760], #643:In body in bathroom ops3
+        ["placeaploc", "", [749], 644, 759], #644:In body in bathroom 2 ops3
+        ["placeaploc", "", vector(54.82, 190.7, -23.87), 645, 750], #645:Hidden between toilet and wall near body in bathroom ops3
+        ["placeaploc", "", [718], 646, 719], #646:In body in data storage ops3
+        ["placeaploc", "", [718], 647, 720], #647:In body in data storage 2 ops3
+        ["placeaploc", "", vector(10.92, 132.21, -19.88), 648, 828], #648:On top of crate in data storage ops3
+        ["placeaploc", "", [776, 771, 780, 781, 768, 766, 782], 649, 919], #649:In crates in data storage ops3
+        ["placeaploc", "", vector(-3.35, 150.24, 1.05), 650, 777], #650:High up on ledge in data storage ops3
+        ["placeaploc", "", [1031], 651, 697], #651:In security crate in 1st room on right in power admin near entrance ops3
+        ["placeaploc", "", [1031], 652, 696], #652:In security crate in 1st room on right in power admin near entrance 2 ops3
+        ["placeaploc", "", vector(-97.9, 389.45, -27.36), 653, 778], #653:On ground in middle of power admin near entrance ops3
+        ["placeaploc", "", [151], 654, 825], #654:In desk in 3rd room on right in power admin near entrance ops3
+        ["placeaploc", "", [772], 655, 774], #655:In body in 2nd room on left in power admin near entrance ops3
+        ["placeaploc", "", [1730], 656, 1802], #656:In body near entrance ops3
+        ["placeaploc", "", [1288], 657, 1298], #657:In body hanging from cieling near replicator ops3
+        ["placeaploc", "", [1288], 658, 1362], #658:In body hanging from cieling near replicator 2 ops3
+        ["placeaploc", "", vector(-94.09, 309.21, -23.86), 659, 724], #659:On ground near body hanging from cieling near replicator ops3
+        ["placeaploc", "", [779], 660, 788], #660:In body near replicator ops3
+        ["placeaploc", "", [1173, 1168], 661, 84], #661:In bodies in cafetaria on side further from kitchen 2 ops3
+        ["placeaploc", "", [699, 700], 662, 1356], #662:In crates in room near charger ops3
+        ["placeaploc", "", [699, 700], 663, 698], #663:In crates in room near charger 2 ops3
+        ["placeaploc", "", [699, 700], 664, 717], #664:In crates in room near charger 3 ops3
+        ["placeaploc", "", [793], 665, 937], #665:In enemy in raised area near charger ops3
+        ["placeaploc", "", vector(-32.4, 203.24, -23.36), 666, 770], #666:On ground in bathroom ops3
+        ["placeaploc", "", [790], 667, 940], #667:In body near charger ops3
+        ["placeaploc", "", [790], 668, 723], #668:In body near charger 2 ops3
+        ["placeaploc", "", [1032], 669, 711], #669:In security crate near charger ops3
+        ["placeaploc", "", [1032], 670, 1033], #670:In security crate near charger 2 ops3
+        ["placeaploc", "", vector(-60.67, 197.36, -13.92), 671, 826], #671:On ground in room in raised area ops3
+        ["placeaploc", "", [733], 672, 764], #672:In body on ramp near charger ops3
+        ["placeaploc", "", [733], 673, 763], #673:In body on ramp near charger 2 ops3
+        ["placeaploc", "", [938], 674, 1017], #674:In body near resurrection station ops3
+        ["placeaploc", "", [938], 675, 1018], #675:In body near resurrection station 2 ops3
+        ["placeaploc", "", [798, 799, 800], 676, 1019], #676:In crates outside lounge ops3
+        ["placeaploc", "", [798, 799, 800], 677, 722], #677:In crates outside lounge 2 ops3
+        ["placeaploc", "", [767, 743], 678, 769], #678:In bodies in lounge ops3
+        ["placeaploc", "", [767, 743], 679, 747], #679:In bodies in lounge 2 ops3
+        ["placeaploc", "", [767, 743], 680, 745], #680:In bodies in lounge 3 ops3
+        ["placeaploc", "", [767, 743], 681, 744], #681:In bodies in lounge 4 ops3
+        ["placeaploc", "", vector(-94.31, 97.62, -20.05), 682, 1351], #682:On bench arm in lounge ops3
+        ["placeaploc", "", vector(-88.46, 101.94, -23.9), 683, 789], #683:Hidden under bench in lounge ops3
+        ["placeaploc", "", [1262], 684, 1358], #684:In body near entrance near lounge ops3
+        ["placeaploc", "", [1262], 685, 1805], #685:In body near entrance near lounge 2 ops3
+        ["placeaploc", "", vector(-45.68, 85.04, -23.92), 686, 1349], #686:On ground near entrance near lounge ops3
+        ["placeaploc", "", [1254], 687, 1746], #687:In body in hallway towards data storage 2 ops3
+        ["placeaploc", "", [1743], 688, 1745], #688:In enemy in hallway towards data storage ops3
+        ["placeaploc", "", [125], 689, 840], #689:In enemy that runs into data storage ops3
+        ["destroy", "", 1414], #Ops Chip next to its associated computer, only spawns on easy? dont want it either way
+        ["randomizerepl", "", 693],
+        ["randomizerepl", "", 118],
+        ["replacecybmodshop", "", [758, 691, 690, 757], vector(-79.54, 112.11, -22.32)],
+        ["randomizeenemy", "", 570, "4", vector(-111.64, 388.83, -17.95)],
+        ["randomizeenemy", "", 1010, "4", vector(-101.84, 389.69, -11.95)],
+        ["randomizeenemy", "", 1015, "4", vector(-93.84, 389.69, -11.95)],
+        ["randomizeenemy", "", 1333, "4", vector(-84.34, 388.83, -17.95)],
+        ["randomizeenemy", "", 672, "4", vector(-58.73, 389.4, -20.44)],
+        ["randomizeenemy", "", 246, "4", vector(-67.88, 258.33, -24.04)],
+        ["randomizeenemy", "", 248, "4", vector(-61.48, 252.27, -24.04)],
+        ["randomizeenemy", "", 793, "4", vector(-73.06, 226.44, -10.05)],
+        ["randomizeenemy", "", 573, "4", vector(-67.32, 191.28, -9.05)],
+        ["randomizeenemy", "", 125, "4", vector(-42.94, 119.87, -20.05)],
+        ["randomizeenemy", "", 1743, "4", vector(-18.04, 134.04, -20.05)],
+        ["randomizeenemy", "", 628, "4", vector(-32.42, 191.05, -22.05)],
+        ["randomizeenemy", "", 1095, "4", vector(-25.28, 203.01, -20.05)],
+        ["randomizeenemy", "", 636, "4", vector(50.12, 192.94, -22.04)],
+        ["randomizeenemy", "", 1170, "4", vector(46.95, 264.61, -19.15)],
+        ["randomizeenemy", "", 1167, "4", vector(41.77, 289.22, -15.73)],
+        ["randomizeenemy", "", 1184, "4", vector(36.96, 368.83, -25.97)],
+        ["randomizeenemy", "", 1133, "4", vector(46.38, 426.76, -28.04)],
+        ["randomizeenemy", "", 1135, "4", vector(3.81, 424.66, -24.04)],
+        ["directmonstergenrando", "", 818, "4"],
+        ["directmonstergenrando", "", 265, "4"],
+        ["directmonstergenrando", "", 342, "4"],
+        ["directmonstergenrando", "", 123, "4"],
+        ["directmonstergenrando", "", 270, "4"],
     ]
     "ops4.mis": [
 
@@ -1016,10 +1217,8 @@ enemytables =
     "Midwife",
     "Midwife",
     "Midwife",
-    "Midwife",
     "Laser Turret",
     "Laser Turret",
-    "Red Monkey",
     "Red Monkey",
     "Red Monkey",
     "Red Monkey",
@@ -1029,7 +1228,9 @@ enemytables =
     "Security Robot",
     "Security Robot",
     "Assassin",
-    "Assassin"
+    "Assassin",
+    "OG-Grenade",
+    "Arachnightmare"
     ],
 
     "4Ranged": [
@@ -1044,7 +1245,8 @@ enemytables =
     "Maintenance Robot",
     "Maintenance Robot",
     "Security Robot",
-    "Assassin"
+    "Assassin",
+    "OG-Grenade"
     ],
 
     "5": [
@@ -1730,7 +1932,7 @@ ItemTable = {
     "124": ["Audio Log", [["Logs1", "Logs", 19]]],
     "125": ["Audio Log", [["Logs1", "Logs", 12]]],
     "126": ["Small BP Pile", [["StackCount", 3]]],
-    "127": ["SwiftBoost", []],
+    "127": ["SwifttBoost", []],
     "128": ["Audio Log", [["Logs1", "Logs", 18]]],
     "129": ["Audio Log", [["Logs1", "Logs", 21]]],
     "130": ["Hack Soft V1", []],
@@ -1767,5 +1969,38 @@ ItemTable = {
     "161": ["Incend. Grenade", []],
     "162": ["Hack Soft V2", []],
     "163": ["Hydro Card D", [["KeySrc", "RegionID", "HYD D"]]],
+    "164": ["EMP Rifle", [["GunState", "Ammo", 200], ["GunState", "Condition (%)", 0], ["ObjState", "Broken"]]],
+    "165": ["Repair Soft V2", []],
+    "166": ["Large Beaker", []],
+    "167": ["Audio Log", [["Logs3", "Logs", 16]]],
+    "168": ["Audio Log", [["Logs3", "Logs", 13]]],
+    "169": ["EndurBoost", []],
+    "170": ["Audio Log", [["Logs3", "Logs", 12]]],
+    "171": ["Big Nanite Pile", [["StackCount", 65]]],
+    "172": ["Reflec Armor", []],
+    "173": ["Audio Log", [["Logs4", "Logs", 1]]],
+    "174": ["Audio Log", [["Logs4", "Logs", 16]]],
+    "175": ["Audio Log", [["Logs4", "Logs", 10]]],
+    "176": ["Modify Soft V2", []],
+    "177": ["Audio Log", [["Logs4", "Logs", 19]]],
+    "178": ["Medium Nanite Pile", [["StackCount", 15]]],
+    "179": ["Audio Log", [["Logs4", "Logs", 15]]],
+    "180": ["Audio Log", [["Logs4", "Logs", 5]]],
+    "181": ["Audio Log", [["Logs4", "Logs", 18]]],
+    "182": ["Audio Log", [["Logs4", "Logs", 32]]],
+    "183": ["Crystal Shard", []],
+    "184": ["EMP Rifle", [["GunState", "Ammo", 200], ["GunState", "Condition (%)", 50]]],
+    "185": ["WormMind", []],
+    "186": ["Shotgun", [["GunState", "Ammo", 12]]],
+    "187": ["Laser Pistol", [["GunState", "Condition (%)", 50]]],
+    "188": ["Audio Log", [["Logs4", "Logs", 20]]],
+    "189": ["Hack Soft V2", []],
+    "190": ["Audio Log", [["Logs4", "Logs", 9]]],
+    "191": ["Audio Log", [["Logs4", "Logs", 2]]],
+    "192": ["Hogger Cart", []],
+    "193": ["Audio Log", [["Logs4", "Logs", 3]]],
+    "194": ["Audio Log", [["Logs4", "Logs", 7], ["Questbit", "Note_4_6"], ["QBVal", 1]]],
+    "195": ["Chip C", [["FrobInfo", "World Action", "Move, Script"], ["Scripts", "Script 0", "BaseButton"]]],
+    "196": ["Chip A", [["FrobInfo", "World Action", "Move, Script"], ["Scripts", "Script 0", "BaseButton"]]],
     }
 }
