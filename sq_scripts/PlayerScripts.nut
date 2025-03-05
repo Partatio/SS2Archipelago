@@ -429,62 +429,42 @@ class PlayerScripts extends SqRootScript
 	{
 		local item = VariousDataTables.ItemTable.rawget(itemid);
 		Property.SetSimple(self, "BaseWpnDmg", Property.Get(self, "BaseWpnDmg") + 1) #add 1 to storeditemsreceived
-		ShockGame.AddText("Got Item!", self);
 		switch (item[0])
 		{
 		case "StatUpgrade":
 			{
 			Property.Set(self, "BaseStatsDesc", item[1], Property.Get(self, "BaseStatsDesc", item[1]) + 1);
+			ShockGame.AddText("Got " + item[1] + "stat upgrade!", self);
 			break;
 			}
 		case "TechUpgrade":
 			{
 			Property.Set(self, "BaseTechDesc", item[1], Property.Get(self, "BaseTechDesc", item[1]) + 1);
+			ShockGame.AddText("Got " + item[1] + "technical skill upgrade!", self);
 			break;
 			}
 		case "WeaponUpgrade":
 			{
 			Property.Set(self, "BaseWeaponDesc", item[1], Property.Get(self, "BaseWeaponDesc", item[1]) + 1);
+			ShockGame.AddText("Got " + item[1] + "weapon skill upgrade!", self);
 			break;
 			}
-		case "PsiPowerUnlock": #tiers 1-4
+		case "PsiPowerUnlock": #tiers 1-4. [1] is an array where[0] is the osupgrade number, and [1] is its name. same for next two cases.
 			{
-			Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, item[1] - 1));
-			print(Property.Get(self, "PsiPowerDesc"))
+			Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, item[1][0] - 1));
+			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
 			break;
 			}
 		case "PsiPowerUnlock2": #tier 5
 			{
-			Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, item[1] - 1));
-			print(Property.Get(self, "PsiPower2Desc"))
+			Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, item[1][0] - 1));
+			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
 			break;
 			}
 		case "OsUnlock":
 			{
 				local curosslot = Property.Get(self, "WeaponDamge");
-				switch (curosslot)
-				{
-					case 1:
-						{
-						Property.Set(self, "TraitsDesc", "Trait 1", item[1]);
-						break;
-						}
-					case 2:
-						{
-						Property.Set(self, "TraitsDesc", "Trait 2", item[1]);
-						break;
-						}
-					case 3:
-						{
-						Property.Set(self, "TraitsDesc", "Trait 3", item[1]);
-						break;
-						}
-					case 4:
-						{
-						Property.Set(self, "TraitsDesc", "Trait 4", item[1]);
-						break;
-						}
-					}
+				Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
 				if (curosslot == 4)
 					curosslot = 1;
 				else
@@ -492,6 +472,8 @@ class PlayerScripts extends SqRootScript
 				Property.SetSimple(self, "WeaponDamge", curosslot);
 				if (item[1] == 6)
 					ShockGame.AddExp(self, 20, TRUE);
+				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
+				break;
 			}
 		default:
 			{
@@ -504,6 +486,7 @@ class PlayerScripts extends SqRootScript
 						Property.SetSimple(newitem, property[0], property[1]);
 				}
 			Object.Teleport(newitem, Object.Position(self), Object.Facing(self));
+			ShockGame.AddText("Got Item!", self);
 			}
 		}
 	}
