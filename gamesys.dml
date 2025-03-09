@@ -1,0 +1,290 @@
+DML1
+
+#script "squirrel"
+
+TagBlock "DIFFPARAM"
+{
+	"Upgrade Mult: Easy" 1.8
+	"Upgrade Mult: Normal" 1.8
+	"Upgrade Mult: Hard" 1.8
+	"Upgrade Mult: Imposs" 1.8
+}
+
+CreateArch "Misc Metaprops" "APPlayerScripts" 
+{
+	+ObjProp "Scripts" 
+	{
+	"Script 0" "PlayerScripts"
+	"Don't Inherit" false
+	}
+}
++MetaProp "The Player" "APPlayerScripts"
+
+
+CreateArch "Goodies" "APLocation"
+{
+	+ObjProp "ModelName" 
+	{
+	"" "aaa"
+	}
+	+ObjProp "PsiRadar"
+	{
+	"" "Powerup"
+	}
+	+ObjProp "FrobInfo"
+	{
+	"World Action" "Script"
+	"Inv Action" ""
+	"Tool Action" ""
+	}
+	+ObjProp "VoiceIdx"
+	{
+	"" 0
+	}
+	+ObjProp "ObjIcon"
+	{
+	"" "icn_pil"
+	}
+	+ObjProp "InvDims"
+	{
+	"Width"	1
+	"Height" 1
+	}
+	+ObjProp "ObjName"
+	{
+	"" "APLocation: "An APLocation""
+	}
+	+ObjProp "ExtraLight"
+	{
+	"Amount (-1..1)" 0.50
+	"Additive?" true
+	}
+	+ObjProp "RenderAlpha"
+	{
+	"" 0.75
+	}
+	+ObjProp "CfgTweqRotate"
+	{
+	"Halt" "Continue"
+	"AnimC" "Wrap"
+	"Primary Axis" 0
+	"x rate-low-high" "10, 0, 360"
+	"y rate-low-high" "15, 0, 360"
+	"z rate-low-high" "0, 0, 360"
+	}
+	+ObjProp "StTweqRotate"
+	{
+	"AnimS" "On"
+	}
+	+ObjProp "StTweqScale"
+	{
+	"AnimS" ""
+	}
+	+ObjProp "CollisionType"
+	{
+	"" ""
+	}
+	+ObjProp "Scale"
+	{
+	"" "0.25, 0.25, 0.25"
+	}
+	+ObjProp "MapObjIcon"
+	{
+	"" "mcam"
+	}
+}
+
+CreateArch "Misc Metaprops" "APLocationScripts"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "APLocationFuncs"
+	}
+}
++MetaProp "APLocation" "APLocationScripts"
+
+
+CreateArch "Object" "APLocationTracker"
+{
+	+ObjProp "RenderType"
+	{
+	"" "Not Rendered"
+	}
+}
+
+CreateArch "APLocation" "APLsss1"
+{
+	+ObjProp "VoiceIdx"
+	{
+	"" 3
+	}
+	+ObjProp "ObjShort"
+	{
+	"" "APLsss1: "sss APLocation 1, purchase once""
+	}
+}
+
+CreateArch "APLocation" "APLsss2"
+{
+	+ObjProp "VoiceIdx"
+	{
+	"" 4
+	}
+	+ObjProp "ObjShort"
+	{
+	"" "APLsss2: "sss APLocation 2, purchase once""
+	}
+}
+
+CreateArch "APLocation" "APLsss3"
+{
+	+ObjProp "VoiceIdx"
+	{
+	"" 5
+	}
+	+ObjProp "ObjShort"
+	{
+	"" "APLsss3: "sss APLocation 3, purchase once""
+	}
+}
+
+CreateArch "APLocation" "APLsss4"
+{
+	+ObjProp "VoiceIdx"
+	{
+	"" 6
+	}
+	+ObjProp "ObjShort"
+	{
+	"" "APLsss4: "sss APLocation 4, purchase once""
+	}
+}
+
+CreateArch "APLocation" "APLCommand1"
+{
+	+ObjProp "VoiceIdx"
+	{
+	"" 7
+	}
+	+ObjProp "ObjShort"
+	{
+	"" "APLCommand1: "Command1 APLocation, purchase once""
+	}
+}
+
+CreateArch "Trainers" "CybModShop"
+{
+	+ObjProp "ModelName" 
+	{
+	"" "Pyramid"
+	}
+	+ObjProp "FrobInfo"
+	{
+	"World Action" "Script"
+	}
+	+ObjProp "ExtraLight"
+	{
+	"Amount (-1..1)" 0.50
+	"Additive?" true
+	}
+	+ObjProp "RenderAlpha"
+	{
+	"" 0.75
+	}
+	+ObjProp "CfgTweqRotate"
+	{
+	"Halt" "Continue"
+	"AnimC" "Wrap"
+	"Primary Axis" 0
+	"x rate-low-high" "10, 0, 360"
+	"y rate-low-high" "15, 0, 360"
+	"z rate-low-high" "0, 0, 360"
+	}
+	+ObjProp "StTweqRotate"
+	{
+	"AnimS" "On"
+	}
+	+ObjProp "CfgTweqScale"
+	{
+	"Halt" "Continue"
+	"Primary Axis" 0
+	"x rate-low-high" "0.05, 0.5, 0.75"
+	"y rate-low-high" "0.05, 0.5, 0.75"
+	"z rate-low-high" "0.05, 0.5, 0.75"
+	}
+	+ObjProp "StTweqScale"
+	{
+	"AnimS" "On"
+	}
+	+ObjProp "ObjName"
+	{
+	"" "CybModShop: "A CybModShop, right click to buy locations""
+	}
+		+ObjProp "MapObjIcon"
+	{
+	"" "msec"
+	}
+}
+
+CreateArch "Misc Metaprops" "CybModShopScripts"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "CybModShop"
+	}
+}
++MetaProp "CybModShop" "CybModShopScripts"
+
+CreateArch "Misc Metaprops" "UnlootableEnemyScript"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "UnlootableEnemy"
+	}
+}
++MetaProp "Protocol Droid" "UnlootableEnemyScript"
++MetaProp "Overlord" "UnlootableEnemyScript"
++MetaProp "Eggs" "UnlootableEnemyScript"
+
+-ObjProp "Experience Trap" "Scripts"
+
+//RoSoDudes repairable crates
+////Make Hackable Crates repairable after critically failing a hack
+//First disable explosion by intercepting script messages
++ObjProp -1886 "Scripts" //Hackable Crate
+{
+    "Script 0" "rsdHackableCrate" //was HackableCrate
+    "Script 1" "NVSimpleRepair"
+    "Script 2" "HackableCrate"
+}
+//Then setup repair minigame difficulty
++ObjProp -1886 "ReqTechDesc" //Hackable Crate
+{
+    "Repair" 1
+}
++ObjProp -1886 "RepairDiff" //Hackable Crate
+{
+    "Success %" 20
+    "Critical Fail %" 0 //WARNING: putting any ICE nodes here will result in the object disappearing on critfail with no explosion!
+    "Cost" 4.00
+}
++ObjProp -420 "ReqTechDesc" //SuperCrate
+{
+    "Repair" 1
+}
++ObjProp -420 "RepairDiff" //SuperCrate
+{
+    "Success %" -10
+    "Critical Fail %" 0 //WARNING: putting any ICE nodes here will result in the object disappearing on critfail with no explosion!
+    "Cost" 4.00
+}
+
+
+
+//Sarge945s No Keypad Cheese
+//Attach Keypad Script to all keypads
+//They have don't inherit set, so we need to add it to the archetype manually.
++ObjProp -258 "Scripts"
+{
+    "Script 2" "sargeRandomKeypad"
+}
