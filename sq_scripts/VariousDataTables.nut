@@ -1018,7 +1018,6 @@ mapinstructions =
         ["placeaploc", "", [1254], 687, 1746], #687:In body in hallway towards data storage 2 ops3
         ["placeaploc", "", [1743], 688, 1745], #688:In enemy in hallway towards data storage ops3
         ["placeaploc", "", [125], 689, 840], #689:In enemy that runs into data storage ops3
-        ["destroy", "", 1414], #Ops Chip next to its associated computer, only spawns on easy? dont want it either way
         ["randomizerepl", "", 693],
         ["randomizerepl", "", 118],
         ["replacecybmodshop", "StatsSkillsPsi", [758, 691, 690, 757], vector(-79.54, 112.11, -22.32)],
@@ -1102,9 +1101,6 @@ mapinstructions =
         ["placeaploc", "", vector(-199.18, -257.58, -30.42), 742, 949], #742:In ground in destroyed hallway in security area ops4
         ["placeaploc", "", [1331], 743, 707], #743:In desk in security area in room above cells ops4
         ["placeaploc", "", [436], 744, 438], #744:In enemy that runs towards linear sim unit in security area ops4
-        ["destroy", "", 367], #all access keycard and 2 simulation chips, not sure what these are but dont want em
-        ["destroy", "", 1282],
-        ["destroy", "", 1267],
         ["randomizerepl", "", 461],
         ["replacecybmodshop", "StatsSkillsPsi", [355, 359, 357, 358], vector(-53.53, -121.06, -25.32)],
         ["randomizeenemy", "", 286, "4", vector(56.01, -40.25, -39.13)],
@@ -1214,7 +1210,6 @@ mapinstructions =
         ["placeaploc", "", vector(4.7, -403.67, -12.2), 815, 409], #815:In safe behind desk nearish elevator 2 rec1
         ["placeaploc", "", [107], 816, 808], #816:In body near 2 elevator rec1
         ["placeaploc", "", [356], 817, 80], #817:In body in upper floor room in crew quarters area 11 rec1
-        ["destroy", "", 1607],
         ["randomizerepl", "", 425],
         ["replacecybmodshop", "StatsSkillsPsi", [803, 965, 222, 804], vector(53.6, -400.35, -11.32)],
         ["randomizeenemy", "", 106, "5", vector(-23.86, -572.85, -10.95)],
@@ -1344,7 +1339,6 @@ mapinstructions =
         ["placeaploc", "", vector(-173.8, -130.3, -11.14), 896, 95], #896:On shelves in chemical storage 17 rec2
         ["placeaploc", "", vector(-172.19, -130.97, -11.01), 897, 191], #897:On shelves in chemical storage 18 rec2
         ["placeaploc", "", vector(-173.55, -133.1, -11.9), 898, 475], #898:On ground in chemical storage rec2
-        ["destroy", "", 1575],
         ["randomizerepl", "", 487],
         ["randomizeenemy", "", 170, "5", vector(-290.29, -73.97, -7)],
         ["randomizeenemy", "", 169, "5", vector(-287.39, -65.45, -7)],
@@ -1390,7 +1384,7 @@ mapinstructions =
         ["directmonstergenrando", "", 1301, "5"],
     ]
     "rec3.mis": [
-        ["sss", ""]
+        ["sss", ""],
         ["placeaploc", "", vector(-226.18, -205.08, -12.84), 899, 453], #899:On ground near body in bathroom near crew quarters entrance rec3
         ["placeaploc", "", vector(-227.84, -348, 1.38), 900, 394], #900:On ground near body near replicator in store with broken sign rec3
         ["placeaploc", "", vector(-205.4, -444.06, -12.75), 901, 1941], #901:On ground near body near resurrection station in security station rec3
@@ -1475,7 +1469,99 @@ mapinstructions =
         ["directmonstergenrando", "", 187, "5"],
     ]
     "commmand1.mis": [
-        ["command1repl", ""], #make sure to add the location to AP with id 7 and reqitem "Hack Upgrade" reqgroup "Repair", and add the item SS2 name Big Bomb, AP name Sympathetic Resonator
+        ["randomizerepl", "", 394],
+        ["command1repl", ""],
+        ["placeaploc", "", [1182], 948, 1186], #948:In body near resurrection station command1
+        ["placeaploc", "", [2243, 2375, 2201], 949, 2172], #949:In bodies near tram near replicators command1
+        ["placeaploc", "", vector(817.98, 144.53, -20.71), 950, 1188], #950:On ground near body in cargo bay a command1
+        ["placeaploc", "", [275], 951, 2193], #951:In body near shuttle command hallway entrance command1
+        ["placeaploc", "", [391], 952, 2198], #952:In security crate in upper area of middle tram stop command1
+        ["placeaploc", "", [402], 953, 407], #953:In waste barrel near resurrection station command1
+        ["placeaploc", "", [1182], 954, 1183], #954:In body near resurrection station 2 command1
+        ["placeaploc", "", vector(977.22, 172.53, -47.92), 955, 409], #955:On ground near resurrection station command1
+        ["placeaploc", "", [2243, 2375, 2201], 956, 2167], #956:In bodies near tram near replicators 2 command1
+        ["placeaploc", "", [365], 957, 1212], #957:In waste barrel near tram near replicators command1
+        ["placeaploc", "", vector(938.06, 31.17, -41.36), 958, 1187], #958:In output of broken replicator near tram near another replicator command1
+        ["placeaploc", "", [2243, 2375, 2201], 959, 1201], #959:In bodies near tram near replicators 3 command1
+        ["placeaploc", "", [289], 960, 2223], #960:In security crate in cargo bay b command1
+        ["placeaploc", "", [2220, 209], 961, 2222], #961:In bodies near elevator command1
+        ["placeaploc", "", [2220, 209], 962, 1181], #962:In bodies near elevator 2 command1
+        ["placeaploc", "", vector(921.06, 111.23, -46), 963, 274], #963:On ground near crates near elevator command1
+        ["placeaploc", "", [2220, 209], 964, 2224], #964:In bodies near elevator 3 command1
+        ["placeaploc", "", [2220, 209], 965, 2225], #965:In bodies near elevator 4 command1
+        ["placeaploc", "", [318], 966, 2221], #966:In security crate in upper area of cargo bay b command1
+        ["placeaploc", "", [318], 967, 2196], #967:In security crate in upper area of cargo bay b 2 command1
+        ["placeaploc", "", [389], 968, 2197], #968:In body hidden in corner in upper area of cargo bay b command1
+        ["placeaploc", "", [389], 969, 2195], #969:In body hidden in corner in upper area of cargo bay b 2 command1
+        ["placeaploc", "", [318], 970, 2226], #970:In security crate in upper area of cargo bay b 3 command1
+        ["placeaploc", "", [275], 971, 2194], #971:In body near shuttle command hallway entrance 2 command1
+        ["placeaploc", "", vector(868.18, 89.74, -17.46), 972, 2380], #972:On ground against wall with grate at top of ramp towards shuttle control command1
+        ["placeaploc", "", [946, 2232], 973, 2233], #973:In crates in cargo bay a command1
+        ["placeaploc", "", [2255], 974, 2095], #974:In body in room overlooking shuttle bay a command1
+        ["placeaploc", "", [91], 975, 1179], #975:In body in cargo bay a command1
+        ["placeaploc", "", [91], 976, 646], #976:In body in cargo bay a 2 command1
+        ["placeaploc", "", [91], 977, 401], #977:In body in cargo bay a 3 command1
+        ["placeaploc", "", [946, 2232], 978, 408], #978:In crates in cargo bay a 2 command1
+        ["placeaploc", "", vector(728.72, 214.48, -2.37), 979, 104], #979:On window sill in room overlooking shuttle bay b command1
+        ["placeaploc", "", vector(767.86, 142.6, -6.86), 980, 2238], #980:On ground in upper area of gargo bay b command1
+        ["placeaploc", "", vector(761.8, 167.74, -6.87), 981, 107], #981:On ground in upper area of gargo bay b 2 command1
+        ["placeaploc", "", [2240, 2236], 982, 2242], #982:In crates in cargo bay b command1
+        ["placeaploc", "", [2240, 2236], 983, 184], #983:In crates in cargo bay b 2 command1
+        ["placeaploc", "", [2240, 2236], 984, 2237], #984:In crates in cargo bay b 3 command1
+        ["placeaploc", "", [2240, 2236], 985, 2239], #985:In crates in cargo bay b 4 command1
+        ["placeaploc", "", vector(477.67, 21.4, -40.17), 986, 411], #986:On divider between benches in middle tram stop command1
+        ["placeaploc", "", vector(-461.51, 74.83, -43.92), 987, 410], #987:On ground near rickenbacker entrance command1
+        ["placeaploc", "", [2256], 988, 2257], #988:In body in room with forcefield blocking access to rickenbacker command1
+        ["placeaploc", "", [2256], 989, 2230], #989:In body in room with forcefield blocking access to rickenbacker 2 command1
+        ["placeaploc", "", [2256], 990, 2231], #990:In body in room with forcefield blocking access to rickenbacker 3 command1
+        ["placeaploc", "", [1227], 991, 1234], #991:In body in upper area of middle tram stop command1
+        ["placeaploc", "", vector(454.72, -6.67, -27.53), 992, 1289], #992:On pipes across from middle tram stop command1
+        ["placeaploc", "", vector(-183.14, 19.52, -43.92), 993, 554], #993:On ground outside tram stop near bridge entrance command1
+        ["placeaploc", "", vector(113.78, 4.73, -39.92), 994, 322], #994:On ground hidden behind beam near bridge entrance command1
+        ["randomizerepl", "", 363],
+        ["replacecybmodshop", "", [393, 396], vector(977.09, 150.44, -46.32)],
+        ["randomizeenemy", "", 792, "6", vector(983.45, 175.46, -45.59)],
+        ["randomizeenemy", "", 791, "6", vector(963.81, 70.32, -46.94)],
+        ["randomizeenemy", "", 2314, "6", vector(929.63, 105.62, -44.05)],
+        ["randomizeenemy", "", 1728, "6", vector(872.11, 93.36, -16.05)],
+        ["randomizeenemy", "", 2313, "6", vector(860.12, 96.2, -12.19)],
+        ["randomizeenemy", "", 1191, "6", vector(824.41, 95.82, -15.15)],
+        ["randomizeenemy", "", 1371, "6", vector(775.18, 86.97, -13)],
+        ["randomizeenemy", "", 1030, "7", vector(801.25, 114.32, -5.04)],
+        ["randomizeenemy", "", 1342, "7", vector(791.16, 148.01, -1)],
+        ["randomizeenemy", "", 2351, "7", vector(815.04, 150.17, -13)],
+        ["randomizeenemy", "", 2322, "7", vector(793.01, 167.74, -3.09)],
+        ["randomizeenemy", "", 760, "7", vector(844.51, 160.78, -5.03)],
+        ["randomizeenemy", "", 2356, "7", vector(837.59, 178.48, -17)],
+        ["randomizeenemy", "", 759, "7", vector(844.81, 224.71, -19.02)],
+        ["randomizeenemy", "", 86, "7", vector(825.13, 202.67, -1.43)],
+        ["randomizeenemy", "", 1184, "6", vector(786.81, 207.3, -3)],
+        ["randomizeenemy", "", 2512, "6", vector(772.96, 210.27, -14.2)],
+        ["randomizeenemy", "", 2352, "6", vector(767.98, 147.36, -3.25)],
+        ["randomizeenemy", "", 1241, "6", vector(760.79, 137.09, -4.15)],
+        ["randomizeenemy", "", 605, "6", vector(760.72, 131, -19.01)],
+        ["randomizeenemy", "", 1240, "6", vector(713.18, 137.1, -4.15)],
+        ["randomizeenemy", "", 2358, "6", vector(729.87, 168.15, -17.09)],
+        ["randomizeenemy", "", 464, "6", vector(722.68, 179, -19.03)],
+        ["randomizeenemy", "", 1239, "6", vector(742.19, 164.74, -4.15)],
+        ["randomizeenemy", "", 889, "6", vector(737.88, 193.64, -18.01)],
+        ["randomizeenemy", "", 1520, "6", vector(720.55, 219.18, -19)],
+        ["randomizeenemy", "", 1228, "6", vector(716.74, 256.92, -17.05)],
+        ["randomizeenemy", "", 85, "6", vector(475.52, 52.78, -42.19)],
+        ["randomizeenemy", "", 323, "6", vector(469, 31.1, -41.15)],
+        ["randomizeenemy", "", 324, "6", vector(453, 31.1, -41.15)],
+        ["randomizeenemy", "", 1230, "6", vector(454.29, 19.61, -31.97)],
+        ["randomizeenemy", "", 1231, "6", vector(461.43, 23.19, -31.97)],
+        ["randomizeenemy", "", 1205, "6", vector(117.59, 97.93, 115.95)],
+        ["randomizeenemy", "", 1207, "6", vector(122.74, 98.1, 115.95)],
+        ["randomizeenemy", "", 1209, "6", vector(127.4, 98.74, 115.95)],
+        ["randomizeenemy", "", 1198, "6", vector(123.38, 85.55, 115.95)],
+        ["randomizeenemy", "", 1203, "6", vector(120.32, 86.52, 115.95)],
+        ["directmonstergenrando", "", 1316, "6"],
+        ["directmonstergenrando", "", 425, "6"],
+        ["directmonstergenrando", "", 342, "6"],
+        ["directmonstergenrando", "", 1315, "6"],
+        ["directmonstergenrando", "", 424, "6"],
         ["destroy", "", 1252],
         ["destroy", "", 1245] #qb filters that change the first item in the repl to the sympathetic resonator, which we dont want to happen
 
@@ -1737,6 +1823,7 @@ enemytables =
     "OG-Grenade",
     "Invisible Arachnid",
     "Invisible Arachnid",
+    "Blast Turret",
     "Assault Robot",
     "Assault Robot",
     "Assault Robot"
@@ -1791,7 +1878,8 @@ enemytables =
     "Assault Robot",
     "Assault Robot",
     "Assault Robot",
-    "Assault Robot",
+    "Blast Turret",
+    "Blast Turret",
     "Rumbler",
     "Rumbler",
     "Rumbler"
@@ -1841,7 +1929,6 @@ enemytables =
     "Assassin",
     "OG-Grenade",
     "OG-Grenade",
-    "OG-Grenade",
     "Invisible Arachnid",
     "Invisible Arachnid",
     "Assault Robot",
@@ -1851,6 +1938,7 @@ enemytables =
     "Rumbler",
     "Rumbler",
     "Rumbler",
+    "Blast Turret",
     "Blast Turret",
     "Blast Turret",
     "Overlord",
@@ -2220,6 +2308,11 @@ HackedReplItems =
 
 ItemTable = {
     "1": ["Wrench", []],
+    "3": ["Nikki_Card", []],
+    "4": ["Candy_Card", []],
+    "5": ["Sven_Card", []],
+    "6": ["Lance_Card", []],
+    "7": ["Big Bomb", []],
     "8": ["Wrench", []],
     "9": ["Pistol", [["GunState", "Ammo", 24]]],
     "10": ["Shotgun", [["GunState", "Ammo", 12], ["GunState", "Condition (%)", 50]]],
@@ -2466,9 +2559,15 @@ ItemTable = {
     "251": ["Audio Log", [["Logs5", "Logs", 10]]],
     "252": ["Audio Log", [["Logs5", "Logs", 19]]],
     "253": ["Audio Log", [["Logs5", "Logs", 20]]],
-    "254": ["Nikki_Card", []],
-    "255": ["Candy_Card", []],
-    "256": ["Sven_Card", []],
-    "257": ["Lance_Card", []],
+    "254": ["10 EXP", [["StackCount", 7]]],
+    "255": ["Audio Log", [["Logs6", "Logs", 8]]],
+    "256": ["Research Soft V3", []],
+    "257": ["Audio Log", [["Logs6", "Logs", 9], ["QBName", "Note_6_13"], ["QBVal", 1]]],
+    "258": ["Audio Log", [["Logs6", "Logs", 14]]],
+    "259": ["Audio Log", [["Logs6", "Logs", 6]]],
+    "260": ["Repair Soft V3", []],
+    "261": ["Audio Log", [["Logs6", "Logs", 13]]],
+    "262": ["Audio Log", [["Logs6", "Logs", 19]]],
+    "263": ["Audio Log", [["Logs6", "Logs", 18]]],
     }
 }
