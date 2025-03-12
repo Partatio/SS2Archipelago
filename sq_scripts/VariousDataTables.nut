@@ -1567,7 +1567,177 @@ mapinstructions =
 
     ]
     "command2.mis": [
-
+        ["placeaploc", "", [595, 584], 995, 155], #995:In bodies in lobby near entrance command2
+        ["placeaploc", "", vector(65.73, -1.12, -27.92), 996, 2179], #996:On ground near body behind table in path towards officers' area command2
+        ["placeaploc", "", vector(72.34, -15.85, -39.46), 997, 2178], #997:On ground near body behind desk in lobby near entrance command2
+        ["placeaploc", "", vector(75.2, -72.57, -12.17), 998, 2081], #998:In chemical storeroom command2
+        ["placeaploc", "", vector(73.04, -89.81, -25.77), 999, 2275], #999:On ground near body in area under officers' area command2
+        ["placeaploc", "", vector(90.01, -139.35, -11.53), 1000, 1366], #1000:On ground near body in room in officers' area command2
+        ["placeaploc", "", vector(57.58, -88.75, -11.65), 1001, 2164], #1001:In corner in security room in officers' area command2
+        ["placeaploc", "", vector(41.37, -137.01, -12.52), 1002, 1393], #1002:On ground in room in officers' area command2
+        ["placeaploc", "", vector(40.83, -139.28, -12.49), 1003, 2292], #1003:On ground in room in officers' area 2 command2
+        ["placeaploc", "", vector(41.16, -143.5, -10.69), 1004, 2291], #1004:On bed in room in officers' area command2
+        ["placeaploc", "", vector(-91.3, -175.48, -26.2), 1005, 786], #1005:On ground near escape pod that leaves command2
+        ["placeaploc", "", vector(-82.76, -43.14, -27.75), 1006, 1263], #1006:On ground near escape pod bay near beams command2
+        ["placeaploc", "", vector(-10.55, 0.98, 22.4), 1007, 1329], #1007:On ground behind structure at top of bridge elevator command2
+        ["placeaploc", "", [983], 1008, 1421], #1008:In body in path towards escape pods near fire command2
+        ["placeaploc", "", [983], 1009, 2188], #1009:In body in path towards escape pods near fire 2 command2
+        ["placeaploc", "", vector(7.48, -76.42, -35.73), 1010, 270], #1010:On ledge above steaming water near resurrection station command2
+        ["placeaploc", "", vector(6.87, -74.88, -35.92), 1011, 287], #1011:On ledge above steaming water near resurrection station 2 command2
+        ["placeaploc", "", vector(-88.5, -166.49, -27.77), 1012, 187], #1012:On ground near escape pod that leaves 2 command2
+        ["placeaploc", "", vector(-89.24, -170.11, -27.98), 1013, 135], #1013:On ground near escape pod that leaves 3 command2
+        ["placeaploc", "", vector(-87.23, -98.12, -27.31), 1014, 798], #1014:On ground under bench near escape pod bay adjacent to escape pod bay with beams command2
+        ["placeaploc", "", [979, 984], 1015, 1402], #1015:In bodies in path towards escape pods near resurrection station command2
+        ["placeaploc", "", vector(-48.83, 59.71, -9.94), 1016, 2219], #1016:On ground in conference room near window smashed with bench command2
+        ["placeaploc", "", vector(-90.04, 49.11, -6.39), 1017, 167], #1017:On counter in conference room near window smashed with bench command2
+        ["placeaploc", "", vector(-90.39, 29.68, -6.25), 1018, 2218], #1018:On counter in conference room near window smashed with bench 2 command2
+        ["placeaploc", "", vector(-75.28, 5.58, -6.03), 1019, 2383], #1019:On desk in room near replicator near window smashed with bench command2
+        ["placeaploc", "", [380, 379], 1020, 1267], #1020:In bodies near window smashed with bench command2
+        ["placeaploc", "", vector(-18.25, -0.42, -25.91), 1021, 575], #1021:On ground near bridge elevator on path towards escape pods command2
+        ["placeaploc", "", vector(-49.5, -16.5, -10.3), 1022, 1900], #1022:On ground in shower in room near replicator near window smashed with bench command2
+        ["placeaploc", "", vector(-81.87, -41.42, -27.69), 1023, 1266], #1023:On ground near escape pod bay near beams 2 command2
+        ["placeaploc", "", vector(-79.75, -57.26, -27.92), 1024, 1280], #1024:Hidden behind bench near escape pod bay near beams command2
+        ["placeaploc", "", vector(-73.99, -50.32, -27.84), 1025, 415], #1025:On ground near escape pod bay near beams 3 command2
+        ["placeaploc", "", [1565], 1026, 2228], #1026:In locker in room near replicator near window smashed with bench command2
+        ["placeaploc", "", [1565], 1027, 797], #1027:In locker in room near replicator near window smashed with bench 2 command2
+        ["placeaploc", "", vector(-65.9, -34.3, -8.77), 1028, 2227], #1028:On ground in room near replicator near window smashed with bench command2
+        ["placeaploc", "", [744], 1029, 1400], #1029:In body near beams in escape pod bay area command2
+        ["placeaploc", "", vector(-49.22, -47.11, -63.25), 1030, 1301], #1030:On ground below broken bridge connected to escape pod area command2
+        ["placeaploc", "", [183], 1031, 185], #1031:In body near resurrection station command2
+        ["placeaploc", "", [183], 1032, 184], #1032:In body near resurrection station 2 command2
+        ["placeaploc", "", [183], 1033, 1528], #1033:In body near resurrection station 3 command2
+        ["placeaploc", "", [1419], 1034, 1415], #1034:In body in room under resurrection station command2
+        ["placeaploc", "", vector(24.86, -139.75, -26.15), 1035, 188], #1035:On ground in shower in bathroom connected to area under officers' quarters command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1036, 2163], #1036:In lockers in rooms in officers' area command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1037, 2162], #1037:In lockers in rooms in officers' area 2 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1038, 2290], #1038:In lockers in rooms in officers' area 3 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1039, 2161], #1039:In lockers in rooms in officers' area 4 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1040, 2387], #1040:In lockers in rooms in officers' area 5 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1041, 651], #1041:In lockers in rooms in officers' area 6 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1042, 2320], #1042:In lockers in rooms in officers' area 7 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1043, 1877], #1043:In lockers in rooms in officers' area 8 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1044, 293], #1044:In lockers in rooms in officers' area 9 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1045, 2288], #1045:In lockers in rooms in officers' area 10 command2
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1046, 547], #1046:In lockers in rooms in officers' area 11 command2
+        ["placeaploc", "", [1281], 1047, 1297], #1047:In body in bathroom connected to area under officers' quarters command2
+        ["placeaploc", "", vector(117.86, -86.25, -25.38), 1048, 2274], #1048:On ground on path towards officers' area command2
+        ["placeaploc", "", [2279], 1049, 2283], #1049:In desk in room in officers' quarters command2
+        ["placeaploc", "", vector(62.13, -104.56, -22.89), 1050, 2379], #1050:On counter near bathroom entrance in area under officers' quarters command2
+        ["placeaploc", "", [1424], 1051, 1428], #1051:In security crate in area under officers' quarters command2
+        ["placeaploc", "", [1424], 1052, 2277], #1052:In security crate in area under officers' quarters 2 command2
+        ["placeaploc", "", [1424], 1053, 2276], #1053:In security crate in area under officers' quarters 3 command2
+        ["placeaploc", "", vector(79.96, -92.39, -25.92), 1054, 2381], #1054:On ground near benches in area under officers' quarters command2
+        ["placeaploc", "", [1913], 1055, 2278], #1055:In body in area under officers' quarters command2
+        ["placeaploc", "", vector(75.55, -60.94, -25.36), 1056, 1420], #1056:On ground hidden behind bench in area under officers' quarters command2
+        ["placeaploc", "", [1675], 1057, 2284], #1057:In locker in room with muerte written on wall in officers' quarters command2
+        ["placeaploc", "", [1675], 1058, 2286], #1058:In locker in room with muerte written on wall in officers' quarters 2 command2
+        ["placeaploc", "", [1675], 1059, 2287], #1059:In locker in room with muerte written on wall in officers' quarters 3 command2
+        ["placeaploc", "", [1365], 1060, 2285], #1060:In body in room in officers' quarters command2
+        ["placeaploc", "", [532], 1061, 1423], #1061:In desk in security room in officers' area command2
+        ["placeaploc", "", [532], 1062, 148], #1062:In desk in security room in officers' area 2 command2
+        ["placeaploc", "", [84], 1063, 2385], #1063:In body in path towards officers' area command2
+        ["placeaploc", "", [84], 1064, 1399], #1064:In body in path towards officers' area 2 command2
+        ["placeaploc", "", [153], 1065, 2190], #1065:In body in security room in officers' area command2
+        ["placeaploc", "", [1427], 1066, 2166], #1066:In high-security crate command2
+        ["placeaploc", "", [1427], 1067, 2165], #1067:In high-security crate 2 command2
+        ["placeaploc", "", [1427], 1068, 1430], #1068:In high-security crate 3 command2
+        ["placeaploc", "", [1427], 1069, 1431], #1069:In high-security crate 4 command2
+        ["placeaploc", "", [1427], 1070, 1432], #1070:In high-security crate 5 command2
+        ["placeaploc", "", [1427], 1071, 1433], #1071:In high-security crate 6 command2
+        ["placeaploc", "", [1335], 1072, 1334], #1072:In crate in area under officers' quarters command2
+        ["placeaploc", "", [1356], 1073, 1422], #1073:In body in room in officers' quarters 2 command2
+        ["placeaploc", "", vector(76.19, -74, -10.53), 1074, 504], #1074:In chemical storeroom 2 command2
+        ["placeaploc", "", vector(76.33, -73.48, -4.12), 1075, 759], #1075:In chemical storeroom 3 command2
+        ["placeaploc", "", vector(76.65, -74.89, -4.12), 1076, 760], #1076:In chemical storeroom 4 command2
+        ["placeaploc", "", vector(76.9, -76.14, -4.12), 1077, 783], #1077:In chemical storeroom 5 command2
+        ["placeaploc", "", vector(76.33, -72.73, -6.12), 1078, 726], #1078:In chemical storeroom 6 command2
+        ["placeaploc", "", vector(76.83, -73.98, -6.12), 1079, 710], #1079:In chemical storeroom 7 command2
+        ["placeaploc", "", vector(77.33, -75.36, -6.12), 1080, 709], #1080:In chemical storeroom 8 command2
+        ["placeaploc", "", vector(76.58, -76.36, -6.12), 1081, 675], #1081:In chemical storeroom 9 command2
+        ["placeaploc", "", vector(77.12, -73.1, -8.12), 1082, 674], #1082:In chemical storeroom 10 command2
+        ["placeaploc", "", vector(76.44, -73.96, -8.11), 1083, 654], #1083:In chemical storeroom 11 command2
+        ["placeaploc", "", vector(77.02, -74.99, -8.12), 1084, 669], #1084:In chemical storeroom 12 command2
+        ["placeaploc", "", vector(77.27, -76.24, -8.12), 1085, 661], #1085:In chemical storeroom 13 command2
+        ["placeaploc", "", vector(77.27, -72.73, -10.12), 1086, 655], #1086:In chemical storeroom 14 command2
+        ["placeaploc", "", vector(77.24, -75.02, -10.12), 1087, 653], #1087:In chemical storeroom 15 command2
+        ["placeaploc", "", vector(76.99, -76.27, -10.12), 1088, 652], #1088:In chemical storeroom 16 command2
+        ["placeaploc", "", vector(77.21, -72.82, -13.32), 1089, 789], #1089:In chemical storeroom 17 command2
+        ["placeaploc", "", vector(75.96, -73.57, -13.32), 1090, 790], #1090:In chemical storeroom 18 command2
+        ["placeaploc", "", vector(77.36, -74.86, -13.32), 1091, 788], #1091:In chemical storeroom 19 command2
+        ["placeaploc", "", vector(77.36, -76.36, -13.32), 1092, 784], #1092:In chemical storeroom 20 command2
+        ["placeaploc", "", vector(137.74, 17.32, 32.11), 1093, 413], #1093:On desk near large exterior window in bridge area command2
+        ["placeaploc", "", vector(138.46, 2.28, 32.21), 1094, 1583], #1094:On desk near large window in bridge area 2 command2
+        ["placeaploc", "", vector(113.76, -1.17, 18.54), 1095, 2217], #1095:Hidden under desk in lower area near large window in bridge area command2
+        ["placeaploc", "", [268, 261], 1096, 1260], #1096:In bodies in upper area of bridge command2
+        ["placeaploc", "", [268, 261], 1097, 2209], #1097:In bodies in upper area of bridge 2 command2
+        ["placeaploc", "", vector(71.4, -10.85, 44.18), 1098, 2208], #1098:On ground near body in upper area of bridge command2
+        ["placeaploc", "", [2459], 1099, 1328], #1099:In enemy near bridge elevator in bridge command2
+        ["placeaploc", "", vector(33.33, 1.74, 48.06), 1100, 2215], #1100:On conference table in upper area of bridge command2
+        ["placeaploc", "", vector(35.96, 3.3, 48.06), 1101, 2214], #1101:On conference table in upper area of bridge 2 command2
+        ["placeaploc", "", [2199], 1102, 1327], #1102:In desk near conference table in upper area of bridge command2
+        ["placeaploc", "", [1827], 1103, 1584], #1103:In desk in room that opens after rickenbacker forcefield appears in upper area of bridge command2
+        ["placeaploc", "", [1426], 1104, 2213], #1104:In high-security crate in room that opens after rickenbacker forcefield appears in upper area of bridge command2
+        ["placeaploc", "", [1426], 1105, 2210], #1105:In high-security crate in room that opens after rickenbacker forcefield appears in upper area of bridge 2 command2
+        ["placeaploc", "", [1426], 1106, 1429], #1106:In high-security crate in room that opens after rickenbacker forcefield appears in upper area of bridge 3 command2
+        ["placeaploc", "", [589], 1107, 1408], #1107:In trashcan near medical bed in lobby near entrance command2
+        ["placeaploc", "", [595], 1108, 1261], #1108:In body in water in lobby near entrance command2
+        ["placeaploc", "", [595], 1109, 1262], #1109:In body in water in lobby near entrance 2 command2
+        ["placeaploc", "", vector(84.89, -8.72, -36.92), 1110, 292], #1110:On desk in lobby near entrance command2
+        ["placeaploc", "", [584], 1111, 1406], #1111:In body behind desk in lobby near entrance command2
+        ["placeaploc", "", [1339], 1112, 1398], #1112:In body on bed in room in officers' area command2
+        ["placeaploc", "", vector(76.22, -12.15, -27.9), 1113, 2378], #1113:On ground in path towards officers' area command2
+        ["placeaploc", "", [2124], 1114, 2273], #1114:In body near table in path towards officers' area command2
+        ["placeaploc", "", [2124], 1115, 2181], #1115:In body near table in path towards officers' area 2 command2
+        ["placeaploc", "", [2124], 1116, 2189], #1116:In body near table in path towards officers' area 3 command2
+        ["placeaploc", "", [1419], 1117, 2180], #1117:In body in room under resurrection station 2 command2
+        ["placeaploc", "", vector(96.64, -12.75, 48.01), 1118, 507], #1118:Behind glass near door that opens after rickenbacker forcefield appears in upper area of bridge command2
+        ["randomizerepl", "", 649],
+        ["randomizerepl", "", 630],
+        ["replacecybmodshop", "StatsSkillsPsi", [499], vector(-15.34, -84.07, -50.32)],
+        ["replacecybmodshop", "", [500], vector(-67, -21.88, -24.32)],
+        ["randomizeenemy", "", 1325, "7", vector(141.29, 15, 30.85)],
+        ["randomizeenemy", "", 2459, "7", vector(67.36, 0.46, 25.73)],
+        ["randomizeenemy", "", 857, "7", vector(84.05, 26.63, 25.95)],
+        ["randomizeenemy", "", 472, "7", vector(45.5, 11.2, 47.95)],
+        ["randomizeenemy", "", 1387, "7", vector(77, -23.87, 46.85)],
+        ["randomizeenemy", "", 1295, "6", vector(33.06, 107.63, 19.45)],
+        ["randomizeenemy", "", 189, "9", vector(94.01, 42.66, 49.8)],
+        ["randomizeenemy", "", 161, "9", vector(33.84, 98.69, 25)],
+        ["randomizeenemy", "", 506, "6", vector(93.87, -138.41, -5.03)],
+        ["randomizeenemy", "", 505, "6", vector(88.78, -137.57, -5.03)],
+        ["randomizeenemy", "", 1368, "6", vector(93, -111, -9)],
+        ["randomizeenemy", "", 508, "6", vector(101.22, -80.61, -24.84)],
+        ["randomizeenemy", "", 1367, "6", vector(93, -52, -9)],
+        ["randomizeenemy", "", 539, "6", vector(100.63, -49.45, -4.95)],
+        ["randomizeenemy", "", 319, "6", vector(100.67, -31.19, -10.86)],
+        ["randomizeenemy", "", 537, "6", vector(78.25, -38.58, -11.04)],
+        ["randomizeenemy", "", 2400, "6", vector(41.61, -50.99, -9)],
+        ["randomizeenemy", "", 2457, "6", vector(39.3, -86.37, -22.4)],
+        ["randomizeenemy", "", 2360, "6", vector(13.12, -0.06, -7.15)],
+        ["randomizeenemy", "", 2336, "6", vector(-1.91, 14.79, -22)],
+        ["randomizeenemy", "", 1554, "7", vector(0.05, 0.21, -34.6)],
+        ["randomizeenemy", "", 2401, "6", vector(-11.45, 0.55, -38.37)],
+        ["randomizeenemy", "", 2338, "6", vector(-45.84, 34.63, -6)],
+        ["randomizeenemy", "", 2335, "6", vector(-1.36, -41.42, -21.55)],
+        ["randomizeenemy", "", 2399, "6", vector(-39.22, -48.18, -23.15)],
+        ["randomizeenemy", "", 169, "6", vector(-86.59, -87.69, -26.49)],
+        ["randomizeenemy", "", 2334, "6", vector(-83.26, -47.42, -24.05)],
+        ["randomizeenemy", "", 1416, "6", vector(-17.11, -66.99, -50.03)],
+        ["randomizeenemy", "", 1414, "6", vector(-11.69, -67.14, -49.93)],
+        ["randomizeenemy", "", 1418, "6", vector(-14.58, -72, -50.04)],
+        ["randomizeenemy", "", 1410, "6", vector(-12.13, -87.31, -49.99)],
+        ["randomizeenemy", "", 2460, "6", vector(-17.54, -110.82, -22.54)],
+        ["directmonstergenrando", "", 830, "6"],
+        ["directmonstergenrando", "", 2516, "7"],
+        ["directmonstergenrando", "", 2472, "6"],
+        ["directmonstergenrando", "", 830, "6"],
+        ["directmonstergenrando", "", 2478, "6"],
+        ["directmonstergenrando", "", 221, "6"],
+        ["directmonstergenrando", "", 2497, "6"],
+        ["directmonstergenrando", "", 2480, "6"],
+        ["directmonstergenrando", "", 311, "7"],
+        ["directmonstergenrando", "", 2467, "6"],
+        ["directmonstergenrando", "", 2485, "6"],
     ]
     "rick1.mis": [
 
@@ -2569,5 +2739,20 @@ ItemTable = {
     "261": ["Audio Log", [["Logs6", "Logs", 13]]],
     "262": ["Audio Log", [["Logs6", "Logs", 19]]],
     "263": ["Audio Log", [["Logs6", "Logs", 18]]],
+    "264": ["Bridge Card", [["KeySrc", "RegionID", "BRIDGE"]]],
+    "265": ["Audio Log", [["Logs6", "Logs", 10]]],
+    "266": ["Audio Log", [["Logs6", "Logs", 7]]],
+    "267": ["Audio Log", [["Logs6", "Logs", 17]]],
+    "268": ["WormHeart", []],
+    "269": ["Audio Log", [["Logs6", "Logs", 12], ["QBName", "note_6_11"], ["QBVal", 1]]],
+    "270": ["Audio Log", [["Logs6", "Logs", 5]]],
+    "271": ["Audio Log", [["Logs6", "Logs", 3]]],
+    "272": ["Shuttle Access Key", [["KeySrc", "RegionID", "SHUTTLE"], ["QBName", "Note_6_10"], ["QBVal", 2], ["Scripts", "Script 0", "FrobQB"]]],
+    "273": ["Audio Log", [["Logs6", "Logs", 11], ["QBName", "note_6_10"], ["QBVal", 1]]],
+    "274": ["Manifest", [["Logs6", "Logs", 32]]],
+    "275": ["Korenchin Log", []],
+    "276": ["85 Nanites", [["StackCount", 85]]],
+    "277": ["Audio Log", [["Logs6", "Logs", 4]]],
+    "278": ["Ops Override Key", [["KeySrc", "RegionID", "OPS OVERRIDE"], ["QBName", "Note_6_1"], ["QBVal", 2], ["Scripts", "Script 0", "FrobQB"]]],
     }
 }

@@ -170,7 +170,10 @@ class PlayerScripts extends SqRootScript
 					}
 				case "randomizeenemy": #destroy command[2] enemy if that field isnt set to 0.  Get the correct tier array based on command[3].  choose a random enemy from that, then create it and teleport it to command[4] with the original enemies properties if there was one.
 					{
-					local chosenenemy = PickEnemy(command[3],  FALSE)
+					if (IsTeleTrapLinked(command[2])) #dont want eggs, turrets, or overlords teleporting
+						local chosenenemy = PickEnemy(command[3], TRUE);
+					else
+						local chosenenemy = PickEnemy(command[3], FALSE);
 					local newenemy = Object.Create(chosenenemy);
 					local enemyfacing = vector();
 					if (command[2] != 0)#lots of this was taken from Sarge945s rando
@@ -280,13 +283,26 @@ class PlayerScripts extends SqRootScript
 		if(boolgen)
 			{
 			local attempts = 0;
-			while ((chosenenemy.find("Pod") || chosenenemy.find("Turret")) && attempts < 15) #We don 't want stationary enemies spawning from gens
+			while ((chosenenemy.find("Pod") || chosenenemy.find("Turret") || chosenenemy == "Greater Over." || chosenenemy == "Overlord") && attempts < 15) #We don't want stationary enemies spawning from gens
 				{
 					attempts += 1;
 					chosenenemy = enemytable[ShockGame.RandRange(0, enemytable.len() - 1)];
 				}
 			}
 		return chosenenemy;
+	}
+
+	function IsTeleTrapLinked(object)
+	{
+		if (!object)
+			return FALSE;
+		local teletrap = FALSE;
+		foreach (outLink in Link.GetAll(linkkind("~SwitchLink"), object))
+		{
+			if (Object.GetName(outLink.Dest) == "Teleport Trap")
+				teletrap = TRUE;
+		}
+		return teletrap;
 	}
 
 	function PickUnhackedReplItem()

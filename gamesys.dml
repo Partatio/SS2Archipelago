@@ -248,6 +248,33 @@ CreateArch "Misc Metaprops" "UnlootableEnemyScript"
 
 -ObjProp "Experience Trap" "Scripts"
 
++ObjProp "Blast Turret" "PhysControl"
+{
+	"Controls Active" 0
+}
++ObjProp "Blast Turret" "PhysAttr"
+{
+	"Gravity %" "1000"
+}
+
++ObjProp "Laser Turret" "PhysControl"
+{
+	"Controls Active" 0
+}
++ObjProp "Laser Turret" "PhysAttr"
+{
+	"Gravity %" "1000"
+}
+
++ObjProp "Slug Turret" "PhysControl"
+{
+	"Controls Active" 0
+}
++ObjProp "Slug Turret" "PhysAttr"
+{
+	"Gravity %" "1000"
+}
+
 //RoSoDudes repairable crates
 ////Make Hackable Crates repairable after critically failing a hack
 //First disable explosion by intercepting script messages
