@@ -27,7 +27,9 @@ class VariousDataTables extends SqRootScript
 //example ["placeaploc", "None", vector(55, 21, 30), 4, 341]
 //example ["placeaploc", "Chems", [62, 853, 92, 1], 91, 0]
 //"replacecybmodshop" = Destroy all upgrade terminals in an area, then place a CybModShop at a location.
-//example ["replacecybmodshop", "Stats", [52,12], vector(12, 7, 312)]
+//example ["replacecybmodshop", "", [52,12], vector(12, 7, 312)]
+//"respecmachine" = Place a RespecMachine at a location.
+//example ["respecmachine", "", vector(12, 7, 312)]
 //"destroy" = destroy an object
 //example ["destroy", "None", 71]
 //"randomizerepl" = Randomize the contents and prices of a replicator
@@ -43,11 +45,11 @@ mapinstructions =
 {
     "earth.mis": [
         ["skipearth", ""],
-    ]
+    ],
     "station.mis": [
         ["setcareer", ""],
         ["skipstation", ""],
-    ]
+    ],
     "medsci1.mis": [
         ["resetchar", ""],
         ["medsci1replpsihypo", ""],
@@ -158,6 +160,7 @@ mapinstructions =
         ["directmonstergenrando", "", 1315, "0"],
         ["randomizerepl", "", 1001],
         ["replacecybmodshop", "StatsSkillsPsi", [1354, 1355, 1317, 1352], vector(36.08, -135.07, -18.32)],
+        ["respecmachine", "Respec", vector(36.08, -135.07, -18.32)],
         ["randomizeenemy", "", 1015, "0", vector(-46.99, 23.68, -1.11)],
         ["randomizeenemy", "", 427, "0", vector(-32.07, -15.06, -0.05)],
         ["randomizeenemy", "", 87, "2", vector(-30.44, -125.38, -6.04)],#maint robot
@@ -171,7 +174,7 @@ mapinstructions =
         ["randomizeenemy", "", 1081, "0", vector(32.46, -4.75, -0.11)],
         ["randomizeenemy", "", 1007, "0", vector(52.84, 36.95, -12.05)],
         ["randomizeenemy", "", 163, "0", vector(24.91, 106.07, -12.05)]
-    ]
+    ],
     "medsci2.mis": [
         ["placeaploc", "", vector(-82.09, -116.52, -2.22), 103, 94], #103:Under counter in snack room with replicator medsci2crew
         ["placeaploc", "", vector(-53.78, -61.25, -3.5), 104, 1372], #104:On ground in armory near entrance medsci2crew
@@ -213,6 +216,7 @@ mapinstructions =
         ["directmonstergenrando", "", 214, "1"],
         ["directmonstergenrando", "", 201, "1"],
         ["replacecybmodshop", "StatsSkillsPsi", [1358, 254, 1367, 1366], vector(-112.6, -87.87, 10.68)],
+        ["respecmachine", "Respec", vector(-112.6, -87.87, 10.68)],
         ["destroy", "OSUpgrades", 133],
         ["placeaploc", "OSUpgrades", vector(-93.3, -57.02, 1.93), 136, 0], #136:On wall across from lounge near entrance medsci2crew
         ["placeaploc", "OSUpgrades", vector(-93.3, -53.74, 0.87), 137, 0], #137:On wall across from lounge near entrance 2 medsci2crew
@@ -273,7 +277,7 @@ mapinstructions =
         ["directmonstergenrando", "", 1238, "1"],
         ["directmonstergenrando", "", 226, "1"],
         ["directmonstergenrando", "", 476, "1"],
-    ]
+    ],
     "eng1.mis": [
         ["placeaploc", "", vector(-96.27, -34.57, -57.14), 177, 1894], #177:In tunnel in port nacelle near engine core eng1
         ["placeaploc", "", [1203], 178, 862], #178:In body in recessed area behind engine core eng1
@@ -393,7 +397,7 @@ mapinstructions =
         ["randomizeenemy", "", 522, "1", vector(15.27, -472.3, -29.15)],
         ["randomizeenemy", "", 1056, "1", vector(17.65, -296.47, -37.75)],
         ["randomizeenemy", "", 794, "1", vector(-9.16, -277.81, -30.47)],
-        ["randomizeenemy", "", 1, "809", vector(146.95, -124.67, -39.47)],
+        ["randomizeenemy", "", 809, "1", vector(146.95, -124.67, -39.47)],
         ["randomizeenemy", "", 781, "2", vector(94.25, -38.46, -56.97)],
         ["randomizeenemy", "", 164, "2", vector(4.13, 32.28, -37.97)],
         ["randomizeenemy", "", 154, "2", vector(-20.49, 27.99, -34.55)],
@@ -418,7 +422,8 @@ mapinstructions =
         ["randomizerepl", "", 973],
         ["randomizerepl", "", 887],
         ["replacecybmodshop", "StatsSkillsPsi", [1112, 1113], vector(42.03, -459.37, -31.5)],
-    ]
+        ["respecmachine", "Respec", vector(42.03, -459.37, -31.5)],
+    ],
     "eng2.mis": [
         ["placeaploc", "", vector(99.78, -449.6, -31.23), 283, 1042], #283:On ground near body in cargo bay 1b near security control station eng2
         ["placeaploc", "", vector(80.6, -428.82, -12), 284, 28], #284:On ground near body on second floor in cargo bay 1b eng2
@@ -507,6 +512,7 @@ mapinstructions =
         ["randomizerepl", "", 485],
         ["randomizerepl", "", 346],
         ["replacecybmodshop", "StatsSkillsPsi", [966, 973], vector(-38.89, -708.08, 21.68)],
+        ["respecmachine", "Respec", vector(-38.89, -708.08, 21.68)],
         ["directmonstergenrando", "", 589, "2"],
         ["directmonstergenrando", "", 150, "2"],
         ["directmonstergenrando", "", 867, "2"],
@@ -517,7 +523,7 @@ mapinstructions =
         ["randomizeenemy", "", 1143, "2", vector(-16.59, -707.49, -37.05)],
         ["randomizeenemy", "", 100, "2", vector(0.23, -729.31, 23.95)],
         ["randomizeenemy", "", 843, "2", vector(-43.65, -709.49, 23.95)],
-        ["randomizeenemy", "", 128, "2ranged", vector(-35.55, -711.03, -14.97)],
+        ["randomizeenemy", "", 128, "2Ranged", vector(-35.55, -711.03, -14.97)],
         ["randomizeenemy", "", 808, "3", vector(12.03, -724.84, -29.15)],
         ["randomizeenemy", "", 854, "2", vector(31.85, -717.96, -31.05)],
         ["randomizeenemy", "", 660, "3", vector(79.59, -696.32, 7.85)],
@@ -539,7 +545,7 @@ mapinstructions =
         ["randomizeenemy", "", 427, "3", vector(-106.48, -662.88, -28.97)],
         ["randomizeenemy", "", 50, "3", vector(-75.89, -675.99, -9.05)],
         ["randomizeenemy", "", 376, "3", vector(-60.67, -691.69, 8.95)],
-    ]
+    ],
     "hydro2.mis": [
         ["placeaploc", "", vector(-46.02, 51.17, -4.85), 366, 1013], #366:On ground near body and desk in room with charger hydro2
         ["placeaploc", "", vector(-58.37, -7.75, -4.74), 367, 140], #367:On ground near body and pipes in room with xerxes hydro2
@@ -652,6 +658,7 @@ mapinstructions =
         ["randomizerepl", "", 718],
         ["randomizerepl", "", 1435],
         ["replacecybmodshop", "StatsSkillsPsi", [966, 967], vector(-63.42, 55.17, -3.32)],
+        ["respecmachine", "Respec", vector(-63.42, 55.17, -3.32)],
         ["destroy", "OSUpgrades", 879],
         ["placeaploc", "OSUpgrades", vector(-53.89, 65.63, -3.32), 473, 0], #473:On ground in room with charger hydro2
         ["placeaploc", "OSUpgrades", vector(-48.77, 66.52, -3.32), 474, 0], #474:On ground in room with charger 2 hydro2
@@ -709,7 +716,7 @@ mapinstructions =
         ["directmonstergenrando", "", 1646, "3"],
         ["directmonstergenrando", "", 1645, "3"],
         ["directmonstergenrando", "", 1489, "3"],
-    ]
+    ],
     "hydro1.mis": [
         ["placeaploc", "", vector(-81.73, 123.66, -0.76), 477, 77], #477:On ground in storage room hydro1
         ["placeaploc", "", vector(-72.82, 60.27, -0.74), 478, 545], #478:Under bench near security control station in hallways near entrance hydro1
@@ -756,6 +763,7 @@ mapinstructions =
         ["placeaploc", "", vector(-23.46, -99.89, -4.74), 519, 1141], #519:On ground in water in second left room in cultivation 2 hydro1
         ["randomizerepl", "", 1084],
         ["replacecybmodshop", "StatsSkillsPsi", [97, 1256], vector(-56.05, 136.12, 0.68)],
+        ["respecmachine", "Respec", vector(-56.05, 136.12, 0.68)],
         ["randomizeenemy", "", 328, "3", vector(-38.5, 144.67, 1.16)],
         ["randomizeenemy", "", 326, "3", vector(-38.54, 117.78, 1.16)],
         ["randomizeenemy", "", 1003, "3", vector(-115, 136, -12)],
@@ -786,7 +794,7 @@ mapinstructions =
         ["directmonstergenrando", "", 94, "3"],
         ["directmonstergenrando", "", 172, "3"],
         ["directmonstergenrando", "", 151, "3"],
-    ]
+    ],
     "hydro3.mis": [
         ["placeaploc", "", vector(-68.36, -32.64, 1.19), 520, 103], #520:On ground near body near entrance hydro3
         ["placeaploc", "", vector(-65, 43.17, 1.25), 521, 101], #521:On desk in room with 3 windows across from entrance hydro3
@@ -836,7 +844,7 @@ mapinstructions =
         ["randomizeenemy", "", 171, "3", vector(-59.5, 1, 3.06)],
         ["randomizeenemy", "", 138, "3", vector(-45, -6, 7.66)],
         ["directmonstergenrando", "", 145, "3"],
-    ]
+    ],
     "ops2.mis": [
         ["placeaploc", "", vector(-166.1, 80.62, -23.72), 552, 1494], #552:On ground near body near crew quarters entrance ops2
         ["placeaploc", "", [519], 553, 522], #553:In desk in first left room coming from conference room in system admin area ops2
@@ -911,6 +919,7 @@ mapinstructions =
         ["placeaploc", "", [254], 622, 554], #622:In enemy that runs to conference room ops2
         ["randomizerepl", "", 461],
         ["replacecybmodshop", "StatsSkillsPsi", [373, 374, 375, 376], vector(-176.46, 121.68, -8.32)],
+        ["respecmachine", "Respec", vector(-176.46, 121.68, -8.32)],
         ["randomizeenemy", "", 815, "4", vector(-193.37, -84.07, -20.05)],
         ["randomizeenemy", "", 960, "4", vector(-171.4, -30.55, -5.1)],
         ["randomizeenemy", "", 958, "4", vector(-165.79, -30.38, -5.1)],
@@ -945,11 +954,11 @@ mapinstructions =
         ["directmonstergenrando", "", 130, "4"],
         ["directmonstergenrando", "", 1048, "4"],
         ["directmonstergenrando", "", 342, "4"],
-    ]
+    ],
     "ops1.mis": [
         ["placeaploc", "", vector(39.64, 17.19, -23.9), 690, 19], #690:On ground near polito ops1
         ["destroy", "", 132], #forcefield that stops you from leaving, sounds horrible though with overlapping emails.  Potentially hard code a solution later.
-    ]
+    ],
     "ops3.mis": [
         ["placeaploc", "", vector(-66.37, 88.08, -23.75), 623, 1263], #623:On ground next to body next to entrance ops3
         ["placeaploc", "", vector(-63.1, 123.38, -23.7), 624, 748], #624:On ground near body in lounge ops3
@@ -1021,10 +1030,11 @@ mapinstructions =
         ["randomizerepl", "", 693],
         ["randomizerepl", "", 118],
         ["replacecybmodshop", "StatsSkillsPsi", [758, 691, 690, 757], vector(-79.54, 112.11, -22.32)],
-        ["randomizeenemy", "", 570, "4", vector(-111.64, 388.83, -17.95)],
-        ["randomizeenemy", "", 1010, "4", vector(-101.84, 389.69, -11.95)],
-        ["randomizeenemy", "", 1015, "4", vector(-93.84, 389.69, -11.95)],
-        ["randomizeenemy", "", 1333, "4", vector(-84.34, 388.83, -17.95)],
+        ["respecmachine", "Respec", vector(-79.54, 112.11, -22.32)],
+        ["randomizeenemy", "", 570, "4", vector(-111.64, 388.83, -25.65)],
+        ["randomizeenemy", "", 1010, "4", vector(-105.45, 389.72, -25.86)],
+        ["randomizeenemy", "", 1015, "4", vector(-92.13, 388.84, -25.81)],
+        ["randomizeenemy", "", 1333, "4", vector(-84.34, 388.83, -25.65)],
         ["randomizeenemy", "", 672, "4", vector(-58.73, 389.4, -20.44)],
         ["randomizeenemy", "", 246, "4", vector(-67.88, 258.33, -24.04)],
         ["randomizeenemy", "", 248, "4", vector(-61.48, 252.27, -24.04)],
@@ -1045,7 +1055,7 @@ mapinstructions =
         ["directmonstergenrando", "", 342, "4"],
         ["directmonstergenrando", "", 123, "4"],
         ["directmonstergenrando", "", 270, "4"],
-    ]
+    ],
     "ops4.mis": [
         ["placeaploc", "", [557], 691, 354], #691:In body near interpolar sim unit ops4
         ["placeaploc", "", vector(25.31, -34.33, -39.86), 692, 121], #692:On ground near body near interpolar sim unit ops4
@@ -1103,6 +1113,7 @@ mapinstructions =
         ["placeaploc", "", [436], 744, 438], #744:In enemy that runs towards linear sim unit in security area ops4
         ["randomizerepl", "", 461],
         ["replacecybmodshop", "StatsSkillsPsi", [355, 359, 357, 358], vector(-53.53, -121.06, -25.32)],
+        ["respecmachine", "Respec", vector(-53.53, -121.06, -25.32)],
         ["randomizeenemy", "", 286, "4", vector(56.01, -40.25, -39.13)],
         ["randomizeenemy", "", 603, "4", vector(51.97, -39.65, -39.13)],
         ["randomizeenemy", "", 285, "4", vector(-6.49, -37.37, -39.13)],
@@ -1136,8 +1147,8 @@ mapinstructions =
         ["directmonstergenrando", "", 272, "4"],
         ["directmonstergenrando", "", 1209, "4"],
         ["directmonstergenrando", "", 123, "4"],
-    ]
-    "Rec1.mis": [
+    ],
+    "rec1.mis": [
         ["placeaploc", "", [774, 466], 745, 411], #745:In bodies near transmitter in athletics area rec1
         ["placeaploc", "", [345], 746, 1735], #746:In desk near charger in athletics area rec1
         ["placeaploc", "", vector(-33.07, -493.43, -12.87), 747, 722], #747:On ground near body in bathroom near mall entrance rec1
@@ -1212,6 +1223,7 @@ mapinstructions =
         ["placeaploc", "", [356], 817, 80], #817:In body in upper floor room in crew quarters area 11 rec1
         ["randomizerepl", "", 425],
         ["replacecybmodshop", "StatsSkillsPsi", [803, 965, 222, 804], vector(53.6, -400.35, -11.32)],
+        ["respecmachine", "Respec", vector(53.6, -400.35, -11.32)],
         ["randomizeenemy", "", 106, "5", vector(-23.86, -572.85, -10.95)],
         ["randomizeenemy", "", 886, "5", vector(-13.01, -574.13, -4.01)],
         ["randomizeenemy", "", 1546, "6", vector(14.11, -563.32, -8.6)],
@@ -1256,7 +1268,7 @@ mapinstructions =
         ["directmonstergenrando", "", 189, "5"],
         ["directmonstergenrando", "", 344, "5"],
         ["directmonstergenrando", "", 1822, "5"],
-    ]
+    ],
     "rec2.mis": [
         ["placeaploc", "", vector(18.9, -80.76, -12.07), 818, 742], #818:On ground near body near security crate at the security station rec2
         ["placeaploc", "", vector(13.95, -119.46, -10.8), 819, 1730], #819:On ground near desk near charger in room connected to maintenance tunnels rec2
@@ -1382,7 +1394,7 @@ mapinstructions =
         ["directmonstergenrando", "", 1287, "5"],
         ["directmonstergenrando", "", 1321, "5"],
         ["directmonstergenrando", "", 1301, "5"],
-    ]
+    ],
     "rec3.mis": [
         ["sss", ""],
         ["placeaploc", "", vector(-226.18, -205.08, -12.84), 899, 453], #899:On ground near body in bathroom near crew quarters entrance rec3
@@ -1435,6 +1447,8 @@ mapinstructions =
         ["randomizerepl", "", 2040],
         ["replacecybmodshop", "StatsSkillsPsi", [114, 116], vector(-208.54, -471.29, -11.32)],
         ["replacecybmodshop", "StatsSkillsPsi", [111, 112, 1075, 1076], vector(-271.65, -335.45, -11.32)],
+        ["respecmachine", "Respec", vector(-208.54, -471.29, -11.32)],
+        ["respecmachine", "Respec", vector(-271.65, -335.45, -11.32)],
         ["destroy", "OSUpgrades", 153],
         ["placeaploc", "OSUpgrades", vector(-238, -332.37, -7.29), 944, 0], #944:On wall near neural implant express store rec3
         ["placeaploc", "OSUpgrades", vector(-238, -335.32, -7.29), 945, 0], #945:On wall near neural implant express store 2 rec3
@@ -1467,8 +1481,8 @@ mapinstructions =
         ["directmonstergenrando", "", 213, "5"],
         ["directmonstergenrando", "", 195, "5"],
         ["directmonstergenrando", "", 187, "5"],
-    ]
-    "commmand1.mis": [
+    ],
+    "command1.mis": [
         ["randomizerepl", "", 394],
         ["command1repl", ""],
         ["placeaploc", "", [1182], 948, 1186], #948:In body near resurrection station command1
@@ -1519,7 +1533,8 @@ mapinstructions =
         ["placeaploc", "", vector(-183.14, 19.52, -43.92), 993, 554], #993:On ground outside tram stop near bridge entrance command1
         ["placeaploc", "", vector(113.78, 4.73, -39.92), 994, 322], #994:On ground hidden behind beam near bridge entrance command1
         ["randomizerepl", "", 363],
-        ["replacecybmodshop", "", [393, 396], vector(977.09, 150.44, -46.32)],
+        ["replacecybmodshop", "StatsSkillsPsi", [393, 396], vector(977.09, 150.44, -46.32)],
+        ["respecmachine", "Respec", vector(977.09, 150.44, -46.32)],
         ["randomizeenemy", "", 792, "6", vector(983.45, 175.46, -45.59)],
         ["randomizeenemy", "", 791, "6", vector(963.81, 70.32, -46.94)],
         ["randomizeenemy", "", 2314, "6", vector(929.63, 105.62, -44.05)],
@@ -1564,8 +1579,7 @@ mapinstructions =
         ["directmonstergenrando", "", 424, "6"],
         ["destroy", "", 1252],
         ["destroy", "", 1245] #qb filters that change the first item in the repl to the sympathetic resonator, which we dont want to happen
-
-    ]
+    ],
     "command2.mis": [
         ["placeaploc", "", [595, 584], 995, 155], #995:In bodies in lobby near entrance command2
         ["placeaploc", "", vector(65.73, -1.12, -27.92), 996, 2179], #996:On ground near body behind table in path towards officers' area command2
@@ -1694,7 +1708,9 @@ mapinstructions =
         ["randomizerepl", "", 649],
         ["randomizerepl", "", 630],
         ["replacecybmodshop", "StatsSkillsPsi", [499], vector(-15.34, -84.07, -50.32)],
-        ["replacecybmodshop", "", [500], vector(-67, -21.88, -24.32)],
+        ["replacecybmodshop", "StatsSkillsPsi", [500], vector(-67, -21.88, -24.32)],
+        ["respecmachine", "Respec", vector(-15.34, -84.07, -50.32)],
+        ["respecmachine", "Respec", vector(-67, -21.88, -24.32)],
         ["randomizeenemy", "", 1325, "7", vector(141.29, 15, 30.85)],
         ["randomizeenemy", "", 2459, "7", vector(67.36, 0.46, 25.73)],
         ["randomizeenemy", "", 857, "7", vector(84.05, 26.63, 25.95)],
@@ -1738,22 +1754,554 @@ mapinstructions =
         ["directmonstergenrando", "", 311, "7"],
         ["directmonstergenrando", "", 2467, "6"],
         ["directmonstergenrando", "", 2485, "6"],
-    ]
+    ],
     "rick1.mis": [
-
-    ]
+        ["placeaploc", "", [1053], 1119, 1466], #1119:In body at top of ladder near entrance rick1
+        ["placeaploc", "", vector(-60.3, 7.03, 40.12), 1120, 1464], #1120:On ground near body at top of ladder near entrance rick1
+        ["placeaploc", "", vector(-71.9, -100.14, 80.23), 1121, 490], #1121:On ground near nacelle b door near resurrection station rick1
+        ["placeaploc", "", [2157], 1122, 2161], #1122:In high-security crate near resurrection station rick1
+        ["placeaploc", "", [2157], 1123, 2158], #1123:In high-security crate near resurrection station 2 rick1
+        ["placeaploc", "", [2157], 1124, 2159], #1124:In high-security crate near resurrection station 3 rick1
+        ["placeaploc", "", [2157], 1125, 2160], #1125:In high-security crate near resurrection station 4 rick1
+        ["placeaploc", "", vector(-108.81, -41.08, 96.7), 1126, 1782], #1126:On ground near body near chemical storeroom rick1
+        ["placeaploc", "", vector(-163.59, -31.33, 58.68), 1127, 1612], #1127:On ground near body on top of fuel cell near bridge that extends rick1
+        ["placeaploc", "", vector(-210.28, 21.49, 42.7), 1128, 1771], #1128:Under desk across bridge that extends rick1
+        ["placeaploc", "", vector(-276.53, 2.5, 170.23), 1129, 1304], #1129:On ground on path to pod2 rick1
+        ["placeaploc", "", [1458], 1130, 1459], #1130:In body near entrance rick1
+        ["placeaploc", "", [1458], 1131, 1460], #1131:In body near entrance 2 rick1
+        ["placeaploc", "", [1458], 1132, 1402], #1132:In body near entrance 3 rick1
+        ["placeaploc", "", vector(-17.68, 18.78, -23.92), 1133, 1794], #1133:On structural support near entrance rick1
+        ["placeaploc", "", vector(-52.73, -4.89, -26.79), 1134, 1461], #1134:Under pipes near ladder near entrance rick1
+        ["placeaploc", "", vector(-63.55, -126.61, 85.2), 1135, 2169], #1135:Hidden behind pipes in nacelle b after keycarded door rick1
+        ["placeaploc", "", vector(-70.9, -73.44, 80.75), 1136, 1387], #1136:Hidden behind pipes near replicator near resurrection machine rick1
+        ["placeaploc", "", vector(-133.04, -77.46, 96.21), 1137, 1783], #1137:On ground near egg in dead end room near chemical storage rick1
+        ["placeaploc", "", vector(-161.43, -82.55, 96.2), 1138, 2130], #1138:On ground near egg in dead end room near chemical storage 2 rick1
+        ["placeaploc", "", vector(-162.01, -80.72, 96.1), 1139, 1785], #1139:On ground near egg in dead end room near chemical storage 3 rick1
+        ["placeaploc", "", [2145], 1140, 2104], #1140:In enemy near egg in dead end room near chemical storage rick1
+        ["placeaploc", "", [2164], 1141, 1625], #1141:In security crate near ramp downward near bridge that extends rick1
+        ["placeaploc", "", [2164], 1142, 2166], #1142:In security crate near ramp downward near bridge that extends 2 rick1
+        ["placeaploc", "", [1611], 1143, 1615], #1143:In body on top of fuel cell near bridge that extends rick1
+        ["placeaploc", "", [2181], 1144, 2182], #1144:In security crate along path to pod 2 in area before radiated area rick1
+        ["placeaploc", "", [2181], 1145, 2183], #1145:In security crate along path to pod 2 in area before radiated area 2 rick1
+        ["placeaploc", "", [2181], 1146, 2184], #1146:In security crate along path to pod 2 in area before radiated area 3 rick1
+        ["placeaploc", "", [2181], 1147, 2185], #1147:In security crate along path to pod 2 in area before radiated area 4 rick1
+        ["placeaploc", "", [2181], 1148, 2112], #1148:In security crate along path to pod 2 in area before radiated area 5 rick1
+        ["placeaploc", "", [2181], 1149, 2111], #1149:In security crate along path to pod 2 in area before radiated area 6 rick1
+        ["placeaploc", "", vector(-72.13, -58.06, 55.63), 1150, 1403], #1150:On ground near egg near large window nearish entrance rick1
+        ["placeaploc", "", [2211], 1151, 2216], #1151:In security crate near pod2 exit rick1
+        ["placeaploc", "", [2211], 1152, 2213], #1152:In security crate near pod2 exit 2 rick1
+        ["placeaploc", "", [2211], 1153, 2214], #1153:In security crate near pod2 exit 3 rick1
+        ["placeaploc", "", [2211], 1154, 2212], #1154:In security crate near pod2 exit 4 rick1
+        ["placeaploc", "", [1636], 1155, 1770], #1155:In body across bridge that extends rick1
+        ["placeaploc", "", [1636], 1156, 1773], #1156:In body across bridge that extends 2 rick1
+        ["placeaploc", "", [1636], 1157, 1776], #1157:In body across bridge that extends 3 rick1
+        ["placeaploc", "", [1636], 1158, 1779], #1158:In body across bridge that extends 4 rick1
+        ["placeaploc", "", vector(-196.77, 12.9, 67.11), 1159, 1781], #1159:In vent duct connected to room above bridge that extends rick1
+        ["placeaploc", "", vector(-193.95, 2.82, 67.08), 1160, 1796], #1160:In room above bridge that extends rick1
+        ["placeaploc", "", [1786], 1161, 1798], #1161:In body on path to pod 2 at start of the path rick1
+        ["placeaploc", "", [1786], 1162, 1788], #1162:In body on path to pod 2 at start of the path 2 rick1
+        ["placeaploc", "", vector(274.36, 32.25, 181.08), 1163, 1365], #1163:Hidden in room behind glass near ladder near end of path to pod 2 rick1
+        ["placeaploc", "", vector(-285.95, 14.16, 204.13), 1164, 907], #1164:Hidden behind pipes near end of path 2 rick1
+        ["placeaploc", "", vector(-270.75, -14.41, 200.33), 1165, 1039], #1165:On ground near body near end of path 2 rick1
+        ["placeaploc", "", vector(-242.23, 5.21, 96.18), 1166, 1727], #1166:Hidden behind pipes on path to pod2 rick1
+        ["placeaploc", "", vector(-252.22, -51.04, 88.08), 1167, 1801], #1167:On ground at bottom of ladder on path to pod 2 rick1
+        ["placeaploc", "", [1800], 1168, 1802], #1168:In body on path to pod 2 rick1
+        ["placeaploc", "", vector(-237.74, -28.91, 102.05), 1169, 2120], #1169:On table on path to pod 2 rick1
+        ["placeaploc", "", vector(225.73, -8.55, 123.51), 1170, 2191], #1170:On ground behind beams near replicator on path to pod2 rick1
+        ["placeaploc", "", vector(-213.17, -25.86, 44.62), 1171, 1519], #1171:On pipes directly next to bridge that extends rick1
+        ["placeaploc", "", vector(-223.81, -34.35, 96.08), 1172, 1799], #1172:Under bench on path to pod2 rick1
+        ["placeaploc", "", vector(-216.8, -54.81, 58.58), 1173, 2192], #1173:On top of fuel cell against wall near bridge that extends rick1
+        ["placeaploc", "", vector(-194.48, -38.24, 133.29), 1174, 2198], #1174:On ground near body on upper metal walkway on path to pod2 rick1
+        ["placeaploc", "", vector(-194.16, -41.25, 92.11), 1175, 1787], #1175:On ground near body on path to pod 2 rick1
+        ["placeaploc", "", [2178], 1176, 2177], #1176:In crate near first button that extends bridge rick1
+        ["placeaploc", "", [2178], 1177, 2179], #1177:In crate near first button that extends bridge 2 rick1
+        ["placeaploc", "", [1780], 1178, 2180], #1178:In enemy near first button that extends bridge rick1
+        ["placeaploc", "", vector(-195.6, -65.61, 44.08), 1179, 468], #1179:On broken window sill near first button that extends bridge rick1
+        ["placeaploc", "", vector(-188.85, -61.85, 42.34), 1180, 2096], #1180:On ground near body near first button that extends bridge rick1
+        ["placeaploc", "", [1761], 1181, 1766], #1181:In body near first button that extends bridge rick1
+        ["placeaploc", "", [1761], 1182, 1768], #1182:In body near first button that extends bridge 2 rick1
+        ["placeaploc", "", [1761], 1183, 1767], #1183:In body near first button that extends bridge 3 rick1
+        ["placeaploc", "", [1621, 1619], 1184, 1412], #1184:In bodies at bottom of dual broken ladders that you jump between rick1
+        ["placeaploc", "", [584], 1185, 1354], #1185:In waste barrel near resurrection station rick1
+        ["placeaploc", "", vector(-84.2, -32.12, 97.63), 1186, 2153], #1186:On ground at start of path to nacelle b rick1
+        ["placeaploc", "", [1565], 1187, 1405], #1187:In body near first fuel cell rick1
+        ["placeaploc", "", vector(-88.81, -60.82, 42.53), 1188, 1608], #1188:On ground near body near first fuel cell rick1
+        ["placeaploc", "", [2155], 1189, 2156], #1189:In crate behind wall near start of nacelle b rick1
+        ["placeaploc", "", vector(-104.74, -32.55, 59.1), 1190, 2172], #1190:On top of first fuel cell rick1
+        ["placeaploc", "", [1669], 1191, 1680], #1191:In body near chemical storeroom rick1
+        ["placeaploc", "", vector(-122.7, -30.97, 134.72), 1192, 2125], #1192:Hidden on metal rafter above in room with rockets that move upward rick1
+        ["placeaploc", "", vector(-148.36, -10.29, 166.08), 1193, 1362], #1193:Hidden under grate under you near radiated area rick1
+        ["placeaploc", "", [1623, 1413, 342], 1194, 1626], #1194:In bodies at top of dual broken ladders that you jump between rick1
+        ["placeaploc", "", [1623, 1413, 342], 1195, 1797], #1195:In bodies at top of dual broken ladders that you jump between 2 rick1
+        ["placeaploc", "", vector(-161.27, 16.34, 95.2), 1196, 1627], #1196:On ground near body at top of dual broken ladders that you jump between rick1
+        ["placeaploc", "", [1621, 1619], 1197, 494], #1197:In bodies at bottom of dual broken ladders that you jump between 2 rick1
+        ["placeaploc", "", [1623, 1413, 342], 1198, 1414], #1198:In bodies at top of dual broken ladders that you jump between 3 rick1
+        ["placeaploc", "", vector(-112.19, 17.83, 88.14), 1199, 914], #1199:On ground near pipes in nacelle a rick1
+        ["placeaploc", "", vector(-116.37, 8.51, 88.08), 1200, 471], #1200:On ground near pipes in nacelle a 2 rick1
+        ["placeaploc", "", vector(-127.82, 1.3, 164.33), 1201, 1038], #1201:In water hidden under pipes along path to pod 2 in area before radiated area rick1
+        ["placeaploc", "", [2165], 1202, 2122], #1202:In enemy in area connected to vent ducts above fuel cells
+        ["placeaploc", "", [360, 2162, 2154], 1203, 2131], #1203:In body bags in nacelle a rick1
+        ["placeaploc", "", [360, 2162, 2154], 1204, 2097], #1204:In body bags in nacelle a 2 rick1
+        ["placeaploc", "", [1567], 1205, 1059], #1205:In body in room with button that raises barrier near top of ladder near entrance rick1
+        ["placeaploc", "", [1567], 1206, 1467], #1206:In body in room with button that raises barrier near top of ladder near entrance 2 rick1
+        ["placeaploc", "", [1567], 1207, 1404], #1207:In body in room with button that raises barrier near top of ladder near entrance 3 rick1
+        ["placeaploc", "", vector(-77.79, 2.04, 55.08), 1208, 1795], #1208:On ground near body in room with button that raises barrier near top of ladder near entrance rick1
+        ["placeaploc", "", vector(-141.33, -17.55, 101.38), 1209, 434], #1209:In chemical storage room rick1
+        ["placeaploc", "", vector(-140.65, -15.64, 101.38), 1210, 1446], #1210:In chemical storage room 2 rick1
+        ["placeaploc", "", vector(-140.86, -10.44, 101.4), 1211, 439], #1211:In chemical storage room 3 rick1
+        ["placeaploc", "", vector(-136.73, -6.63, 101.4), 1212, 446], #1212:In chemical storage room 4 rick1
+        ["placeaploc", "", vector(-135.04, -5.66, 101.38), 1213, 445], #1213:In chemical storage room 5 rick1
+        ["placeaploc", "", vector(-131.26, -5.61, 101.17), 1214, 1313], #1214:In chemical storage room 6 rick1
+        ["placeaploc", "", vector(-128.85, -6.67, 101.38), 1215, 1447], #1215:In chemical storage room 7 rick1
+        ["placeaploc", "", vector(-127.51, -6.2, 101.44), 1216, 1312], #1216:In chemical storage room 8 rick1
+        ["placeaploc", "", vector(-139.08, -17.43, 99.38), 1217, 1445], #1217:In chemical storage room 9 rick1
+        ["placeaploc", "", vector(-139.93, -14.82, 99.38), 1218, 443], #1218:In chemical storage room 10 rick1
+        ["placeaploc", "", vector(-139.02, -11.9, 99.38), 1219, 444], #1219:In chemical storage room 11 rick1
+        ["placeaploc", "", vector(-140.02, -8.76, 99.38), 1220, 436], #1220:In chemical storage room 12 rick1
+        ["placeaploc", "", vector(-138.21, -6.85, 99.38), 1221, 438], #1221:In chemical storage room 13 rick1
+        ["placeaploc", "", vector(-136.7, -6.98, 99.38), 1222, 1444], #1222:In chemical storage room 14 rick1
+        ["placeaploc", "", vector(-134.09, -8.34, 98.86), 1223, 427], #1223:In chemical storage room 15 rick1
+        ["placeaploc", "", vector(-132.31, -6.85, 99.38), 1224, 432], #1224:In chemical storage room 16 rick1
+        ["placeaploc", "", vector(-129.45, -7.73, 99.38), 1225, 431], #1225:In chemical storage room 17 rick1
+        ["placeaploc", "", vector(-130.05, -6.22, 99.38), 1226, 435], #1226:In chemical storage room 18 rick1
+        ["placeaploc", "", vector(127.54, -7.04, 99.38), 1227, 430], #1227:In chemical storage room 19 rick1
+        ["placeaploc", "", vector(-139.72, -18.15, 96.64), 1228, 1616], #1228:In chemical storage room 20 rick1
+        ["placeaploc", "", vector(-139.12, -16.55, 96.64), 1229, 1617], #1229:In chemical storage room 21 rick1
+        ["placeaploc", "", vector(-139.97, -14.55, 96.64), 1230, 1618], #1230:In chemical storage room 22 rick1
+        ["placeaploc", "", vector(-139.62, -12.33, 96.64), 1231, 1620], #1231:In chemical storage room 23 rick1
+        ["placeaploc", "", vector(-139.03, -9.68, 96.64), 1232, 1622], #1232:In chemical storage room 24 rick1
+        ["placeaploc", "", vector(-138.37, -7.39, 96.64), 1233, 1635], #1233:In chemical storage room 25 rick1
+        ["placeaploc", "", vector(-135.83, -7.36, 96.64), 1234, 1638], #1234:In chemical storage room 26 rick1
+        ["placeaploc", "", vector(-133.22, -6.98, 96.71), 1235, 2163], #1235:In chemical storage room 27 rick1
+        ["placeaploc", "", vector(-130.59, -7.42, 96.64), 1236, 1639], #1236:In chemical storage room 28 rick1
+        ["placeaploc", "", vector(-128.05, -7.11, 96.64), 1237, 1641], #1237:In chemical storage room 29 rick1
+        ["placeaploc", "", vector(-94, -9.89, 42.46), 1238, 2121], #1238:On ground hidden in corner behind first fuel cell rick1
+        ["randomizerepl", "", 119],
+        ["randomizerepl", "", 1369],
+        ["replacecybmodshop", "StatsSkillsPsi", [166], vector(-27.19, 4.91, -25.32)],
+        ["replacecybmodshop", "StatsSkillsPsi", [165], vector(-87.54, -36.2, 43.68)],
+        ["replacecybmodshop", "StatsSkillsPsi", [112, 113], vector(-269.75, -28.2, 201.68)],
+        ["respecmachine", "Respec", vector(-27.19, 4.91, -25.32)],
+        ["respecmachine", "Respec", vector(-87.54, -36.2, 43.68)],
+        ["respecmachine", "Respec", vector(-269.75, -28.2, 201.68)],
+        ["destroy", "OSUpgrades", 1939],
+        ["placeaploc", "OSUpgrades", vector(-163.66, 3.93, 97), 1239, 0], #1239:On ground near body at top of dual broken ladders that you jump between 2 rick1
+        ["placeaploc", "OSUpgrades", vector(-166.71, 3.49, 97), 1240, 0], #1240:On ground near body at top of dual broken ladders that you jump between 3 rick1
+        ["placeaploc", "OSUpgrades", vector(-158.48, 2.7, 97), 1241, 0], #1241:On ground near body at top of dual broken ladders that you jump between 4 rick1
+        ["placeaploc", "OSUpgrades", vector(-158.48, 5.28, 97), 1242, 0], #1242:On ground near body at top of dual broken ladders that you jump between 5 rick1
+        ["randomizeenemy", "", 2188, "7", vector(-286.08, -32.55, 204.4)],
+        ["randomizeenemy", "", 913, "7", vector(-270.37, -20.47, 203.01)],
+        ["randomizeenemy", "", 912, "7", vector(-270.37, -8.47, 203.01)],
+        ["randomizeenemy", "", 411, "7", vector(-265.44, -10.44, 126.23)],
+        ["randomizeenemy", "", 2100, "7", vector(-200.58, -5.28, 126.63)],
+        ["randomizeenemy", "", 2109, "7", vector(-214.98, -38.53, 98.85)],
+        ["randomizeenemy", "", 617, "7", vector(-215.28, -47.51, 98.85)],
+        ["randomizeenemy", "", 2103, "7", vector(-215.76, -54.09, 98.85)],
+        ["randomizeenemy", "", 652, "7", vector(-211.12, -58.25, 45.95)],
+        ["randomizeenemy", "", 1780, "7", vector(-189.34, -74.76, 43.12)],
+        ["randomizeenemy", "", 417, "7", vector(-184.75, -29.74, 126.23)],
+        ["randomizeenemy", "", 2201, "7", vector(-182.32, 17.7, 173.95)],
+        ["randomizeenemy", "", 2203, "7", vector(-180.08, 17.41, 173.95)],
+        ["randomizeenemy", "", 2205, "7", vector(-181.26, 10.61, 173.95)],
+        ["randomizeenemy", "", 2123, "7", vector(-9.7, -74.95, -79)],
+        ["randomizeenemy", "", 2113, "7", vector(-9.25, -49.47, -78.21)],
+        ["randomizeenemy", "", 2243, "7", vector(-4.32, -49.92, -84.1)],
+        ["randomizeenemy", "", 708, "7", vector(-65.07, -144.11, 97.91)],
+        ["randomizeenemy", "", 1624, "7", vector(-145.98, -145.15, 87.92)],
+        ["randomizeenemy", "", 1632, "7", vector(-116.82, -127.7, 87.85)],
+        ["randomizeenemy", "", 2106, "7", vector(-164.39, -52.08, 98.85)],
+        ["randomizeenemy", "", 2145, "7", vector(-147.75, -58.02, 100.55)],
+        ["randomizeenemy", "", 1633, "7", vector(-133.12, -35.12, 125.85)],
+        ["randomizeenemy", "", 1634, "7", vector(-133.12, -16.87, 125.85)],
+        ["randomizeenemy", "", 2200, "7", vector(-126.48, -18.48, 168.85)],
+        ["randomizeenemy", "", 2099, "7", vector(-133.61, 7.79, 99.95)],
+        ["randomizeenemy", "", 2165, "7", vector(-104.45, 3.09, 70.95)],
+        ["randomizeenemy", "", 253, "7", vector(-116.58, -45.5, 47.02)],
+        ["randomizeenemy", "", 2147, "7", vector(-113.07, -51.64, 100.5)],
+        ["randomizeenemy", "", 2144, "7", vector(-114.6, -48.92, 101)],
+        ["randomizeenemy", "", 2149, "7", vector(-111.62, -28.19, 97)],
+        ["randomizeenemy", "", 450, "7", vector(-99.74, -33.47, 84.45)],
+        ["randomizeenemy", "", 418, "7", vector(-97.6, -61.07, 158.45)],
+        ["randomizeenemy", "", 2141, "7", vector(-71.17, 8.58, 100.4)],
+        ["randomizeenemy", "", 1079, "7Ranged", vector(-54.06, -1.97, 10.87)],
+        ["randomizeenemy", "", 171, "7Ranged", vector(-54.06, -1.97, 18.87)],
+        ["randomizeenemy", "", 257, "7Ranged", vector(-54.06, -1.97, 26.87)],
+        ["randomizeenemy", "", 1307, "7Ranged", vector(-49.96, 0.26, -11.05)],
+        ["directmonstergenrando", "", 1489, "7"],
+        ["directmonstergenrando", "", 1651, "7"],
+        ["directmonstergenrando", "", 2296, "7"],
+        ["directmonstergenrando", "", 1645, "7"],
+        ["directmonstergenrando", "", 706, "7"],
+        ["directmonstergenrando", "", 1493, "7"],
+        ["directmonstergenrando", "", 1488, "7"],
+        ["directmonstergenrando", "", 1497, "7"],
+        ["directmonstergenrando", "", 1496, "7"],
+        ["directmonstergenrando", "", 2028, "7"],
+        ["directmonstergenrando", "", 2027, "7"],
+        ["directmonstergenrando", "", 1667, "7"],
+        ["directmonstergenrando", "", 1490, "7"],
+        ["directmonstergenrando", "", 1659, "7"],
+        ["directmonstergenrando", "", 2026, "7"],
+    ],
     "rick2.mis": [
-
-    ]
+        ["placeaploc", "", vector(-350.51, -22.11, 221.24), 1243, 713], #1243:On ground near body near entrance rick2
+        ["placeaploc", "", [144], 1244, 145], #1244:In body near pipe jump rick2
+        ["placeaploc", "", [144], 1245, 147], #1245:In body near pipe jump 2 rick2
+        ["placeaploc", "", vector(-433.6, 21.14, 229.18), 1246, 146], #1246:On ground near body near pipe jump rick2
+        ["placeaploc", "", vector(-452.81, -10.98, 207.86), 1247, 705], #1247:On ground near body in church rick2
+        ["placeaploc", "", vector(-307.79, 4.2, 220.65), 1248, 725], #1248:Under bridge at entrance rick2
+        ["placeaploc", "", [126], 1249, 734], #1249:In body near entrance rick2
+        ["placeaploc", "", vector(-350.9, -14.43, 221.25), 1250, 116], #1250:On ground near body near entrance 2 rick2
+        ["placeaploc", "", vector(-397.56, -29.03, 229.71), 1251, 723], #1251:On ground outside church rick2
+        ["placeaploc", "", vector(-418.81, 21.2, 196.66), 1252, 816], #1252:On ground at bottom of pipe jump rick2
+        ["placeaploc", "", vector(-422.05, 20.74, 196.08), 1253, 246], #1253:On ground at bottom of pipe jump 2 rick2
+        ["placeaploc", "", [704, 149], 1254, 150], #1254:In bodies in church rick2
+        ["placeaploc", "", [704, 149], 1255, 151], #1255:In bodies in church 2 rick2
+        ["placeaploc", "", [704, 149], 1256, 152], #1256:In bodies in church 3 rick2
+        ["placeaploc", "", [704, 149], 1257, 746], #1257:In bodies in church 4 rick2
+        ["placeaploc", "", [704, 149], 1258, 702], #1258:In bodies in church 5 rick2
+        ["placeaploc", "", vector(-448.78, -7.29, 207.08), 1259, 117], #1259:On ground near body in church 2 rick2
+        ["placeaploc", "", vector(-463.49, -38.2, 222.04), 1260, 148], #1260:On ground to the left in the church rick2
+        ["placeaploc", "", vector(-483.76, -11.8, 286.72), 1261, 252], #1261:On ground nearish exit rick2
+        ["placeaploc", "", vector(-505.73, 31.06, 287.25), 1262, 154], #1262:On ground near body nearish exit rick2
+        ["placeaploc", "", vector(-508.43, 31.44, 287.52), 1263, 153], #1263:On ground near body nearish exit 2 rick2
+        ["placeaploc", "", [155, 85], 1264, 156], #1264:In bodies nearish exit rick2
+        ["placeaploc", "", [155, 85], 1265, 724], #1265:In bodies nearish exit 2 rick2
+        ["placeaploc", "", vector(-498.24, -1.32, 288.08), 1266, 336], #1266:On ground near body nearish exit 3 rick2
+        ["placeaploc", "", vector(-503.44, -3.12, 288.1), 1267, 158], #1267:On ground near body nearish exit 4 rick2
+        ["placeaploc", "", [155, 85], 1268, 774], #1268:In bodies nearish exit 3 rick2
+        ["placeaploc", "", vector(-504.22, -36.87, 287.14), 1269, 160], #1269:On ground near exit rick2
+        ["placeaploc", "", vector(-499.76, -37.89, 287.45), 1270, 164], #1270:On ground near exit 2 rick2
+        ["placeaploc", "", [159], 1271, 161], #1271:In body near exit rick2
+        ["placeaploc", "", vector(-527.79, -33.86, 283.14), 1272, 163], #1272:On ground near body near exit rick2
+        ["placeaploc", "", vector(-544.65, -14.83, 271.14), 1273, 162], #1273:On lower ground to left of exit rick2
+        ["randomizeenemy", "", 752, "8", vector(-546.33, -16.07, 274.86)],
+        ["randomizeenemy", "", 751, "8", vector(-540.19, -12.14, 274.86)],
+        ["randomizeenemy", "", 760, "8", vector(-524.88, -14.41, 273.14)],
+        ["randomizeenemy", "", 759, "8", vector(-520.76, -16.07, 276.51)],
+        ["randomizeenemy", "", 744, "8", vector(-526.91, -29.46, 290.5)],
+        ["randomizeenemy", "", 94, "8", vector(-521.17, -36.09, 287.91)],
+        ["randomizeenemy", "", 95, "8", vector(-513.07, -35.64, 287.87)],
+        ["randomizeenemy", "", 693, "8", vector(-487.02, 12.48, 288.36)],
+        ["randomizeenemy", "", 88, "8", vector(-488.31, 31.96, 288.22)],
+        ["randomizeenemy", "", 68, "8", vector(-490.47, 38.31, 298)],
+        ["randomizeenemy", "", 714, "8", vector(-462.91, -32.62, 225.95)],
+        ["randomizeenemy", "", 696, "8", vector(-462.89, 6.68, 225.95)],
+        ["randomizeenemy", "", 699, "8", vector(-450.97, 6.48, 225.95)],
+        ["randomizeenemy", "", 733, "8", vector(-368.79, 58.72, 233.12)],
+    ],
     "rick3.mis": [
-
-    ]
+        ["placeaploc", "", vector(-672.73, -108.33, 279.24), 1274, 510], #1274:On ground in diego's quarters rick3
+        ["placeaploc", "", [662], 1275, 669], #1275:In locker in diego's quarters rick3
+        ["placeaploc", "", vector(-731.49, -5.71, 268.79), 1276, 666], #1276:Under desk near front of bridge rick3
+        ["placeaploc", "", vector(-603.05, -8.24, 301.31), 1277, 772], #1277:On ground around structure above using tall ladder rick3
+        ["placeaploc", "", vector(-646.14, -74.77, 271.93), 1278, 667], #1278:On ground hidden behind circular structure across from replicator rick3
+        ["placeaploc", "", vector(-673.15, 31.94, 274.38), 1279, 668], #1279:On ground behind box near camera near entrance rick3
+        ["placeaploc", "", [506], 1280, 507], #1280:In body on path to escape pod rick3
+        ["placeaploc", "", [506], 1281, 508], #1281:In body on path to escape pod 2 rick3
+        ["placeaploc", "", [506], 1282, 509], #1282:In body on path to escape pod 3 rick3
+        ["placeaploc", "", [501], 1283, 503], #1283:In body behind keycarded door near entrance rick3
+        ["placeaploc", "", [501], 1284, 505], #1284:In body behind keycarded door near entrance 2 rick3
+        ["placeaploc", "", [501], 1285, 502], #1285:In body behind keycarded door near entrance 3 rick3
+        ["placeaploc", "", vector(-678.93, -53.67, 276.79), 1286, 788], #1286:On shelves near replicator rick3
+        ["placeaploc", "", vector(-678.93, -52.17, 276.79), 1287, 789], #1287:On shelves near replicator 2 rick3
+        ["placeaploc", "", vector(-679.12, -50.36, 279.14), 1288, 500], #1288:On shelves near replicator 3 rick3
+        ["placeaploc", "", vector(-678.87, -49.11, 276.64), 1289, 496], #1289:On shelves near replicator 4 rick3
+        ["placeaploc", "", vector(-678.62, -45.86, 276.65), 1290, 498], #1290:On shelves near replicator 5 rick3
+        ["randomizerepl", "", 1505],
+        ["destroy", "OSUpgrades", 511], #Os upgrade machine present in vanilla
+        ["replacecybmodshop", "StatsSkillsPsi", [1078, 1077, 1080, 1079], vector(-671.86, 3.15, 274.68)],
+        ["respecmachine", "Respec", vector(-671.86, 3.15, 274.68)],
+        ["randomizeenemy", "", 495, "8", vector(-674.34, -68.85, 272)],
+        ["randomizeenemy", "", 80, "8", vector(-690.46, -43.3, 277.6)],
+        ["randomizeenemy", "", 625, "8", vector(-663.59, -19, 275.85)],
+        ["randomizeenemy", "", 81, "8", vector(-643.46, -19.3, 263.6)],
+        ["randomizeenemy", "", 622, "8", vector(-588.87, -36.71, 261.85)],
+        ["randomizeenemy", "", 621, "8", vector(-588.92, -0.72, 261.85)],
+        ["randomizeenemy", "", 79, "8", vector(-690.46, 4.7, 277.6)],
+        ["randomizeenemy", "", 175, "8", vector(-692.02, 10.64, 263.95)],
+        ["randomizeenemy", "", 216, "8", vector(-709.49, 22.24, 259.01)],
+        ["randomizeenemy", "", 217, "8", vector(-711.49, 34.24, 259.01)],
+        ["randomizeenemy", "", 620, "8", vector(-689.78, 62.12, 273.87)],
+        ["randomizeenemy", "", 134, "8", vector(-682.71, 60.38, 275)],
+        ["directmonstergenrando", "", 119, "8"],
+        ["directmonstergenrando", "", 118, "8"],
+        ["directmonstergenrando", "", 103, "8"],
+    ],
     "many.mis": [
-        ["slayvictoryprop", "Many", 253]
-
-    ]
+        ["slayvictoryprop", "Many", 253],
+        ["placeaploc", "", vector(-126.11, -244.29, 13.08), 1291, 14], #1291:In pod directly next to start of level many
+        ["placeaploc", "", vector(75.78, -163.14, -1.34), 1292, 79], #1292:On ground near body near start of level many
+        ["placeaploc", "", vector(28.46, -93.35, 2.04), 1293, 95], #1293:On ground near body nearish start of level many
+        ["placeaploc", "", [135, 768], 1294, 136], #1294:In bodies in water near nerve cluster many
+        ["placeaploc", "", [135, 768], 1295, 138], #1295:In bodies in water near nerve cluster 2 many
+        ["placeaploc", "", vector(-119.56, -222.54, -51.54), 1296, 278], #1296:In water in large chamber of water on path to nerve cluster many
+        ["placeaploc", "", [275, 276], 1297, 1392], #1297:In bodies in large chamber of water on path to nerve cluster many
+        ["placeaploc", "", vector(-174.96, -24.82, -3.23), 1298, 171], #1298:On ground near body near chemical storeroom many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1299, 23], #1299:In bodies on path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1300, 293], #1300:In bodies on path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1301, 292], #1301:In bodies on path with 4 rooms that have bodies in them 3 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1302, 388], #1302:In bodies on path with 4 rooms that have bodies in them 4 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1303, 888], #1303:In bodies on path with 4 rooms that have bodies in them 5 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1304, 302], #1304:In bodies on path with 4 rooms that have bodies in them 6 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1305, 291], #1305:In bodies on path with 4 rooms that have bodies in them 7 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1306, 745], #1306:In bodies on path with 4 rooms that have bodies in them 8 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1307, 233], #1307:In bodies on path with 4 rooms that have bodies in them 9 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1308, 773], #1308:In bodies on path with 4 rooms that have bodies in them 10 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1309, 296], #1309:In bodies on path with 4 rooms that have bodies in them 11 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1310, 298], #1310:In bodies on path with 4 rooms that have bodies in them 12 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1311, 1431], #1311:In bodies on path with 4 rooms that have bodies in them 13 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1312, 985], #1312:In bodies on path with 4 rooms that have bodies in them 14 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1313, 295], #1313:In bodies on path with 4 rooms that have bodies in them 15 many
+        ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1314, 297], #1314:In bodies on path with 4 rooms that have bodies in them 16 many
+        ["placeaploc", "", vector(-214.62, 355.13, 51.05), 1315, 774], #1315:On ground near bodies on path with 4 rooms that have bodies in them many
+        ["placeaploc", "", vector(-227.51, 348.01, 50.59), 1316, 1389], #1316:On ground near bodies on path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", vector(-237.62, 451.98, 40.11), 1317, 156], #1317:On ground along path with 4 rooms that have bodies in them many
+        ["placeaploc", "", vector(-288.93, 313.02, 53.79), 1318, 285], #1318:On ground near body in hub room connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [35, 45], 1319, 36], #1319:In bodies in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [35, 45], 1320, 38], #1320:In bodies in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [35, 45], 1321, 53], #1321:In bodies in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 3 many
+        ["placeaploc", "", [35, 45], 1322, 63], #1322:In bodies in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 4 many
+        ["placeaploc", "", [35, 45], 1323, 684], #1323:In bodies in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 5 many
+        ["placeaploc", "", vector(-554.85, 462.46, -2.1), 1324, 1350], #1324:On ground near body in area after you jump in water many
+        ["placeaploc", "", vector(-553.88, 455.81, -1.2), 1325, 775], #1325:On ground near body in area after you jump in water 2 many
+        ["placeaploc", "", vector(-557.15, 458.56, -1.89), 1326, 330], #1326:On ground near body in area after you jump in water 3 many
+        ["placeaploc", "", [747], 1327, 1421], #1327:In body in water you jump into many
+        ["placeaploc", "", [135, 768], 1328, 769], #1328:In bodies in water near nerve cluster 3 many
+        ["placeaploc", "", [916], 1329, 100], #1329:In body in water under nerve cluster many
+        ["placeaploc", "", [916], 1330, 959], #1330:In body in water under nerve cluster 2 many
+        ["placeaploc", "", vector(56.78, -267.91, -34.6), 1331, 309], #1331:At bottom of water under nerve cluster many
+        ["placeaploc", "", vector(62.04, -272.46, -32.53), 1332, 918], #1332:In body bag in water under nerve cluster many
+        ["placeaploc", "", [279], 1333, 280], #1333:In body in air pocket above large chamber of water on path to nerve cluster area many
+        ["placeaploc", "", [279], 1334, 281], #1334:In body in air pocket above large chamber of water on path to nerve cluster area 2 many
+        ["placeaploc", "", [279], 1335, 306], #1335:In body in air pocket above large chamber of water on path to nerve cluster area 3 many
+        ["placeaploc", "", [275, 276], 1336, 277], #1336:In bodies in large chamber of water on path to nerve cluster 2 many
+        ["placeaploc", "", vector(-152.48, -182.65, -63.3), 1337, 274], #1337:In large chamber of water on path to nerve cluster many
+        ["placeaploc", "", vector(118.14, -171.99, 4.48), 1338, 94], #1338:On ground near start of level many
+        ["placeaploc", "", [78], 1339, 98], #1339:In body near start of level many
+        ["placeaploc", "", [78], 1340, 99], #1340:In body near start of level 2 many
+        ["placeaploc", "", vector(113.8, -147.97, 4.77), 1341, 1695], #1341:Hidden behind first replicator many
+        ["placeaploc", "", [839, 552], 1342, 495], #1342:In bodies near first replicator many
+        ["placeaploc", "", [839, 552], 1343, 960], #1343:In bodies near first replicator 2 many
+        ["placeaploc", "", [839, 552], 1344, 884], #1344:In bodies near first replicator 3 many
+        ["placeaploc", "", [839, 552], 1345, 52], #1345:In bodies near first replicator 4 many
+        ["placeaploc", "", vector(110.5, -129.12, 2.14), 1346, 510], #1346:On ground near first replicator many
+        ["placeaploc", "", vector(120.41, -130.42, -3.12), 1347, 512], #1347:On ground near first replicator 2 many
+        ["placeaploc", "", vector(118.06, -131.14, -3.12), 1348, 511], #1348:On ground near first replicator 3 many
+        ["placeaploc", "", vector(120.94, -140.87, 2.22), 1349, 508], #1349:On ground near first replicator 4 many
+        ["placeaploc", "", [1414], 1350, 1417], #1350:In security crate near first replicator many
+        ["placeaploc", "", [1414], 1351, 1416], #1351:In security crate near first replicator 2 many
+        ["placeaploc", "", [1414], 1352, 1415], #1352:In security crate near first replicator 3 many
+        ["placeaploc", "", vector(119.73, -119.12, -1.08), 1353, 509], #1353:On ground near first replicator 5 many
+        ["placeaploc", "", [80], 1354, 983], #1354:In body nearish start of level many
+        ["placeaploc", "", [80], 1355, 96], #1355:In body nearish start of level 2 many
+        ["placeaploc", "", vector(31.49, -115.64, -1.53), 1356, 757], #1356:On ground near start of body nearish start of level many
+        ["placeaploc", "", vector(16.93, -150.43, 2.83), 1357, 329], #1357:On ground near start of level 2 many
+        ["placeaploc", "", vector(-12.97, -121.67, -8.56), 1358, 174], #1358:On ground in piece of rickenbacker near start of level many
+        ["placeaploc", "", vector(-13.4, -120.26, -7.64), 1359, 230], #1359:On ground in piece of rickenbacker near start of level 2 many
+        ["placeaploc", "", vector(-16.57, -121.49, -6.92), 1360, 173], #1360:On ground in piece of rickenbacker near start of level 3 many
+        ["placeaploc", "", vector(-11.76, -114.38, -6.85), 1361, 244], #1361:On ground in piece of rickenbacker near start of level 4 many
+        ["placeaploc", "", [1418], 1362, 1419], #1362:In security crate in piece of rickenbacker near start of level many
+        ["placeaploc", "", [245], 1363, 384], #1363:In body in piece of rickenbacker near start of level many
+        ["placeaploc", "", [245], 1364, 257], #1364:In body in piece of rickenbacker near start of level 2 many
+        ["placeaploc", "", [140], 1365, 122], #1365:In desk in water on path to first nerve cluster many
+        ["placeaploc", "", [140], 1366, 123], #1366:In desk in water on path to first nerve cluster 2 many
+        ["placeaploc", "", [686], 1367, 120], #1367:In body in water on path to first nerve cluster many
+        ["placeaploc", "", [686], 1368, 687], #1368:In body in water on path to first nerve cluster 2 many
+        ["placeaploc", "", [686], 1369, 116], #1369:In body in water on path to first nerve cluster 3 many
+        ["placeaploc", "", vector(-83.16, -123.41, -58.47), 1370, 273], #1370:In water on path to first nerve cluster many
+        ["placeaploc", "", [305], 1371, 981], #1371:In body under broken doors near chemical storage many
+        ["placeaploc", "", [305], 1372, 304], #1372:In body under broken doors near chemical storage 2 many
+        ["placeaploc", "", [919], 1373, 1347], #1373:In body near chemical storage many
+        ["placeaploc", "", [919], 1374, 920], #1374:In body near chemical storage 2 many
+        ["placeaploc", "", vector(-29.54, 82.14, 3.41), 1375, 332], #1375:On ground near body near first nerve cluster door many
+        ["placeaploc", "", [328], 1376, 984], #1376:In body near first nerve cluster door many
+        ["placeaploc", "", [328], 1377, 386], #1377:In body near first nerve cluster door 2 many
+        ["placeaploc", "", vector(-126.65, 104.85, 26.78), 1378, 310], #1378:Under broken doors after first nerve cluster door many
+        ["placeaploc", "", vector(-121.05, 108.44, 26.57), 1379, 982], #1379:Under broken doors after first nerve cluster door 2 many
+        ["placeaploc", "", vector(-121.38, 110.09, 26.55), 1380, 311], #1380:Under broken doors after first nerve cluster door 3 many
+        ["placeaploc", "", [312], 1381, 313], #1381:In body under broken doors after first nerve cluster door many
+        ["placeaploc", "", [294], 1382, 303], #1382:In body in pool after first nerve cluster door many
+        ["placeaploc", "", vector(-117.2, 131.23, 23.39), 1383, 333], #1383:On ground near tooth after first nerve cluster door many
+        ["placeaploc", "", [331], 1384, 923], #1384:In body near first chamber after nerve cluster is destroyed many
+        ["placeaploc", "", [331], 1385, 1348], #1385:In body near first chamber after nerve cluster is destroyed 2 many
+        ["placeaploc", "", vector(-98.75, 120.05, 47.55), 1386, 1466], #1386:Above mouth after first nerve cluster door many
+        ["placeaploc", "", vector(-96.45, 118.99, 47.04), 1387, 1465], #1387:Above mouth after first nerve cluster door 2 many
+        ["placeaploc", "", [885], 1388, 886], #1388:In body in small tunnel near tooth room before second nerve cluster door many
+        ["placeaploc", "", [885], 1389, 1428], #1389:In body in small tunnel near tooth room before second nerve cluster door 2 many
+        ["placeaploc", "", [263], 1390, 264], #1390:In body after second nerve cluster door many
+        ["placeaploc", "", [263], 1391, 265], #1391:In body after second nerve cluster door 2 many
+        ["placeaploc", "", [1485], 1392, 1586], #1392:In body hidden above in hub room connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [1485], 1393, 1587], #1393:In body hidden above in hub room connected to path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [283], 1394, 387], #1394:In body in hub room connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [283], 1395, 284], #1395:In body in hub room connected to path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [759], 1396, 760], #1396:In desk in hub room connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [921], 1397, 922], #1397:In waste barrel in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [921], 1398, 1432], #1398:In waste barrel in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [69, 47, 71, 746], 1399, 48], #1399:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them many
+        ["placeaploc", "", [69, 47, 71, 746], 1400, 49], #1400:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 2 many
+        ["placeaploc", "", [69, 47, 71, 746], 1401, 57], #1401:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 3 many
+        ["placeaploc", "", [69, 47, 71, 746], 1402, 766], #1402:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 4 many
+        ["placeaploc", "", [69, 47, 71, 746], 1403, 779], #1403:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 5 many
+        ["placeaploc", "", [763], 1404, 762], #1404:In crate in room before jump into water many
+        ["placeaploc", "", [299], 1405, 301], #1405:In body in room before jump into water many
+        ["placeaploc", "", [299], 1406, 300], #1406:In body in room before jump into water 2 many
+        ["placeaploc", "", vector(-389.66, 393.24, 66.2), 1407, 761], #1407:On ground in room before jump into water many
+        ["placeaploc", "", [392, 389, 747], 1408, 1349], #1408:In bodies in water you jump into many
+        ["placeaploc", "", [392, 389, 747], 1409, 72], #1409:In bodies in water you jump into 2 many
+        ["placeaploc", "", [392, 389, 747], 1410, 137], #1410:In bodies in water you jump into 3 many
+        ["placeaploc", "", [392, 389, 747], 1411, 391], #1411:In bodies in water you jump into 4 many
+        ["placeaploc", "", [946], 1412, 945], #1412:In body hidden above jump geyser after jump into water many
+        ["placeaploc", "", [946], 1413, 947], #1413:In body hidden above jump geyser after jump into water 2 many
+        ["placeaploc", "", [688], 1414, 690], #1414:In body afer jump into water many
+        ["placeaploc", "", [688], 1415, 689], #1415:In body afer jump into water 2 many
+        ["placeaploc", "", [234, 169, 287], 1416, 685], #1416:In bodies in chemical storeroom many
+        ["placeaploc", "", [234, 169, 287], 1417, 266], #1417:In bodies in chemical storeroom 2 many
+        ["placeaploc", "", [234, 169, 287], 1418, 170], #1418:In bodies in chemical storeroom 3 many
+        ["placeaploc", "", [234, 169, 287], 1419, 172], #1419:In bodies in chemical storeroom 4 many
+        ["placeaploc", "", [234, 169, 287], 1420, 288], #1420:In bodies in chemical storeroom 5 many
+        ["placeaploc", "", [234, 169, 287], 1421, 961], #1421:In bodies in chemical storeroom 6 many
+        ["placeaploc", "", [1423], 1422, 1424], #1422:In security crate in chemical storage many
+        ["placeaploc", "", [1423], 1423, 70], #1423:In security crate in chemical storage 2 many
+        ["placeaploc", "", vector(-174.63, -23.2, -2.92), 1424, 778], #1424:In chemical storage many
+        ["placeaploc", "", vector(-151.59, -13.68, 0.02), 1425, 855], #1425:In chemical storage 2 many
+        ["placeaploc", "", vector(-146.87, -17.6, -0.64), 1426, 953], #1426:In chemical storage 3 many
+        ["placeaploc", "", vector(-156.32, -22.08, -0.5), 1427, 952], #1427:In chemical storage 4 many
+        ["placeaploc", "", vector(-152.42, -21.14, 0.1), 1428, 854], #1428:In chemical storage 5 many
+        ["placeaploc", "", vector(-150.81, -22.11, -0.08), 1429, 853], #1429:In chemical storage 6 many
+        ["placeaploc", "", vector(-153.72, -23.5, 0.51), 1430, 421], #1430:In chemical storage 7 many
+        ["placeaploc", "", vector(-154.68, -26.18, 0.45), 1431, 442], #1431:In chemical storage 8 many
+        ["placeaploc", "", vector(-154.59, -28.79, -0.5), 1432, 950], #1432:In chemical storage 9 many
+        ["placeaploc", "", vector(-155.22, -35.27, -0.19), 1433, 447], #1433:In chemical storage 10 many
+        ["placeaploc", "", vector(-142.9, -34.74, -0.36), 1434, 521], #1434:In chemical storage 11 many
+        ["placeaploc", "", vector(-146.2, -38.96, 0.08), 1435, 520], #1435:In chemical storage 12 many
+        ["placeaploc", "", vector(-137.16, -45.13, 1.98), 1436, 268], #1436:In chemical storage 13 many
+        ["placeaploc", "", vector(-140.13, -44.98, -3.67), 1437, 949], #1437:In chemical storage 14 many
+        ["placeaploc", "", vector(-142.01, -48.92, -2.98), 1438, 954], #1438:In chemical storage 15 many
+        ["placeaploc", "", vector(-160.58, -53.39, 4.84), 1439, 523], #1439:In chemical storage 16 many
+        ["placeaploc", "", vector(-159.82, -52.08, 4.34), 1440, 522], #1440:In chemical storage 17 many
+        ["placeaploc", "", vector(-158.59, -49.89, 3.97), 1441, 955], #1441:In chemical storage 18 many
+        ["placeaploc", "", vector(-157.2, -52.7, 3.76), 1442, 956], #1442:In chemical storage 19 many
+        ["placeaploc", "", vector(-154.67, -49.62, 2.31), 1443, 948], #1443:In chemical storage 20 many
+        ["placeaploc", "", vector(-151.94, -51.85, 3.49), 1444, 271], #1444:In chemical storage 21 many
+        ["placeaploc", "", vector(-142.47, -50.39, -3.38), 1445, 590], #1445:In chemical storage 22 many
+        ["placeaploc", "", vector(-140.68, -52.43, -3.47), 1446, 267], #1446:In chemical storage 23 many
+        ["placeaploc", "", vector(-153.84, -56.95, 7.03), 1447, 241], #1447:In chemical storage 24 many
+        ["placeaploc", "", vector(-151.72, -56.58, 7.61), 1448, 251], #1448:In chemical storage 25 many
+        ["placeaploc", "", vector(-151.28, -56.63, 0.97), 1449, 513], #1449:In chemical storage 26 many
+        ["placeaploc", "", vector(-149.47, -56.63, 7.47), 1450, 252], #1450:In chemical storage 27 many
+        ["placeaploc", "", vector(-146.88, -56.77, 7.52), 1451, 398], #1451:In chemical storage 28 many
+        ["placeaploc", "", vector(-145.69, -56.36, 0.63), 1452, 219], #1452:In chemical storage 29 many
+        ["placeaploc", "", vector(-143.59, -56.43, 0.63), 1453, 269], #1453:In chemical storage 30 many
+        ["placeaploc", "", vector(-142.22, -56.28, -2.78), 1454, 224], #1454:In chemical storage 31 many
+        ["placeaploc", "", vector(-141.27, -56.28, 0.81), 1455, 222], #1455:In chemical storage 32 many
+        ["randomizerepl", "", 68],
+        ["randomizerepl", "", 56],
+        ["replacecybmodshop", "StatsSkillsPsi", [231, 236, 235, 232], vector(-169.76, -7.35, -1.94)],
+        ["respecmachine", "Respec", vector(-169.76, -7.35, -1.94)],
+        ["randomizeenemy", "", 454, "9", vector(49.13, -278.16, -13.96)],
+        ["randomizeenemy", "", 395, "9", vector(45.41, -267.11, -27.08)],
+        ["randomizeenemy", "", 1407, "9", vector(114.1, -129.5, 18.04)],
+        ["randomizeenemy", "", 1405, "9", vector(110.75, -126.22, 18.03)],
+        ["randomizeenemy", "", 498, "9", vector(105.05, -127.96, 5.49)],
+        ["randomizeenemy", "", 18, "9", vector(65.67, -158.5, 2.96)],
+        ["randomizeenemy", "", 17, "9", vector(31.44, -168.64, 6.55)],
+        ["randomizeenemy", "", 109, "9", vector(-26.04, -27.85, 4.18)],
+        ["randomizeenemy", "", 204, "9", vector(-52.23, -92.41, -17.96)],
+        ["randomizeenemy", "", 1426, "9", vector(-60.57, -30.77, 3.97)],
+        ["randomizeenemy", "", 1449, "9", vector(-63.05, 36.76, 2.79)],
+        ["randomizeenemy", "", 201, "9", vector(-71.22, 114.72, 26.27)],
+        ["randomizeenemy", "", 801, "9", vector(-80.74, 109.03, 31.15)],
+        ["randomizeenemy", "", 1412, "9", vector(-174.14, -20.84, 10.5)],
+        ["randomizeenemy", "", 1609, "9", vector(-173.98, -25.56, 10.5)],
+        ["randomizeenemy", "", 97, "9", vector(-116.74, -3.6, 0.14)],
+        ["randomizeenemy", "", 29, "9", vector(-118.91, -12.43, 0.47)],
+        ["randomizeenemy", "", 59, "9", vector(-122.63, -17.23, 1.29)],
+        ["randomizeenemy", "", 130, "9", vector(-122.78, -21.96, 0.06)],
+        ["randomizeenemy", "", 707, "9", vector(-123.36, 174.41, 31.41)],
+        ["randomizeenemy", "", 206, "9", vector(-124.94, 180.54, 29.51)],
+        ["randomizeenemy", "", 162, "9", vector(-180.09, 441.79, 58.24)],
+        ["randomizeenemy", "", 207, "9", vector(-179.14, 411.92, 59.57)],
+        ["randomizeenemy", "", 187, "9", vector(-184.7, 405, 58.24)],
+        ["randomizeenemy", "", 75, "9", vector(-175.59, 328, 57.96)],
+        ["randomizeenemy", "", 117, "9", vector(-177.84, 333.47, 57.97)],
+        ["randomizeenemy", "", 1383, "9", vector(-179.7, 338.4, 64.03)],
+        ["randomizeenemy", "", 1394, "9", vector(-212.93, 358.98, 58.52)],
+        ["randomizeenemy", "", 30, "9", vector(-213.61, 342.7, 52.47)],
+        ["randomizeenemy", "", 32, "9", vector(-222.37, 346.69, 52.47)],
+        ["randomizeenemy", "", 1390, "9", vector(-229.41, 357.43, 58.52)],
+        ["randomizeenemy", "", 112, "9", vector(-265.29, 413.43, 44.04)],
+        ["randomizeenemy", "", 1473, "9", vector(-236.84, 264.08, 68.38)],
+        ["randomizeenemy", "", 1583, "9", vector(-265.93, 319.7, 82.49)],
+        ["randomizeenemy", "", 167, "9", vector(-264.21, 351.02, 55.25)],
+        ["randomizeenemy", "", 55, "9", vector(-271.36, 350.45, 55.21)],
+        ["randomizeenemy", "", 212, "9", vector(-266.3, 342.36, 54.32)],
+        ["randomizeenemy", "", 113, "9", vector(-288.49, 364.85, 58.25)],
+        ["randomizeenemy", "", 199, "9", vector(-291.95, 362.08, 54.27)],
+        ["randomizeenemy", "", 159, "9", vector(-320.22, 363.15, 48.96)],
+        ["randomizeenemy", "", 165, "9", vector(-325.14, 360.67, 48.96)],
+        ["randomizeenemy", "", 228, "9", vector(-326.53, 368.14, 48.2)],
+        ["randomizeenemy", "", 128, "9", vector(-339.97, 332.09, 66.13)],
+        ["randomizeenemy", "", 1391, "9", vector(-332.07, 272.5, 52)],
+        ["randomizeenemy", "", 1403, "9", vector(-316.37, 254.31, 49.96)],
+        ["randomizeenemy", "", 248, "9", vector(-311.32, 260.44, 47.45)],
+        ["randomizeenemy", "", 282, "9", vector(-310.48, 267.48, 47.45)],
+        ["randomizeenemy", "", 1541, "9", vector(-316.18, 273.9, 55.55)],
+        ["randomizeenemy", "", 1644, "9", vector(-323.08, 283.41, 55.55)],
+        ["randomizeenemy", "", 115, "9", vector(-389.71, 386.45, 69.93)],
+        ["randomizeenemy", "", 1395, "9", vector(-453.6, 404.75, 78.06)],
+        ["randomizeenemy", "", 453, "9", vector(531.52, 473.1, 9.07)],
+        ["randomizeenemy", "", 229, "9", vector(-539.41, 465.92, 4.6)],
+        ["randomizeenemy", "", 198, "9", vector(-570.44, 363.3, 40.63)],
+        ["randomizeenemy", "", 679, "9", vector(-594.99, 355.7, 34.57)],
+        ["randomizeenemy", "", 694, "9", vector(-615.84, 356.93, 36.97)],
+        ["randomizeenemy", "", 729, "9", vector(-640.53, 354.38, 30.51)],
+        ["randomizeenemy", "", 61, "9", vector(-713.59, 348.61, 41.21)],
+        ["randomizeenemy", "", 730, "9", vector(-732.02, 353.6, 28.27)],
+        ["randomizeenemy", "", 108, "9", vector(-770, 421.67, 24.12)],
+        ["randomizeenemy", "", 728, "9", vector(-790.5, 415.81, 24.15)],
+        ["randomizeenemy", "", 343, "9", vector(-754.01, 296.46, 23.7)],
+        ["randomizeenemy", "", 107, "9", vector(-770.09, 294.34, 24.75)],
+        ["randomizeenemy", "", 678, "9", vector(-790.03, 302.74, 23)],
+        ["randomizeenemy", "", 507, "9", vector(-798.94, 356.33, 32.44)],
+        ["directmonstergenrando", "", 1489, "9"],
+        ["directmonstergenrando", "", 155, "9"],
+    ],
     "shodan.mis": [
-        ["slayvictoryprop", "", 298]
+        ["slayvictoryprop", "", 298],
+        ["placeaploc", "", vector(-81, 24, 64.32), 1456, 1229], #1456:In supply cache at top of block stairs near shodan teleport shodan
+        ["placeaploc", "", vector(-78, 22, 64.32), 1457, 1230], #1457:In supply cache at top of block stairs near shodan teleport 2 shodan
+        ["placeaploc", "", vector(-77, 22, 64.19), 1458, 1231], #1458:In supply cache at top of block stairs near shodan teleport 3 shodan
+        ["placeaploc", "", vector(-79.5, 22, 64.26), 1459, 1232], #1459:In supply cache at top of block stairs near shodan teleport 4 shodan
+        ["placeaploc", "", vector(-77, 24, 64.23), 1460, 1233], #1460:In supply cache at top of block stairs near shodan teleport 5 shodan
+        ["placeaploc", "", vector(-81, 22, 64.29), 1461, 1338], #1461:In supply cache at top of block stairs near shodan teleport 6 shodan
+        ["placeaploc", "", vector(-80, 24, 64.29), 1462, 1339], #1462:In supply cache at top of block stairs near shodan teleport 7 shodan
+        ["placeaploc", "", vector(-79, 24, 64.29), 1463, 1337], #1463:In supply cache at top of block stairs near shodan teleport 8 shodan
+        ["placeaploc", "", vector(-78, 24, 64.42), 1464, 1336], #1464:In supply cache at top of block stairs near shodan teleport 9 shodan
+        ["placeaploc", "", vector(-12, 146, 8.5), 1465, 515], #1465:On ground in bridge before cyberspace shodan
+        ["placeaploc", "", vector(-69.44, 75.4, -3.47), 1466, 1156], #1466:On ground behind secret wall near block stairs near shodan teleport shodan
+        ["placeaploc", "", vector(-80, 71, -65.5), 1467, 290], #1467:On ground before shodan teleport shodan
+        ["placeaploc", "", vector(-84, 36, 4.5), 1468, 259], #1468:On ground near block stairs near shodan teleport shodan
+        ["placeaploc", "", vector(-4, 28, 20), 1469, 606], #1469:On ground on block above in start of cyberspace shodan
+        ["placeaploc", "", vector(-110.25, -133.08, -3.82), 1470, 1268], #1470:On ground near cyberjack shodan
+        ["placeaploc", "", vector(-100.29, -116.47, -3.67), 1471, 1273], #1471:On ground behind secret wall near room with cyberjack shodan
+        ["placeaploc", "", vector(-37.05, -123.74, 3.23), 1472, 1265], #1472:On ground in room near stay away text on wall shodan
+        ["placeaploc", "", vector(-91.83, -48.02, -11.67), 1473, 1270], #1473:On ground in lower area under grate shodan
+        ["placeaploc", "", vector(-62.6, -17.58, -3), 1474, 1271], #1474:On ground near recharger shodan
+        ["placeaploc", "", vector(-27.45, -15.49, -0.85), 1475, 1247], #1475:On ground in starting room of system shock shodan
+        ["placeaploc", "", vector(9.37, -37.49, -7.76), 1476, 1272], #1476:On ground hidden behind machine near first recharger shodan
+        ["placeaploc", "", [1251], 1477, 1252], #1477:In crate near first recharger shodan
+        ["placeaploc", "", [1253, 1254, 1255, 1256], 1478, 1259], #1478:In crates near camera shodan
+        ["placeaploc", "", [1253, 1254, 1255, 1256], 1479, 1258], #1479:In crates near camera 2 shodan
+        ["placeaploc", "", [1253, 1254, 1255, 1256], 1480, 1257], #1480:In crates near camera 3 shodan
+        ["randomizerepl", "", 661],
+        ["replacecybmodshop", "StatsSkillsPsi", [1077, 1078, 1080, 1079], vector(-32.38, 177.98, 2.68)],
+        ["respecmachine", "Respec", vector(-32.38, 177.98, 2.68)],
+        ["randomizeenemy", "", 659, "9", vector(-36.92, -78.74, -4.05)],
+        ["randomizeenemy", "", 678, "9", vector(-92, -4, 4)],
+        ["randomizeenemy", "", 644, "9", vector(-92, -12, -0.05)],
+        ["randomizeenemy", "", 649, "9", vector(-88, -12, -0.05)],
+        ["randomizeenemy", "", 643, "9", vector(-84, -12, -0.05)],
     ]
 }
 
@@ -1829,7 +2377,7 @@ enemytables =
     "Protocol Droid",
     "Protocol Droid",
     "Slug Turret",
-    "Maintenance Robot"
+    "Maintenance"
     ],
 
     "2Ranged": [
@@ -1856,8 +2404,8 @@ enemytables =
     "Protocol Droid",
     "Protocol Droid",
     "Midwife",
-    "Maintenance Robot",
-    "Maintenance Robot",
+    "Maintenance",
+    "Maintenance",
     "Slug Turret",
     "Slug Turret",
     "Laser Turret"
@@ -1868,8 +2416,8 @@ enemytables =
     "Blue Monkey",
     "Blue Monkey",
     "Midwife",
-    "Maintenance Robot",
-    "Maintenance Robot",
+    "Maintenance",
+    "Maintenance",
     "Slug Turret",
     "Slug Turret",
     "Laser Turret"
@@ -1893,11 +2441,11 @@ enemytables =
     "Red Monkey",
     "Red Monkey",
     "Red Monkey",
-    "Maintenance Robot",
-    "Maintenance Robot",
-    "Maintenance Robot",
-    "Security Robot",
-    "Security Robot",
+    "Maintenance",
+    "Maintenance",
+    "Maintenance",
+    "Security",
+    "Security",
     "Assassin",
     "Assassin",
     "OG-Grenade",
@@ -1913,9 +2461,9 @@ enemytables =
     "Laser Turret",
     "Red Monkey",
     "Red Monkey",
-    "Maintenance Robot",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Maintenance",
+    "Security",
     "Assassin",
     "OG-Grenade"
     ],
@@ -1930,11 +2478,11 @@ enemytables =
     "Floor Pod",
     "Slug Turret",
     "Protocol Droid",
-    "Maintenance Robot",
-    "Security Robot",
-    "Security Robot",
-    "Security Robot",
-    "Assault Robot",
+    "Maintenance",
+    "Security",
+    "Security",
+    "Security",
+    "Assault",
     "Midwife",
     "Midwife",
     "Midwife",
@@ -1957,8 +2505,8 @@ enemytables =
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Midwife",
     "Midwife",
     "Laser Turret",
@@ -1979,8 +2527,8 @@ enemytables =
     "Floor Pod",
     "Slug Turret",
     "Protocol Droid",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -1994,17 +2542,17 @@ enemytables =
     "Invisible Arachnid",
     "Invisible Arachnid",
     "Blast Turret",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot"
+    "Assault",
+    "Assault",
+    "Assault"
     ],
 
     "6Ranged": [
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2017,9 +2565,9 @@ enemytables =
     "OG-Grenade",
     "OG-Grenade",
     "OG-Grenade",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot"
+    "Assault",
+    "Assault",
+    "Assault"
     ],
 
     "7": [
@@ -2032,8 +2580,8 @@ enemytables =
     "Floor Pod",
     "Slug Turret",
     "Protocol Droid",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2045,9 +2593,9 @@ enemytables =
     "Invisible Arachnid",
     "Invisible Arachnid",
     "Invisible Arachnid",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot",
+    "Assault",
+    "Assault",
+    "Assault",
     "Blast Turret",
     "Blast Turret",
     "Rumbler",
@@ -2059,8 +2607,8 @@ enemytables =
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2074,10 +2622,10 @@ enemytables =
     "OG-Grenade",
     "OG-Grenade",
     "OG-Grenade",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot"
+    "Assault",
+    "Assault",
+    "Assault",
+    "Assault"
     ],
 
     "8": [
@@ -2090,8 +2638,8 @@ enemytables =
     "Floor Pod",
     "Slug Turret",
     "Protocol Droid",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2101,9 +2649,9 @@ enemytables =
     "OG-Grenade",
     "Invisible Arachnid",
     "Invisible Arachnid",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot",
+    "Assault",
+    "Assault",
+    "Assault",
     "Rumbler",
     "Rumbler",
     "Rumbler",
@@ -2120,8 +2668,8 @@ enemytables =
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2130,9 +2678,9 @@ enemytables =
     "OG-Grenade",
     "OG-Grenade",
     "OG-Grenade",
-    "Assault Robot",
-    "Assault Robot",
-    "Assault Robot",
+    "Assault",
+    "Assault",
+    "Assault",
     "Blast Turret",
     "Blast Turret",
     "Blast Turret",
@@ -2153,8 +2701,8 @@ enemytables =
     "Floor Pod",
     "Slug Turret",
     "Protocol Droid",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
@@ -2162,7 +2710,7 @@ enemytables =
     "Assassin",
     "OG-Grenade",
     "Invisible Arachnid",
-    "Assault Robot",
+    "Assault",
     "Blast Turret",
     "Blast Turret",
     "Rumbler",
@@ -2194,14 +2742,14 @@ enemytables =
     "OG-Shotgun",
     "Blue Monkey",
     "Slug Turret",
-    "Maintenance Robot",
-    "Security Robot",
+    "Maintenance",
+    "Security",
     "Laser Turret",
     "Midwife",
     "Red Monkey",
     "Assassin",
     "OG-Grenade",
-    "Assault Robot",
+    "Assault",
     "Blast Turret",
     "Blast Turret",
     "Blast Turret",
@@ -2719,7 +3267,7 @@ ItemTable = {
     "241": ["Research Soft V2", []],
     "242": ["1 EXP", [["StackCount", 5]]],
     "243": ["Audio Log", [["Logs5", "Logs", 13]]],
-    "244": ["Small Worm Beaker", []],
+    "244": ["Large Worm Beaker", [["StackCount", 36]]],
     "245": ["Hack Soft V3", []],
     "246": ["Manifest", [["Logs5", "Logs", 32]]],
     "247": ["Audio Log", [["Logs5", "Logs", 18]]],
@@ -2751,8 +3299,120 @@ ItemTable = {
     "273": ["Audio Log", [["Logs6", "Logs", 11], ["QBName", "note_6_10"], ["QBVal", 1]]],
     "274": ["Manifest", [["Logs6", "Logs", 32]]],
     "275": ["Korenchin Log", []],
-    "276": ["85 Nanites", [["StackCount", 85]]],
+    "276": ["20 Nanites", [["StackCount", 85]]],
     "277": ["Audio Log", [["Logs6", "Logs", 4]]],
     "278": ["Ops Override Key", [["KeySrc", "RegionID", "OPS OVERRIDE"], ["QBName", "Note_6_1"], ["QBVal", 2], ["Scripts", "Script 0", "FrobQB"]]],
+    "279": ["Big Nanite Pile", [["StackCount", 79]]],
+    "280": ["Audio Log", [["Logs7", "Logs", 1]]],
+    "281": ["Rickenbacker Card", [["KeySrc", "RegionID", "RICKENBACHER"]]],
+    "282": ["Audio Log", [["Logs7", "Logs", 3]]],
+    "283": ["Audio Log", [["Logs7", "Logs", 7]]],
+    "284": ["Audio Log", [["Logs7", "Logs", 8], ["QBName", "note_7_6"], ["QBVal", 1]]],
+    "285": ["Audio Log", [["Logs7", "Logs", 6]]],
+    "286": ["Audio Log", [["Logs7", "Logs", 4]]],
+    "287": ["Audio Log", [["Logs7", "Logs", 9]]],
+    "288": ["Audio Log", [["Logs7", "Logs", 2]]],
+    "289": ["Manifest", [["Logs7", "Logs", 32]]],
+    "290": ["Modify Soft V3", []],
+    "291": ["Audio Log", [["Logs7", "Logs", 5]]],
+    "292": ["Audio Log", [["Logs7", "Logs", 18], ["QBName", "Note_7_9"], ["QBVal", 1]]],
+    "293": ["Rick Room Key", [["KeySrc", "RegionID", "RICK ROOM"]]],
+    "294": ["Worm Launcher", [["GunState", "Ammo", 16], ["GunState", "Condition (%)", 100]]],
+    "295": ["Small Worm Beaker", []],
+    "296": ["Large Worm Beaker", []],
+    "297": ["Audio Log", [["Logs8", "Logs", 5]]],
+    "298": ["Big Nanite Pile", [["StackCount", 73]]],
+    "299": ["Audio Log", [["Logs8", "Logs", 1]]],
+    "300": ["Audio Log", [["Logs8", "Logs", 6], ["QBName", "note_8_1"], ["QBVal", 1]]],
+    "301": ["Audio Log", [["Logs8", "Logs", 4], ["QBName", "note_8_2"], ["QBVal", 1]]],
+    "302": ["Audio Log", [["Logs8", "Logs", 2]]],
+    "303": ["Audio Log", [["Logs8", "Logs", 3]]],
+    "304": ["Audio Log", [["Logs8", "Logs", 10]]],
+    "305": ["Audio Log", [["Logs8", "Logs", 9]]],
+    "306": ["Audio Log", [["Logs8", "Logs", 8]]],
+    "307": ["PREFONTAINE Re: The Many Audio Log", [["Logs8", "Logs", 7], ["QBName", "Note_8_2"], ["QBVal", 1]]],
+    "308": ["Large Prism", [["StackCount", 37]]],
+    "309": ["Manifest", [["Logs8", "Logs", 32]]],
+    "310": ["Audio Log", [["Logs9", "Logs", 1]]],
+    "311": ["Audio Log", [["Logs9", "Logs", 4]]],
+    "312": ["Audio Log", [["Logs9", "Logs", 3]]],
+    "313": ["Audio Log", [["Logs9", "Logs", 2]]],
+    "314": ["OsUnlock", [1, "Strong Metabolism"]],
+    "315": ["OsUnlock", [2, "Pharmo-Friendly"]],
+    "316": ["OsUnlock", [3, "Pack-Rat"]],
+    "317": ["OsUnlock", [4, "Speedy"]],
+    "318": ["OsUnlock", [5, "Sharpshooter"]],
+    "319": ["OsUnlock", [6, "Naturally Able"]],
+    "320": ["OsUnlock", [7, "Cybernetically Enhanced"]],
+    "321": ["OsUnlock", [8, "Tank"]],
+    "322": ["OsUnlock", [9, "Lethal Weapon"]],
+    "323": ["OsUnlock", [10, "Security Expert"]],
+    "324": ["OsUnlock", [11, "Smasher"]],
+    "325": ["OsUnlock", [12, "CyberAssimilation"]],
+    "326": ["OsUnlock", [13, "Replicator Expert"]],
+    "327": ["OsUnlock", [14, "Power Psi"]],
+    "328": ["OsUnlock", [15, "Tinker"]],
+    "329": ["OsUnlock", [16, "Spatially Aware"]],
+    "330": ["StatUpgrade", "STR"],
+    "331": ["StatUpgrade", "END"],
+    "332": ["StatUpgrade", "PSI"],
+    "333": ["StatUpgrade", "AGI"],
+    "334": ["StatUpgrade", "CYB"],
+    "335": ["TechUpgrade", "Hack"],
+    "336": ["TechUpgrade", "Repair"],
+    "337": ["TechUpgrade", "Modify"],
+    "338": ["TechUpgrade", "Maintain"],
+    "339": ["TechUpgrade", "Research"],
+    "340": ["WeaponUpgrade", "Conventional"],
+    "341": ["WeaponUpgrade", "Energy"],
+    "342": ["WeaponUpgrade", "Heavy"],
+    "343": ["WeaponUpgrade", "Annelid"],
+    "344": ["PsiPowerUnlock", [1, "First Tier Neural Capacity"]],
+    "345": ["PsiPowerUnlock", [2, "Psycho-Reflective"]],
+    "346": ["PsiPowerUnlock", [3, "Neuro-Reflex"]],
+    "347": ["PsiPowerUnlock", [4, "Kinetic Redirection"]],
+    "348": ["PsiPowerUnlock", [5, "Psychogenic Agility"]],
+    "349": ["PsiPowerUnlock", [6, "Psychogenic Cyber-Affinity"]],
+    "350": ["PsiPowerUnlock", [7, "Projected Cryokinesis"]],
+    "351": ["PsiPowerUnlock", [8, "Remote Electron Tampering"]],
+    "352": ["PsiPowerUnlock", [9, "Second Tier Neural Capacity"]],
+    "353": ["PsiPowerUnlock", [10, "Anti-Entropic Field"]],
+    "354": ["PsiPowerUnlock", [11, "Adrenaline Overproduction"]],
+    "355": ["PsiPowerUnlock", [12, "Neural Decontamination"]],
+    "356": ["PsiPowerUnlock", [13, "Cerebro-Stimulated Regeneration"]],
+    "357": ["PsiPowerUnlock", [14, "Pyschogenic Strength"]],
+    "358": ["PsiPowerUnlock", [15, "Recursive Psionic Amplification"]],
+    "359": ["PsiPowerUnlock", [16, "Localized Pyrokinesis"]],
+    "360": ["PsiPowerUnlock", [17, "Third Tier Neural Capacity"]],
+    "361": ["PsiPowerUnlock", [18, "Molecular Duplication"]],
+    "362": ["PsiPowerUnlock", [19, "Electron Cascade"]],
+    "363": ["PsiPowerUnlock", [20, "Energy Reflection"]],
+    "364": ["PsiPowerUnlock", [21, "Neural Toxin-Blocker"]],
+    "365": ["PsiPowerUnlock", [22, "Enhanced Motion Sensitivity"]],
+    "366": ["PsiPowerUnlock", [23, "Projected Pyrokinesis"]],
+    "367": ["PsiPowerUnlock", [24, "Psionic Hypnogenesis"]],
+    "368": ["PsiPowerUnlock", [25, "Fourth Tier Neural Capacity"]],
+    "369": ["PsiPowerUnlock", [26, "Photonic Redirection"]],
+    "370": ["PsiPowerUnlock", [27, "Remote Pattern Detection"]],
+    "371": ["PsiPowerUnlock", [28, "Electron Suppression"]],
+    "372": ["PsiPowerUnlock", [29, "Psychogenic Endurance"]],
+    "373": ["PsiPowerUnlock", [30, "Molecular Transmutation"]],
+    "374": ["PsiPowerUnlock", [31, "Remote Circuitry Manipulation"]],
+    "375": ["PsiPowerUnlock", [32, "Cerebro-Energetic Extension"]],
+    "376": ["PsiPowerUnlock2", [1, "Fifth Tier Neural Capacity"]],
+    "377": ["PsiPowerUnlock2", [2, "Advanced Cerebro-Stimulated Regeneration"]],
+    "378": ["PsiPowerUnlock2", [3, "Soma Transference"]],
+    "379": ["PsiPowerUnlock2", [4, "Instantaneous Quantum Relocation"]],
+    "380": ["PsiPowerUnlock2", [5, "Imposed Neural Restructuring"]],
+    "381": ["PsiPowerUnlock2", [6, "Metacreative Barrier"]],
+    "382": ["PsiPowerUnlock2", [7, "External Psionic Detonation"]],
+    "383": ["PsiPowerUnlock2", [8, "Psycho-Reflective Aura"]],
+    "384": ["10 EXP", [["StackCount", 13]]],
+    "385": ["10 EXP", [["StackCount", 14]]],
+    "386": ["10 EXP", [["StackCount", 15]]],
+    "387": ["10 EXP", [["StackCount", 25]]],
+    "388": ["10 EXP", [["StackCount", 20]]],
+    "389": ["10 EXP", [["StackCount", 30]]],
+    "390": ["10 EXP", [["StackCount", 16]]],
     }
 }

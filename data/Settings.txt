@@ -1,1 +1,1 @@
-814,None
+814,OSUpgrades,StartingWrench,ManyIsVictory,StatsSkillsPsi

@@ -220,7 +220,7 @@ CreateArch "Trainers" "CybModShop"
 	{
 	"" "CybModShop: "A CybModShop, right click to buy locations""
 	}
-		+ObjProp "MapObjIcon"
+	+ObjProp "MapObjIcon"
 	{
 	"" "msec"
 	}
@@ -234,6 +234,69 @@ CreateArch "Misc Metaprops" "CybModShopScripts"
 	}
 }
 +MetaProp "CybModShop" "CybModShopScripts"
+
+CreateArch "Trainers" "RespecMachine"
+{
+	+ObjProp "ModelName" 
+	{
+	"" "Pyramid"
+	}
+	+ObjProp "FrobInfo"
+	{
+	"World Action" "Script"
+	}
+	+ObjProp "ExtraLight"
+	{
+	"Amount (-1..1)" 0.50
+	"Additive?" true
+	}
+	+ObjProp "RenderAlpha"
+	{
+	"" 0.75
+	}
+	+ObjProp "CfgTweqRotate"
+	{
+	"Halt" "Continue"
+	"AnimC" "Wrap"
+	"Primary Axis" 0
+	"x rate-low-high" "10, 0, 360"
+	"y rate-low-high" "15, 0, 360"
+	"z rate-low-high" "0, 0, 360"
+	}
+	+ObjProp "StTweqRotate"
+	{
+	"AnimS" "On"
+	}
+	+ObjProp "CfgTweqScale"
+	{
+	"Halt" "Continue"
+	"Primary Axis" 0
+	"x rate-low-high" "0.05, 0.5, 0.75"
+	"y rate-low-high" "0.05, 0.5, 0.75"
+	"z rate-low-high" "0.05, 0.5, 0.75"
+	}
+	+ObjProp "StTweqScale"
+	{
+	"AnimS" "On"
+	}
+	+ObjProp "ObjName"
+	{
+	"" "RespecMachine: "A RespecMachine, right click to respec all stats, skills, weapon skills, and psi abilities""
+	}
+	+ObjProp "MapObjIcon"
+	{
+	"" "msec"
+	}
+}
+
+CreateArch "Misc Metaprops" "RespecMachineScripts"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "RespecMachineScript"
+	}
+}
++MetaProp "RespecMachine" "RespecMachineScripts"
 
 CreateArch "Misc Metaprops" "UnlootableEnemyScript"
 {

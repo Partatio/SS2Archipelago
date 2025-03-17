@@ -29,7 +29,7 @@ class PlayerScripts extends SqRootScript
 					{
 						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
 						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  vector());
-						Property.SetSimple(NewAPLocation, "HasRefs", FALSE);
+						Property.SetSimple(NewAPLocation, "HasRefs", false);
 						Link.Create(linkkind("Contains"), chosencontainer, NewAPLocation);
 					}
 					else
@@ -48,6 +48,12 @@ class PlayerScripts extends SqRootScript
 						Object.Destroy(Terminal);
 					local CybModShop = Object.Create("CybModShop");
 					Object.Teleport(CybModShop, command[3], vector(0, 0, 0));
+					continue;
+					}
+				case "respecmachine":
+					{
+					local RespecMachine = Object.Create("RespecMachine");
+					Object.Teleport(RespecMachine, command[2], vector(0, 0, 0));
 					continue;
 					}
 				case "destroy":
@@ -170,16 +176,11 @@ class PlayerScripts extends SqRootScript
 					}
 				case "randomizeenemy": #destroy command[2] enemy if that field isnt set to 0.  Get the correct tier array based on command[3].  choose a random enemy from that, then create it and teleport it to command[4] with the original enemies properties if there was one.
 					{
-					if (IsTeleTrapLinked(command[2])) #dont want eggs, turrets, or overlords teleporting
-						local chosenenemy = PickEnemy(command[3], TRUE);
-					else
-						local chosenenemy = PickEnemy(command[3], FALSE);
+					local chosenenemy = PickEnemy(command[3], IsSpecialEnemy(command[2]));#dont want eggs, turrets, or overlords teleporting or replacing enemies with special scripts
 					local newenemy = Object.Create(chosenenemy);
 					local enemyfacing = vector();
-					if (command[2] != 0)#lots of this was taken from Sarge945s rando
+					if (Object.Exists(command[2]) && command[2] != 0) #lots of this was taken from Sarge945s rando
 					{
-						enemyfacing = Property.Get(command[2], "PhysState", "Facing");
-
 						CopyMetaProp(command[2], newenemy, "Docile");
 						CopyMetaProp(command[2], newenemy, "Patrolling");
 						CopyMetaProp(command[2], newenemy, "Silent");
@@ -243,12 +244,12 @@ class PlayerScripts extends SqRootScript
 					if (chosenenemy == "Floor Pod" || chosenenemy == "Swarmer Floor Pod" || chosenenemy == "Grub Floor Pod")
 						{
 						Property.Set(newenemy, "PhysControl", "Controls Active", 0);
-						SetOneShotTimer(newenemy, "CreateTripwire", 3);
+						SetOneShotTimer("CreateTripwire", 3, newenemy);
 						}
 					if (chosenenemy == "Greater Over." || chosenenemy == "Overlord")
 						{
 							local brainstem = Object.Create("Overlord Brain");
-							Object.teleport(brainstem, Object.Position(newenemy));
+							Object.Teleport(brainstem, Object.Position(newenemy), vector());
 							Link.Create("AIWatchObj", newenemy, brainstem);
 							Property.Set(brainstem, "PhysControl", "Controls Active", 0);
 						}
@@ -256,10 +257,10 @@ class PlayerScripts extends SqRootScript
 					}
 				case "directmonstergenrando":#change the enemies a DirectMonsterGen gotten from command[2] spawns to enemies chosen randomly from a tier table based on command[3]
 					{
-					Property.Set(command[2], "Spawn", "Type 1", PickEnemy(command[3],  TRUE));
-					Property.Set(command[2], "Spawn", "Type 2", PickEnemy(command[3],  TRUE));
-					Property.Set(command[2], "Spawn", "Type 3", PickEnemy(command[3],  TRUE));
-					Property.Set(command[2], "Spawn", "Type 4", PickEnemy(command[3],  TRUE));
+					Property.Set(command[2], "Spawn", "Type 1", PickEnemy(command[3],  true));
+					Property.Set(command[2], "Spawn", "Type 2", PickEnemy(command[3],  true));
+					Property.Set(command[2], "Spawn", "Type 3", PickEnemy(command[3],  true));
+					Property.Set(command[2], "Spawn", "Type 4", PickEnemy(command[3],  true));
 					Property.Set(command[2], "Spawn", "Rarity 1", 25);
 					Property.Set(command[2], "Spawn", "Rarity 2", 25);
 					Property.Set(command[2], "Spawn", "Rarity 3", 25);
@@ -272,18 +273,18 @@ class PlayerScripts extends SqRootScript
 
 	function OnItemsUnrestricted()
 	{
-		Property.SetSimple(self, "AI_PtrlRnd", FALSE);
+		Property.SetSimple(self, "AI_PtrlRnd", false);
 		SetOneShotTimer("ItemReceiver", 1);
 	}
 
-	function PickEnemy(tier, boolgen)
+	function PickEnemy(tier, special)
 	{
 		local enemytable = VariousDataTables.enemytables.rawget(tier);
 		local chosenenemy = enemytable[ShockGame.RandRange(0, enemytable.len() - 1)];
-		if(boolgen)
+		if (special)
 			{
 			local attempts = 0;
-			while ((chosenenemy.find("Pod") || chosenenemy.find("Turret") || chosenenemy == "Greater Over." || chosenenemy == "Overlord") && attempts < 15) #We don't want stationary enemies spawning from gens
+			while ((chosenenemy.find("Pod") || chosenenemy.find("Turret") || chosenenemy == "Greater Over." || chosenenemy == "Overlord") && attempts < 15) #We don 't want stationary enemies spawning if special, like from gens
 				{
 					attempts += 1;
 					chosenenemy = enemytable[ShockGame.RandRange(0, enemytable.len() - 1)];
@@ -292,17 +293,19 @@ class PlayerScripts extends SqRootScript
 		return chosenenemy;
 	}
 
-	function IsTeleTrapLinked(object)
+	function IsSpecialEnemy(enemy)
 	{
-		if (!object)
-			return FALSE;
-		local teletrap = FALSE;
-		foreach (outLink in Link.GetAll(linkkind("~SwitchLink"), object))
+		local special = false;
+		if (!enemy)
+			return special;
+		if (Link.AnyExist("Contains", enemy))
+			special = true;
+		foreach (outLink in Link.GetAll(linkkind("~SwitchLink"), enemy))
 		{
-			if (Object.GetName(outLink.Dest) == "Teleport Trap")
-				teletrap = TRUE;
+			if (Property.Get(LinkDest(outLink), "Scripts", "Script 0") == "TrapTeleport")
+				special = true;
 		}
-		return teletrap;
+		return special;
 	}
 
 	function PickUnhackedReplItem()
@@ -363,13 +366,16 @@ class PlayerScripts extends SqRootScript
 				Property.SetSimple(self, "Modify1", settings); #store the settings
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
 				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
-				Property.SetSimple(self, "AI_PtrlRnd", TRUE); #Whether player has not left airlock
+				Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
 				Property.SetSimple(self, "WeaponDamge", 1); #current osupgrade slot
 
-				local shoparray = "";
-				for (local i = 1000; i < 1139; i++)
-					shoparray += i + "," + (ceil((i - 1000) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
-				Property.SetSimple(self, "LockMsg", shoparray);
+				if (settings.find("StatsSkillsPsi"))
+					{
+					local shoparray = "";
+					for (local i = 1481; i < 1620; i++)
+						shoparray += i + "," + (ceil((i - 1481) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
+					Property.SetSimple(self, "LockMsg", shoparray);
+					}
 				}
 			local storedseed = Property.Get(self, "CurWpnDmg");
 			if (runseed != storedseed)
@@ -394,17 +400,27 @@ class PlayerScripts extends SqRootScript
 					return;
 				}
 			local itemsreceived = split(ReceivedItemsfile, ",");
-			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"));
+			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"))
 				{
 					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, likely because you are not connected to the correct slot.", self)
 					return;
 				}
-			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg") + 1;
+			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
 			local receiveditems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
 			foreach (itemid in receiveditems)
 				ItemReceived(itemid);
-			SetOneShotTimer("ItemReceiver", 1);
+			SetOneShotTimer("ItemReceiver", 3);
 		}
+
+		if (message().name == "CreateTripwire")
+        {
+            local podtrip = Object.Create("Floor Egg Tripwire");
+			local egg = message().data
+            Property.SetSimple(podtrip, "Scale", vector(3, 3, 2));
+            Link.Create("SwitchLink", podtrip, egg);
+            Object.Teleport(podtrip, Object.Position(egg), vector(0, 0, 0));
+			Property.Set(egg, "PhysAttr", "Mass", (1000));
+        }
 	}
 
 	static function CopyMetaProp(oldenemy, newenemy, metaprop)#From Sarge945s Rando
@@ -486,8 +502,8 @@ class PlayerScripts extends SqRootScript
 				else
 					curosslot = curosslot + 1;
 				Property.SetSimple(self, "WeaponDamge", curosslot);
-				if (item[1] == 6)
-					ShockGame.AddExp(self, 20, TRUE);
+				if (item[1][0] == 6)
+					ShockGame.AddExp(self, 20, true);
 				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
 				break;
 			}
