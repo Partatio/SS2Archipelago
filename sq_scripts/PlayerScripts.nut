@@ -372,7 +372,7 @@ class PlayerScripts extends SqRootScript
 				if (settings.find("StatsSkillsPsi"))
 					{
 					local shoparray = "";
-					for (local i = 1481; i < 1620; i++)
+					for (local i = 1481; i < 1628; i++)
 						shoparray += i + "," + (ceil((i - 1481) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
 					Property.SetSimple(self, "LockMsg", shoparray);
 					}
