@@ -20,7 +20,7 @@ class RespecMachineScript extends SqRootScript
     }
 
     WeaponTable = {
-        "": 0,
+        "0": 0,
         "1": 21,
         "2": 31,
         "3": 45,
@@ -31,7 +31,7 @@ class RespecMachineScript extends SqRootScript
 
     function PsiPowRefund(PsiEnum, psipow, amount)
     {
-        if (abs(PsiEnum & pow(2, psipower - 1).tointeger()) > 0)
+        if (abs(PsiEnum & pow(2, psipow - 1).tointeger()) > 0)
             return amount
         else
             return 0;
@@ -92,6 +92,8 @@ class RespecMachineScript extends SqRootScript
         refund += PsiPowRefund(CurPsiPowers, 1, 134)
         for (local i = 2; i < 9; i++)
             refund += PsiPowRefund(CurPsiPowers, i, 35)
+
+        ShockGame.AddExp(p, refund, true);
 
         Property.SetSimple(p, "PsiPowerDesc", 0)
         Property.SetSimple(p, "PsiPowerDesc2", 0)

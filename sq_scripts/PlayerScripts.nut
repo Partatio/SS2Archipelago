@@ -127,7 +127,6 @@ class PlayerScripts extends SqRootScript
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPowerDesc",0);
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPower2Desc",0);
 					ShockGame.RecalcStats(Networking.FirstPlayer());
-					ShockGame.DestroyInvObj(1593);
 					continue; #taken from RoSoDudes alternate start mod
 					}
 				case "skipstation":
@@ -355,25 +354,38 @@ class PlayerScripts extends SqRootScript
 			Version.GetMap(curmap);
 			curmap = curmap.tostring().tolower();
 			local settings = ParseFile("DMM\\Archipelago\\data\\Settings.txt");
-			local runseed = split(settings, ",")[0].tointeger();
 			if (!settings)
 				{
 				ShockGame.AddText("You aren't connected to a slot with the client.  Open the client, connect, and reload.  If you are connected then the settings file failed to be read.", self);
 				return;
 				}
-			#if (curmap == "earth.mis" && !Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker")) #uncomment this when done testing
+			local runseed = split(settings, ",")[0].tointeger();
+			if (curmap == "earth.mis" && !Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"))
 				{
 				Property.SetSimple(self, "Modify1", settings); #store the settings
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
 				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
 				Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
-				Property.SetSimple(self, "WeaponDamge", 1); #current osupgrade slot
+				Property.SetSimple(self, "WeaponDamage", 1); #current osupgrade slot
+
+				Property.SetSimple(self, "AI_NGOBB", false)#Psi Tier Unlock status
+				Property.SetSimple(self, "AI_TrackM", false)
+				Property.SetSimple(self, "AI_UseWater", false)
+				Property.SetSimple(self, "AI_IsBig", false)
+				Property.SetSimple(self, "AI_IgCam", false)
+				Property.SetSimple(self, "AI_Standtags", "")#Psi ability queues
+				Property.SetSimple(self, "AI_SndTags", "")
+				Property.SetSimple(self, "AI_MotTags", "")
+				Property.SetSimple(self, "ModeChangeMeta", "")
+				Property.SetSimple(self, "ModeUnchngeMeta", "")
 
 				if (settings.find("StatsSkillsPsi"))
 					{
 					local shoparray = "";
 					for (local i = 1481; i < 1628; i++)
-						shoparray += i + "," + (ceil((i - 1481) / 21) + 2) + ","; #The list of items purchasable from the location shop, costs increase the more you buy. i is the locid.
+						{
+						shoparray += i + "," + 6 + ","; #The list of items purchasable from the location shop.  i is the locid.
+						}
 					Property.SetSimple(self, "LockMsg", shoparray);
 					}
 				}
@@ -393,21 +405,23 @@ class PlayerScripts extends SqRootScript
 
 		if (message().name == "ItemReceiver")
 		{
-			local ReceivedItemsfile = ParseFile("DMM\\Archipelago\\data\\ReceivedItems.txt")
+			local ReceivedItemsfile = ParseFile("DMM\\Archipelago\\data\\ReceivedItems.txt");
 			if (ReceivedItemsfile == null)
 				{
-					ShockGame.AddText("RecievedItemsfile could not be read or is empty.  Open the client and connect to a slot.", self)
+					ShockGame.AddText("RecievedItemsfile could not be read or is empty.  Open the client and connect to a slot.", self);
 					return;
 				}
 			local itemsreceived = split(ReceivedItemsfile, ",");
 			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"))
 				{
-					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, likely because you are not connected to the correct slot.", self)
+					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, likely because you are not connected to the correct slot.", self);
 					return;
 				}
 			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
-			local receiveditems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
-			foreach (itemid in receiveditems)
+			local newitems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
+			if (newitems.len() != 0)
+				Sound.PlaySchemaAmbient(self, "btabs");
+			foreach (itemid in newitems)
 				ItemReceived(itemid);
 			SetOneShotTimer("ItemReceiver", 3);
 		}
@@ -466,52 +480,144 @@ class PlayerScripts extends SqRootScript
 		case "StatUpgrade":
 			{
 			Property.Set(self, "BaseStatsDesc", item[1], Property.Get(self, "BaseStatsDesc", item[1]) + 1);
-			ShockGame.AddText("Got " + item[1] + "stat upgrade!", self);
+			ShockGame.RecalcStats(self);
+			ShockGame.AddText("Got " + item[1] + " stat upgrade!", self);
 			break;
 			}
 		case "TechUpgrade":
 			{
 			Property.Set(self, "BaseTechDesc", item[1], Property.Get(self, "BaseTechDesc", item[1]) + 1);
-			ShockGame.AddText("Got " + item[1] + "technical skill upgrade!", self);
+			ShockGame.AddText("Got " + item[1] + " technical skill upgrade!", self);
 			break;
 			}
 		case "WeaponUpgrade":
 			{
 			Property.Set(self, "BaseWeaponDesc", item[1], Property.Get(self, "BaseWeaponDesc", item[1]) + 1);
-			ShockGame.AddText("Got " + item[1] + "weapon skill upgrade!", self);
+			ShockGame.AddText("Got " + item[1] + " weapon skill upgrade!", self);
 			break;
 			}
 		case "PsiPowerUnlock": #tiers 1-4. [1] is an array where[0] is the osupgrade number, and [1] is its name. same for next two cases.
 			{
-			Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, item[1][0] - 1));
+			local psipowerid = item[1][0]
+			if (psipowerid == 1)
+				{
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "AI_NGOBB", true)
+				local queue = split(Property.Get(self, "AI_Standtags"), ",")
+				foreach (psipow in queue)
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+				}
+			if (psipowerid < 9 && psipowerid > 1)
+				{
+				if (Property.Get(self, "AI_NGOBB"))
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				else
+					Property.SetSimple(self, "AI_Standtags", Property.Get(self, "AI_Standtags") + psipowerid.tostring() + ",")
+				}
+			if (psipowerid == 9)
+				{
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "AI_TrackM", true)
+				local queue = split(Property.Get(self, "AI_SndTags"), ",")
+				foreach (psipow in queue)
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+				}
+			if (psipowerid < 17 && psipowerid > 9)
+				{
+				if (Property.Get(self, "AI_TrackM"))
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				else
+					Property.SetSimple(self, "AI_SndTags", Property.Get(self, "AI_SndTags") + psipowerid.tostring() + ",")
+				}
+			if (psipowerid == 17)
+				{
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "AI_UseWater", true)
+				local queue = split(Property.Get(self, "AI_MotTags"), ",")
+				foreach (psipow in queue)
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+				}
+			if (psipowerid < 25 && psipowerid > 17)
+				{
+				if (Property.Get(self, "AI_UseWater"))
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				else
+					Property.SetSimple(self, "AI_MotTags", Property.Get(self, "AI_MotTags") + psipowerid.tostring() + ",")
+				}
+			if (psipowerid == 25)
+				{
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "AI_IsBig", true)
+				local queue = split(Property.Get(self, "ModeChangeMeta"), ",")
+				foreach (psipow in queue)
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+				}
+			if (psipowerid < 33 && psipowerid > 25)
+				{
+				if (Property.Get(self, "AI_IsBig"))
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				else
+					Property.SetSimple(self, "ModeChangeMeta", Property.Get(self, "ModeChangeMeta") + psipowerid.tostring() + ",")
+				}
 			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
 			break;
 			}
 		case "PsiPowerUnlock2": #tier 5
 			{
-			Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, item[1][0] - 1));
+			local psipowerid = item[1][0]
+			if (psipowerid == 1)
+				{
+				Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "AI_IgCam", true)
+				local queue = split(Property.Get(self, "ModeUnchngeMeta"), ",")
+				foreach (psipow in queue)
+					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipow.tointeger() - 1));
+				}
+			else
+				{
+				if (Property.Get(self, "AI_IgCam"))
+					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipowerid - 1));
+				else
+					Property.SetSimple(self, "ModeUnchngeMeta", Property.Get(self, "ModeUnchngeMeta") + psipowerid.tostring() + ",")
+				}
 			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
 			break;
 			}
 		case "OsUnlock":
 			{
-				local curosslot = Property.Get(self, "WeaponDamge");
-				Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
-				if (curosslot == 4)
-					curosslot = 1;
-				else
-					curosslot = curosslot + 1;
-				Property.SetSimple(self, "WeaponDamge", curosslot);
-				if (item[1][0] == 6)
-					ShockGame.AddExp(self, 20, true);
-				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
+			local curosslot = Property.Get(self, "WeaponDamage");
+			Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
+			if (curosslot == 4)
+				curosslot = 1;
+			else
+				curosslot = curosslot + 1;
+			Property.SetSimple(self, "WeaponDamage", curosslot);
+			if (item[1][0] == 6)
+				ShockGame.AddExp(self, 8, true);
+			if (item[1][0] == 8)
+				ShockGame.RecalcStats(self);
+			ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
+			break;
+			}
+		case "CyberModules":
+			{
+				ShockGame.AddExp(self, item[1], true);
 				break;
+			}
+		case "Nanites":
+			{
+			local naniteholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "FakeNanites");
+			Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + item[1])
+			ShockGame.AddText("Got " + item[1].tostring() + " Nanites!", self)
+			break;
 			}
 		default:
 			{
 			local newitem = Object.Create(item[0]);
 			local properties = item[1];
 				foreach(property in properties){
+					if (property[1] == "Logs")
+						property[2] = 0 | pow(2, property[2] - 1).tointeger();
 					if (property.len() == 3)
 						Property.Set(newitem, property[0], property[1], property[2]);
 					else

@@ -90,7 +90,7 @@ CreateArch "Goodies" "APLocation"
 	}
 	+ObjProp "MapObjIcon"
 	{
-	"" "mcam"
+	"" "locs"
 	}
 }
 
@@ -222,7 +222,7 @@ CreateArch "Trainers" "CybModShop"
 	}
 	+ObjProp "MapObjIcon"
 	{
-	"" "msec"
+	"" "locshop"
 	}
 }
 
@@ -281,11 +281,7 @@ CreateArch "Trainers" "RespecMachine"
 	}
 	+ObjProp "ObjName"
 	{
-	"" "RespecMachine: "A RespecMachine, right click to respec all stats, skills, weapon skills, and psi abilities""
-	}
-	+ObjProp "MapObjIcon"
-	{
-	"" "msec"
+	"" "RespecMachine: "A RespecMachine, right click to respec""
 	}
 }
 
@@ -308,6 +304,7 @@ CreateArch "Misc Metaprops" "UnlootableEnemyScript"
 +MetaProp "Protocol Droid" "UnlootableEnemyScript"
 +MetaProp "Overlord" "UnlootableEnemyScript"
 +MetaProp "Eggs" "UnlootableEnemyScript"
++MetaProp "Turrets" "UnlootableEnemyScript"
 
 -ObjProp "Experience Trap" "Scripts"
 
@@ -336,6 +333,15 @@ CreateArch "Misc Metaprops" "UnlootableEnemyScript"
 +ObjProp "Slug Turret" "PhysAttr"
 {
 	"Gravity %" "1000"
+}
++ObjProp "Rickenbacker Card" "KeySrc"
+{
+	"RegionID" "RICKENBACHER"
+}
+
++ObjProp "Crew 2 Card" "KeySrc"
+{
+	"RegionID" "CREW2"
 }
 
 //RoSoDudes repairable crates
