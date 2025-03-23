@@ -94,16 +94,16 @@ class PlayerScripts extends SqRootScript
 					Property.Set(command[2], "RepHacked", "Obj 4 Cost", ReplItem[1]);
 					continue;
 					}
-				case "sss": #changes sss objects to aplocations with set ids.  ids can be changed in the gamesys
+				case "ssu": #changes ssu objects to aplocations with set ids.  ids can be changed in the gamesys
 					{
-					Property.Set(240, "RepContents", "Obj 1 Name", "APLsss1");
-					Property.Set(240, "RepContents", "Obj 2 Name", "APLsss2");
-					Property.Set(240, "RepContents", "Obj 3 Name", "APLsss3");
-					Property.Set(240, "RepContents", "Obj 4 Name", "APLsss4");
-					Property.Set(240, "RepHacked", "Obj 1 Name", "APLsss1");
-					Property.Set(240, "RepHacked", "Obj 2 Name", "APLsss2");
-					Property.Set(240, "RepHacked", "Obj 3 Name", "APLsss3");
-					Property.Set(240, "RepHacked", "Obj 4 Name", "APLsss4");
+					Property.Set(240, "RepContents", "Obj 1 Name", "APLssu1");
+					Property.Set(240, "RepContents", "Obj 2 Name", "APLssu2");
+					Property.Set(240, "RepContents", "Obj 3 Name", "APLssu3");
+					Property.Set(240, "RepContents", "Obj 4 Name", "APLssu4");
+					Property.Set(240, "RepHacked", "Obj 1 Name", "APLssu1");
+					Property.Set(240, "RepHacked", "Obj 2 Name", "APLssu2");
+					Property.Set(240, "RepHacked", "Obj 3 Name", "APLssu3");
+					Property.Set(240, "RepHacked", "Obj 4 Name", "APLssu4");
 					continue;
 					}
 				case "command1repl": #changes command1s first hacked item to a location, this is to replace the resonator.  id changeable in gamesys
@@ -131,7 +131,7 @@ class PlayerScripts extends SqRootScript
 					}
 				case "skipstation":
 					{
-					Object.Teleport(self, vector(56.5, -20, -9), vector(0, 0, 0));
+					Object.Teleport(self, vector(56.5, -21, -8), vector(0, 0, 0));
 					continue; #teleport player to level end tripwire, only do after "setcareer"
 					}
 				case "itemrestrictorapl": #creates an APLocation at location command[2], with Locid command[3], and a script that sends a message to the player to start sending items.  does not link to APlocationTracker.  Used on medsci1 to stop items from spawning.
@@ -170,6 +170,7 @@ class PlayerScripts extends SqRootScript
 					}
 				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire
 					{
+					Quest.Set("SCPGame", 1, eQuestDataType.kQuestDataCampaign) #Gets rid of mid - game activation message from scp.  May need to be updated with scp updates, is setting the same qb as object 15
 					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0))
 					continue;
 					}
@@ -360,7 +361,7 @@ class PlayerScripts extends SqRootScript
 				return;
 				}
 			local runseed = split(settings, ",")[0].tointeger();
-			if (curmap == "earth.mis" && !Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"))
+			if ((curmap == "earth.mis" && !Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker")) || Version.IsEditor())
 				{
 				Property.SetSimple(self, "Modify1", settings); #store the settings
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
@@ -501,61 +502,61 @@ class PlayerScripts extends SqRootScript
 			local psipowerid = item[1][0]
 			if (psipowerid == 1)
 				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				Property.SetSimple(self, "AI_NGOBB", true)
 				local queue = split(Property.Get(self, "AI_Standtags"), ",")
 				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
 				}
 			if (psipowerid < 9 && psipowerid > 1)
 				{
 				if (Property.Get(self, "AI_NGOBB"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				else
 					Property.SetSimple(self, "AI_Standtags", Property.Get(self, "AI_Standtags") + psipowerid.tostring() + ",")
 				}
 			if (psipowerid == 9)
 				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				Property.SetSimple(self, "AI_TrackM", true)
 				local queue = split(Property.Get(self, "AI_SndTags"), ",")
 				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
 				}
 			if (psipowerid < 17 && psipowerid > 9)
 				{
 				if (Property.Get(self, "AI_TrackM"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				else
 					Property.SetSimple(self, "AI_SndTags", Property.Get(self, "AI_SndTags") + psipowerid.tostring() + ",")
 				}
 			if (psipowerid == 17)
 				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				Property.SetSimple(self, "AI_UseWater", true)
 				local queue = split(Property.Get(self, "AI_MotTags"), ",")
 				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
 				}
 			if (psipowerid < 25 && psipowerid > 17)
 				{
 				if (Property.Get(self, "AI_UseWater"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				else
 					Property.SetSimple(self, "AI_MotTags", Property.Get(self, "AI_MotTags") + psipowerid.tostring() + ",")
 				}
 			if (psipowerid == 25)
 				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				Property.SetSimple(self, "AI_IsBig", true)
 				local queue = split(Property.Get(self, "ModeChangeMeta"), ",")
 				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipow.tointeger() - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
 				}
 			if (psipowerid < 33 && psipowerid > 25)
 				{
 				if (Property.Get(self, "AI_IsBig"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") + pow(2, psipowerid - 1));
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
 				else
 					Property.SetSimple(self, "ModeChangeMeta", Property.Get(self, "ModeChangeMeta") + psipowerid.tostring() + ",")
 				}
@@ -567,16 +568,16 @@ class PlayerScripts extends SqRootScript
 			local psipowerid = item[1][0]
 			if (psipowerid == 1)
 				{
-				Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipowerid - 1));
+				Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
 				Property.SetSimple(self, "AI_IgCam", true)
 				local queue = split(Property.Get(self, "ModeUnchngeMeta"), ",")
 				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipow.tointeger() - 1));
+					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipow.tointeger() - 1).tointeger());
 				}
 			else
 				{
 				if (Property.Get(self, "AI_IgCam"))
-					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") + pow(2, psipowerid - 1));
+					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
 				else
 					Property.SetSimple(self, "ModeUnchngeMeta", Property.Get(self, "ModeUnchngeMeta") + psipowerid.tostring() + ",")
 				}

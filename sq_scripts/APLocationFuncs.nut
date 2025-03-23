@@ -8,7 +8,7 @@ class APLocationFuncs extends SqRootScript
 
     function OnCollectedItemsUpdate()
     {
-        if (split(message().data, ",").find(Property.Get(self, "VoiceIdx").tostring()))
+        if (split(message().data, ",").find(" " + Property.Get(self, "VoiceIdx").tostring()))
             Object.Destroy(self);
     }
 }

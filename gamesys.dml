@@ -27,10 +27,6 @@ CreateArch "Goodies" "APLocation"
 	{
 	"" "aaa"
 	}
-	+ObjProp "PsiRadar"
-	{
-	"" "Powerup"
-	}
 	+ObjProp "FrobInfo"
 	{
 	"World Action" "Script"
@@ -112,7 +108,7 @@ CreateArch "Object" "APLocationTracker"
 	}
 }
 
-CreateArch "APLocation" "APLsss1"
+CreateArch "APLocation" "APLssu1"
 {
 	+ObjProp "VoiceIdx"
 	{
@@ -120,11 +116,11 @@ CreateArch "APLocation" "APLsss1"
 	}
 	+ObjProp "ObjShort"
 	{
-	"" "APLsss1: "sss APLocation 1, purchase once""
+	"" "APLssu1: "ssu APLocation 1, purchase once""
 	}
 }
 
-CreateArch "APLocation" "APLsss2"
+CreateArch "APLocation" "APLssu2"
 {
 	+ObjProp "VoiceIdx"
 	{
@@ -132,11 +128,11 @@ CreateArch "APLocation" "APLsss2"
 	}
 	+ObjProp "ObjShort"
 	{
-	"" "APLsss2: "sss APLocation 2, purchase once""
+	"" "APLssu2: "ssu APLocation 2, purchase once""
 	}
 }
 
-CreateArch "APLocation" "APLsss3"
+CreateArch "APLocation" "APLssu3"
 {
 	+ObjProp "VoiceIdx"
 	{
@@ -144,11 +140,11 @@ CreateArch "APLocation" "APLsss3"
 	}
 	+ObjProp "ObjShort"
 	{
-	"" "APLsss3: "sss APLocation 3, purchase once""
+	"" "APLssu3: "ssu APLocation 3, purchase once""
 	}
 }
 
-CreateArch "APLocation" "APLsss4"
+CreateArch "APLocation" "APLssu4"
 {
 	+ObjProp "VoiceIdx"
 	{
@@ -156,7 +152,7 @@ CreateArch "APLocation" "APLsss4"
 	}
 	+ObjProp "ObjShort"
 	{
-	"" "APLsss4: "sss APLocation 4, purchase once""
+	"" "APLssu4: "ssu APLocation 4, purchase once""
 	}
 }
 
@@ -302,6 +298,7 @@ CreateArch "Misc Metaprops" "UnlootableEnemyScript"
 	}
 }
 +MetaProp "Protocol Droid" "UnlootableEnemyScript"
++MetaProp "Big Droids" "UnlootableEnemyScript"
 +MetaProp "Overlord" "UnlootableEnemyScript"
 +MetaProp "Eggs" "UnlootableEnemyScript"
 +MetaProp "Turrets" "UnlootableEnemyScript"

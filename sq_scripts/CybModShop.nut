@@ -2,12 +2,13 @@ class CybModShop extends SqRootScript
 {
     function OnFrobWorldEnd()
     {
-        local cybmodshoplist = split(Property.Get(Networking.FirstPlayer(), "LockMsg"), ",");
-        if (cybmodshoplist.len() == 0)
+        local cybmodshopstr = Property.Get(Networking.FirstPlayer(), "LockMsg");
+        if (cybmodshopstr.len() == 0)
             {
             ShockGame.AddText("All locations already purchased.", Networking.FirstPlayer());
             return;
             }
+        local cybmodshoplist = split(cybmodshopstr, ",")
         local price = cybmodshoplist[1].tointeger();
         local cybmodholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "FakeCookie")
         local playercybmodcount = Property.Get(cybmodholder, "StackCount");
@@ -15,7 +16,7 @@ class CybModShop extends SqRootScript
             {
             local amountbought = 0
             local totalprice = 0
-            while (playercybmodcount >= price)
+            while (playercybmodcount >= price && cybmodshoplist.len() > 0)
                 {
                 Debug.Command("dump_cmds", "pylocid" + cybmodshoplist[0] + ".txt");#send out location
                 playercybmodcount -= price;
@@ -23,7 +24,8 @@ class CybModShop extends SqRootScript
                 amountbought += 1;
                 cybmodshoplist.remove(0);#remove id and price of just purchased location
                 cybmodshoplist.remove(0);
-                price = cybmodshoplist[1].tointeger();
+                if (!cybmodshoplist.len() == 0)
+                    price = cybmodshoplist[1].tointeger();
                 }
             Property.SetSimple(cybmodholder, "StackCount", playercybmodcount);#reduce player cyber modules
             local newcybmodshoplist = "";
