@@ -176,11 +176,49 @@ class PlayerScripts extends SqRootScript
 					}
 				case "randomizeenemy": #destroy command[2] enemy if that field isnt set to 0.  Get the correct tier array based on command[3].  choose a random enemy from that, then create it and teleport it to command[4] with the original enemies properties if there was one.
 					{
-					local chosenenemy = PickEnemy(command[3], IsSpecialEnemy(command[2]));#dont want eggs, turrets, or overlords teleporting or replacing enemies with special scripts
+					local enemytier = command[3]
+					local chosenenemy = PickEnemy(enemytier, IsSpecialEnemy(command[2]));#dont want eggs, turrets, or overlords teleporting or replacing enemies with special scripts
 					local newenemy = Object.Create(chosenenemy);
 					local enemyfacing = vector();
+					switch(enemytier)
+						{
+						case "4":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 2);
+							break;
+							}
+						case "5":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 4);
+							break;
+							}
+						case "6":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 7);
+							break;
+							}
+						case "7":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 10);
+							break;
+							}
+						case "8":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 14);
+							break;
+							}
+						case "9":
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 18);
+							break;
+							}
+						}
+					//Set HP to max (fixes issues with RSD)
+					Property.SetSimple(newenemy, "HitPoints", Property.Get(newenemy, "MAX_HP"));
 					if (Object.Exists(command[2]) && command[2] != 0) #lots of this was taken from Sarge945s rando
 					{
+						enemyfacing = vector(0, 0, Object.Facing(command[2]).z);
+
 						CopyMetaProp(command[2], newenemy, "Docile");
 						CopyMetaProp(command[2], newenemy, "Patrolling");
 						CopyMetaProp(command[2], newenemy, "Silent");
@@ -197,9 +235,6 @@ class PlayerScripts extends SqRootScript
 
 						//Remove friendly (fixes issue with Repairman)
 						Object.RemoveMetaProperty(newenemy, "Good Guy");
-
-						//Set HP to max (fixes issues with RSD)
-						Property.SetSimple(newenemy, "HitPoints", Property.Get(newenemy, "MAX_HP"));
 
 						//Copy over AI Properties
 						Property.CopyFrom(newenemy, "AI_Fidget", command[2]);
@@ -240,10 +275,12 @@ class PlayerScripts extends SqRootScript
 						Object.Destroy(command[2]);
 						Object.SetName(newenemy, enemyname)
 					}
-					Object.Teleport(newenemy, command[4], enemyfacing);
+					Object.Teleport(newenemy, command[4] + vector(0, 0, 2), enemyfacing);
 					if (chosenenemy == "Floor Pod" || chosenenemy == "Swarmer Floor Pod" || chosenenemy == "Grub Floor Pod")
 						{
 						Property.Set(newenemy, "PhysControl", "Controls Active", 0);
+						Property.Set(newenemy, "AmbientHacked", "Radius", 25);
+						Property.Set(newenemy, "AmbientHacked", "Schema Name", "eggloop")
 						SetOneShotTimer("CreateTripwire", 3, newenemy);
 						}
 					if (chosenenemy == "Greater Over." || chosenenemy == "Overlord")
@@ -424,7 +461,7 @@ class PlayerScripts extends SqRootScript
 				Sound.PlaySchemaAmbient(self, "btabs");
 			foreach (itemid in newitems)
 				ItemReceived(itemid);
-			SetOneShotTimer("ItemReceiver", 3);
+			SetOneShotTimer("ItemReceiver", 1);
 		}
 
 		if (message().name == "CreateTripwire")
@@ -432,9 +469,10 @@ class PlayerScripts extends SqRootScript
             local podtrip = Object.Create("Floor Egg Tripwire");
 			local egg = message().data
             Property.SetSimple(podtrip, "Scale", vector(3, 3, 2));
+			Property.Set(podtrip, "PhysDims", "Size", vector(12, 12, 8));
             Link.Create("SwitchLink", podtrip, egg);
-            Object.Teleport(podtrip, Object.Position(egg), vector(0, 0, 0));
-			Property.Set(egg, "PhysAttr", "Mass", (1000));
+            Object.Teleport(podtrip, Object.Position(egg), vector());
+			Property.Set(egg, "PhysControl", "Controls Active", 11000);
         }
 	}
 
@@ -612,18 +650,34 @@ class PlayerScripts extends SqRootScript
 			ShockGame.AddText("Got " + item[1].tostring() + " Nanites!", self)
 			break;
 			}
+		case "Audio Log":
+			{
+			local properties = item[1];
+			foreach(property in properties)
+				{
+				if (property[1] == "Logs")
+					Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
+				else
+					{
+					Quest.Set(property[1], property[2], eQuestDataType.kQuestDataCampaign);
+					if (property.len() == 4)
+						ShockGame.AddText("Got keypad code for " + property[3] + "!", self);
+					}
+				}
+			ShockGame.AddText("Got Audio Log!", self);
+			break;
+			}
 		default:
 			{
 			local newitem = Object.Create(item[0]);
 			local properties = item[1];
-				foreach(property in properties){
-					if (property[1] == "Logs")
-						property[2] = 0 | pow(2, property[2] - 1).tointeger();
+				foreach(property in properties)
+					{
 					if (property.len() == 3)
 						Property.Set(newitem, property[0], property[1], property[2]);
 					else
 						Property.SetSimple(newitem, property[0], property[1]);
-				}
+					}
 			Object.Teleport(newitem, Object.Position(self), Object.Facing(self));
 			ShockGame.AddText("Got Item!", self);
 			}
