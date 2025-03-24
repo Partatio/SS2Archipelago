@@ -172,7 +172,7 @@ mapinstructions =
         ["randomizeenemy", "", 610, "0", vector(-7.91, -35.04, -13.11)],
         ["randomizeenemy", "", 611, "0", vector(11.69, -15.32, -13.14)],
         ["randomizeenemy", "", 1081, "0", vector(32.46, -4.75, -0.11)],
-        ["randomizeenemy", "", 1007, "0", vector(52.84, 36.95, -12.05)],
+        ["randomizeenemy", "", 1007, "0", vector(52.22, 39.25, -12.05)],
         ["randomizeenemy", "", 163, "0", vector(24.91, 106.07, -12.05)]
     ],
     "medsci2.mis": [
