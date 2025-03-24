@@ -404,7 +404,7 @@ class PlayerScripts extends SqRootScript
 				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
 				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
 				Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
-				Property.SetSimple(self, "WeaponDamage", 1); #current osupgrade slot
+				Property.SetSimple(self, "RsrchTime", 1); #current osupgrade slot
 
 				Property.SetSimple(self, "AI_NGOBB", false)#Psi Tier Unlock status
 				Property.SetSimple(self, "AI_TrackM", false)
@@ -624,13 +624,13 @@ class PlayerScripts extends SqRootScript
 			}
 		case "OsUnlock":
 			{
-			local curosslot = Property.Get(self, "WeaponDamage");
+			local curosslot = Property.Get(self, "RsrchTime");
 			Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
 			if (curosslot == 4)
 				curosslot = 1;
 			else
 				curosslot = curosslot + 1;
-			Property.SetSimple(self, "WeaponDamage", curosslot);
+			Property.SetSimple(self, "RsrchTime", curosslot);
 			if (item[1][0] == 6)
 				ShockGame.AddExp(self, 8, true);
 			if (item[1][0] == 8)
