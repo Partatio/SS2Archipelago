@@ -3425,7 +3425,7 @@ ItemTable = {
     "306": ["Audio Log", [["Logs8", "Logs", 8]]],
     "307": ["Audio Log", [["Logs8", "Logs", 7], ["QBName", "Note_8_2", 1]]],
     "308": ["Large Prism", [["StackCount", 37]]],
-    "309": ["Manifest", [["Logs7", "Logs", 32]]],
+    "309": ["Manifest", [["Logs8", "Logs", 32]]],
     "310": ["Audio Log", [["Logs9", "Logs", 1]]],
     "311": ["Audio Log", [["Logs9", "Logs", 4]]],
     "312": ["Audio Log", [["Logs9", "Logs", 3]]],
