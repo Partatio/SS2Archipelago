@@ -173,7 +173,8 @@ mapinstructions =
         ["randomizeenemy", "", 611, "0", vector(11.69, -15.32, -13.14)],
         ["randomizeenemy", "", 1081, "0", vector(32.46, -4.75, -0.11)],
         ["randomizeenemy", "", 1007, "0", vector(52.22, 39.25, -12.05)],
-        ["randomizeenemy", "", 163, "0", vector(24.91, 106.07, -12.05)]
+        ["randomizeenemy", "", 163, "0", vector(24.91, 106.07, -12.05)],
+        ["randomizeenemy", "", 613, "5", vector(35.15, -84.54, -0.05)],
     ],
     "medsci2.mis": [
         ["placeaploc", "", vector(-82.09, -116.52, -2.22), 103, 94], #103:Under counter in snack room with replicator medsci2crew

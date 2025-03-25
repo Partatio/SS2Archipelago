@@ -20,16 +20,21 @@ class EggScript extends SqRootScript
     }
 }
 
-class UnlootableEnemy extends SqRootScript
+class EnemyWithLocation extends SqRootScript
 {
     function OnSlain()
     {
         foreach(link in Link.GetAll("Contains", self))
         {
-            local containedloc = sLink(link).dest;
-            Object.Teleport(containedloc, Object.Position(self), vector());
-            Property.SetSimple(containedloc, "HasRefs", TRUE);
-            Link.Destroy(link);
+            local containeditem = sLink(link).dest;
+                {
+                if (Object.InheritsFrom(containeditem, "APLocation"))
+                    {
+                    Object.Teleport(containeditem, Object.Position(self), vector());
+                    Property.SetSimple(containeditem, "HasRefs", TRUE);
+                    Link.Destroy(link);
+                    }
+                }
         }
     }
 }

@@ -126,6 +126,8 @@ class PlayerScripts extends SqRootScript
 					Property.Set(Networking.FirstPlayer(), "BaseTechDesc", "Repair",0);
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPowerDesc",0);
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPower2Desc",0);
+					local naniteholder = Object.FindClosestObjectNamed(self, "FakeNanites")
+					Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + 20);
 					ShockGame.RecalcStats(Networking.FirstPlayer());
 					continue; #taken from RoSoDudes alternate start mod
 					}
@@ -339,7 +341,8 @@ class PlayerScripts extends SqRootScript
 			special = true;
 		foreach (outLink in Link.GetAll(linkkind("~SwitchLink"), enemy))
 		{
-			if (Property.Get(LinkDest(outLink), "Scripts", "Script 0") == "TrapTeleport")
+			local firstscript = Property.Get(LinkDest(outLink), "Scripts", "Script 0")
+			if (firstscript == "TrapTeleport" || firstscript == "TrapTerminator")
 				special = true;
 		}
 		return special;

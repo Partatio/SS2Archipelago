@@ -290,19 +290,14 @@ CreateArch "Misc Metaprops" "RespecMachineScripts"
 }
 +MetaProp "RespecMachine" "RespecMachineScripts"
 
-CreateArch "Misc Metaprops" "UnlootableEnemyScript"
+CreateArch "Misc Metaprops" "EnemyWithLocationScript"
 {
 	+ObjProp "Scripts"
 	{
-	"Script 0" "UnlootableEnemy"
+	"Script 0" "EnemyWithLocation"
 	}
 }
-+MetaProp "Monsters" "UnlootableEnemyScript"
-//+MetaProp "Protocol Droid" "UnlootableEnemyScript"
-//+MetaProp "Big Droids" "UnlootableEnemyScript"
-//+MetaProp "Overlord" "UnlootableEnemyScript"
-//+MetaProp "Eggs" "UnlootableEnemyScript"
-//+MetaProp "Turrets" "UnlootableEnemyScript"
++MetaProp "Monsters" "EnemyWithLocationScript"
 
 -ObjProp "Experience Trap" "Scripts"
 
