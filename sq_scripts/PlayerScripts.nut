@@ -667,6 +667,13 @@ class PlayerScripts extends SqRootScript
 			ShockGame.AddText("Got Audio Log!", self);
 			break;
 			}
+		case "Manifest":
+			{
+			local property = item[1][0];
+			Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
+			ShockGame.AddText("Got Audio Log!", self);
+			break;
+			}
 		default:
 			{
 			local newitem = Object.Create(item[0]);
