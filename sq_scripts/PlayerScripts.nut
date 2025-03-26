@@ -186,32 +186,32 @@ class PlayerScripts extends SqRootScript
 						{
 						case "4":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 2);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 4);
 							break;
 							}
 						case "5":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 4);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 8);
 							break;
 							}
 						case "6":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 7);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 12);
 							break;
 							}
 						case "7":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 10);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 18);
 							break;
 							}
 						case "8":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 14);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 24);
 							break;
 							}
 						case "9":
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 18);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 30);
 							break;
 							}
 						}
@@ -433,7 +433,7 @@ class PlayerScripts extends SqRootScript
 			local storedseed = Property.Get(self, "CurWpnDmg");
 			if (runseed != storedseed)
 				{
-				ShockGame.AddText("You are connected to the wrong slot, connect to the correct slot and reload.", self);
+				ShockGame.AddText("You are connected to the wrong slot or have loaded the wrong game, connect to the correct slot and reload the correct game.", self);
 				return;
 				}
 			if (!Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"))
@@ -455,7 +455,7 @@ class PlayerScripts extends SqRootScript
 			local itemsreceived = split(ReceivedItemsfile, ",");
 			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"))
 				{
-					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, likely because you are not connected to the correct slot.", self);
+					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, Connect to the correct slot or load the correct save.", self);
 					return;
 				}
 			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
@@ -675,6 +675,15 @@ class PlayerScripts extends SqRootScript
 			local property = item[1][0];
 			Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
 			ShockGame.AddText("Got Audio Log!", self);
+			break;
+			}
+		case "Access Card":
+			{
+			local keyholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "fakekeys");
+			Property.Set(keyholder, "KeySrc", "RegionID", Property.Get(keyholder, "KeySrc", "RegionID") | pow(2, item[1][0] - 1).tointeger());
+			if (item[1].len() == 4)
+				Quest.Set(item[1][2], item[1][3], eQuestDataType.kQuestDataCampaign);
+			ShockGame.AddText("Got " + item[1][1] + " access card!", self);
 			break;
 			}
 		default:
