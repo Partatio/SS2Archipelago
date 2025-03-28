@@ -1084,9 +1084,9 @@ mapinstructions =
         ["placeaploc", "", [369, 370, 365, 364, 402, 400, 399, 397, 396], 713, 464], #713:In lockers in bunks room next to security control station near armory 3 ops4
         ["placeaploc", "", [369, 370, 365, 364, 402, 400, 399, 397, 396], 714, 389], #714:In lockers in bunks room next to security control station near armory 4 ops4
         ["placeaploc", "", [369, 370, 365, 364, 402, 400, 399, 397, 396], 715, 423], #715:In lockers in bunks room next to security control station near armory 5 ops4
-        ["placeaploc", "", [467, 348, 351, 352, 253], 716, 1262], #716:In crates in armory ops4
-        ["placeaploc", "", [467, 348, 351, 352, 253], 717, 119], #717:In crates in armory 2 ops4
-        ["placeaploc", "", [467, 348, 351, 352, 253], 718, 379], #718:In crates in armory 3 ops4
+        ["placeaploc", "", [467, 348, 351, 352, 353], 716, 1262], #716:In crates in armory ops4
+        ["placeaploc", "", [467, 348, 351, 352, 353], 717, 119], #717:In crates in armory 2 ops4
+        ["placeaploc", "", [467, 348, 351, 352, 353], 718, 379], #718:In crates in armory 3 ops4
         ["placeaploc", "", vector(-140.88, -124.33, -26.68), 719, 1188], #719:On ground near replicator near armory ops4
         ["placeaploc", "", [390], 720, 405], #720:In enemy near resurrection station ops4
         ["placeaploc", "", [140, 150, 151, 152, 131, 135, 138, 139], 721, 410], #721:In lockers in bunks room near shooting range ops4
