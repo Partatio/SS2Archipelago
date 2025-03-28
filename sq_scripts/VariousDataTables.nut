@@ -2024,7 +2024,7 @@ mapinstructions =
         ["randomizeenemy", "", 621, "8", vector(-588.92, -0.72, 261.85)],
         ["randomizeenemy", "", 79, "8", vector(-690.46, 4.7, 277.6)],
         ["randomizeenemy", "", 175, "8", vector(-692.02, 10.64, 265.95)],
-        ["randomizeenemy", "", 216, "8", vector(-709.49, 22.24, 261.01)],
+        ["randomizeenemy", "", 216, "8", vector(-709.49, 22.24, 259.01)],
         ["randomizeenemy", "", 217, "8", vector(-711.49, 34.24, 261.01)],
         ["randomizeenemy", "", 620, "8", vector(-689.78, 62.12, 275.87)],
         ["randomizeenemy", "", 134, "8", vector(-682.71, 60.38, 275)],
