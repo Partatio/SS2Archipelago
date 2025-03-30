@@ -129,23 +129,23 @@ mapinstructions =
         ["placeaploc", "", [893, 900], 79, 877], #79:In containers in chem storage room medsci1
         ["placeaploc", "", vector(-41.95, -5.77, 4.63), 80, 2008], #80:Above on pipe near turret near crew quarters entrance medsci1
         ["placeaploc", "", vector(-40.92, -5.91, 5), 81, 478], #81:Above on pipe near turret near crew quarters entrance 2 medsci1
-        ["placeaploc", "", vector(-29.22, -53.28, -3.92), 82, 1105], #82:On ground in chemical storeroom medsci1
-        ["placeaploc", "", vector(-45.17, -44.36, 1.65), 83, 589], #83:In chemical storeroom on/near shelves medsci1
-        ["placeaploc", "", vector(-44.08, -44.16, -0.72), 84, 575], #84:In chemical storeroom on/near shelves 2 medsci1
-        ["placeaploc", "", vector(-39.96, -43.79, 1.65), 85, 588], #85:In chemical storeroom on/near shelves 3 medsci1
-        ["placeaploc", "", vector(-39.96, -44.34, -0.32), 86, 583], #86:In chemical storeroom on/near shelves 4 medsci1
-        ["placeaploc", "", vector(-39.78, -47.34, -3), 87, 581], #87:In chemical storeroom on/near shelves 5 medsci1
-        ["placeaploc", "", vector(-38.83, -44.34, 4.18), 88, 579], #88:In chemical storeroom on/near shelves 6 medsci1
-        ["placeaploc", "", vector(-32.28, -43.81, 4.12), 89, 590], #89:In chemical storeroom on/near shelves 7 medsci1
-        ["placeaploc", "", vector(-32, -44.14, 1.62), 90, 570], #90:In chemical storeroom on/near shelves 8 medsci1
-        ["placeaploc", "", vector(-30.63, -44.18, -0.56), 91, 604], #91:#In chemical storeroom on/near shelves 9 medsci1
-        ["placeaploc", "", vector(-29.43, -45.28, 1.64), 92, 574], #92:In chemical storeroom on/near shelves 10 medsci1
-        ["placeaploc", "", vector(-26.75, -43.9, 4.18), 93, 602], #93:In chemical storeroom on/near shelves 11 medsci1
-        ["placeaploc", "", vector(-25.37, -44.55, -0.87), 94, 576], #94:In chemical storeroom on/near shelves 12 medsci1
-        ["placeaploc", "", vector(-24.82, -44.29, 1.7), 95, 606], #95:In chemical storeroom on/near shelves 13 medsci1
-        ["placeaploc", "", vector(-22.85, -46.7, -3.25), 96, 577], #96:In chemical storeroom on/near shelves 14 medsci1
-        ["placeaploc", "", vector(-21.63, -44.47, 4.18), 97, 578], #97:In chemical storeroom on/near shelves 15 medsci1
-        ["placeaploc", "", vector(-20.11, -45.6, 4.12), 98, 938], #98:In chemical storeroom on/near shelves 16 medsci1
+        ["placeaploc", "Chemicals", vector(-29.22, -53.28, -3.92), 82, 1105], #82:On ground in chemical storeroom medsci1
+        ["placeaploc", "Chemicals", vector(-45.17, -44.36, 1.65), 83, 589], #83:In chemical storeroom on/near shelves medsci1
+        ["placeaploc", "Chemicals", vector(-44.08, -44.16, -0.72), 84, 575], #84:In chemical storeroom on/near shelves 2 medsci1
+        ["placeaploc", "Chemicals", vector(-39.96, -43.79, 1.65), 85, 588], #85:In chemical storeroom on/near shelves 3 medsci1
+        ["placeaploc", "Chemicals", vector(-39.96, -44.34, -0.32), 86, 583], #86:In chemical storeroom on/near shelves 4 medsci1
+        ["placeaploc", "Chemicals", vector(-39.78, -47.34, -3), 87, 581], #87:In chemical storeroom on/near shelves 5 medsci1
+        ["placeaploc", "Chemicals", vector(-38.83, -44.34, 4.18), 88, 579], #88:In chemical storeroom on/near shelves 6 medsci1
+        ["placeaploc", "Chemicals", vector(-32.28, -43.81, 4.12), 89, 590], #89:In chemical storeroom on/near shelves 7 medsci1
+        ["placeaploc", "Chemicals", vector(-32, -44.14, 1.62), 90, 570], #90:In chemical storeroom on/near shelves 8 medsci1
+        ["placeaploc", "Chemicals", vector(-30.63, -44.18, -0.56), 91, 604], #91:#In chemical storeroom on/near shelves 9 medsci1
+        ["placeaploc", "Chemicals", vector(-29.43, -45.28, 1.64), 92, 574], #92:In chemical storeroom on/near shelves 10 medsci1
+        ["placeaploc", "Chemicals", vector(-26.75, -43.9, 4.18), 93, 602], #93:In chemical storeroom on/near shelves 11 medsci1
+        ["placeaploc", "Chemicals", vector(-25.37, -44.55, -0.87), 94, 576], #94:In chemical storeroom on/near shelves 12 medsci1
+        ["placeaploc", "Chemicals", vector(-24.82, -44.29, 1.7), 95, 606], #95:In chemical storeroom on/near shelves 13 medsci1
+        ["placeaploc", "Chemicals", vector(-22.85, -46.7, -3.25), 96, 577], #96:In chemical storeroom on/near shelves 14 medsci1
+        ["placeaploc", "Chemicals", vector(-21.63, -44.47, 4.18), 97, 578], #97:In chemical storeroom on/near shelves 15 medsci1
+        ["placeaploc", "Chemicals", vector(-20.11, -45.6, 4.12), 98, 938], #98:In chemical storeroom on/near shelves 16 medsci1
         ["placeaploc", "", vector(-74.47, -189.26, -3.78), 99, 1186], #99:On ground near body near medical entrance medsci1
         ["placeaploc", "", vector(41.39, -172.36, 2.05), 100, 338], #100:On ground near glass in area after airlock medsci1
         ["placeaploc", "", [1362], 101, 2168], #101:In body in closet in R&D medsci1
@@ -331,23 +331,23 @@ mapinstructions =
         ["placeaploc", "", [1011], 225, 820], #225:In desk in room connected to chemical storage eng1
         ["placeaploc", "", [1011], 226, 1321], #226:In desk in room connected to chemical storage 2 eng1
         ["placeaploc", "", vector(132.63, -136.58, -36.95), 227, 289], #227:In chemical storage room on shelves eng1
-        ["placeaploc", "", vector(129.39, -135.19, -37.39), 228, 286], #228:In chemical storage room on shelves 2 eng1
-        ["placeaploc", "", vector(121.77, -129.76, -36.88), 229, 547], #229:In chemical storage room on shelves 3 eng1
-        ["placeaploc", "", vector(123.08, -129.76, -36.88), 230, 551], #230:In chemical storage room on shelves 4 eng1
-        ["placeaploc", "", vector(124.42, -129.77, -36.87), 231, 552], #231:In chemical storage room on shelves 5 eng1
-        ["placeaploc", "", vector(125.74, -129.77, -36.87), 232, 553], #232:In chemical storage room on shelves 6 eng1
-        ["placeaploc", "", vector(127.07, -129.77, -36.87), 233, 554], #233:In chemical storage room on shelves 7 eng1
-        ["placeaploc", "", vector(128.4, -129.77, -36.87), 234, 555], #234:In chemical storage room on shelves 8 eng1
-        ["placeaploc", "", vector(129.72, -129.78, -36.87), 235, 556], #235:In chemical storage room on shelves 9 eng1
-        ["placeaploc", "", vector(131.08, -129.76, -36.87), 236, 557], #236:In chemical storage room on shelves 10 eng1
-        ["placeaploc", "", vector(132.42, -129.76, -36.87), 237, 558], #237:In chemical storage room on shelves 11 eng1
-        ["placeaploc", "", vector(134.77, -143.22, -36.87), 238, 528], #238:In chemical storage room on shelves 12 eng1
-        ["placeaploc", "", vector(133.44, -143.22, -36.87), 239, 533], #239:In chemical storage room on shelves 13 eng1
-        ["placeaploc", "", vector(132.12, -143.21, -36.87), 240, 542], #240:In chemical storage room on shelves 14 eng1
-        ["placeaploc", "", vector(130.83, -143.22, -36.87), 241, 543], #241:In chemical storage room on shelves 15 eng1
-        ["placeaploc", "", vector(129.54, -143.22, -36.87), 242, 524], #242:In chemical storage room on shelves 16 eng1
-        ["placeaploc", "", vector(128.23, -143.22, -36.87), 243, 525], #243:In chemical storage room on shelves 17 eng1
-        ["placeaploc", "", vector(126.89, -143.21, -36.87), 244, 544], #244:In chemical storage room on shelves 18 eng1
+        ["placeaploc", "Chemicals", vector(129.39, -135.19, -37.39), 228, 286], #228:In chemical storage room on shelves 2 eng1
+        ["placeaploc", "Chemicals", vector(121.77, -129.76, -36.88), 229, 547], #229:In chemical storage room on shelves 3 eng1
+        ["placeaploc", "Chemicals", vector(123.08, -129.76, -36.88), 230, 551], #230:In chemical storage room on shelves 4 eng1
+        ["placeaploc", "Chemicals", vector(124.42, -129.77, -36.87), 231, 552], #231:In chemical storage room on shelves 5 eng1
+        ["placeaploc", "Chemicals", vector(125.74, -129.77, -36.87), 232, 553], #232:In chemical storage room on shelves 6 eng1
+        ["placeaploc", "Chemicals", vector(127.07, -129.77, -36.87), 233, 554], #233:In chemical storage room on shelves 7 eng1
+        ["placeaploc", "Chemicals", vector(128.4, -129.77, -36.87), 234, 555], #234:In chemical storage room on shelves 8 eng1
+        ["placeaploc", "Chemicals", vector(129.72, -129.78, -36.87), 235, 556], #235:In chemical storage room on shelves 9 eng1
+        ["placeaploc", "Chemicals", vector(131.08, -129.76, -36.87), 236, 557], #236:In chemical storage room on shelves 10 eng1
+        ["placeaploc", "Chemicals", vector(132.42, -129.76, -36.87), 237, 558], #237:In chemical storage room on shelves 11 eng1
+        ["placeaploc", "Chemicals", vector(134.77, -143.22, -36.87), 238, 528], #238:In chemical storage room on shelves 12 eng1
+        ["placeaploc", "Chemicals", vector(133.44, -143.22, -36.87), 239, 533], #239:In chemical storage room on shelves 13 eng1
+        ["placeaploc", "Chemicals", vector(132.12, -143.21, -36.87), 240, 542], #240:In chemical storage room on shelves 14 eng1
+        ["placeaploc", "Chemicals", vector(130.83, -143.22, -36.87), 241, 543], #241:In chemical storage room on shelves 15 eng1
+        ["placeaploc", "Chemicals", vector(129.54, -143.22, -36.87), 242, 524], #242:In chemical storage room on shelves 16 eng1
+        ["placeaploc", "Chemicals", vector(128.23, -143.22, -36.87), 243, 525], #243:In chemical storage room on shelves 17 eng1
+        ["placeaploc", "Chemicals", vector(126.89, -143.21, -36.87), 244, 544], #244:In chemical storage room on shelves 18 eng1
         ["placeaploc", "", [1672], 245, 811], #245:In enemy in radiated hallways near chemical storage eng1
         ["placeaploc", "", [819], 246, 1176], #246:In body outside chemical storage eng1
         ["placeaploc", "", [819], 247, 821], #247:In body outside chemical storage 2 eng1
@@ -385,7 +385,7 @@ mapinstructions =
         ["placeaploc", "", vector(34.32, -447.54, -29.24), 279, 1352], #279:In cutout in wall in security office after engineering control grav shaft eng1
         ["placeaploc", "", [1331], 280, 784], #280:In body outside security office after engineering control grav shaft eng1
         ["placeaploc", "", [1331], 281, 901], #281:In body outside security office after engineering control grav shaft 2 eng1
-        ["placeaploc", "", vector(128.61, -127.61, -36.85), 282, 1710], #282:In chemical storage room on shelves 19 eng1
+        ["placeaploc", "", vector(130.76, -127.73, -37.3), 282, 705], #282:In chemical storage room on shelves 19 eng1
         ["randomizeenemy", "", 1670, "1", vector(-84.98, -166.23, -38.05)],
         ["randomizeenemy", "", 1668, "1", vector(-37.18, -142.92, -38.05)],
         ["randomizeenemy", "", 1672, "1", vector(56.52, -114.89, -37.92)],
@@ -627,31 +627,31 @@ mapinstructions =
         ["placeaploc", "", [935, 1298, 1297, 936], 442, 1315], #442:In bodies in snowy area 10 hydro2
         ["placeaploc", "", [935, 1298, 1297, 936], 443, 762], #443:In bodies in snowy area 11 hydro2
         ["placeaploc", "", [1711], 444, 816], #444:In enemy in chemical storeroom hydro2
-        ["placeaploc", "", [354, 325], 445, 545], #445:In desks in chemical storeroom hydro2
-        ["placeaploc", "", [354, 325], 446, 544], #446:In desks in chemical storeroom 2 hydro2
+        ["placeaploc", "Chemicals", [354, 325], 445, 545], #445:In desks in chemical storeroom hydro2
+        ["placeaploc", "Chemicals", [354, 325], 446, 544], #446:In desks in chemical storeroom 2 hydro2
         ["placeaploc", "", [354, 325], 447, 1186], #447:In desks in chemical storeroom 3 hydro2
-        ["placeaploc", "", [354, 325], 448, 665], #448:In desks in chemical storeroom 4 hydro2
+        ["placeaploc", "Chemicals", [354, 325], 448, 665], #448:In desks in chemical storeroom 4 hydro2
         ["placeaploc", "", [1596], 449, 633], #449:In waste barrel in chemical storeroom hydro2
-        ["placeaploc", "", [354, 325], 450, 1221], #450:In desks in chemical storeroom 5 hydro2
-        ["placeaploc", "", vector(-136, -125.5, -0.88), 451, 796], #451:On chemical storeroom shelves hydro2
-        ["placeaploc", "", vector(-136, -127.5, -0.87), 452, 877], #452:On chemical storeroom shelves 2 hydro2
-        ["placeaploc", "", vector(-136.5, -130, -0.88), 453, 878], #453:On chemical storeroom shelves 3 hydro2
-        ["placeaploc", "", vector(-138, -131.5, -0.87), 454, 973], #454:On chemical storeroom shelves 4 hydro2
+        ["placeaploc", "Chemicals", [354, 325], 450, 1221], #450:In desks in chemical storeroom 5 hydro2
+        ["placeaploc", "Chemicals", vector(-136, -125.5, -0.88), 451, 796], #451:On chemical storeroom shelves hydro2
+        ["placeaploc", "Chemicals", vector(-136, -127.5, -0.87), 452, 877], #452:On chemical storeroom shelves 2 hydro2
+        ["placeaploc", "Chemicals", vector(-136.5, -130, -0.88), 453, 878], #453:On chemical storeroom shelves 3 hydro2
+        ["placeaploc", "Chemicals", vector(-138, -131.5, -0.87), 454, 973], #454:On chemical storeroom shelves 4 hydro2
         ["placeaploc", "", vector(-148.49, -131.81, -1.32), 455, 1377], #455:On chemical storeroom shelves 5 hydro2
-        ["placeaploc", "", vector(-150.46, -130.9, -0.88), 456, 1062], #456:On chemical storeroom shelves 6 hydro2
-        ["placeaploc", "", vector(-151.8, -129.77, -0.88), 457, 1082], #457:On chemical storeroom shelves 7 hydro2
-        ["placeaploc", "", vector(-151.77, -127.7, -0.88), 458, 1376], #458:On chemical storeroom shelves 8 hydro2
-        ["placeaploc", "", vector(-151.92, -125.17, -0.85), 459, 546], #459:On chemical storeroom shelves 9 hydro2
-        ["placeaploc", "", vector(-136, -125, -3.38), 460, 974], #460:On chemical storeroom shelves 10 hydro2
-        ["placeaploc", "", vector(-136.14, -126.78, -3.38), 461, 1725], #461:On chemical storeroom shelves 11 hydro2
-        ["placeaploc", "", vector(-136.32, -128.37, -3.38), 462, 1008], #462:On chemical storeroom shelves 12 hydro2
-        ["placeaploc", "", vector(-137.64, -130.05, -3.38), 463, 375], #463:On chemical storeroom shelves 13 hydro2
-        ["placeaploc", "", vector(-139.49, -131.55, -3.38), 464, 1018], #464:On chemical storeroom shelves 14 hydro2
-        ["placeaploc", "", vector(-147.93, -131.93, -3.38), 465, 1020], #465:On chemical storeroom shelves 15 hydro2
-        ["placeaploc", "", vector(-149.84, -131.3, -3.38), 466, 1021], #466:On chemical storeroom shelves 16 hydro2
-        ["placeaploc", "", vector(-151.77, -129.17, -3.38), 467, 1033], #467:On chemical storeroom shelves 17 hydro2
-        ["placeaploc", "", vector(-152.12, -127.6, -3.38), 468, 1041], #468:On chemical storeroom shelves 18 hydro2
-        ["placeaploc", "", vector(-151.9, -125.97, -3.38), 469, 1050], #469:On chemical storeroom shelves 19 hydro2
+        ["placeaploc", "Chemicals", vector(-150.46, -130.9, -0.88), 456, 1062], #456:On chemical storeroom shelves 6 hydro2
+        ["placeaploc", "Chemicals", vector(-151.8, -129.77, -0.88), 457, 1082], #457:On chemical storeroom shelves 7 hydro2
+        ["placeaploc", "Chemicals", vector(-151.77, -127.7, -0.88), 458, 1376], #458:On chemical storeroom shelves 8 hydro2
+        ["placeaploc", "Chemicals", vector(-151.92, -125.17, -0.85), 459, 546], #459:On chemical storeroom shelves 9 hydro2
+        ["placeaploc", "Chemicals", vector(-136, -125, -3.38), 460, 974], #460:On chemical storeroom shelves 10 hydro2
+        ["placeaploc", "Chemicals", vector(-136.14, -126.78, -3.38), 461, 1725], #461:On chemical storeroom shelves 11 hydro2
+        ["placeaploc", "Chemicals", vector(-136.32, -128.37, -3.38), 462, 1008], #462:On chemical storeroom shelves 12 hydro2
+        ["placeaploc", "Chemicals", vector(-137.64, -130.05, -3.38), 463, 375], #463:On chemical storeroom shelves 13 hydro2
+        ["placeaploc", "Chemicals", vector(-139.49, -131.55, -3.38), 464, 1018], #464:On chemical storeroom shelves 14 hydro2
+        ["placeaploc", "Chemicals", vector(-147.93, -131.93, -3.38), 465, 1020], #465:On chemical storeroom shelves 15 hydro2
+        ["placeaploc", "Chemicals", vector(-149.84, -131.3, -3.38), 466, 1021], #466:On chemical storeroom shelves 16 hydro2
+        ["placeaploc", "Chemicals", vector(-151.77, -129.17, -3.38), 467, 1033], #467:On chemical storeroom shelves 17 hydro2
+        ["placeaploc", "Chemicals", vector(-152.12, -127.6, -3.38), 468, 1041], #468:On chemical storeroom shelves 18 hydro2
+        ["placeaploc", "Chemicals", vector(-151.9, -125.97, -3.38), 469, 1050], #469:On chemical storeroom shelves 19 hydro2
         ["placeaploc", "", vector(-11.96, 100.78, -4.75), 470, 1112], #470:On ground under desk in room with bodies in research area hydro2
         ["placeaploc", "", [935, 1298, 1297, 936], 471, 934], #471:In bodies in snowy area 12 hydro2
         ["placeaploc", "", [754], 472, 942], #472:In body near lots of blood near water in biological survey area 2 hydro2
@@ -901,23 +901,23 @@ mapinstructions =
         ["placeaploc", "", [1541], 602, 498], #602:In security crate near chemical storeroom ops2
         ["placeaploc", "", [1541], 603, 477], #603:In security crate near chemical storeroom 2 ops2
         ["placeaploc", "", vector(-163.08, 303.59, -24.92), 604, 1090], #604:On ground near chemical storeroom ops2
-        ["placeaploc", "", vector(-146.42, 344.82, -21.42), 605, 1125], #605:On shelf in chemical storeroom ops2
-        ["placeaploc", "", vector(-149.9, 350.88, -20.88), 606, 737], #606:On shelf in chemical storeroom 2 ops2
-        ["placeaploc", "", vector(-148.24, 350.54, -20.88), 607, 738], #607:On shelf in chemical storeroom 3 ops2
-        ["placeaploc", "", vector(-149.49, 350.44, -17.86), 608, 732], #608:On shelf in chemical storeroom 4 ops2
-        ["placeaploc", "", vector(-147.86, 350.2, -17.86), 609, 733], #609:On shelf in chemical storeroom 5 ops2
-        ["placeaploc", "", vector(-145.86, 347.88, -17.87), 610, 530], #610:On shelf in chemical storeroom 6 ops2
-        ["placeaploc", "", vector(-146.07, 346.32, -18.86), 611, 529], #611:On shelf in chemical storeroom 7 ops2
-        ["placeaploc", "", vector(-145.57, 343.02, -17.87), 612, 531], #612:On shelf in chemical storeroom 8 ops2
-        ["placeaploc", "", vector(-145.71, 341.32, -17.86), 613, 716], #613:On shelf in chemical storeroom 9 ops2
-        ["placeaploc", "", vector(-149.55, 337.42, -17.86), 614, 723], #614:On shelf in chemical storeroom 10 ops2
-        ["placeaploc", "", vector(-150.13, 350.12, -14.87), 615, 719], #615:On shelf in chemical storeroom 11 ops2
-        ["placeaploc", "", vector(-148.57, 350.89, -14.87), 616, 722], #616:On shelf in chemical storeroom 12 ops2
-        ["placeaploc", "", vector(-145.42, 345.4, -14.87), 617, 735], #617:On shelf in chemical storeroom 13 ops2
-        ["placeaploc", "", vector(-145.16, 343.95, -14.87), 618, 734], #618:On shelf in chemical storeroom 14 ops2
-        ["placeaploc", "", vector(-145.4, 341.84, -14.87), 619, 718], #619:On shelf in chemical storeroom 15 ops2
-        ["placeaploc", "", vector(-148.36, 337.54, -14.87), 620, 730], #620:On shelf in chemical storeroom 16 ops2
-        ["placeaploc", "", vector(-150.13, 337.09, -14.87), 621, 729], #621:On shelf in chemical storeroom 17 ops2
+        ["placeaploc", "Chemicals", vector(-146.42, 344.82, -21.42), 605, 1125], #605:On shelf in chemical storeroom ops2
+        ["placeaploc", "Chemicals", vector(-149.9, 350.88, -20.88), 606, 737], #606:On shelf in chemical storeroom 2 ops2
+        ["placeaploc", "Chemicals", vector(-148.24, 350.54, -20.88), 607, 738], #607:On shelf in chemical storeroom 3 ops2
+        ["placeaploc", "Chemicals", vector(-149.49, 350.44, -17.86), 608, 732], #608:On shelf in chemical storeroom 4 ops2
+        ["placeaploc", "Chemicals", vector(-147.86, 350.2, -17.86), 609, 733], #609:On shelf in chemical storeroom 5 ops2
+        ["placeaploc", "Chemicals", vector(-145.86, 347.88, -17.87), 610, 530], #610:On shelf in chemical storeroom 6 ops2
+        ["placeaploc", "Chemicals", vector(-146.07, 346.32, -18.86), 611, 529], #611:On shelf in chemical storeroom 7 ops2
+        ["placeaploc", "Chemicals", vector(-145.57, 343.02, -17.87), 612, 531], #612:On shelf in chemical storeroom 8 ops2
+        ["placeaploc", "Chemicals", vector(-145.71, 341.32, -17.86), 613, 716], #613:On shelf in chemical storeroom 9 ops2
+        ["placeaploc", "Chemicals", vector(-149.55, 337.42, -17.86), 614, 723], #614:On shelf in chemical storeroom 10 ops2
+        ["placeaploc", "Chemicals", vector(-150.13, 350.12, -14.87), 615, 719], #615:On shelf in chemical storeroom 11 ops2
+        ["placeaploc", "Chemicals", vector(-148.57, 350.89, -14.87), 616, 722], #616:On shelf in chemical storeroom 12 ops2
+        ["placeaploc", "Chemicals", vector(-145.42, 345.4, -14.87), 617, 735], #617:On shelf in chemical storeroom 13 ops2
+        ["placeaploc", "Chemicals", vector(-145.16, 343.95, -14.87), 618, 734], #618:On shelf in chemical storeroom 14 ops2
+        ["placeaploc", "Chemicals", vector(-145.4, 341.84, -14.87), 619, 718], #619:On shelf in chemical storeroom 15 ops2
+        ["placeaploc", "Chemicals", vector(-148.36, 337.54, -14.87), 620, 730], #620:On shelf in chemical storeroom 16 ops2
+        ["placeaploc", "Chemicals", vector(-150.13, 337.09, -14.87), 621, 729], #621:On shelf in chemical storeroom 17 ops2
         ["placeaploc", "", [254], 622, 554], #622:In enemy that runs to conference room ops2
         ["randomizerepl", "", 461],
         ["replacecybmodshop", "StatsSkillsPsi", [373, 374, 375, 376], vector(-176.46, 121.68, -8.32)],
@@ -1335,25 +1335,25 @@ mapinstructions =
         ["placeaploc", "", [195, 199], 877, 485], #877:In security crates in chemical storage 2 rec2
         ["placeaploc", "", [195, 199], 878, 200], #878:In security crates in chemical storage 3 rec2
         ["placeaploc", "", [195, 199], 879, 201], #879:In security crates in chemical storage 4 rec2
-        ["placeaploc", "", vector(-177.41, -131.48, -11.92), 880, 576], #880:On shelves in chemical storage rec2
-        ["placeaploc", "", vector(-189.85, -139.73, -5.22), 881, 96], #881:On shelves in chemical storage 2 rec2
-        ["placeaploc", "", vector(-184.54, -130.53, -4.89), 882, 471], #882:On shelves in chemical storage 3 rec2
-        ["placeaploc", "", vector(-182.63, -130.48, -4.81), 883, 472], #883:On shelves in chemical storage 4 rec2
-        ["placeaploc", "", vector(-171.52, -130.52, -5.08), 884, 476], #884:On shelves in chemical storage 5 rec2
-        ["placeaploc", "", vector(-190.65, -143.56, -8.42), 885, 444], #885:On shelves in chemical storage 6 rec2
-        ["placeaploc", "", vector(-190.57, -136.89, -8.25), 886, 392], #886:On shelves in chemical storage 7 rec2
-        ["placeaploc", "", vector(-190.57, -135.16, -8.22), 887, 401], #887:On shelves in chemical storage 8 rec2
-        ["placeaploc", "", vector(-185.76, -130.68, -8.05), 888, 378], #888:On shelves in chemical storage 9 rec2
-        ["placeaploc", "", vector(-184.27, -130.94, -8.07), 889, 91], #889:On shelves in chemical storage 10 rec2
-        ["placeaploc", "", vector(-180.12, -130.21, -8.1), 890, 372], #890:On shelves in chemical storage 11 rec2
-        ["placeaploc", "", vector(-178.82, -131, -8.06), 891, 428], #891:On shelves in chemical storage 12 rec2
-        ["placeaploc", "", vector(-190.6, -142.89, -11.11), 892, 470], #892:On shelves in chemical storage 13 rec2
-        ["placeaploc", "", vector(-190.28, -139.61, -10.84), 893, 462], #893:On shelves in chemical storage 14 rec2
-        ["placeaploc", "", vector(-183.35, -130.89, -10.9), 894, 389], #894:On shelves in chemical storage 15 rec2
-        ["placeaploc", "", vector(-181.1, -130.93, -11.05), 895, 165], #895:On shelves in chemical storage 16 rec2
-        ["placeaploc", "", vector(-173.8, -130.3, -11.14), 896, 95], #896:On shelves in chemical storage 17 rec2
-        ["placeaploc", "", vector(-172.19, -130.97, -11.01), 897, 191], #897:On shelves in chemical storage 18 rec2
-        ["placeaploc", "", vector(-173.55, -133.1, -11.9), 898, 475], #898:On ground in chemical storage rec2
+        ["placeaploc", "Chemicals", vector(-177.41, -131.48, -11.92), 880, 576], #880:On shelves in chemical storage rec2
+        ["placeaploc", "Chemicals", vector(-189.85, -139.73, -5.22), 881, 96], #881:On shelves in chemical storage 2 rec2
+        ["placeaploc", "Chemicals", vector(-184.54, -130.53, -4.89), 882, 471], #882:On shelves in chemical storage 3 rec2
+        ["placeaploc", "Chemicals", vector(-182.63, -130.48, -4.81), 883, 472], #883:On shelves in chemical storage 4 rec2
+        ["placeaploc", "Chemicals", vector(-171.52, -130.52, -5.08), 884, 476], #884:On shelves in chemical storage 5 rec2
+        ["placeaploc", "Chemicals", vector(-190.65, -143.56, -8.42), 885, 444], #885:On shelves in chemical storage 6 rec2
+        ["placeaploc", "Chemicals", vector(-190.57, -136.89, -8.25), 886, 392], #886:On shelves in chemical storage 7 rec2
+        ["placeaploc", "Chemicals", vector(-190.57, -135.16, -8.22), 887, 401], #887:On shelves in chemical storage 8 rec2
+        ["placeaploc", "Chemicals", vector(-185.76, -130.68, -8.05), 888, 378], #888:On shelves in chemical storage 9 rec2
+        ["placeaploc", "Chemicals", vector(-184.27, -130.94, -8.07), 889, 91], #889:On shelves in chemical storage 10 rec2
+        ["placeaploc", "Chemicals", vector(-180.12, -130.21, -8.1), 890, 372], #890:On shelves in chemical storage 11 rec2
+        ["placeaploc", "Chemicals", vector(-178.82, -131, -8.06), 891, 428], #891:On shelves in chemical storage 12 rec2
+        ["placeaploc", "Chemicals", vector(-190.6, -142.89, -11.11), 892, 470], #892:On shelves in chemical storage 13 rec2
+        ["placeaploc", "Chemicals", vector(-190.28, -139.61, -10.84), 893, 462], #893:On shelves in chemical storage 14 rec2
+        ["placeaploc", "Chemicals", vector(-183.35, -130.89, -10.9), 894, 389], #894:On shelves in chemical storage 15 rec2
+        ["placeaploc", "Chemicals", vector(-181.1, -130.93, -11.05), 895, 165], #895:On shelves in chemical storage 16 rec2
+        ["placeaploc", "Chemicals", vector(-173.8, -130.3, -11.14), 896, 95], #896:On shelves in chemical storage 17 rec2
+        ["placeaploc", "Chemicals", vector(-172.19, -130.97, -11.01), 897, 191], #897:On shelves in chemical storage 18 rec2
+        ["placeaploc", "Chemicals", vector(-173.55, -133.1, -11.9), 898, 475], #898:On ground in chemical storage rec2
         ["randomizerepl", "", 487],
         ["randomizeenemy", "", 170, "5", vector(-290.29, -73.97, -7)],
         ["randomizeenemy", "", 169, "5", vector(-287.39, -65.45, -7)],
@@ -1663,25 +1663,25 @@ mapinstructions =
         ["placeaploc", "", [1427], 1071, 1433], #1071:In high-security crate 6 command2
         ["placeaploc", "", [1335], 1072, 1334], #1072:In crate in area under officers' quarters command2
         ["placeaploc", "", [1356], 1073, 1422], #1073:In body in room in officers' quarters 2 command2
-        ["placeaploc", "", vector(76.19, -74, -10.53), 1074, 504], #1074:In chemical storeroom 2 command2
-        ["placeaploc", "", vector(76.33, -73.48, -4.12), 1075, 759], #1075:In chemical storeroom 3 command2
-        ["placeaploc", "", vector(76.65, -74.89, -4.12), 1076, 760], #1076:In chemical storeroom 4 command2
-        ["placeaploc", "", vector(76.9, -76.14, -4.12), 1077, 783], #1077:In chemical storeroom 5 command2
-        ["placeaploc", "", vector(76.33, -72.73, -6.12), 1078, 726], #1078:In chemical storeroom 6 command2
-        ["placeaploc", "", vector(76.83, -73.98, -6.12), 1079, 710], #1079:In chemical storeroom 7 command2
-        ["placeaploc", "", vector(77.33, -75.36, -6.12), 1080, 709], #1080:In chemical storeroom 8 command2
-        ["placeaploc", "", vector(76.58, -76.36, -6.12), 1081, 675], #1081:In chemical storeroom 9 command2
-        ["placeaploc", "", vector(77.12, -73.1, -8.12), 1082, 674], #1082:In chemical storeroom 10 command2
-        ["placeaploc", "", vector(76.44, -73.96, -8.11), 1083, 654], #1083:In chemical storeroom 11 command2
-        ["placeaploc", "", vector(77.02, -74.99, -8.12), 1084, 669], #1084:In chemical storeroom 12 command2
-        ["placeaploc", "", vector(77.27, -76.24, -8.12), 1085, 661], #1085:In chemical storeroom 13 command2
-        ["placeaploc", "", vector(77.27, -72.73, -10.12), 1086, 655], #1086:In chemical storeroom 14 command2
-        ["placeaploc", "", vector(77.24, -75.02, -10.12), 1087, 653], #1087:In chemical storeroom 15 command2
-        ["placeaploc", "", vector(76.99, -76.27, -10.12), 1088, 652], #1088:In chemical storeroom 16 command2
-        ["placeaploc", "", vector(77.21, -72.82, -13.32), 1089, 789], #1089:In chemical storeroom 17 command2
-        ["placeaploc", "", vector(75.96, -73.57, -13.32), 1090, 790], #1090:In chemical storeroom 18 command2
-        ["placeaploc", "", vector(77.36, -74.86, -13.32), 1091, 788], #1091:In chemical storeroom 19 command2
-        ["placeaploc", "", vector(77.36, -76.36, -13.32), 1092, 784], #1092:In chemical storeroom 20 command2
+        ["placeaploc", "Chemicals", vector(76.19, -74, -10.53), 1074, 504], #1074:In chemical storeroom 2 command2
+        ["placeaploc", "Chemicals", vector(76.33, -73.48, -4.12), 1075, 759], #1075:In chemical storeroom 3 command2
+        ["placeaploc", "Chemicals", vector(76.65, -74.89, -4.12), 1076, 760], #1076:In chemical storeroom 4 command2
+        ["placeaploc", "Chemicals", vector(76.9, -76.14, -4.12), 1077, 783], #1077:In chemical storeroom 5 command2
+        ["placeaploc", "Chemicals", vector(76.33, -72.73, -6.12), 1078, 726], #1078:In chemical storeroom 6 command2
+        ["placeaploc", "Chemicals", vector(76.83, -73.98, -6.12), 1079, 710], #1079:In chemical storeroom 7 command2
+        ["placeaploc", "Chemicals", vector(77.33, -75.36, -6.12), 1080, 709], #1080:In chemical storeroom 8 command2
+        ["placeaploc", "Chemicals", vector(76.58, -76.36, -6.12), 1081, 675], #1081:In chemical storeroom 9 command2
+        ["placeaploc", "Chemicals", vector(77.12, -73.1, -8.12), 1082, 674], #1082:In chemical storeroom 10 command2
+        ["placeaploc", "Chemicals", vector(76.44, -73.96, -8.11), 1083, 654], #1083:In chemical storeroom 11 command2
+        ["placeaploc", "Chemicals", vector(77.02, -74.99, -8.12), 1084, 669], #1084:In chemical storeroom 12 command2
+        ["placeaploc", "Chemicals", vector(77.27, -76.24, -8.12), 1085, 661], #1085:In chemical storeroom 13 command2
+        ["placeaploc", "Chemicals", vector(77.27, -72.73, -10.12), 1086, 655], #1086:In chemical storeroom 14 command2
+        ["placeaploc", "Chemicals", vector(77.24, -75.02, -10.12), 1087, 653], #1087:In chemical storeroom 15 command2
+        ["placeaploc", "Chemicals", vector(76.99, -76.27, -10.12), 1088, 652], #1088:In chemical storeroom 16 command2
+        ["placeaploc", "Chemicals", vector(77.21, -72.82, -13.32), 1089, 789], #1089:In chemical storeroom 17 command2
+        ["placeaploc", "Chemicals", vector(75.96, -73.57, -13.32), 1090, 790], #1090:In chemical storeroom 18 command2
+        ["placeaploc", "Chemicals", vector(77.36, -74.86, -13.32), 1091, 788], #1091:In chemical storeroom 19 command2
+        ["placeaploc", "Chemicals", vector(77.36, -76.36, -13.32), 1092, 784], #1092:In chemical storeroom 20 command2
         ["placeaploc", "", vector(137.74, 17.32, 32.11), 1093, 413], #1093:On desk near large exterior window in bridge area command2
         ["placeaploc", "", vector(138.46, 2.28, 32.21), 1094, 1583], #1094:On desk near large window in bridge area 2 command2
         ["placeaploc", "", vector(113.76, -1.17, 18.54), 1095, 2217], #1095:Hidden under desk in lower area near large window in bridge area command2
@@ -1850,35 +1850,35 @@ mapinstructions =
         ["placeaploc", "", [1567], 1206, 1467], #1206:In body in room with button that raises barrier near top of ladder near entrance 2 rick1
         ["placeaploc", "", [1567], 1207, 1404], #1207:In body in room with button that raises barrier near top of ladder near entrance 3 rick1
         ["placeaploc", "", vector(-77.79, 2.04, 55.08), 1208, 1795], #1208:On ground near body in room with button that raises barrier near top of ladder near entrance rick1
-        ["placeaploc", "", vector(-141.33, -17.55, 101.38), 1209, 434], #1209:In chemical storage room rick1
-        ["placeaploc", "", vector(-140.65, -15.64, 101.38), 1210, 1446], #1210:In chemical storage room 2 rick1
-        ["placeaploc", "", vector(-140.86, -10.44, 101.4), 1211, 439], #1211:In chemical storage room 3 rick1
-        ["placeaploc", "", vector(-136.73, -6.63, 101.4), 1212, 446], #1212:In chemical storage room 4 rick1
-        ["placeaploc", "", vector(-135.04, -5.66, 101.38), 1213, 445], #1213:In chemical storage room 5 rick1
+        ["placeaploc", "Chemicals", vector(-141.33, -17.55, 101.38), 1209, 434], #1209:In chemical storage room rick1
+        ["placeaploc", "Chemicals", vector(-140.65, -15.64, 101.38), 1210, 1446], #1210:In chemical storage room 2 rick1
+        ["placeaploc", "Chemicals", vector(-140.86, -10.44, 101.4), 1211, 439], #1211:In chemical storage room 3 rick1
+        ["placeaploc", "Chemicals", vector(-136.73, -6.63, 101.4), 1212, 446], #1212:In chemical storage room 4 rick1
+        ["placeaploc", "Chemicals", vector(-135.04, -5.66, 101.38), 1213, 445], #1213:In chemical storage room 5 rick1
         ["placeaploc", "", vector(-131.26, -5.61, 101.17), 1214, 1313], #1214:In chemical storage room 6 rick1
-        ["placeaploc", "", vector(-128.85, -6.67, 101.38), 1215, 1447], #1215:In chemical storage room 7 rick1
+        ["placeaploc", "Chemicals", vector(-128.85, -6.67, 101.38), 1215, 1447], #1215:In chemical storage room 7 rick1
         ["placeaploc", "", vector(-127.51, -6.2, 101.44), 1216, 1312], #1216:In chemical storage room 8 rick1
-        ["placeaploc", "", vector(-139.08, -17.43, 99.38), 1217, 1445], #1217:In chemical storage room 9 rick1
-        ["placeaploc", "", vector(-139.93, -14.82, 99.38), 1218, 443], #1218:In chemical storage room 10 rick1
-        ["placeaploc", "", vector(-139.02, -11.9, 99.38), 1219, 444], #1219:In chemical storage room 11 rick1
-        ["placeaploc", "", vector(-140.02, -8.76, 99.38), 1220, 436], #1220:In chemical storage room 12 rick1
-        ["placeaploc", "", vector(-138.21, -6.85, 99.38), 1221, 438], #1221:In chemical storage room 13 rick1
-        ["placeaploc", "", vector(-136.7, -6.98, 99.38), 1222, 1444], #1222:In chemical storage room 14 rick1
-        ["placeaploc", "", vector(-134.09, -8.34, 98.86), 1223, 427], #1223:In chemical storage room 15 rick1
-        ["placeaploc", "", vector(-132.31, -6.85, 99.38), 1224, 432], #1224:In chemical storage room 16 rick1
-        ["placeaploc", "", vector(-129.45, -7.73, 99.38), 1225, 431], #1225:In chemical storage room 17 rick1
-        ["placeaploc", "", vector(-130.05, -6.22, 99.38), 1226, 435], #1226:In chemical storage room 18 rick1
-        ["placeaploc", "", vector(-127.54, -7.04, 99.38), 1227, 430], #1227:In chemical storage room 19 rick1
-        ["placeaploc", "", vector(-139.72, -18.15, 96.64), 1228, 1616], #1228:In chemical storage room 20 rick1
-        ["placeaploc", "", vector(-139.12, -16.55, 96.64), 1229, 1617], #1229:In chemical storage room 21 rick1
-        ["placeaploc", "", vector(-139.97, -14.55, 96.64), 1230, 1618], #1230:In chemical storage room 22 rick1
-        ["placeaploc", "", vector(-139.62, -12.33, 96.64), 1231, 1620], #1231:In chemical storage room 23 rick1
-        ["placeaploc", "", vector(-139.03, -9.68, 96.64), 1232, 1622], #1232:In chemical storage room 24 rick1
-        ["placeaploc", "", vector(-138.37, -7.39, 96.64), 1233, 1635], #1233:In chemical storage room 25 rick1
-        ["placeaploc", "", vector(-135.83, -7.36, 96.64), 1234, 1638], #1234:In chemical storage room 26 rick1
+        ["placeaploc", "Chemicals", vector(-139.08, -17.43, 99.38), 1217, 1445], #1217:In chemical storage room 9 rick1
+        ["placeaploc", "Chemicals", vector(-139.93, -14.82, 99.38), 1218, 443], #1218:In chemical storage room 10 rick1
+        ["placeaploc", "Chemicals", vector(-139.02, -11.9, 99.38), 1219, 444], #1219:In chemical storage room 11 rick1
+        ["placeaploc", "Chemicals", vector(-140.02, -8.76, 99.38), 1220, 436], #1220:In chemical storage room 12 rick1
+        ["placeaploc", "Chemicals", vector(-138.21, -6.85, 99.38), 1221, 438], #1221:In chemical storage room 13 rick1
+        ["placeaploc", "Chemicals", vector(-136.7, -6.98, 99.38), 1222, 1444], #1222:In chemical storage room 14 rick1
+        ["placeaploc", "Chemicals", vector(-134.09, -8.34, 98.86), 1223, 427], #1223:In chemical storage room 15 rick1
+        ["placeaploc", "Chemicals", vector(-132.31, -6.85, 99.38), 1224, 432], #1224:In chemical storage room 16 rick1
+        ["placeaploc", "Chemicals", vector(-129.45, -7.73, 99.38), 1225, 431], #1225:In chemical storage room 17 rick1
+        ["placeaploc", "Chemicals", vector(-130.05, -6.22, 99.38), 1226, 435], #1226:In chemical storage room 18 rick1
+        ["placeaploc", "Chemicals", vector(-127.54, -7.04, 99.38), 1227, 430], #1227:In chemical storage room 19 rick1
+        ["placeaploc", "Chemicals", vector(-139.72, -18.15, 96.64), 1228, 1616], #1228:In chemical storage room 20 rick1
+        ["placeaploc", "Chemicals", vector(-139.12, -16.55, 96.64), 1229, 1617], #1229:In chemical storage room 21 rick1
+        ["placeaploc", "Chemicals", vector(-139.97, -14.55, 96.64), 1230, 1618], #1230:In chemical storage room 22 rick1
+        ["placeaploc", "Chemicals", vector(-139.62, -12.33, 96.64), 1231, 1620], #1231:In chemical storage room 23 rick1
+        ["placeaploc", "Chemicals", vector(-139.03, -9.68, 96.64), 1232, 1622], #1232:In chemical storage room 24 rick1
+        ["placeaploc", "Chemicals", vector(-138.37, -7.39, 96.64), 1233, 1635], #1233:In chemical storage room 25 rick1
+        ["placeaploc", "Chemicals", vector(-135.83, -7.36, 96.64), 1234, 1638], #1234:In chemical storage room 26 rick1
         ["placeaploc", "", vector(-133.22, -6.98, 96.71), 1235, 2163], #1235:In chemical storage room 27 rick1
-        ["placeaploc", "", vector(-130.59, -7.42, 96.64), 1236, 1639], #1236:In chemical storage room 28 rick1
-        ["placeaploc", "", vector(-128.05, -7.11, 96.64), 1237, 1641], #1237:In chemical storage room 29 rick1
+        ["placeaploc", "Chemicals", vector(-130.59, -7.42, 96.64), 1236, 1639], #1236:In chemical storage room 28 rick1
+        ["placeaploc", "Chemicals", vector(-128.05, -7.11, 96.64), 1237, 1641], #1237:In chemical storage room 29 rick1
         ["placeaploc", "", vector(-94, -9.89, 42.46), 1238, 2121], #1238:On ground hidden in corner behind first fuel cell rick1
         ["randomizerepl", "", 119],
         ["randomizerepl", "", 1369],
@@ -2089,21 +2089,21 @@ mapinstructions =
         ["placeaploc", "", [839, 552], 1343, 960], #1343:In bodies near first replicator 2 many
         ["placeaploc", "", [839, 552], 1344, 884], #1344:In bodies near first replicator 3 many
         ["placeaploc", "", [839, 552], 1345, 52], #1345:In bodies near first replicator 4 many
-        ["placeaploc", "", vector(110.5, -129.12, 2.14), 1346, 510], #1346:On ground near first replicator many
-        ["placeaploc", "", vector(120.41, -130.42, -3.12), 1347, 512], #1347:On ground near first replicator 2 many
-        ["placeaploc", "", vector(118.06, -131.14, -3.12), 1348, 511], #1348:On ground near first replicator 3 many
-        ["placeaploc", "", vector(120.94, -140.87, 2.22), 1349, 508], #1349:On ground near first replicator 4 many
+        ["placeaploc", "Chemicals", vector(110.5, -129.12, 2.14), 1346, 510], #1346:On ground near first replicator many
+        ["placeaploc", "Chemicals", vector(120.41, -130.42, -3.12), 1347, 512], #1347:On ground near first replicator 2 many
+        ["placeaploc", "Chemicals", vector(118.06, -131.14, -3.12), 1348, 511], #1348:On ground near first replicator 3 many
+        ["placeaploc", "Chemicals", vector(120.94, -140.87, 2.22), 1349, 508], #1349:On ground near first replicator 4 many
         ["placeaploc", "", [1414], 1350, 1417], #1350:In security crate near first replicator many
         ["placeaploc", "", [1414], 1351, 1416], #1351:In security crate near first replicator 2 many
         ["placeaploc", "", [1414], 1352, 1415], #1352:In security crate near first replicator 3 many
-        ["placeaploc", "", vector(119.73, -119.12, -1.08), 1353, 509], #1353:On ground near first replicator 5 many
+        ["placeaploc", "Chemicals", vector(119.73, -119.12, -1.08), 1353, 509], #1353:On ground near first replicator 5 many
         ["placeaploc", "", [80], 1354, 983], #1354:In body nearish start of level many
         ["placeaploc", "", [80], 1355, 96], #1355:In body nearish start of level 2 many
         ["placeaploc", "", vector(31.49, -115.64, -1.53), 1356, 757], #1356:On ground near start of body nearish start of level many
         ["placeaploc", "", vector(16.93, -150.43, 2.83), 1357, 329], #1357:On ground near start of level 2 many
-        ["placeaploc", "", vector(-12.97, -121.67, -8.56), 1358, 174], #1358:On ground in piece of rickenbacker near start of level many
-        ["placeaploc", "", vector(-13.4, -120.26, -7.64), 1359, 230], #1359:On ground in piece of rickenbacker near start of level 2 many
-        ["placeaploc", "", vector(-16.57, -121.49, -6.92), 1360, 173], #1360:On ground in piece of rickenbacker near start of level 3 many
+        ["placeaploc", "Chemicals", vector(-12.97, -121.67, -8.56), 1358, 174], #1358:On ground in piece of rickenbacker near start of level many
+        ["placeaploc", "Chemicals", vector(-13.4, -120.26, -7.64), 1359, 230], #1359:On ground in piece of rickenbacker near start of level 2 many
+        ["placeaploc", "Chemicals", vector(-16.57, -121.49, -6.92), 1360, 173], #1360:On ground in piece of rickenbacker near start of level 3 many
         ["placeaploc", "", vector(-11.76, -114.38, -6.85), 1361, 244], #1361:On ground in piece of rickenbacker near start of level 4 many
         ["placeaploc", "", [1418], 1362, 1419], #1362:In security crate in piece of rickenbacker near start of level many
         ["placeaploc", "", [245], 1363, 384], #1363:In body in piece of rickenbacker near start of level many
@@ -2168,37 +2168,37 @@ mapinstructions =
         ["placeaploc", "", [1423], 1422, 1424], #1422:In security crate in chemical storage many
         ["placeaploc", "", [1423], 1423, 70], #1423:In security crate in chemical storage 2 many
         ["placeaploc", "", vector(-174.63, -23.2, -2.92), 1424, 778], #1424:In chemical storage many
-        ["placeaploc", "", vector(-151.59, -13.68, 0.02), 1425, 855], #1425:In chemical storage 2 many
-        ["placeaploc", "", vector(-146.87, -17.6, -0.64), 1426, 953], #1426:In chemical storage 3 many
-        ["placeaploc", "", vector(-156.32, -22.08, -0.5), 1427, 952], #1427:In chemical storage 4 many
-        ["placeaploc", "", vector(-152.42, -21.14, 0.1), 1428, 854], #1428:In chemical storage 5 many
-        ["placeaploc", "", vector(-150.81, -22.11, -0.08), 1429, 853], #1429:In chemical storage 6 many
-        ["placeaploc", "", vector(-153.72, -23.5, 0.51), 1430, 421], #1430:In chemical storage 7 many
-        ["placeaploc", "", vector(-154.68, -26.18, 0.45), 1431, 442], #1431:In chemical storage 8 many
-        ["placeaploc", "", vector(-154.59, -28.79, -0.5), 1432, 950], #1432:In chemical storage 9 many
-        ["placeaploc", "", vector(-155.22, -35.27, -0.19), 1433, 447], #1433:In chemical storage 10 many
-        ["placeaploc", "", vector(-142.9, -34.74, -0.36), 1434, 521], #1434:In chemical storage 11 many
-        ["placeaploc", "", vector(-146.2, -38.96, 0.08), 1435, 520], #1435:In chemical storage 12 many
-        ["placeaploc", "", vector(-137.16, -45.13, 1.98), 1436, 268], #1436:In chemical storage 13 many
-        ["placeaploc", "", vector(-140.13, -44.98, -3.67), 1437, 949], #1437:In chemical storage 14 many
-        ["placeaploc", "", vector(-142.01, -48.92, -2.98), 1438, 954], #1438:In chemical storage 15 many
-        ["placeaploc", "", vector(-160.58, -53.39, 4.84), 1439, 523], #1439:In chemical storage 16 many
-        ["placeaploc", "", vector(-159.82, -52.08, 4.34), 1440, 522], #1440:In chemical storage 17 many
-        ["placeaploc", "", vector(-158.59, -49.89, 3.97), 1441, 955], #1441:In chemical storage 18 many
-        ["placeaploc", "", vector(-157.2, -52.7, 3.76), 1442, 956], #1442:In chemical storage 19 many
-        ["placeaploc", "", vector(-154.67, -49.62, 2.31), 1443, 948], #1443:In chemical storage 20 many
-        ["placeaploc", "", vector(-151.94, -51.85, 3.49), 1444, 271], #1444:In chemical storage 21 many
-        ["placeaploc", "", vector(-142.47, -50.39, -3.38), 1445, 590], #1445:In chemical storage 22 many
-        ["placeaploc", "", vector(-140.68, -52.43, -3.47), 1446, 267], #1446:In chemical storage 23 many
-        ["placeaploc", "", vector(-153.84, -56.95, 7.03), 1447, 241], #1447:In chemical storage 24 many
-        ["placeaploc", "", vector(-151.72, -56.58, 7.61), 1448, 251], #1448:In chemical storage 25 many
-        ["placeaploc", "", vector(-151.28, -56.63, 0.97), 1449, 513], #1449:In chemical storage 26 many
-        ["placeaploc", "", vector(-149.47, -56.63, 7.47), 1450, 252], #1450:In chemical storage 27 many
-        ["placeaploc", "", vector(-146.88, -56.77, 7.52), 1451, 398], #1451:In chemical storage 28 many
-        ["placeaploc", "", vector(-145.69, -56.36, 0.63), 1452, 219], #1452:In chemical storage 29 many
-        ["placeaploc", "", vector(-143.59, -56.43, 0.63), 1453, 269], #1453:In chemical storage 30 many
-        ["placeaploc", "", vector(-142.22, -56.28, -2.78), 1454, 224], #1454:In chemical storage 31 many
-        ["placeaploc", "", vector(-141.27, -56.28, 0.81), 1455, 222], #1455:In chemical storage 32 many
+        ["placeaploc", "Chemicals", vector(-151.59, -13.68, 0.02), 1425, 855], #1425:In chemical storage 2 many
+        ["placeaploc", "Chemicals", vector(-146.87, -17.6, -0.64), 1426, 953], #1426:In chemical storage 3 many
+        ["placeaploc", "Chemicals", vector(-156.32, -22.08, -0.5), 1427, 952], #1427:In chemical storage 4 many
+        ["placeaploc", "Chemicals", vector(-152.42, -21.14, 0.1), 1428, 854], #1428:In chemical storage 5 many
+        ["placeaploc", "Chemicals", vector(-150.81, -22.11, -0.08), 1429, 853], #1429:In chemical storage 6 many
+        ["placeaploc", "Chemicals", vector(-153.72, -23.5, 0.51), 1430, 421], #1430:In chemical storage 7 many
+        ["placeaploc", "Chemicals", vector(-154.68, -26.18, 0.45), 1431, 442], #1431:In chemical storage 8 many
+        ["placeaploc", "Chemicals", vector(-154.59, -28.79, -0.5), 1432, 950], #1432:In chemical storage 9 many
+        ["placeaploc", "Chemicals", vector(-155.22, -35.27, -0.19), 1433, 447], #1433:In chemical storage 10 many
+        ["placeaploc", "Chemicals", vector(-142.9, -34.74, -0.36), 1434, 521], #1434:In chemical storage 11 many
+        ["placeaploc", "Chemicals", vector(-146.2, -38.96, 0.08), 1435, 520], #1435:In chemical storage 12 many
+        ["placeaploc", "Chemicals", vector(-137.16, -45.13, 1.98), 1436, 268], #1436:In chemical storage 13 many
+        ["placeaploc", "Chemicals", vector(-140.13, -44.98, -3.67), 1437, 949], #1437:In chemical storage 14 many
+        ["placeaploc", "Chemicals", vector(-142.01, -48.92, -2.98), 1438, 954], #1438:In chemical storage 15 many
+        ["placeaploc", "Chemicals", vector(-160.58, -53.39, 4.84), 1439, 523], #1439:In chemical storage 16 many
+        ["placeaploc", "Chemicals", vector(-159.82, -52.08, 4.34), 1440, 522], #1440:In chemical storage 17 many
+        ["placeaploc", "Chemicals", vector(-158.59, -49.89, 3.97), 1441, 955], #1441:In chemical storage 18 many
+        ["placeaploc", "Chemicals", vector(-157.2, -52.7, 3.76), 1442, 956], #1442:In chemical storage 19 many
+        ["placeaploc", "Chemicals", vector(-154.67, -49.62, 2.31), 1443, 948], #1443:In chemical storage 20 many
+        ["placeaploc", "Chemicals", vector(-151.94, -51.85, 3.49), 1444, 271], #1444:In chemical storage 21 many
+        ["placeaploc", "Chemicals", vector(-142.47, -50.39, -3.38), 1445, 590], #1445:In chemical storage 22 many
+        ["placeaploc", "Chemicals", vector(-140.68, -52.43, -3.47), 1446, 267], #1446:In chemical storage 23 many
+        ["placeaploc", "Chemicals", vector(-153.84, -56.95, 7.03), 1447, 241], #1447:In chemical storage 24 many
+        ["placeaploc", "Chemicals", vector(-151.72, -56.58, 7.61), 1448, 251], #1448:In chemical storage 25 many
+        ["placeaploc", "Chemicals", vector(-151.28, -56.63, 0.97), 1449, 513], #1449:In chemical storage 26 many
+        ["placeaploc", "Chemicals", vector(-149.47, -56.63, 7.47), 1450, 252], #1450:In chemical storage 27 many
+        ["placeaploc", "Chemicals", vector(-146.88, -56.77, 7.52), 1451, 398], #1451:In chemical storage 28 many
+        ["placeaploc", "Chemicals", vector(-145.69, -56.36, 0.63), 1452, 219], #1452:In chemical storage 29 many
+        ["placeaploc", "Chemicals", vector(-143.59, -56.43, 0.63), 1453, 269], #1453:In chemical storage 30 many
+        ["placeaploc", "Chemicals", vector(-142.22, -56.28, -2.78), 1454, 224], #1454:In chemical storage 31 many
+        ["placeaploc", "Chemicals", vector(-141.27, -56.28, 0.81), 1455, 222], #1455:In chemical storage 32 many
         ["randomizerepl", "", 68],
         ["randomizerepl", "", 56],
         ["replacecybmodshop", "StatsSkillsPsi", [231, 236, 235, 232], vector(-169.76, -7.35, -1.94)],
