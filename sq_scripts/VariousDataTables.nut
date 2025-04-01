@@ -386,6 +386,7 @@ mapinstructions =
         ["placeaploc", "", [1331], 280, 784], #280:In body outside security office after engineering control grav shaft eng1
         ["placeaploc", "", [1331], 281, 901], #281:In body outside security office after engineering control grav shaft 2 eng1
         ["placeaploc", "", vector(130.76, -127.73, -37.3), 282, 705], #282:In chemical storage room on shelves 19 eng1
+        ["placeaploc", "", vector(33.63, -469.03, -27.71), 1629, 165], #1629:On med bed in security office after engineering control grav shaft eng1
         ["randomizeenemy", "", 1670, "1", vector(-84.98, -166.23, -38.05)],
         ["randomizeenemy", "", 1668, "1", vector(-37.18, -142.92, -38.05)],
         ["randomizeenemy", "", 1672, "1", vector(56.52, -114.89, -37.92)],
@@ -521,7 +522,7 @@ mapinstructions =
         ["directmonstergenrando", "", 395, "3"],
         ["directmonstergenrando", "", 863, "2"],
         ["randomizeenemy", "", 232, "2", vector(-0.19, -637.95, -29.97)],
-        ["randomizeenemy", "", 1143, "2", vector(-16.59, -707.49, -37.05)],
+        ["randomizeenemy", "", 1143, "2", vector(-16.59, -707.49, -39.05)],
         ["randomizeenemy", "", 100, "2", vector(0.23, -731.14, 23.95)],
         ["randomizeenemy", "", 843, "2", vector(-43.65, -709.49, 23.95)],
         ["randomizeenemy", "", 128, "2Ranged", vector(-35.55, -711.03, -14.97)],
@@ -1548,7 +1549,7 @@ mapinstructions =
         ["randomizeenemy", "", 1030, "7", vector(801.25, 114.32, -5.04)],
         ["randomizeenemy", "", 1342, "7", vector(791.16, 146.07, -4.8)],
         ["randomizeenemy", "", 2351, "7", vector(813.01, 150.17, -13)],
-        ["randomizeenemy", "", 2322, "7", vector(793.01, 167.74, -3.09)],
+        ["randomizeenemy", "", 2322, "7", vector(794.41, 163.13, -5.09)],
         ["randomizeenemy", "", 760, "7", vector(844.51, 160.78, -5.03)],
         ["randomizeenemy", "", 2356, "7", vector(837.59, 178.48, -17)],
         ["randomizeenemy", "", 759, "7", vector(844.81, 224.71, -19.02)],

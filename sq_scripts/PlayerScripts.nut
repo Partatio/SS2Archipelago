@@ -184,34 +184,39 @@ class PlayerScripts extends SqRootScript
 					local enemyfacing = vector();
 					switch(enemytier)
 						{
-						case "4":
+						case "3": #hydro
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 4);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 2);
 							break;
 							}
-						case "5":
+						case "4": #ops
 							{
 							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 8);
 							break;
 							}
-						case "6":
+						case "5": #rec
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 12);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 14);
 							break;
 							}
-						case "7":
+						case "6": #command
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 18);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 20);
 							break;
 							}
-						case "8":
+						case "7": #command-rick1
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 24);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 28);
 							break;
 							}
-						case "9":
+						case "8": #rick2-3
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 30);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 36);
+							break;
+							}
+						case "9": #many-shodan
+							{
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 44);
 							break;
 							}
 						}
