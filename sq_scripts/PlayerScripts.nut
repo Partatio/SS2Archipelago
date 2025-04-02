@@ -454,19 +454,26 @@ class PlayerScripts extends SqRootScript
 			local ReceivedItemsfile = ParseFile("DMM\\Archipelago\\data\\ReceivedItems.txt");
 			if (ReceivedItemsfile == null)
 				{
-					ShockGame.AddText("RecievedItemsfile could not be read or is empty.  Open the client and connect to a slot.", self);
-					return;
+				ShockGame.AddText("RecievedItemsfile could not be read or is empty.  Open the client and connect to a slot.", self);
+				return;
 				}
 			local itemsreceived = split(ReceivedItemsfile, ",");
 			if (itemsreceived[0].tointeger() != Property.Get(self, "CurWpnDmg"))
 				{
-					ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, Connect to the correct slot or load the correct save.", self);
-					return;
+				ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, Connect to the correct slot or load the correct save.", self);
+				return;
 				}
 			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
 			local newitems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
 			if (newitems.len() != 0)
+				{
 				Sound.PlaySchemaAmbient(self, "btabs");
+				Property.SetSimple(self, "BaseWpnDmg", Property.Get(self, "BaseWpnDmg") + newitems.len());
+				}
+			if (newitems.len() > 100) #avoiding crashing when spawning too many items by combining as many as possible and not spawning extras of items the player needs 1 or 2 of
+				{
+				newitems = HandleExcessItems(newitems);
+				}
 			foreach (itemid in newitems)
 				ItemReceived(itemid);
 			SetOneShotTimer("ItemReceiver", 1);
@@ -518,193 +525,194 @@ class PlayerScripts extends SqRootScript
         }
     }
 
-	function ItemReceived(itemid) #grabs the associated array from the ItemTable and spawns it, sets its properties, then teleports it to the player
+	function ItemReceived(itemid, stackcount = 0) #grabs the associated array from the ItemTable and spawns it, sets its properties, then teleports it to the player
 	{
 		local item = VariousDataTables.ItemTable.rawget(itemid);
-		Property.SetSimple(self, "BaseWpnDmg", Property.Get(self, "BaseWpnDmg") + 1) #add 1 to storeditemsreceived
 		switch (item[0])
 		{
-		case "StatUpgrade":
-			{
-			Property.Set(self, "BaseStatsDesc", item[1], Property.Get(self, "BaseStatsDesc", item[1]) + 1);
-			ShockGame.RecalcStats(self);
-			ShockGame.AddText("Got " + item[1] + " stat upgrade!", self);
-			break;
-			}
-		case "TechUpgrade":
-			{
-			Property.Set(self, "BaseTechDesc", item[1], Property.Get(self, "BaseTechDesc", item[1]) + 1);
-			ShockGame.AddText("Got " + item[1] + " technical skill upgrade!", self);
-			break;
-			}
-		case "WeaponUpgrade":
-			{
-			Property.Set(self, "BaseWeaponDesc", item[1], Property.Get(self, "BaseWeaponDesc", item[1]) + 1);
-			ShockGame.AddText("Got " + item[1] + " weapon skill upgrade!", self);
-			break;
-			}
-		case "PsiPowerUnlock": #tiers 1-4. [1] is an array where[0] is the osupgrade number, and [1] is its name. same for next two cases.
-			{
-			local psipowerid = item[1][0]
-			if (psipowerid == 1)
+			case "StatUpgrade":
 				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				Property.SetSimple(self, "AI_NGOBB", true)
-				local queue = split(Property.Get(self, "AI_Standtags"), ",")
-				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
-				}
-			if (psipowerid < 9 && psipowerid > 1)
-				{
-				if (Property.Get(self, "AI_NGOBB"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				else
-					Property.SetSimple(self, "AI_Standtags", Property.Get(self, "AI_Standtags") + psipowerid.tostring() + ",")
-				}
-			if (psipowerid == 9)
-				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				Property.SetSimple(self, "AI_TrackM", true)
-				local queue = split(Property.Get(self, "AI_SndTags"), ",")
-				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
-				}
-			if (psipowerid < 17 && psipowerid > 9)
-				{
-				if (Property.Get(self, "AI_TrackM"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				else
-					Property.SetSimple(self, "AI_SndTags", Property.Get(self, "AI_SndTags") + psipowerid.tostring() + ",")
-				}
-			if (psipowerid == 17)
-				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				Property.SetSimple(self, "AI_UseWater", true)
-				local queue = split(Property.Get(self, "AI_MotTags"), ",")
-				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
-				}
-			if (psipowerid < 25 && psipowerid > 17)
-				{
-				if (Property.Get(self, "AI_UseWater"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				else
-					Property.SetSimple(self, "AI_MotTags", Property.Get(self, "AI_MotTags") + psipowerid.tostring() + ",")
-				}
-			if (psipowerid == 25)
-				{
-				Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				Property.SetSimple(self, "AI_IsBig", true)
-				local queue = split(Property.Get(self, "ModeChangeMeta"), ",")
-				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
-				}
-			if (psipowerid < 33 && psipowerid > 25)
-				{
-				if (Property.Get(self, "AI_IsBig"))
-					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
-				else
-					Property.SetSimple(self, "ModeChangeMeta", Property.Get(self, "ModeChangeMeta") + psipowerid.tostring() + ",")
-				}
-			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
-			break;
-			}
-		case "PsiPowerUnlock2": #tier 5
-			{
-			local psipowerid = item[1][0]
-			if (psipowerid == 1)
-				{
-				Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
-				Property.SetSimple(self, "AI_IgCam", true)
-				local queue = split(Property.Get(self, "ModeUnchngeMeta"), ",")
-				foreach (psipow in queue)
-					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipow.tointeger() - 1).tointeger());
-				}
-			else
-				{
-				if (Property.Get(self, "AI_IgCam"))
-					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
-				else
-					Property.SetSimple(self, "ModeUnchngeMeta", Property.Get(self, "ModeUnchngeMeta") + psipowerid.tostring() + ",")
-				}
-			ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
-			break;
-			}
-		case "OsUnlock":
-			{
-			local curosslot = Property.Get(self, "RsrchTime");
-			Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
-			if (curosslot == 4)
-				curosslot = 1;
-			else
-				curosslot = curosslot + 1;
-			Property.SetSimple(self, "RsrchTime", curosslot);
-			if (item[1][0] == 6)
-				ShockGame.AddExp(self, 8, true);
-			if (item[1][0] == 8 || item[1][0] == 3)
+				Property.Set(self, "BaseStatsDesc", item[1], Property.Get(self, "BaseStatsDesc", item[1]) + 1);
 				ShockGame.RecalcStats(self);
-			ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
-			break;
-			}
-		case "CyberModules":
-			{
-				ShockGame.AddExp(self, item[1], true);
+				ShockGame.AddText("Got " + item[1] + " stat upgrade!", self);
 				break;
-			}
-		case "Nanites":
-			{
-			local naniteholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "FakeNanites");
-			Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + item[1])
-			ShockGame.AddText("Got " + item[1].tostring() + " Nanites!", self)
-			break;
-			}
-		case "Audio Log":
-			{
-			local properties = item[1];
-			foreach(property in properties)
+				}
+			case "TechUpgrade":
 				{
-				if (property[1] == "Logs")
-					Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
+				Property.Set(self, "BaseTechDesc", item[1], Property.Get(self, "BaseTechDesc", item[1]) + 1);
+				ShockGame.AddText("Got " + item[1] + " technical skill upgrade!", self);
+				break;
+				}
+			case "WeaponUpgrade":
+				{
+				Property.Set(self, "BaseWeaponDesc", item[1], Property.Get(self, "BaseWeaponDesc", item[1]) + 1);
+				ShockGame.AddText("Got " + item[1] + " weapon skill upgrade!", self);
+				break;
+				}
+			case "PsiPowerUnlock": #tiers 1-4. [1] is an array where[0] is the osupgrade number, and [1] is its name. same for next two cases.
+				{
+				local psipowerid = item[1][0]
+				if (psipowerid == 1)
+					{
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					Property.SetSimple(self, "AI_NGOBB", true)
+					local queue = split(Property.Get(self, "AI_Standtags"), ",")
+					foreach (psipow in queue)
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
+					}
+				if (psipowerid < 9 && psipowerid > 1)
+					{
+					if (Property.Get(self, "AI_NGOBB"))
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					else
+						Property.SetSimple(self, "AI_Standtags", Property.Get(self, "AI_Standtags") + psipowerid.tostring() + ",")
+					}
+				if (psipowerid == 9)
+					{
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					Property.SetSimple(self, "AI_TrackM", true)
+					local queue = split(Property.Get(self, "AI_SndTags"), ",")
+					foreach (psipow in queue)
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
+					}
+				if (psipowerid < 17 && psipowerid > 9)
+					{
+					if (Property.Get(self, "AI_TrackM"))
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					else
+						Property.SetSimple(self, "AI_SndTags", Property.Get(self, "AI_SndTags") + psipowerid.tostring() + ",")
+					}
+				if (psipowerid == 17)
+					{
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					Property.SetSimple(self, "AI_UseWater", true)
+					local queue = split(Property.Get(self, "AI_MotTags"), ",")
+					foreach (psipow in queue)
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
+					}
+				if (psipowerid < 25 && psipowerid > 17)
+					{
+					if (Property.Get(self, "AI_UseWater"))
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					else
+						Property.SetSimple(self, "AI_MotTags", Property.Get(self, "AI_MotTags") + psipowerid.tostring() + ",")
+					}
+				if (psipowerid == 25)
+					{
+					Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					Property.SetSimple(self, "AI_IsBig", true)
+					local queue = split(Property.Get(self, "ModeChangeMeta"), ",")
+					foreach (psipow in queue)
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipow.tointeger() - 1).tointeger());
+					}
+				if (psipowerid < 33 && psipowerid > 25)
+					{
+					if (Property.Get(self, "AI_IsBig"))
+						Property.SetSimple(self, "PsiPowerDesc", Property.Get(self, "PsiPowerDesc") | pow(2, psipowerid - 1).tointeger());
+					else
+						Property.SetSimple(self, "ModeChangeMeta", Property.Get(self, "ModeChangeMeta") + psipowerid.tostring() + ",")
+					}
+				ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
+				break;
+				}
+			case "PsiPowerUnlock2": #tier 5
+				{
+				local psipowerid = item[1][0]
+				if (psipowerid == 1)
+					{
+					Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
+					Property.SetSimple(self, "AI_IgCam", true)
+					local queue = split(Property.Get(self, "ModeUnchngeMeta"), ",")
+					foreach (psipow in queue)
+						Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipow.tointeger() - 1).tointeger());
+					}
 				else
 					{
-					Quest.Set(property[1], property[2], eQuestDataType.kQuestDataCampaign);
-					if (property.len() == 4)
-						ShockGame.AddText("Got keypad code for " + property[3] + "!", self);
+					if (Property.Get(self, "AI_IgCam"))
+						Property.SetSimple(self, "PsiPower2Desc", Property.Get(self, "PsiPower2Desc") | pow(2, psipowerid - 1).tointeger());
+					else
+						Property.SetSimple(self, "ModeUnchngeMeta", Property.Get(self, "ModeUnchngeMeta") + psipowerid.tostring() + ",")
 					}
+				ShockGame.AddText("Got " + item[1][1] + " psi ability!", self);
+				break;
 				}
-			ShockGame.AddText("Got Audio Log!", self);
-			break;
-			}
-		case "Manifest":
-			{
-			local property = item[1][0];
-			Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
-			ShockGame.AddText("Got Audio Log!", self);
-			break;
-			}
-		case "Access Card":
-			{
-			local keyholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "fakekeys");
-			Property.Set(keyholder, "KeySrc", "RegionID", Property.Get(keyholder, "KeySrc", "RegionID") | pow(2, item[1][0] - 1).tointeger());
-			if (item[1].len() == 4)
-				Quest.Set(item[1][2], item[1][3], eQuestDataType.kQuestDataCampaign);
-			ShockGame.AddText("Got " + item[1][1] + " access card!", self);
-			break;
-			}
-		default:
-			{
-			local newitem = Object.Create(item[0]);
-			local properties = item[1];
+			case "OsUnlock":
+				{
+				local curosslot = Property.Get(self, "RsrchTime");
+				Property.Set(self, "TraitsDesc", "Trait " + curosslot.tostring(), item[1][0]);
+				if (curosslot == 4)
+					curosslot = 1;
+				else
+					curosslot = curosslot + 1;
+				Property.SetSimple(self, "RsrchTime", curosslot);
+				if (item[1][0] == 6)
+					ShockGame.AddExp(self, 8, true);
+				if (item[1][0] == 8 || item[1][0] == 3)
+					ShockGame.RecalcStats(self);
+				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
+				break;
+				}
+			case "CyberModules":
+				{
+					ShockGame.AddExp(self, item[1], true);
+					break;
+				}
+			case "Nanites":
+				{
+				local naniteholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "FakeNanites");
+				Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + item[1])
+				ShockGame.AddText("Got " + item[1].tostring() + " Nanites!", self)
+				break;
+				}
+			case "Audio Log":
+				{
+				local properties = item[1];
 				foreach(property in properties)
 					{
-					if (property.len() == 3)
-						Property.Set(newitem, property[0], property[1], property[2]);
+					if (property[1] == "Logs")
+						Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
 					else
-						Property.SetSimple(newitem, property[0], property[1]);
+						{
+						Quest.Set(property[1], property[2], eQuestDataType.kQuestDataCampaign);
+						if (property.len() == 4)
+							ShockGame.AddText("Got keypad code for " + property[3] + "!", self);
+						}
 					}
-			Object.Teleport(newitem, Object.Position(self), Object.Facing(self));
-			ShockGame.AddText("Got Item!", self);
-			}
+				ShockGame.AddText("Got Audio Log!", self);
+				break;
+				}
+			case "Manifest":
+				{
+				local property = item[1][0];
+				Property.Set(self, property[0], property[1], Property.Get(self, property[0], property[1]) | pow(2, property[2] - 1).tointeger());
+				ShockGame.AddText("Got Audio Log!", self);
+				break;
+				}
+			case "Access Card":
+				{
+				local keyholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "fakekeys");
+				Property.Set(keyholder, "KeySrc", "RegionID", Property.Get(keyholder, "KeySrc", "RegionID") | pow(2, item[1][0] - 1).tointeger());
+				if (item[1].len() == 4)
+					Quest.Set(item[1][2], item[1][3], eQuestDataType.kQuestDataCampaign);
+				ShockGame.AddText("Got " + item[1][1] + " access card!", self);
+				break;
+				}
+			default:
+				{
+				local newitem = Object.Create(item[0]);
+				local properties = item[1];
+					foreach(property in properties)
+						{
+						if (property.len() == 3)
+							Property.Set(newitem, property[0], property[1], property[2]);
+						else
+							Property.SetSimple(newitem, property[0], property[1]);
+						}
+				if (stackcount)
+					Property.SetSimple(newitem, "StackCount", stackcount)
+				Object.Teleport(newitem, Object.Position(self), Object.Facing(self));
+				ShockGame.AddText("Got Item!", self);
+				}
 		}
 	}
 
@@ -724,5 +732,522 @@ class PlayerScripts extends SqRootScript
 		}
 		file.close();
 		return output;
+	}
+
+	function HandleExcessItems(newitems)
+	{
+		local remainingitems = [];
+
+		local wrench = false; #only want to spawn 1
+		local psiamp = false;
+		local radhypocount = 0; #want to spawn 1 with combined stack count of all
+		local gameplayer = false;
+		local standardcount = 0;
+		local speedboostercount = 0;
+		local armorpiercingcount = 0;
+		local antipersonshellcount = 0;
+		local medhypocount = 0;
+		local psihypocount = 0;
+		local rifledslugcount = 0;
+		local brawnimplantcount = 0;
+		local antitoxinhypocount = 0;
+
+		local fermiumcount = 0;
+		local vanadiumcount = 0;
+		local galliumcount = 0;
+		local antimonycount = 0;
+		local yttriumcount = 0;
+		local coppercount = 0;
+		local californiumcount = 0;
+		local sodiumcount = 0;
+		local osmiumcount = 0;
+		local iridiumcount = 0;
+		local arseniccount = 0;
+		local cesiumcount = 0;
+		local hassiumcount = 0;
+		local telluriumcount = 0;
+		local molybdenumcount = 0;
+		local technetiumcount = 0;
+		local radiumcount = 0;
+		local bariumcount = 0;
+		local seleniumcount = 0;
+
+		local proxgrenadecount = 0;
+		local medkitcount = 0;
+		local lightarmor = false;
+		local fraggrenadecount = 0;
+		local batterycount = 0;
+		local antipersoncount = 0;
+		local standardarmor = false;
+		local medbedkeycount = 0;
+		local laserrapier = false;
+		local psiboostercount = 0;
+		local hazardsuit = false;
+		local healingglandcount = 0;
+		local frenchdevicecount = 0;
+		local swiftimplantcount = 0;
+		local empgrenadecount = 0;
+		local aprcount = 0;
+		local maintenancetoolcount = 0;
+		local incendiarygrenadecount = 0;
+		local crystalshard = false;
+		local wormmindimplantcount = 0;
+		local prismcount = 0;
+		local wormskinarmor = false;
+		local heavyarmor = false;
+		local disruptiongrenadecount = 0;
+		local wormheartimplantcount = 0;
+
+		foreach (itemid in newitems)
+			{
+			switch (itemid)
+				{
+				case "1":
+					{
+					wrench = true;
+					break;
+					}
+				case "8":
+					{
+					wrench = true;
+					break;
+					}
+				case "13":
+					{
+					psiamp = true;
+					break;
+					}
+				case "14":
+					{
+					radhypocount += 1;
+					break;
+					}
+				case "15":
+					{
+					gameplayer = true;
+					break;
+					}
+				case "19":
+					{
+					standardcount += 6;
+					break;
+					}
+				case "20":
+					{
+					speedboostercount += 1;
+					break;
+					}
+				case "21":
+					{
+					standardcount += 12;
+					break;
+					}
+				case "22":
+					{
+					armorpiercingcount += 6;
+					break;
+					}
+				case "24":
+					{
+					antipersonshellcount += 6;
+					break;
+					}
+				case "25":
+					{
+					medhypocount += 1;
+					break;
+					}
+				case "28":
+					{
+					psihypocount += 1;
+					break;
+					}
+				case "33":
+					{
+					rifledslugcount += 6;
+					break;
+					}
+				case "36":
+					{
+					brawnimplantcount += 1;
+					break;
+					}
+				case "39":
+					{
+					antitoxinhypocount += 1;
+					break;
+					}
+				case "46":
+					{
+					fermiumcount += 1;
+					break;
+					}
+				case "47":
+					{
+					vanadiumcount += 1;
+					break;
+					}
+				case "48":
+					{
+					galliumcount += 1;
+					break;
+					}
+				case "49":
+					{
+					antimonycount += 1;
+					break;
+					}
+				case "50":
+					{
+					yttriumcount += 1;
+					break;
+					}
+				case "51":
+					{
+					coppercount += 1;
+					break;
+					}
+				case "52":
+					{
+					californiumcount += 1;
+					break;
+					}
+				case "53":
+					{
+					sodiumcount += 1;
+					break;
+					}
+				case "54":
+					{
+					osmiumcount += 1;
+					break;
+					}
+				case "55":
+					{
+					iridiumcount += 1;
+					break;
+					}
+				case "56":
+					{
+					arseniccount += 1;
+					break;
+					}
+				case "57":
+					{
+					cesiumcount += 1;
+					break;
+					}
+				case "58":
+					{
+					hassiumcount += 1;
+					break;
+					}
+				case "59":
+					{
+					telluriumcount += 1;
+					break;
+					}
+				case "60":
+					{
+					molybdenumcount += 1;
+					break;
+					}
+				case "61":
+					{
+					technetiumcount += 1;
+					break;
+					}
+				case "62":
+					{
+					radiumcount += 1;
+					break;
+					}
+				case "63":
+					{
+					bariumcount += 1;
+					break;
+					}
+				case "64":
+					{
+					seleniumcount += 1;
+					break;
+					}
+				case "75":
+					{
+					proxgrenadecount += 3;
+					break;
+					}
+				case "76":
+					{
+					medkitcount += 1;
+					break;
+					}
+				case "77":
+					{
+					lightarmor = true;
+					break;
+					}
+				case "78":
+					{
+					fraggrenadecount += 3;
+					break;
+					}
+				case "79":
+					{
+					batterycount += 1;
+					break;
+					}
+				case "80":
+					{
+					antipersoncount += 12;
+					break;
+					}
+				case "81":
+					{
+					standardarmor = true
+					break;
+					}
+				case "83":
+					{
+					medbedkeycount += 1;
+					break;
+					}
+				case "94":
+					{
+					laserrapier = true;
+					break;
+					}
+				case "95":
+					{
+					psiboostercount += 1;
+					break;
+					}
+				case "102":
+					{
+					antipersoncount += 6;
+					break;
+					}
+				case "107":
+					{
+					hazardsuit = true;
+					break;
+					}
+				case "109":
+					{
+					armorpiercingcount += 12;
+					break;
+					}
+				case "115":
+					{
+					healingglandcount += 1;
+					break;
+					}
+				case "119":
+					{
+					frenchdevicecount += 1;
+					break;
+					}
+				case "127":
+					{
+					swiftimplantcount += 1;
+					break;
+					}
+				case "136":
+					{
+					empgrenadecount += 3;
+					break;
+					}
+				case "150":
+					{
+					aprcount += 1;
+					break;
+					}
+				case "152":
+					{
+					maintenancetoolcount += 1;
+					break;
+					}
+				case "161":
+					{
+					incendiarygrenadecount += 3;
+					break;
+					}
+				case "183":
+					{
+					crystalshard = true;
+					break;
+					}
+				case "185":
+					{
+					wormmindimplantcount += 1;
+					break;
+					}
+				case "203":
+					{
+					prismcount += 20;
+					break;
+					}
+				case "212":
+					{
+					wormskinarmor = true;
+					break;
+					}
+				case "215":
+					{
+					heavyarmor = true;
+					break;
+					}
+				case "228":
+					{
+					disruptiongrenadecount += 3
+					break;
+					}
+				case "268":
+					{
+					wormheartimplantcount += 1
+					break;
+					}
+				default:
+					remainingitems.append(itemid);
+				}
+			}
+		if (wrench)
+			remainingitems.append("1");
+		if (psiamp)
+			remainingitems.append("13");
+		if (radhypocount)
+			ItemReceived("14", radhypocount);
+		if (gameplayer)
+			remainingitems.append("15");
+		if (standardcount)
+			ItemReceived("19", standardcount);
+		if (speedboostercount)
+			ItemReceived("20", speedboostercount);
+		if (armorpiercingcount)
+			ItemReceived("22", armorpiercingcount);
+		if (antipersonshellcount)
+			ItemReceived("24", antipersonshellcount);
+		if (medhypocount)
+			ItemReceived("25", medhypocount);
+		if (psihypocount)
+			ItemReceived("28", psihypocount);
+		if (rifledslugcount)
+			ItemReceived("33", rifledslugcount);
+		if (brawnimplantcount)
+			{
+			if (brawnimplantcount >= 2)
+				remainingitems.extend(["36", "36"]);
+			else
+				remainingitems.append("36");
+			}
+		if (antitoxinhypocount)
+			ItemReceived("39", antitoxinhypocount);
+
+		if (fermiumcount)
+			ItemReceived("46", fermiumcount);
+		if (vanadiumcount)
+			ItemReceived("47", vanadiumcount);
+		if (galliumcount)
+			ItemReceived("48", galliumcount);
+		if (antimonycount)
+			ItemReceived("49", antimonycount);
+		if (yttriumcount)
+			ItemReceived("50", yttriumcount);
+		if (coppercount)
+			ItemReceived("51", coppercount);
+		if (californiumcount)
+			ItemReceived("52", californiumcount);
+		if (sodiumcount)
+			ItemReceived("53", sodiumcount);
+		if (osmiumcount)
+			ItemReceived("54", osmiumcount);
+		if (iridiumcount)
+			ItemReceived("55", iridiumcount);
+		if (arseniccount)
+			ItemReceived("56", arseniccount);
+		if (cesiumcount)
+			ItemReceived("57", cesiumcount);
+		if (hassiumcount)
+			ItemReceived("58", hassiumcount);
+		if (telluriumcount)
+			ItemReceived("59", telluriumcount);
+		if (molybdenumcount)
+			ItemReceived("60", molybdenumcount);
+		if (technetiumcount)
+			ItemReceived("61", technetiumcount);
+		if (radiumcount)
+			ItemReceived("62", radiumcount);
+		if (bariumcount)
+			ItemReceived("63", bariumcount);
+		if (seleniumcount)
+			ItemReceived("64", seleniumcount);
+
+		if (proxgrenadecount)
+			ItemReceived("75", proxgrenadecount);
+		if (medkitcount)
+			ItemReceived("76", medkitcount);
+		if (lightarmor)
+			remainingitems.append("77");
+		if (fraggrenadecount)
+			ItemReceived("78", fraggrenadecount);
+		if (batterycount)
+			ItemReceived("79", batterycount);
+		if (antipersoncount)
+			ItemReceived("80", antipersoncount);
+		if (standardarmor)
+			remainingitems.append("81");
+		if (medbedkeycount)
+			ItemReceived("83", medbedkeycount);
+		if (laserrapier)
+			remainingitems.append("94");
+		if (psiboostercount)
+			ItemReceived("95", psiboostercount);
+		if (hazardsuit)
+			remainingitems.append("107")
+		if (healingglandcount)
+			ItemReceived("115", healingglandcount);
+		if (frenchdevicecount)
+			ItemReceived("119", frenchdevicecount);
+		if (swiftimplantcount)
+			{
+			if (swiftimplantcount >= 2)
+				remainingitems.extend(["127", "127"]);
+			else
+				remainingitems.append("127");
+			}
+		if (empgrenadecount)
+			ItemReceived("136", empgrenadecount);
+		if (aprcount)
+			ItemReceived("150", aprcount);
+		if (maintenancetoolcount)
+			ItemReceived("152", maintenancetoolcount);
+		if (incendiarygrenadecount)
+			ItemReceived("161", incendiarygrenadecount);
+		if (crystalshard)
+			remainingitems.append("183");
+		if (wormmindimplantcount)
+			{
+			if (wormmindimplantcount >= 2)
+				remainingitems.extend(["185", "185"]);
+			else
+				remainingitems.append("185");
+			}
+		if (prismcount)
+			ItemReceived("203", prismcount);
+		if (wormskinarmor)
+			remainingitems.append("212");
+		if (heavyarmor)
+			remainingitems.append("215");
+		if (disruptiongrenadecount)
+			ItemReceived("228", disruptiongrenadecount);
+		if (wormheartimplantcount)
+			{
+			if (wormheartimplantcount >= 2)
+				remainingitems.extend(["268", "268"]);
+			else
+				remainingitems.append("268");
+			}
+
+		return remainingitems;
 	}
 }
