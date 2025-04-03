@@ -172,7 +172,7 @@ class PlayerScripts extends SqRootScript
 					}
 				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire
 					{
-					Quest.Set("SCPGame", 1, eQuestDataType.kQuestDataCampaign) #Gets rid of mid - game activation message from scp.  May need to be updated with scp updates, is setting the same qb as object 15
+					Quest.Set("SCPVersion", 7, eQuestDataType.kQuestDataCampaign) #Gets rid of mid - game activation message from scp.  Needs to be updated with scp updates, is setting the same qb as object 15
 					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0))
 					continue;
 					}
@@ -186,37 +186,37 @@ class PlayerScripts extends SqRootScript
 						{
 						case "3": #hydro
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 2);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 4);
 							break;
 							}
 						case "4": #ops
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 8);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 10);
 							break;
 							}
 						case "5": #rec
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 14);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 16);
 							break;
 							}
 						case "6": #command
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 20);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 22);
 							break;
 							}
 						case "7": #command-rick1
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 28);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 30);
 							break;
 							}
 						case "8": #rick2-3
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 36);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 40);
 							break;
 							}
 						case "9": #many-shodan
 							{
-							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 44);
+							Property.SetSimple(newenemy, "MAX_HP", Property.Get(newenemy, "MAX_HP") + 50);
 							break;
 							}
 						}
@@ -476,7 +476,7 @@ class PlayerScripts extends SqRootScript
 				}
 			foreach (itemid in newitems)
 				ItemReceived(itemid);
-			SetOneShotTimer("ItemReceiver", 1);
+			SetOneShotTimer("ItemReceiver", 0.5);
 		}
 
 		if (message().name == "CreateTripwire")
@@ -646,7 +646,7 @@ class PlayerScripts extends SqRootScript
 					curosslot = curosslot + 1;
 				Property.SetSimple(self, "RsrchTime", curosslot);
 				if (item[1][0] == 6)
-					ShockGame.AddExp(self, 8, true);
+					ShockGame.AddExp(self, 8, false);
 				if (item[1][0] == 8 || item[1][0] == 3)
 					ShockGame.RecalcStats(self);
 				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);

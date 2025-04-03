@@ -368,7 +368,103 @@ CreateArch "Misc Metaprops" "EnemyWithLocationScript"
     "Cost" 4.00
 }
 
+//Decreases Mechanical multiplier for EMP damage from 4x to 2x
++Receptron -1052 "EMP" 0020002E //Mechanical Vulnerability
+{
+	Min 0
+	Max None
 
+	Target Me
+	Agent Source
+
+	Effect "damage"
+	{
+		"Damage Type" 0
+		"Use stimulus as type" TRUE
+		"Multiply By" 2.00 //was 4.00
+		"Then Add" 0
+	}
+}
+
+//Decreases Annelid multiplier for Anti-Annelid damage from 4x to 2x
++Receptron -1326 "Anti-Annelid" 002000D6 //Annelid Vulnerability
+{
+	Min 0
+	Max None
+
+	Target Me
+	Agent Source
+
+	Effect "damage"
+	{
+		"Damage Type" 0
+		"Use stimulus as type" TRUE
+		"Multiply By" 2.00 //was 4.00
+		"Then Add" 0
+	}
+}
+
+//Taken from RoSoDudes Rebalanced Skills and Disciplines
+////Decreases Mechanical multiplier for Armor Piercing damage from x3 to x2
++Receptron -1052 "Armor Piercing Impact" 0020000C //Mechanical Vulnerability
+{
+	Min 0
+	Max None
+
+	Target Me
+	Agent Source
+
+	Effect "damage"
+	{
+		"Damage Type" 0
+		"Use stimulus as type" TRUE
+		"Multiply By" 2.00 //was 3.00
+		"Then Add" 0
+	}
+}
+
+////Decreases Half-Annelid multiplier for Armor Piercing damage from x3 to x2
++Receptron -1325 "High Explosive" 00200023 //Half-Annelid Vulnerability
+{
+	Min 0
+	Max None
+
+	Target Me
+	Agent Source
+
+	Effect "damage"
+	{
+		"Damage Type" 0
+		"Use stimulus as type" TRUE
+		"Multiply By" 2.00 //was 3.00
+		"Then Add" 0
+	}
+}
+////Rebalances Anti-Human sources and human receptron
+//Reduce human vulnerability to Anti-Human from 4x to 2x
++Receptron -1230 "Anti-Human" 00200011 //Human Vulnerability
+{
+	Effect "damage"
+	{
+		"Damage Type" 0
+		"Use stimulus as type" TRUE
+		"Multiply By" 2.00 //was 4.00
+		"Then Add" 0
+	}
+}
+//Increase most Anti-Human sources to match
++StimSource -182 "Anti-Human" 0090005D //Grub
+{
+	Intensity 2.00 //was 1.00
+}
++StimSource -183 "Anti-Human" 00900045 //Swarm
+{
+	Intensity 2.00 //was 1.00
+}
++StimSource -2299 "Anti-Human" 00900049 //Overlord Shot
+{
+	Intensity 10.00 //was 5.00
+}
 
 //Sarge945s No Keypad Cheese
 //Attach Keypad Script to all keypads
