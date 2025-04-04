@@ -3,6 +3,7 @@ class APLocationFuncs extends SqRootScript
     function OnFrobWorldEnd()
     {
         Debug.Command("dump_cmds", "pylocid" + Property.Get(self, "VoiceIdx") + ".txt");
+        Sound.PlaySchemaAmbient(Networking.FirstPlayer(), "hitspark");
         Object.Destroy(self);
     }
 
