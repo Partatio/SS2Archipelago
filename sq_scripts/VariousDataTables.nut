@@ -109,9 +109,9 @@ mapinstructions =
         ["placeaploc", "", vector(29.18, -176.85, -15.32), 59, 1176], #59:In hackable closet in area after airlock 3 medsci1
         ["placeaploc", "", [1182], 60, 1183], #60:In body near charger near chem storage room medsci1
         ["placeaploc", "", [915, 1071, 483, 976], 61, 926], #61:In desk in room in hallway where someone runs towards R&D medsci1
-        ["placeaploc", "", [915, 1071, 483, 976], 62, 1073], #62:In desk in room in hallway where someone runs towards R&D medsci1 2
-        ["placeaploc", "", [915, 1071, 483, 976], 63, 1075], #63:In desk in room in hallway where someone runs towards R&D medsci1 3
-        ["placeaploc", "", [915, 1071, 483, 976], 64, 1078], #64:In desk in room in hallway where someone runs towards R&D medsci1 4
+        ["placeaploc", "", [915, 1071, 483, 976], 62, 1073], #62:In desk in room in hallway where someone runs towards R&D 2 medsci1
+        ["placeaploc", "", [915, 1071, 483, 976], 63, 1075], #63:In desk in room in hallway where someone runs towards R&D 3 medsci1
+        ["placeaploc", "", [915, 1071, 483, 976], 64, 1078], #64:In desk in room in hallway where someone runs towards R&D 4 medsci1
         ["placeaploc", "", [474], 65, 247], #65:In security crate in room in hallway where someone runs towards R&D medsci1
         ["placeaploc", "", [474], 66, 1100], #66:In security crate in room in hallway where someone runs towards R&D 2 medsci1
         ["placeaploc", "", [474], 67, 475], #67:In security crate in room in hallway where someone runs towards R&D 3 medsci1
@@ -1186,9 +1186,9 @@ mapinstructions =
         ["placeaploc", "", [1551], 776, 1554], #776:In body in radioactive room with medical beds near mall entrance rec1
         ["placeaploc", "", vector(-63.61, -426.18, -12.36), 777, 625], #777:On ground in radioactive room with medical beds near mall entrance rec1
         ["placeaploc", "", vector(-55.31, -431.93, -12.36), 778, 1550], #778:On ground in radioactive room with medical beds near mall entrance 2 rec1
-        ["placeaploc", "", [190], 779, 94], #779:In security crate near replicator near mall entrance rec1
-        ["placeaploc", "", [190], 780, 193], #780:In security crate near replicator near mall entrance 2 rec1
-        ["placeaploc", "", [191], 781, 192], #781:In security crate near replicator near mall entrance 3 rec1
+        ["placeaploc", "", [190], 779, 94], #779:In security crate near mall entrance rec1
+        ["placeaploc", "", [190], 780, 193], #780:In security crate near mall entrance 2 rec1
+        ["placeaploc", "", [191], 781, 192], #781:In security crate near replicator near mall entrance rec1
         ["placeaploc", "", vector(3.6, -445.25, -9.53), 782, 1862], #782:On desk near replicator near mall entrance rec1
         ["placeaploc", "", vector(-18.16, -420.78, -9.56), 783, 1756], #783:On med bed near mall entrance rec1
         ["placeaploc", "", vector(27.98, -404.19, -9.87), 784, 218], #784:On desk near safe nearish elevator rec1
