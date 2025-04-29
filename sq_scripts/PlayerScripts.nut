@@ -127,7 +127,7 @@ class PlayerScripts extends SqRootScript
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPowerDesc",0);
 					Property.SetSimple(Networking.FirstPlayer(), "PsiPower2Desc",0);
 					local naniteholder = Object.FindClosestObjectNamed(self, "FakeNanites")
-					Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + 20);
+					Property.SetSimple(naniteholder, "StackCount", Property.Get(naniteholder, "StackCount") + 60);
 					ShockGame.RecalcStats(Networking.FirstPlayer());
 					continue; #taken from RoSoDudes alternate start mod
 					}
