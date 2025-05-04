@@ -807,7 +807,8 @@ mapinstructions =
         ["placeaploc", "Chemicals", vector(-151.77, -129.17, -3.38), 467, 1033], #467:On chemical storeroom shelves 17 hydro2
         ["placeaploc", "Chemicals", vector(-152.12, -127.6, -3.38), 468, 1041], #468:On chemical storeroom shelves 18 hydro2
         ["placeaploc", "Chemicals", vector(-151.9, -125.97, -3.38), 469, 1050], #469:On chemical storeroom shelves 19 hydro2
-        ["placeaploc", "", vector(-11.96, 100.78, -4.75), 470, 1112], #470:On ground under desk in room with bodies in research area hydro2
+        ["placeaploc", "KeepDuplicates", vector(-11.96, 100.78, -4.75), 470, 1112], #470:On ground under desk in room with bodies in research area hydro2
+        ["destroy", "RemoveDuplicates", 1112],
         ["placeaploc", "KeepDuplicates", [935, 1298, 1297, 936], 471, 934], #471:In bodies in snowy area 12 hydro2
         ["destroy", "RemoveDuplicates", 934],
         ["placeaploc", "KeepDuplicates", [754], 472, 942], #472:In body near lots of blood near water in biological survey area 2 hydro2
