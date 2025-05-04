@@ -665,7 +665,8 @@ mapinstructions =
     "hydro2.mis": [
         ["placeaploc", "KeepDuplicates", vector(-46.02, 51.17, -4.85), 366, 1013], #366:On ground near body and desk in room with charger hydro2
         ["destroy", "RemoveDuplicates", 1013],
-        ["placeaploc", "", vector(-58.37, -7.75, -4.74), 367, 140], #367:On ground near body and pipes in room with xerxes hydro2
+        ["placeaploc", "KeepDuplicates", vector(-58.37, -7.75, -4.74), 367, 140], #367:On ground near body and pipes in room with xerxes hydro2
+        ["destroy", "RemoveDuplicates", 140],
         ["placeaploc", "", vector(-75.67, -41.31, -4.25), 368, 1012], #368:On ground behind sector b door hydro2
         ["placeaploc", "KeepDuplicates", vector(-75.09, -36.92, -4.22), 369, 1037], #369:On ground behind sector b door 2 hydro2
         ["destroy", "RemoveDuplicates", 1037],
