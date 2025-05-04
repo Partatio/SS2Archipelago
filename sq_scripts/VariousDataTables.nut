@@ -454,7 +454,8 @@ mapinstructions =
         ["placeaploc", "", [1169], 272, 1679], #272:In body in fluidics control room above engineering control grav shaft eng1
         ["placeaploc", "", vector(-4.49, -443.22, -6.89), 273, 1421], #273:On ground in fluidics control room above engineering control grav shaft eng1
         ["placeaploc", "", vector(3.53, -432.87, -31.92), 274, 936], #274:On ground in room with bodies after engineering control grav shaft eng1
-        ["placeaploc", "", [1042, 894, 854], 275, 1275], #275:In body or lockers in security office after engineering control grav shaft eng1
+        ["placeaploc", "KeepDuplicates", [1042, 894, 854], 275, 1275], #275:In body or lockers in security office after engineering control grav shaft eng1
+        ["destroy", "RemoveDuplicates", 1275],
         ["placeaploc", "KeepDuplicates", [1042, 894, 854], 276, 1416], #276:In body or lockers in security office after engineering control grav shaft 2 eng1
         ["destroy", "RemoveDuplicates", 1416],
         ["placeaploc", "KeepDuplicates", [1042, 894, 854], 277, 1168], #277:In body or lockers in security office after engineering control grav shaft 3 eng1
@@ -1076,48 +1077,37 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [495], 574, 1109], #574:In locker in room with piano in lower area near pool with support in middle in crew quarters 2 ops2
         ["destroy", "RemoveDuplicates", 1109],
         ["placeaploc", "", [500], 575, 502], #575:In locker in room in lower area near pool with support in middle in crew quarters ops2
-        ["placeaploc", "KeepDuplicates", [500], 576, 501], #576:In locker in room in lower area near pool with support in middle in crew quarters 2 ops2
-        ["destroy", "RemoveDuplicates", 501],
-        ["placeaploc", "KeepDuplicates", [497], 577, 482], #577:In locker in room in lower area near pool with support in middle in crew quarters 3 ops2
-        ["destroy", "RemoveDuplicates", 482],
+        ["placeaploc", "", [500], 576, 501], #576:In locker in room in lower area near pool with support in middle in crew quarters 2 ops2
+        ["placeaploc", "", [497], 577, 482], #577:In locker in room in lower area near pool with support in middle in crew quarters 3 ops2
         ["placeaploc", "", [638], 578, 1108], #578:In body near charger in upper area in crew quarters ops2
         ["placeaploc", "", vector(-169.88, 137.47, -27.24), 579, 1463], #579:On ledge under overlooking room near pool with support in middle in crew quarters ops2
-        ["placeaploc", "KeepDuplicates", [546], 580, 547], #580:In locker in room in lower area near pool with support in middle in crew quarters 4 ops2
-        ["destroy", "RemoveDuplicates", 547],
-        ["placeaploc", "KeepDuplicates", [546], 581, 458], #581:In locker in room in lower area near pool with support in middle in crew quarters 5 ops2
-        ["destroy", "RemoveDuplicates", 458],
+        ["placeaploc", "", [546], 580, 547], #580:In locker in room in lower area near pool with support in middle in crew quarters 4 ops2
+        ["placeaploc", "", [546], 581, 458], #581:In locker in room in lower area near pool with support in middle in crew quarters 5 ops2
         ["placeaploc", "", vector(-128.55, 148.14, -37.8), 582, 475], #582:On ground in room in lower area near pool with support in middle in crew quarters ops2
         ["placeaploc", "", vector(-119.27, 173.69, -39.92), 583, 1495], #583:On ground near body in meat room in room in lower area near pool with support in middle in crew quarters
-        ["placeaploc", "", [552], 584, 1496], #584:In locker in meat room in lower area near pool with support in middle in crew quarters ops2
+        ["placeaploc", "KeepDuplicates", [552], 584, 1496], #584:In locker in meat room in lower area near pool with support in middle in crew quarters ops2
+        ["destroy", "RemoveDuplicates", 1496],
         ["placeaploc", "", [492], 585, 494], #585:In locker in room in lower area near pool without support crew quarters ops2
         ["placeaploc", "KeepDuplicates", [492], 586, 493], #586:In locker in room in lower area near pool without support crew quarters 2 ops2
         ["destroy", "RemoveDuplicates", 493],
-        ["placeaploc", "KeepDuplicates", [526], 587, 535], #587:In locker in room in lower area near pool without support crew quarters 3 ops2
-        ["destroy", "RemoveDuplicates", 535],
+        ["placeaploc", "", [526], 587, 535], #587:In locker in room in lower area near pool without support crew quarters 3 ops2
         ["placeaploc", "KeepDuplicates", [526], 588, 1102], #588:In locker in room in lower area near pool without support crew quarters 4 ops2
         ["destroy", "RemoveDuplicates", 1102],
         ["placeaploc", "", [1485], 589, 1488], #589:In body near replicator ops2
-        ["placeaploc", "KeepDuplicates", [472], 590, 469], #590:In locker in room in lower area near pool without support crew quarters 5 ops2
-        ["destroy", "RemoveDuplicates", 469],
+        ["placeaploc", "", [472], 590, 469], #590:In locker in room in lower area near pool without support crew quarters 5 ops2
         ["placeaploc", "KeepDuplicates", [472], 591, 473], #591:In locker in room in lower area near pool without support crew quarters 6 ops2
         ["destroy", "RemoveDuplicates", 473],
         ["placeaploc", "", [1540], 592, 491], #592:In security crate in room in lower area near pool without support crew quarters ops2
         ["placeaploc", "KeepDuplicates", [1540], 593, 474], #593:In security crate in room in lower area near pool without support crew quarters 2 ops2
         ["destroy", "RemoveDuplicates", 474],
-        ["placeaploc", "KeepDuplicates", [290], 594, 476], #594:In locker in room in lower area near pool without support crew quarters 7 ops2
-        ["destroy", "RemoveDuplicates", 476],
-        ["placeaploc", "KeepDuplicates", [490], 595, 520], #595:In locker in room in lower area near pool without support crew quarters 8 ops2
-        ["destroy", "RemoveDuplicates", 520],
+        ["placeaploc", "", [290], 594, 476], #594:In locker in room in lower area near pool without support crew quarters 7 ops2
+        ["placeaploc", "", [490], 595, 520], #595:In locker in room in lower area near pool without support crew quarters 8 ops2
         ["placeaploc", "KeepDuplicates", [490], 596, 514], #596:In locker in room in lower area near pool without support crew quarters 9 ops2
         ["destroy", "RemoveDuplicates", 514],
-        ["placeaploc", "KeepDuplicates", [685], 597, 1017], #597:In locker in room in lower area near pool without support crew quarters 10 ops2
-        ["destroy", "RemoveDuplicates", 1017],
-        ["placeaploc", "KeepDuplicates", vector(-134.78, 258.56, -37.75), 598, 1491], #598:On ground in room in lower area near pool without support crew quarters 11 ops2
-        ["destroy", "RemoveDuplicates", 1491],
-        ["placeaploc", "KeepDuplicates", [524], 599, 525], #599:In locker in room in lower area near pool without support crew quarters 11 ops2
-        ["destroy", "RemoveDuplicates", 525],
-        ["placeaploc", "KeepDuplicates", [702], 600, 460], #600:In locker in room in lower area near pool without support crew quarters 12 ops2
-        ["destroy", "RemoveDuplicates", 460],
+        ["placeaploc", "", [685], 597, 1017], #597:In locker in room in lower area near pool without support crew quarters 10 ops2
+        ["placeaploc", "", vector(-134.78, 258.56, -37.75), 598, 1491], #598:On ground in room in lower area near pool without support crew quarters 11 ops2
+        ["placeaploc", "", [524], 599, 525], #599:In locker in room in lower area near pool without support crew quarters 11 ops2
+        ["placeaploc", "", [702], 600, 460], #600:In locker in room in lower area near pool without support crew quarters 12 ops2
         ["placeaploc", "KeepDuplicates", [702], 601, 481], #601:In locker in room in lower area near pool without support crew quarters 13 ops2
         ["destroy", "RemoveDuplicates", 481],
         ["placeaploc", "", [1541], 602, 498], #602:In security crate near chemical storeroom ops2
@@ -1208,8 +1198,9 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [231], 640, 1350], #640:In desk in office in kitchen 2 ops3
         ["destroy", "RemoveDuplicates", 1350],
         ["placeaploc", "", vector(41.17, 322.04, -31.92), 641, 1357], #641:On ground in cafeteria near security control station ops3
-        ["placeaploc", "", [1173, 1168], 642, 786], #642:In bodies in cafetaria on side further from kitchen ops3
-        ["placeaploc", "", [749], 643, 760], #643:In body in bathroom ops3
+        ["placeaploc", "", [1173, 1168], 642, 786], #642:In bodies in cafeteria on side further from kitchen ops3
+        ["placeaploc", "KeepDuplicates", [749], 643, 760], #643:In body in bathroom ops3
+        ["destroy", "RemoveDuplicates", 760],
         ["placeaploc", "KeepDuplicates", [749], 644, 759], #644:In body in bathroom 2 ops3
         ["destroy", "RemoveDuplicates", 759],
         ["placeaploc", "", vector(54.82, 190.7, -23.87), 645, 750], #645:Hidden between toilet and wall near body in bathroom ops3
@@ -1224,14 +1215,17 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 696],
         ["placeaploc", "", vector(-97.9, 389.45, -27.36), 653, 778], #653:On ground in middle of power admin near entrance ops3
         ["placeaploc", "", [151], 654, 825], #654:In desk in 3rd room on right in power admin near entrance ops3
-        ["placeaploc", "", [772], 655, 774], #655:In body in 2nd room on left in power admin near entrance ops3
+        ["placeaploc", "KeepDuplicates", [772], 655, 774], #655:In body in 2nd room on left in power admin near entrance ops3
+        ["destroy", "RemoveDuplicates", 774],
         ["placeaploc", "", [1730], 656, 1802], #656:In body near entrance ops3
         ["placeaploc", "", [1288], 657, 1298], #657:In body hanging from cieling near replicator ops3
         ["placeaploc", "KeepDuplicates", [1288], 658, 1362], #658:In body hanging from cieling near replicator 2 ops3
         ["destroy", "RemoveDuplicates", 1362],
-        ["placeaploc", "", vector(-94.09, 309.21, -23.86), 659, 724], #659:On ground near body hanging from cieling near replicator ops3
-        ["placeaploc", "", [779], 660, 788], #660:In body near replicator ops3
-        ["placeaploc", "KeepDuplicates", [1173, 1168], 661, 84], #661:In bodies in cafetaria on side further from kitchen 2 ops3
+        ["placeaploc", "KeepDuplicates", vector(-94.09, 309.21, -23.86), 659, 724], #659:On ground near body hanging from cieling near replicator ops3
+        ["destroy", "RemoveDuplicates", 724],
+        ["placeaploc", "KeepDuplicates", [779], 660, 788], #660:In body near replicator ops3
+        ["destroy", "RemoveDuplicates", 788],
+        ["placeaploc", "KeepDuplicates", [1173, 1168], 661, 84], #661:In bodies in cafeteria on side further from kitchen 2 ops3
         ["destroy", "RemoveDuplicates", 84],
         ["placeaploc", "", [699, 700], 662, 1356], #662:In crates in room near charger ops3
         ["placeaploc", "KeepDuplicates", [699, 700], 663, 698], #663:In crates in room near charger 2 ops3
@@ -1256,7 +1250,8 @@ mapinstructions =
         ["placeaploc", "", [798, 799, 800], 676, 1019], #676:In crates outside lounge ops3
         ["placeaploc", "KeepDuplicates", [798, 799, 800], 677, 722], #677:In crates outside lounge 2 ops3
         ["destroy", "RemoveDuplicates", 722],
-        ["placeaploc", "", [767, 743], 678, 769], #678:In bodies in lounge ops3
+        ["placeaploc", "KeepDuplicates", [767, 743], 678, 769], #678:In bodies in lounge ops3
+        ["destroy", "RemoveDuplicates", 769],
         ["placeaploc", "KeepDuplicates", [767, 743], 679, 747], #679:In bodies in lounge 2 ops3
         ["destroy", "RemoveDuplicates", 747],
         ["placeaploc", "KeepDuplicates", [767, 743], 680, 745], #680:In bodies in lounge 3 ops3
@@ -1264,11 +1259,14 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [767, 743], 681, 744], #681:In bodies in lounge 4 ops3
         ["destroy", "RemoveDuplicates", 744],
         ["placeaploc", "", vector(-94.31, 97.62, -20.05), 682, 1351], #682:On bench arm in lounge ops3
-        ["placeaploc", "", vector(-88.46, 101.94, -23.9), 683, 789], #683:Hidden under bench in lounge ops3
-        ["placeaploc", "", [1262], 684, 1358], #684:In body near entrance near lounge ops3
+        ["placeaploc", "KeepDuplicates", vector(-88.46, 101.94, -23.9), 683, 789], #683:Hidden under bench in lounge ops3
+        ["destroy", "RemoveDuplicates", 789],
+        ["placeaploc", "KeepDuplicates", [1262], 684, 1358], #684:In body near entrance near lounge ops3
+        ["destroy", "RemoveDuplicates", 1358],
         ["placeaploc", "KeepDuplicates", [1262], 685, 1805], #685:In body near entrance near lounge 2 ops3
         ["destroy", "RemoveDuplicates", 1805],
-        ["placeaploc", "", vector(-45.68, 85.04, -23.92), 686, 1349], #686:On ground near entrance near lounge ops3
+        ["placeaploc", "KeepDuplicates", vector(-45.68, 85.04, -23.92), 686, 1349], #686:On ground near entrance near lounge ops3
+        ["destroy", "RemoveDuplicates", 1349],
         ["placeaploc", "KeepDuplicates", [1254], 687, 1746], #687:In body in hallway towards data storage 2 ops3
         ["destroy", "RemoveDuplicates", 1746],
         ["placeaploc", "", [1743], 688, 1745], #688:In enemy in hallway towards data storage ops3
@@ -1303,7 +1301,8 @@ mapinstructions =
         ["directmonstergenrando", "", 270, "4"],
     ],
     "ops4.mis": [
-        ["placeaploc", "", [557], 691, 354], #691:In body near interpolar sim unit ops4
+        ["placeaploc", "KeepDuplicates", [557], 691, 354], #691:In body near interpolar sim unit ops4
+        ["destroy", "RemoveDuplicates", 354],
         ["placeaploc", "", vector(25.31, -34.33, -39.86), 692, 121], #692:On ground near body near interpolar sim unit ops4
         ["placeaploc", "", [326], 693, 406], #693:In body above on raised walkway in fluid ops near entrance ops4
         ["placeaploc", "", [427, 426], 694, 376], #694:In lockers near linear sim unit ops4
@@ -1355,14 +1354,16 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [140, 150, 151, 152, 131, 135, 138, 139], 725, 392], #725:In lockers in bunks room near shooting range 5 ops4
         ["destroy", "RemoveDuplicates", 392],
         ["placeaploc", "", [544], 726, 421], #726:In body in cell 2 in lower area in security area ops4
-        ["placeaploc", "", [415, 146, 395, 195], 727, 526], #727:In bodies near linear sim unit ops4
+        ["placeaploc", "KeepDuplicates", [415, 146, 395, 195], 727, 526], #727:In bodies near linear sim unit ops4
+        ["destroy", "RemoveDuplicates", 526],
         ["placeaploc", "KeepDuplicates", [427, 426], 728, 429], #728:In lockers near linear sim unit 2 ops4
         ["destroy", "RemoveDuplicates", 429],
         ["placeaploc", "KeepDuplicates", [427, 426], 729, 430], #729:In lockers near linear sim unit 3 ops4
         ["destroy", "RemoveDuplicates", 430],
         ["placeaploc", "KeepDuplicates", [427, 426], 730, 432], #730:In lockers near linear sim unit 4 ops4
         ["destroy", "RemoveDuplicates", 432],
-        ["placeaploc", "", [378], 731, 466], #731:In desk near linear sim unit ops4
+        ["placeaploc", "KeepDuplicates", [378], 731, 466], #731:In desk near linear sim unit ops4
+        ["destroy", "RemoveDuplicates", 466],
         ["placeaploc", "KeepDuplicates", [378], 732, 394], #732:In desk near linear sim unit 2 ops4
         ["destroy", "RemoveDuplicates", 394],
         ["placeaploc", "KeepDuplicates", [378], 733, 428], #733:In desk near linear sim unit 3 ops4
@@ -1370,12 +1371,16 @@ mapinstructions =
         ["placeaploc", "", [84], 734, 414], #734:In body near entrance to security area ops4
         ["placeaploc", "", vector(-163.26, -268.61, -35.92), 735, 375], #735:On table in room in area under command center ops4
         ["placeaploc", "", [749], 736, 833], #736:In body on table in room in area under command center ops4
-        ["placeaploc", "", vector(-183.32, -304.68, -38.65), 737, 433], #737:Under table in room in area under command center ops4
+        ["placeaploc", "KeepDuplicates", vector(-183.32, -304.68, -38.65), 737, 433], #737:Under table in room in area under command center ops4
+        ["destroy", "RemoveDuplicates", 433],
         ["placeaploc", "", vector(-182.1, -301.1, -38.47), 738, 416], #738:On ground in room in area under command center ops4
-        ["placeaploc", "", vector(-182.65, -294.01, -38.92), 739, 525], #739:Under chair in room in area under command center ops4
-        ["placeaploc", "", vector(-195.17, -268.78, -26.73), 740, 360], #740:On ground near pipes in destroyed hallway in security area ops4
+        ["placeaploc", "KeepDuplicates", vector(-182.65, -294.01, -38.92), 739, 525], #739:Under chair in room in area under command center ops4
+        ["destroy", "RemoveDuplicates", 525],
+        ["placeaploc", "KeepDuplicates", vector(-195.17, -268.78, -26.73), 740, 360], #740:On ground near pipes in destroyed hallway in security area ops4
+        ["destroy", "RemoveDuplicates", 360],
         ["placeaploc", "", vector(-193.04, -259.75, -26.92), 741, 831], #741:On ground in destroyed hallway in security area ops4
-        ["placeaploc", "", vector(-199.18, -257.58, -30.42), 742, 949], #742:In ground in destroyed hallway in security area ops4
+        ["placeaploc", "KeepDuplicates", vector(-199.18, -257.58, -30.42), 742, 949], #742:In ground in destroyed hallway in security area 2 ops4
+        ["destroy", "RemoveDuplicates", 949],
         ["placeaploc", "", [1331], 743, 707], #743:In desk in security area in room above cells ops4
         ["placeaploc", "", [436], 744, 438], #744:In enemy that runs towards linear sim unit in security area ops4
         ["randomizerepl", "", 461],
@@ -1419,9 +1424,11 @@ mapinstructions =
         ["placeaploc", "", [774, 466], 745, 411], #745:In bodies near transmitter in athletics area rec1
         ["placeaploc", "", [354], 746, 1735], #746:In desk near charger in athletics area rec1
         ["placeaploc", "", vector(-33.07, -493.43, -12.87), 747, 722], #747:On ground near body in bathroom near mall entrance rec1
-        ["placeaploc", "", [348], 748, 389], #748:In body near resurrection station rec1
+        ["placeaploc", "KeepDuplicates", [348], 748, 389], #748:In body near resurrection station rec1
+        ["destroy", "RemoveDuplicates", 389],
         ["placeaploc", "", vector(17.37, -202.77, 7.84), 749, 188], #749:On ground near body in secret area connected by vent to upper floor room in crew quarters area rec1
-        ["placeaploc", "", [262], 750, 1786], #750:In body in secret area connected by vent to upper floor room in crew quarters area rec1
+        ["placeaploc", "KeepDuplicates", [262], 750, 1786], #750:In body in secret area connected by vent to upper floor room in crew quarters area rec1
+        ["destroy", "RemoveDuplicates", 1786],
         ["placeaploc", "KeepDuplicates", vector(13.82, -194.71, 7.4), 751, 623], #751:On ground near body in secret area connected by vent to upper floor room in crew quarters area 2 rec1
         ["destroy", "RemoveDuplicates", 623],
         ["placeaploc", "KeepDuplicates", [262], 752, 708], #752:In body in secret area connected by vent to upper floor room in crew quarters area 2 rec1
@@ -1432,23 +1439,23 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 1787],
         ["placeaploc", "", vector(-76.09, -204.41, 12.5), 755, 1942], #755:On shelf in upper floor keypadded room in crew quarters area rec1
         ["placeaploc", "", vector(-100.05, -207.98, 7.62), 756, 775], #756:On ground in upper floor keypadded room in crew quarters area rec1
-        ["placeaploc", "", [646, 392], 757, 645], #757:In bodies in upper floor keypadded room in crew quarters area rec1
+        ["placeaploc", "KeepDuplicates", [646, 392], 757, 645], #757:In bodies in upper floor keypadded room in crew quarters area rec1
+        ["destroy", "RemoveDuplicates", 645],
         ["placeaploc", "KeepDuplicates", [646, 392], 758, 224], #758:In bodies in upper floor keypadded room in crew quarters area 2 rec1
         ["destroy", "RemoveDuplicates", 224],
         ["placeaploc", "KeepDuplicates", vector(-101.14, -203.19, 12.51), 759, 1738], #759:On shelf in upper floor keypadded room in crew quarters area 2 rec1
         ["destroy", "RemoveDuplicates", 1738],
         ["placeaploc", "KeepDuplicates", vector(-99.87, -202.9, 12.83), 760, 148], #760:On shelf in upper floor keypadded room in crew quarters area 3 rec1
         ["destroy", "RemoveDuplicates", 148],
-        ["placeaploc", "", [1317], 761, 149], #761:In desk in upper floor keypadded room in crew quarters area rec1
+        ["placeaploc", "KeepDuplicates", [1317], 761, 149], #761:In desk in upper floor keypadded room in crew quarters area rec1
+        ["destroy", "RemoveDuplicates", 149],
         ["placeaploc", "KeepDuplicates", vector(-78.6, -202.31, 10.2), 762, 351], #762:On ground in upper floor keypadded room in crew quarters area 2 rec1
         ["destroy", "RemoveDuplicates", 351],
         ["placeaploc", "", [1924], 763, 255], #763:In body in upper floor room in crew quarters area rec1
         ["placeaploc", "", [479], 764, 486], #764:In desk in upper floor room in crew quarters area rec1
-        ["placeaploc", "KeepDuplicates", [356], 765, 217], #765:In body in upper floor room in crew quarters area 2 rec1
-        ["destroy", "RemoveDuplicates", 217],
+        ["placeaploc", "", [356], 765, 217], #765:In body in upper floor room in crew quarters area 2 rec1
         ["placeaploc", "", [517], 766, 1205], #766:In body in crew quarters area near garden entrance rec1
-        ["placeaploc", "KeepDuplicates", [786], 767, 226], #767:In body in upper floor room in crew quarters area 3 rec1
-        ["destroy", "RemoveDuplicates", 226],
+        ["placeaploc", "", [786], 767, 226], #767:In body in upper floor room in crew quarters area 3 rec1
         ["placeaploc", "", vector(36.64, -191.85, -12.88), 768, 683], #768:On ground near entrance to garden rec1
         ["placeaploc", "", [102], 769, 127], #769:In body at bottom of pool in athletics area rec1
         ["placeaploc", "", [1546], 770, 287], #770:In enemy in athletics area in basketball court near transmitter rec1
@@ -1457,7 +1464,8 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 1516],
         ["placeaploc", "", vector(22.18, -486, -9.36), 773, 1983], #773:On desk near athletics entrance rec1
         ["placeaploc", "", [1921], 774, 1549], #774:In trash can near athletics entrance rec1
-        ["placeaploc", "", [566], 775, 1366], #775:In body in bathroom near mall entrance rec1
+        ["placeaploc", "KeepDuplicates", [566], 775, 1366], #775:In body in bathroom near mall entrance rec1
+        ["destroy", "RemoveDuplicates", 1366],
         ["placeaploc", "", [1551], 776, 1554], #776:In body in radioactive room with medical beds near mall entrance rec1
         ["placeaploc", "", vector(-63.61, -426.18, -12.36), 777, 625], #777:On ground in radioactive room with medical beds near mall entrance rec1
         ["placeaploc", "KeepDuplicates", vector(-55.31, -431.93, -12.36), 778, 1550], #778:On ground in radioactive room with medical beds near mall entrance 2 rec1
@@ -1476,20 +1484,19 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [786], 787, 237], #787:In body in upper floor room in crew quarters area 5 rec1
         ["destroy", "RemoveDuplicates", 237],
         ["placeaploc", "", vector(-108.92, -321.64, -7.75), 788, 1174], #788:In grass near plant in crew quarters area rec1
-        ["placeaploc", "KeepDuplicates", vector(-65.68, -327.21, -7.87), 789, 1434], #789:In grass near plant in crew quarters area 2 rec1
-        ["destroy", "RemoveDuplicates", 1434],
+        ["placeaploc", "", vector(-65.68, -327.21, -7.87), 789, 1434], #789:In grass near plant in crew quarters area 2 rec1
         ["placeaploc", "", vector(-107.55, -375.08, 7.65), 790, 499], #790:On ground in upper floor room in crew quarters area rec1
-        ["placeaploc", "", [1034], 791, 622], #791:In desk in room in crew quarters area rec1
-        ["placeaploc", "KeepDuplicates", [949], 792, 732], #792:In desk in upper floor room in crew quarters area 2 rec1
-        ["destroy", "RemoveDuplicates", 732],
+        ["placeaploc", "KeepDuplicates", [1034], 791, 622], #791:In desk in room in crew quarters area rec1
+        ["destroy", "RemoveDuplicates", 622],
+        ["placeaploc", "", [949], 792, 732], #792:In desk in upper floor room in crew quarters area 2 rec1
         ["placeaploc", "", [859], 793, 1141], #793:In body in room in crew quarters area rec1
-        ["placeaploc", "KeepDuplicates", [724], 794, 1558], #794:In body in upper floor room in crew quarters area 6 rec1
-        ["destroy", "RemoveDuplicates", 1558],
+        ["placeaploc", "", [724], 794, 1558], #794:In body in upper floor room in crew quarters area 6 rec1
         ["placeaploc", "KeepDuplicates", [724], 795, 254], #795:In body in upper floor room in crew quarters area 7 rec1
         ["destroy", "RemoveDuplicates", 254],
         ["placeaploc", "", [571], 796, 679], #796:In desk near security control station in room with glass looking into crew quarters rec1
         ["placeaploc", "", vector(-43.97, -361.52, -12.86), 797, 678], #797:On ground near body in crew quarters area next to glass rec1
-        ["placeaploc", "", [670], 798, 621], #798:In body in crew quarters area next to glass rec1
+        ["placeaploc", "KeepDuplicates", [670], 798, 621], #798:In body in crew quarters area next to glass rec1
+        ["destroy", "RemoveDuplicates", 621],
         ["placeaploc", "", vector(23.72, -213.93, 17.33), 799, 1435], #799:Above on pipe in secret area connected by vent to upper floor room in crew quarters area rec1
         ["placeaploc", "", [194], 800, 101], #800:In security crate in room near garden entrance rec1
         ["placeaploc", "", [1999, 2000], 801, 216], #801:In crates in room near garden entrance rec1
@@ -1505,8 +1512,7 @@ mapinstructions =
         ["placeaploc", "", vector(-10.17, -307.15, -12.52), 807, 1443], #807:Under bench near window with person near elevator rec1
         ["placeaploc", "KeepDuplicates", [751], 808, 445], #808:In body in upper floor room in crew quarters area 8 rec1
         ["destroy", "RemoveDuplicates", 445],
-        ["placeaploc", "KeepDuplicates", [751], 809, 494], #809:In body in upper floor room in crew quarters area 9 rec1
-        ["destroy", "RemoveDuplicates", 494],
+        ["placeaploc", "", [751], 809, 494], #809:In body in upper floor room in crew quarters area 9 rec1
         ["placeaploc", "", [403, 405], 810, 128], #810:In bodies on med bed 3 doors away from garden entrance rec1
         ["placeaploc", "KeepDuplicates", [403, 405], 811, 416], #811:In bodies on med bed 3 doors away from garden entrance 2 rec1
         ["destroy", "RemoveDuplicates", 416],
@@ -1516,9 +1522,9 @@ mapinstructions =
         ["placeaploc", "", vector(3.79, -405.89, -12.45), 814, 454], #814:In safe behind desk nearish elevator rec1
         ["placeaploc", "KeepDuplicates", vector(4.7, -403.67, -12.2), 815, 409], #815:In safe behind desk nearish elevator 2 rec1
         ["destroy", "RemoveDuplicates", 409],
-        ["placeaploc", "", [107], 816, 808], #816:In body near 2 elevator rec1
-        ["placeaploc", "KeepDuplicates", [356], 817, 80], #817:In body in upper floor room in crew quarters area 10 rec1
-        ["destroy", "RemoveDuplicates", 80],
+        ["placeaploc", "KeepDuplicates", [107], 816, 808], #816:In body near elevator 2 rec1
+        ["destroy", "RemoveDuplicates", 808],
+        ["placeaploc", "", [356], 817, 80], #817:In body in upper floor room in crew quarters area 10 rec1
         ["randomizerepl", "", 425],
         ["replacecybmodshop", "StatsSkillsPsi", [803, 965, 222, 804], vector(53.6, -400.35, -11.32)],
         ["respecmachine", "Respec", vector(53.6, -400.35, -11.32)],
@@ -1646,10 +1652,12 @@ mapinstructions =
         ["placeaploc", "", [526], 871, 711], #871:In security crate in security station rec2
         ["placeaploc", "KeepDuplicates", [526], 872, 145], #872:In security crate in security station 2 rec2
         ["destroy", "RemoveDuplicates", 145],
-        ["placeaploc", "", [464], 873, 523], #873:In body in secuirty station rec2
-        ["placeaploc", "KeepDuplicates", [464], 874, 776], #874:In body in secuirty station 2 rec2
+        ["placeaploc", "KeepDuplicates", [464], 873, 523], #873:In body in security station rec2
+        ["destroy", "RemoveDuplicates", 523],
+        ["placeaploc", "KeepDuplicates", [464], 874, 776], #874:In body in security station 2 rec2
         ["destroy", "RemoveDuplicates", 776],
-        ["placeaploc", "", [327], 875, 447], #875:In desk in security room rec2
+        ["placeaploc", "KeepDuplicates", [327], 875, 447], #875:In desk in security station rec2
+        ["destroy", "RemoveDuplicates", 447],
         ["placeaploc", "", [195, 199], 876, 260], #876:In security crates in chemical storage rec2
         ["placeaploc", "KeepDuplicates", [195, 199], 877, 485], #877:In security crates in chemical storage 2 rec2
         ["destroy", "RemoveDuplicates", 485],
@@ -1726,7 +1734,8 @@ mapinstructions =
         ["placeaploc", "", vector(-227.84, -348, 1.38), 900, 394], #900:On ground near body near replicator in store with broken sign rec3
         ["placeaploc", "", vector(-205.4, -444.06, -12.75), 901, 1941], #901:On ground near body near resurrection station in security station rec3
         ["placeaploc", "", [271], 902, 209], #902:In body in theater rec3
-        ["placeaploc", "", [451], 903, 456], #903:In body in bathroom near crew quarters entrance rec3
+        ["placeaploc", "KeepDuplicates", [451], 903, 456], #903:In body in bathroom near crew quarters entrance rec3
+        ["destroy", "RemoveDuplicates", 456],
         ["placeaploc", "", [1370, 1405], 904, 1121], #904:In waste barrels in bathroom near crew quarters entrance rec3
         ["placeaploc", "", [183], 905, 184], #905:In security crate near replicator in narco stims shop rec3
         ["placeaploc", "", [498], 906, 152], #906:In dead spider near neural implant express store rec3
@@ -1740,12 +1749,14 @@ mapinstructions =
         ["placeaploc", "", [181], 913, 182], #913:In security crate behind counter in casino rec3
         ["placeaploc", "KeepDuplicates", [181], 914, 1120], #914:In security crate behind counter in casino 2 rec3
         ["destroy", "RemoveDuplicates", 1120],
-        ["placeaploc", "", [1813], 915, 119], #915:In body on ramp in casino rec3
+        ["placeaploc", "KeepDuplicates", [1813], 915, 119], #915:In body on ramp in casino rec3
+        ["destroy", "RemoveDuplicates", 119],
         ["placeaploc", "", vector(-102.92, -535.53, -9.36), 916, 2230], #916:On ground near ramp in casino rec3
         ["placeaploc", "", [446], 917, 328], #917:In body behind counter in casino rec3
         ["placeaploc", "KeepDuplicates", [446], 918, 447], #918:In body behind counter in casino 2 rec3
         ["destroy", "RemoveDuplicates", 447],
-        ["placeaploc", "", vector(-117.11, -574.55, -6.42), 919, 87], #919:On counter at back of casino rec3
+        ["placeaploc", "KeepDuplicates", vector(-117.11, -574.55, -6.42), 919, 87], #919:On counter at back of casino rec3
+        ["destroy", "RemoveDuplicates", 87],
         ["placeaploc", "", vector(-194.47, -533.15, 5.01), 920, 457], #920:On bed in Nikki's room rec3
         ["placeaploc", "", vector(-198.43, -524.57, 3.38), 921, 312], #921:On floor in Nikki's room rec1
         ["placeaploc", "", [669], 922, 668], #922:In body in Lance's room rec3
@@ -1755,8 +1766,10 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [1214], 926, 832], #926:In body near charger in security station 2 rec3
         ["destroy", "RemoveDuplicates", 832],
         ["placeaploc", "", vector(-228.68, -464.05, -5.83), 927, 1940], #927:On shelf in security station rec3
-        ["placeaploc", "", vector(-228.34, -461.49, -11.78), 928, 1948], #928:On ground in security station rec3
-        ["placeaploc", "", [287], 929, 323], #929:In body near resurrection station in security station rec3
+        ["placeaploc", "KeepDuplicates", vector(-228.34, -461.49, -11.78), 928, 1948], #928:On ground in security station rec3
+        ["destroy", "RemoveDuplicates", 1948],
+        ["placeaploc", "KeepDuplicates", [287], 929, 323], #929:In body near resurrection station in security station rec3
+        ["destroy", "RemoveDuplicates", 323],
         ["placeaploc", "", [142], 930, 321], #930:In body in bathroom near resurrection station in security station rec3
         ["placeaploc", "KeepDuplicates", [142], 931, 201], #931:In body in bathroom near resurrection station in security station 2 rec3
         ["destroy", "RemoveDuplicates", 201],
@@ -1768,7 +1781,8 @@ mapinstructions =
         ["placeaploc", "", [178], 936, 510], #936:In security crate in fashion outlet store rec3
         ["placeaploc", "KeepDuplicates", [178], 937, 149], #937:In security crate in fashion outlet store 2 rec3
         ["destroy", "RemoveDuplicates", 149],
-        ["placeaploc", "", [259], 938, 198], #938:In body near replicator in store with broken sign rec3
+        ["placeaploc", "KeepDuplicates", [259], 938, 198], #938:In body near replicator in store with broken sign rec3
+        ["destroy", "RemoveDuplicates", 198],
         ["placeaploc", "KeepDuplicates", [259], 939, 185], #939:In body near replicator in store with broken sign 2 rec3
         ["destroy", "RemoveDuplicates", 185],
         ["placeaploc", "KeepDuplicates", [259], 940, 500], #940:In body near replicator in store with broken sign 3 rec3
