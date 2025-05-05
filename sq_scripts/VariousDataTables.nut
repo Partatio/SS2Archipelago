@@ -4129,5 +4129,12 @@ ItemTable = {
     "388": ["CyberModules", 20],
     "389": ["CyberModules", 30],
     "390": ["CyberModules", 16],
+    "391": ["Rad Patch", [["StackCount", 3]]],
+    "392": ["Speed Boost", [["StackCount", 3]]],
+    "392": ["Med Patch", [["StackCount", 3]]],
+    "393": ["Psi Booster", [["StackCount", 3]]],
+    "394": ["Detox Patch", [["StackCount", 3]]],
+    "395": ["Medical Kit", [["StackCount", 3]]],
+    "396": ["Maintenance Tool", [["StackCount", 3]]],
     }
 }
