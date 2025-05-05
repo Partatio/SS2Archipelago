@@ -355,17 +355,17 @@ class PlayerScripts extends SqRootScript
 
 	function PickUnhackedReplItem()
 	{
-		local randitemnum = ShockGame.RandRange(0, 115);
+		local randitemnum = ShockGame.RandRange(0, 105);
 		local price = 0;
-		if (randitemnum >= 0 && randitemnum <= 29)
+		if (randitemnum >= 0 && randitemnum <= 19)
 			price = ShockGame.RandRange(2, 6);
-		if (randitemnum >= 30 && randitemnum <= 52)
+		if (randitemnum >= 20 && randitemnum <= 42)
 			price = ShockGame.RandRange(25, 40);
-		if (randitemnum >= 53 && randitemnum <= 85)
+		if (randitemnum >= 43 && randitemnum <= 75)
 			price = ShockGame.RandRange(50, 90);
-		if (randitemnum >= 86 && randitemnum <= 99)
+		if (randitemnum >= 76 && randitemnum <= 89)
 			price = ShockGame.RandRange(80, 120);
-		if (randitemnum >= 100 && randitemnum <= 115)
+		if (randitemnum >= 90 && randitemnum <= 105)
 			price = ShockGame.RandRange(90, 150);
 		return [VariousDataTables.UnhackedReplItems[randitemnum], price];
 	}
