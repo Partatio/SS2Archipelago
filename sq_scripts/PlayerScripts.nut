@@ -1107,6 +1107,41 @@ class PlayerScripts extends SqRootScript
 					wormheartimplantcount += 1
 					break;
 					}
+				case "391":
+					{
+					radhypocount += 3
+					break;
+					}
+				case "392":
+					{
+					speedboostercount += 3
+					break;
+					}
+				case "393":
+					{
+					medhypocount += 3
+					break;
+					}
+				case "394":
+					{
+					psihypocount += 3
+					break;
+					}
+				case "395":
+					{
+					antitoxinhypocount += 3
+					break;
+					}
+				case "396":
+					{
+					medkitcount += 3
+					break;
+					}
+				case "397":
+					{
+					maintenancetoolcount += 3
+					break;
+					}
 				default:
 					remainingitems.append(itemid);
 				}
