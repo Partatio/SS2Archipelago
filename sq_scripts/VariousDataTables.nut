@@ -1005,9 +1005,9 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 116],
         ["placeaploc", "KeepDuplicates", [2116], 536, 200], #536:In desk near replicator in entrance area 3 hydroponics_D
         ["destroy", "RemoveDuplicates", 200],
-        ["placeaploc", "KeepDupllicates", vector(-60.28, -42.07, 1.08), 537, 967], #537:On ground to right of entrance hydroponics_D
+        ["placeaploc", "KeepDuplicates", vector(-60.28, -42.07, 1.08), 537, 967], #537:On ground to right of entrance hydroponics_D
         ["destroy", "RemoveDuplicates", 967],
-        ["placeaploc", "KeepDupllicates", [190], 538, 122], #538:In body near entrance hydroponics_D
+        ["placeaploc", "KeepDuplicates", [190], 538, 122], #538:In body near entrance hydroponics_D
         ["destroy", "RemoveDuplicates", 538],
         ["placeaploc", "KeepDuplicates", [190], 539, 100], #539:In body near entrance 2 hydroponics_D
         ["destroy", "RemoveDuplicates", 100],
