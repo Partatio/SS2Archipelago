@@ -227,8 +227,10 @@ mapinstructions =
         ["placeaploc", "", vector(-89.82, 22.29, -1.35), 126, 1764], #126:Behind forcefield in wall cutout in room in walkway above flooded hallway med/sci_2
         ["placeaploc", "KeepDuplicates", vector(-87.61, 21.94, 3.98), 127, 1838], #127:Behind forcefield in wall cutout in room in walkway above flooded hallway 2 med/sci_2
         ["destroy", "RemoveDuplicates", 1838],
-        ["placeaploc", "", [646], 128, 1375], #128:In body in armory near entrance med/sci_2
-        ["placeaploc", "", [595, 604], 129, 603], #129:In crates in armory near entrance med/sci_2
+        ["placeaploc", "KeepDuplicates", [646], 128, 1375], #128:In body in armory near entrance med/sci_2
+        ["destroy", "RemoveDuplicates", 1375],
+        ["placeaploc", "KeepDuplicates", [595, 604], 129, 603], #129:In crates in armory near entrance med/sci_2
+        ["destroy", "RemoveDuplicates", 603],
         ["placeaploc", "KeepDuplicates", [595, 604], 130, 601], #130:In crates in armory near entrance 2 med/sci_2
         ["destroy", "RemoveDuplicates", 601],
         ["placeaploc", "KeepDuplicates", [595, 604], 131, 593], #131:In crates in armory near entrance 3 med/sci_2
@@ -1003,9 +1005,9 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 116],
         ["placeaploc", "KeepDuplicates", [2116], 536, 200], #536:In desk near replicator in entrance area 3 hydroponics_D
         ["destroy", "RemoveDuplicates", 200],
-        ["placeaploc", "KeepDupllicates", vector(-60.28, -42.07, 1.08), 537, 967], #537:On ground to right of entrance hydroponics_D
+        ["placeaploc", "KeepDuplicates", vector(-60.28, -42.07, 1.08), 537, 967], #537:On ground to right of entrance hydroponics_D
         ["destroy", "RemoveDuplicates", 967],
-        ["placeaploc", "KeepDupllicates", [190], 538, 122], #538:In body near entrance hydroponics_D
+        ["placeaploc", "KeepDuplicates", [190], 538, 122], #538:In body near entrance hydroponics_D
         ["destroy", "RemoveDuplicates", 538],
         ["placeaploc", "KeepDuplicates", [190], 539, 100], #539:In body near entrance 2 hydroponics_D
         ["destroy", "RemoveDuplicates", 100],
@@ -1837,7 +1839,8 @@ mapinstructions =
     "command1.mis": [
         ["randomizerepl", "", 394],
         ["command1repl", ""],
-        ["placeaploc", "", [1182], 948, 1186], #948:In body near resurrection station command_A
+        ["placeaploc", "KeepDuplicates", [1182], 948, 1186], #948:In body near resurrection station command_A
+        ["destroy", "RemoveDuplicates", 1186],
         ["placeaploc", "", [2243, 2375, 2201], 949, 2172], #949:In bodies near tram near replicators command_A
         ["placeaploc", "", vector(817.98, 144.53, -20.71), 950, 1188], #950:On ground near body in cargo bay a command_A
         ["placeaploc", "", [275], 951, 2193], #951:In body near shuttle command hallway entrance command_A
@@ -1872,9 +1875,11 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [275], 971, 2194], #971:In body near shuttle command hallway entrance 2 command_A
         ["destroy", "RemoveDuplicates", 2194],
         ["placeaploc", "", vector(868.18, 89.74, -17.46), 972, 2380], #972:On ground against wall with grate at top of ramp towards shuttle control command_A
-        ["placeaploc", "", [946, 2232], 973, 2233], #973:In crates in cargo bay a command_A
+        ["placeaploc", "KeepDuplicates", [946, 2232], 973, 2233], #973:In crates in cargo bay a command_A
+        ["destroy", "RemoveDuplicates", 2233],
         ["placeaploc", "", [2255], 974, 2095], #974:In body in room overlooking shuttle bay a command_A
-        ["placeaploc", "", [91], 975, 1179], #975:In body in cargo bay a command_A
+        ["placeaploc", "KeepDuplicates", [91], 975, 1179], #975:In body in cargo bay a command_A
+        ["destroy", "RemoveDuplicates", 1179],
         ["placeaploc", "KeepDuplicates", [91], 976, 646], #976:In body in cargo bay a 2 command_A
         ["destroy", "RemoveDuplicates", 646],
         ["placeaploc", "KeepDuplicates", [91], 977, 401], #977:In body in cargo bay a 3 command_A
@@ -1882,10 +1887,12 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [946, 2232], 978, 408], #978:In crates in cargo bay a 2 command_A
         ["destroy", "RemoveDuplicates", 408],
         ["placeaploc", "", vector(728.72, 214.48, -2.37), 979, 104], #979:On window sill in room overlooking shuttle bay b command_A
-        ["placeaploc", "", vector(767.86, 142.6, -6.86), 980, 2238], #980:On ground in upper area of gargo bay b command_A
+        ["placeaploc", "KeepDuplicates", vector(767.86, 142.6, -6.86), 980, 2238], #980:On ground in upper area of gargo bay b command_A
+        ["destroy", "RemoveDuplicates", 2238],
         ["placeaploc", "KeepDuplicates", vector(761.8, 167.74, -6.87), 981, 107], #981:On ground in upper area of gargo bay b 2 command_A
         ["destroy", "RemoveDuplicates", 107],
-        ["placeaploc", "", [2240, 2236], 982, 2242], #982:In crates in cargo bay b command_A
+        ["placeaploc", "KeepDuplicates", [2240, 2236], 982, 2242], #982:In crates in cargo bay b command_A
+        ["destroy", "RemoveDuplicates", 2242],
         ["placeaploc", "KeepDuplicates", [2240, 2236], 983, 184], #983:In crates in cargo bay b 2 command_A
         ["destroy", "RemoveDuplicates", 184],
         ["placeaploc", "KeepDuplicates", [2240, 2236], 984, 2237], #984:In crates in cargo bay b 3 command_A
@@ -1952,14 +1959,18 @@ mapinstructions =
         ["destroy", "", 1245] #qb filters that change the first item in the repl to the sympathetic resonator, which we dont want to happen
     ],
     "command2.mis": [
-        ["placeaploc", "", [595, 584], 995, 155], #995:In bodies in lobby near entrance command_B
-        ["placeaploc", "", vector(65.73, -1.12, -27.92), 996, 2179], #996:On ground near body behind table in path towards officers' area command_B
+        ["placeaploc", "KeepDuplicates", [595, 584], 995, 155], #995:In bodies in lobby near entrance command_B
+        ["destroy", "RemoveDuplicates", 155],
+        ["placeaploc", "KeepDuplicates", vector(65.73, -1.12, -27.92), 996, 2179], #996:On ground near body behind table in path towards officers' area command_B
+        ["destroy", "RemoveDuplicates", 2179],
         ["placeaploc", "", vector(72.34, -15.85, -39.46), 997, 2178], #997:On ground near body behind desk in lobby near entrance command_B
         ["placeaploc", "", vector(75.2, -72.57, -12.17), 998, 2081], #998:In chemical storeroom command_B
         ["placeaploc", "", vector(73.04, -89.81, -25.77), 999, 2275], #999:On ground near body in area under officers' area command_B
         ["placeaploc", "", vector(90.01, -139.35, -11.53), 1000, 1366], #1000:On ground near body in room in officers' area command_B
-        ["placeaploc", "", vector(57.58, -88.75, -11.65), 1001, 2164], #1001:In corner in security room in officers' area command_B
-        ["placeaploc", "", vector(41.37, -137.01, -12.52), 1002, 1393], #1002:On ground in room in officers' area command_B
+        ["placeaploc", "KeepDuplicates", vector(57.58, -88.75, -11.65), 1001, 2164], #1001:In corner in security room in officers' area command_B
+        ["destroy", "RemoveDuplicates", 2164],
+        ["placeaploc", "KeepDuplicates", vector(41.37, -137.01, -12.52), 1002, 1393], #1002:On ground in room in officers' area command_B
+        ["destroy", "RemoveDuplicates", 1393],
         ["placeaploc", "KeepDuplicates", vector(40.83, -139.28, -12.49), 1003, 2292], #1003:On ground in room in officers' area 2 command_B
         ["destroy", "RemoveDuplicates", 2292],
         ["placeaploc", "", vector(41.16, -143.5, -10.69), 1004, 2291], #1004:On bed in room in officers' area command_B
@@ -1988,23 +1999,28 @@ mapinstructions =
         ["placeaploc", "", vector(-49.5, -16.5, -10.3), 1022, 1900], #1022:On ground in shower in room near replicator near window smashed with bench command_B
         ["placeaploc", "KeepDuplicates", vector(-81.87, -41.42, -27.69), 1023, 1266], #1023:On ground near escape pod bay near beams 2 command_B
         ["destroy", "RemoveDuplicates", 1266],
-        ["placeaploc", "", vector(-79.75, -57.26, -27.92), 1024, 1280], #1024:Hidden behind bench near escape pod bay near beams command_B
+        ["placeaploc", "KeepDuplicates", vector(-79.75, -57.26, -27.92), 1024, 1280], #1024:Hidden behind bench near escape pod bay near beams command_B
+        ["destroy", "RemoveDuplicates", 1280],
         ["placeaploc", "KeepDuplicates", vector(-73.99, -50.32, -27.84), 1025, 415], #1025:On ground near escape pod bay near beams 3 command_B
         ["destroy", "RemoveDuplicates", 415],
-        ["placeaploc", "", [1565], 1026, 2228], #1026:In locker in room near replicator near window smashed with bench command_B
+        ["placeaploc", "KeepDuplicates", [1565], 1026, 2228], #1026:In locker in room near replicator near window smashed with bench command_B
+        ["destroy", "RemoveDuplicates", 2228],
         ["placeaploc", "KeepDuplicates", [1565], 1027, 797], #1027:In locker in room near replicator near window smashed with bench 2 command_B
         ["destroy", "RemoveDuplicates", 797],
         ["placeaploc", "", vector(-65.9, -34.3, -8.77), 1028, 2227], #1028:On ground in room near replicator near window smashed with bench command_B
-        ["placeaploc", "", [744], 1029, 1400], #1029:In body near beams in escape pod bay area command_B
+        ["placeaploc", "KeepDuplicates", [744], 1029, 1400], #1029:In body near beams in escape pod bay area command_B
+        ["destroy", "RemoveDuplicates", 1400],
         ["placeaploc", "", vector(-49.22, -47.11, -63.25), 1030, 1301], #1030:On ground below broken bridge connected to escape pod area command_B
-        ["placeaploc", "", [183], 1031, 185], #1031:In body near resurrection station command_B
+        ["placeaploc", "KeepDuplicates", [183], 1031, 185], #1031:In body near resurrection station command_B
+        ["destroy", "RemoveDuplicates", 185],
         ["placeaploc", "KeepDuplicates", [183], 1032, 184], #1032:In body near resurrection station 2 command_B
         ["destroy", "RemoveDuplicates", 184],
         ["placeaploc", "KeepDuplicates", [183], 1033, 1528], #1033:In body near resurrection station 3 command_B
         ["destroy", "RemoveDuplicates", 1528],
         ["placeaploc", "", [1419], 1034, 1415], #1034:In body in room under resurrection station command_B
         ["placeaploc", "", vector(24.86, -139.75, -26.15), 1035, 188], #1035:On ground in shower in bathroom connected to area under officers' quarters command_B
-        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1036, 2163], #1036:In lockers in rooms in officers' area command_B
+        ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1036, 2163], #1036:In lockers in rooms in officers' area command_B
+        ["destroy", "RemoveDuplicates", 2163],
         ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1037, 2162], #1037:In lockers in rooms in officers' area 2 command_B
         ["destroy", "RemoveDuplicates", 2162],
         ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1038, 2290], #1038:In lockers in rooms in officers' area 3 command_B
@@ -2028,22 +2044,28 @@ mapinstructions =
         ["placeaploc", "", [1281], 1047, 1297], #1047:In body in bathroom connected to area under officers' quarters command_B
         ["placeaploc", "", vector(117.86, -86.25, -25.38), 1048, 2274], #1048:On ground on path towards officers' area command_B
         ["placeaploc", "", [2279], 1049, 2283], #1049:In desk in room in officers' quarters command_B
-        ["placeaploc", "", vector(62.13, -104.56, -22.89), 1050, 2379], #1050:On counter near bathroom entrance in area under officers' quarters command_B
+        ["placeaploc", "KeepDuplicates", vector(62.13, -104.56, -22.89), 1050, 2379], #1050:On counter near bathroom entrance in area under officers' quarters command_B
+        ["destroy", "RemoveDuplicates", 2379],
         ["placeaploc", "", [1424], 1051, 1428], #1051:In security crate in area under officers' quarters command_B
         ["placeaploc", "KeepDuplicates", [1424], 1052, 2277], #1052:In security crate in area under officers' quarters 2 command_B
         ["destroy", "RemoveDuplicates", 2277],
         ["placeaploc", "KeepDuplicates", [1424], 1053, 2276], #1053:In security crate in area under officers' quarters 3 command_B
         ["destroy", "RemoveDuplicates", 2276],
-        ["placeaploc", "", vector(79.96, -92.39, -25.92), 1054, 2381], #1054:On ground near benches in area under officers' quarters command_B
-        ["placeaploc", "", [1913], 1055, 2278], #1055:In body in area under officers' quarters command_B
-        ["placeaploc", "", vector(75.55, -60.94, -25.36), 1056, 1420], #1056:On ground hidden behind bench in area under officers' quarters command_B
+        ["placeaploc", "KeepDuplicates", vector(79.96, -92.39, -25.92), 1054, 2381], #1054:On ground near benches in area under officers' quarters command_B
+        ["destroy", "RemoveDuplicates", 2381],
+        ["placeaploc", "KeepDuplicates", [1913], 1055, 2278], #1055:In body in area under officers' quarters command_B
+        ["destroy", "RemoveDuplicates", 2278],
+        ["placeaploc", "KeepDuplicates", vector(75.55, -60.94, -25.36), 1056, 1420], #1056:On ground hidden behind bench in area under officers' quarters command_B
+        ["destroy", "RemoveDuplicates", 1420],
         ["placeaploc", "", [1675], 1057, 2284], #1057:In locker in room with muerte written on wall in officers' quarters command_B
         ["placeaploc", "KeepDuplicates", [1675], 1058, 2286], #1058:In locker in room with muerte written on wall in officers' quarters 2 command_B
         ["destroy", "RemoveDuplicates", 2286],
         ["placeaploc", "KeepDuplicates", [1675], 1059, 2287], #1059:In locker in room with muerte written on wall in officers' quarters 3 command_B
         ["destroy", "RemoveDuplicates", 2287],
-        ["placeaploc", "", [1365], 1060, 2285], #1060:In body in room in officers' quarters command_B
-        ["placeaploc", "", [532], 1061, 1423], #1061:In desk in security room in officers' area command_B
+        ["placeaploc", "KeepDuplicates", [1365], 1060, 2285], #1060:In body in room in officers' quarters command_B
+        ["destroy", "RemoveDuplicates", 2285],
+        ["placeaploc", "KeepDuplicates", [532], 1061, 1423], #1061:In desk in security room in officers' area command_B
+        ["destroy", "RemoveDuplicates", 1423],
         ["placeaploc", "KeepDuplicates", [532], 1062, 148], #1062:In desk in security room in officers' area 2 command_B
         ["destroy", "RemoveDuplicates", 148],
         ["placeaploc", "", [84], 1063, 2385], #1063:In body in path towards officers' area command_B
@@ -2087,7 +2109,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", vector(138.46, 2.28, 32.21), 1094, 1583], #1094:On desk near large window in bridge area 2 command_B
         ["destroy", "RemoveDuplicates", 1583],
         ["placeaploc", "", vector(113.76, -1.17, 18.54), 1095, 2217], #1095:Hidden under desk in lower area near large window in bridge area command_B
-        ["placeaploc", "", [268, 261], 1096, 1260], #1096:In bodies in upper area of bridge command_B
+        ["placeaploc", "KeepDuplicates", [268, 261], 1096, 1260], #1096:In bodies in upper area of bridge command_B
+        ["destroy", "RemoveDuplicates", 1260],
         ["placeaploc", "KeepDuplicates", [268, 261], 1097, 2209], #1097:In bodies in upper area of bridge 2 command_B
         ["destroy", "RemoveDuplicates", 2209],
         ["placeaploc", "", vector(71.4, -10.85, 44.18), 1098, 2208], #1098:On ground near body in upper area of bridge command_B
@@ -2107,10 +2130,12 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [595], 1109, 1262], #1109:In body in water in lobby near entrance 2 command_B
         ["destroy", "RemoveDuplicates", 1262],
         ["placeaploc", "", vector(84.89, -8.72, -36.92), 1110, 292], #1110:On desk in lobby near entrance command_B
-        ["placeaploc", "", [584], 1111, 1406], #1111:In body behind desk in lobby near entrance command_B
+        ["placeaploc", "KeepDuplicates", [584], 1111, 1406], #1111:In body behind desk in lobby near entrance command_B
+        ["destroy", "RemoveDuplicates", 1406],
         ["placeaploc", "", [1339], 1112, 1398], #1112:In body on bed in room in officers' area command_B
         ["placeaploc", "", vector(76.22, -12.15, -27.9), 1113, 2378], #1113:On ground in path towards officers' area command_B
-        ["placeaploc", "", [2124], 1114, 2273], #1114:In body near table in path towards officers' area command_B
+        ["placeaploc", "KeepDuplicates", [2124], 1114, 2273], #1114:In body near table in path towards officers' area command_B
+        ["destroy", "RemoveDuplicates", 2273],
         ["placeaploc", "KeepDuplicates", [2124], 1115, 2181], #1115:In body near table in path towards officers' area 2 command_B
         ["destroy", "RemoveDuplicates", 2181],
         ["placeaploc", "KeepDuplicates", [2124], 1116, 2189], #1116:In body near table in path towards officers' area 3 command_B
@@ -2170,7 +2195,8 @@ mapinstructions =
         ["directmonstergenrando", "", 2485, "6"],
     ],
     "rick1.mis": [
-        ["placeaploc", "", [1053], 1119, 1466], #1119:In body at top of ladder near entrance rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1053], 1119, 1466], #1119:In body at top of ladder near entrance rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1466],
         ["placeaploc", "", vector(-60.3, 7.03, 40.12), 1120, 1464], #1120:On ground near body at top of ladder near entrance rickenbacker_deck_A
         ["placeaploc", "", vector(-71.9, -100.14, 80.23), 1121, 490], #1121:On ground near nacelle b door near resurrection station rickenbacker_deck_A
         ["placeaploc", "", [2157], 1122, 2161], #1122:In high-security crate near resurrection station rickenbacker_deck_A
@@ -2180,7 +2206,8 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 2159],
         ["placeaploc", "KeepDuplicates", [2157], 1125, 2160], #1125:In high-security crate near resurrection station 4 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2160],
-        ["placeaploc", "", vector(-108.81, -41.08, 96.7), 1126, 1782], #1126:On ground near body near chemical storeroom rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", vector(-108.81, -41.08, 96.7), 1126, 1782], #1126:On ground near body near chemical storeroom rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1782],
         ["placeaploc", "", vector(-163.59, -31.33, 58.68), 1127, 1612], #1127:On ground near body on top of fuel cell near bridge that extends rickenbacker_deck_A
         ["placeaploc", "", vector(-210.28, 21.49, 42.7), 1128, 1771], #1128:Under desk across bridge that extends rickenbacker_deck_A
         ["placeaploc", "", vector(-276.53, 2.5, 170.23), 1129, 1304], #1129:On ground on path to pod2 rickenbacker_deck_A
@@ -2202,7 +2229,8 @@ mapinstructions =
         ["placeaploc", "", [2164], 1141, 1625], #1141:In security crate near ramp downward near bridge that extends rickenbacker_deck_A
         ["placeaploc", "KeepDuplicates", [2164], 1142, 2166], #1142:In security crate near ramp downward near bridge that extends 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2166],
-        ["placeaploc", "", [1611], 1143, 1615], #1143:In body on top of fuel cell near bridge that extends rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1611], 1143, 1615], #1143:In body on top of fuel cell near bridge that extends rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1615],
         ["placeaploc", "", [2181], 1144, 2182], #1144:In security crate along path to pod 2 in area before radiated area rickenbacker_deck_A
         ["placeaploc", "KeepDuplicates", [2181], 1145, 2183], #1145:In security crate along path to pod 2 in area before radiated area 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2183],
@@ -2222,16 +2250,19 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 2214],
         ["placeaploc", "KeepDuplicates", [2211], 1154, 2212], #1154:In security crate near pod2 exit 4 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2212],
-        ["placeaploc", "", [1636], 1155, 1770], #1155:In body across bridge that extends rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1636], 1155, 1770], #1155:In body across bridge that extends rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1770],
         ["placeaploc", "KeepDuplicates", [1636], 1156, 1773], #1156:In body across bridge that extends 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1773],
         ["placeaploc", "KeepDuplicates", [1636], 1157, 1776], #1157:In body across bridge that extends 3 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1776],
         ["placeaploc", "KeepDuplicates", [1636], 1158, 1779], #1158:In body across bridge that extends 4 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1779],
-        ["placeaploc", "", vector(-196.77, 12.9, 67.11), 1159, 1781], #1159:In vent duct connected to room above bridge that extends rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", vector(-196.77, 12.9, 67.11), 1159, 1781], #1159:In vent duct connected to room above bridge that extends rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1781],
         ["placeaploc", "", vector(-193.95, 2.82, 67.08), 1160, 1796], #1160:In room above bridge that extends rickenbacker_deck_A
-        ["placeaploc", "", [1786], 1161, 1798], #1161:In body on path to pod 2 at start of the path rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1786], 1161, 1798], #1161:In body on path to pod 2 at start of the path rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1798],
         ["placeaploc", "KeepDuplicates", [1786], 1162, 1788], #1162:In body on path to pod 2 at start of the path 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1788],
         ["placeaploc", "KeepDuplicates", vector(-274.36, 32.25, 181.08), 1163, 1365], #1163:Hidden in room behind glass near ladder near end of path to pod 2 rickenbacker_deck_A
@@ -2258,9 +2289,11 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [2178], 1177, 2179], #1177:In crate near first button that extends bridge 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2179],
         ["placeaploc", "", [1780], 1178, 2180], #1178:In enemy near first button that extends bridge rickenbacker_deck_A
-        ["placeaploc", "", vector(-195.6, -65.61, 44.08), 1179, 468], #1179:On broken window sill near first button that extends bridge rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", vector(-195.6, -65.61, 44.08), 1179, 468], #1179:On broken window sill near first button that extends bridge rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 468],
         ["placeaploc", "", vector(-188.85, -61.85, 42.34), 1180, 2096], #1180:On ground near body near first button that extends bridge rickenbacker_deck_A
-        ["placeaploc", "", [1761], 1181, 1766], #1181:In body near first button that extends bridge rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1761], 1181, 1766], #1181:In body near first button that extends bridge rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1766],
         ["placeaploc", "KeepDuplicates", [1761], 1182, 1768], #1182:In body near first button that extends bridge 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1768],
         ["placeaploc", "KeepDuplicates", [1761], 1183, 1767], #1183:In body near first button that extends bridge 3 rickenbacker_deck_A
@@ -2268,11 +2301,13 @@ mapinstructions =
         ["placeaploc", "", [1621, 1619], 1184, 1412], #1184:In bodies at bottom of dual broken ladders that you jump between rickenbacker_deck_A
         ["placeaploc", "", [584], 1185, 1354], #1185:In waste barrel near resurrection station rickenbacker_deck_A
         ["placeaploc", "", vector(-84.2, -32.12, 97.63), 1186, 2153], #1186:On ground at start of path to nacelle b rickenbacker_deck_A
-        ["placeaploc", "", [1565], 1187, 1405], #1187:In body near first fuel cell rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1565], 1187, 1405], #1187:In body near first fuel cell rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1405],
         ["placeaploc", "", vector(-88.81, -60.82, 42.53), 1188, 1608], #1188:On ground near body near first fuel cell rickenbacker_deck_A
         ["placeaploc", "", [2155], 1189, 2156], #1189:In crate behind wall near start of nacelle b rickenbacker_deck_A
         ["placeaploc", "", vector(-104.74, -32.55, 59.1), 1190, 2172], #1190:On top of first fuel cell rickenbacker_deck_A
-        ["placeaploc", "", [1669], 1191, 1680], #1191:In body near chemical storeroom rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1669], 1191, 1680], #1191:In body near chemical storeroom rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1680],
         ["placeaploc", "", vector(-122.7, -30.97, 134.72), 1192, 2125], #1192:Hidden on metal rafter above in room with rockets that move upward rickenbacker_deck_A
         ["placeaploc", "", vector(-148.36, -10.29, 166.08), 1193, 1362], #1193:Hidden under grate under you near radiated area rickenbacker_deck_A
         ["placeaploc", "", [1623, 1413, 342], 1194, 1626], #1194:In bodies at top of dual broken ladders that you jump between rickenbacker_deck_A
@@ -2291,7 +2326,8 @@ mapinstructions =
         ["placeaploc", "", [360, 2162, 2154], 1203, 2131], #1203:In body bags in nacelle a rickenbacker_deck_A
         ["placeaploc", "KeepDuplicates", [360, 2162, 2154], 1204, 2097], #1204:In body bags in nacelle a 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 2097],
-        ["placeaploc", "", [1567], 1205, 1059], #1205:In body in room with button that raises barrier near top of ladder near entrance rickenbacker_deck_A
+        ["placeaploc", "KeepDuplicates", [1567], 1205, 1059], #1205:In body in room with button that raises barrier near top of ladder near entrance rickenbacker_deck_A
+        ["destroy", "RemoveDuplicates", 1059],
         ["placeaploc", "KeepDuplicates", [1567], 1206, 1467], #1206:In body in room with button that raises barrier near top of ladder near entrance 2 rickenbacker_deck_A
         ["destroy", "RemoveDuplicates", 1467],
         ["placeaploc", "KeepDuplicates", [1567], 1207, 1404], #1207:In body in room with button that raises barrier near top of ladder near entrance 3 rickenbacker_deck_A
@@ -2398,13 +2434,15 @@ mapinstructions =
     ],
     "rick2.mis": [
         ["placeaploc", "", vector(-350.51, -22.11, 221.24), 1243, 713], #1243:On ground near body near entrance rickenbacker_deck_B
-        ["placeaploc", "", [144], 1244, 145], #1244:In body near pipe jump rickenbacker_deck_B
+        ["placeaploc", "KeepDuplicates", [144], 1244, 145], #1244:In body near pipe jump rickenbacker_deck_B
+        ["destroy", "RemoveDuplicates", 145],
         ["placeaploc", "KeepDuplicates", [144], 1245, 147], #1245:In body near pipe jump 2 rickenbacker_deck_B
         ["destroy", "RemoveDuplicates", 147],
         ["placeaploc", "", vector(-433.6, 21.14, 229.18), 1246, 146], #1246:On ground near body near pipe jump rickenbacker_deck_B
         ["placeaploc", "", vector(-452.81, -10.98, 207.86), 1247, 705], #1247:On ground near body in church rickenbacker_deck_B
         ["placeaploc", "", vector(-307.79, 4.2, 220.65), 1248, 725], #1248:Under bridge at entrance rickenbacker_deck_B
-        ["placeaploc", "", [126], 1249, 734], #1249:In body near entrance rickenbacker_deck_B
+        ["placeaploc", "KeepDuplicates", [126], 1249, 734], #1249:In body near entrance rickenbacker_deck_B
+        ["destroy", "RemoveDuplicates", 734],
         ["placeaploc", "KeepDuplicates", vector(-350.9, -14.43, 221.25), 1250, 116], #1250:On ground near body near entrance 2 rickenbacker_deck_B
         ["destroy", "RemoveDuplicates", 116],
         ["placeaploc", "", vector(-397.56, -29.03, 229.71), 1251, 723], #1251:On ground outside church rickenbacker_deck_B
@@ -2427,7 +2465,8 @@ mapinstructions =
         ["placeaploc", "", vector(-505.73, 31.06, 287.25), 1262, 154], #1262:On ground near body nearish exit rickenbacker_deck_B
         ["placeaploc", "KeepDuplicates", vector(-508.43, 31.44, 287.52), 1263, 153], #1263:On ground near body nearish exit 2 rickenbacker_deck_B
         ["destroy", "RemoveDuplicates", 153],
-        ["placeaploc", "", [155, 85], 1264, 156], #1264:In bodies nearish exit rickenbacker_deck_B
+        ["placeaploc", "KeepDuplicates", [155, 85], 1264, 156], #1264:In bodies nearish exit rickenbacker_deck_B
+        ["destroy", "RemoveDuplicates", 156],
         ["placeaploc", "KeepDuplicates", [155, 85], 1265, 724], #1265:In bodies nearish exit 2 rickenbacker_deck_B
         ["destroy", "RemoveDuplicates", 724],
         ["placeaploc", "KeepDuplicates", vector(-498.24, -1.32, 288.08), 1266, 336], #1266:On ground near body nearish exit 3 rickenbacker_deck_B
@@ -2439,7 +2478,8 @@ mapinstructions =
         ["placeaploc", "", vector(-504.22, -36.87, 287.14), 1269, 160], #1269:On ground near exit rickenbacker_deck_B
         ["placeaploc", "KeepDuplicates", vector(-499.76, -37.89, 287.45), 1270, 164], #1270:On ground near exit 2 rickenbacker_deck_B
         ["destroy", "RemoveDuplicates", 164],
-        ["placeaploc", "", [159], 1271, 161], #1271:In body near exit rickenbacker_deck_B
+        ["placeaploc", "KeepDuplicates", [159], 1271, 161], #1271:In body near exit rickenbacker_deck_B
+        ["destroy", "RemoveDuplicates", 161],
         ["placeaploc", "", vector(-527.79, -33.86, 283.14), 1272, 163], #1272:On ground near body near exit rickenbacker_deck_B
         ["placeaploc", "", vector(-544.65, -14.83, 271.14), 1273, 162], #1273:On lower ground to left of exit rickenbacker_deck_B
         ["randomizeenemy", "", 752, "8", vector(-546.33, -14.75, 274.86)],
@@ -2459,7 +2499,8 @@ mapinstructions =
     ],
     "rick3.mis": [
         ["placeaploc", "", vector(-672.73, -108.33, 279.24), 1274, 510], #1274:On ground in diego's quarters rickenbacker_deck_C
-        ["placeaploc", "", [662], 1275, 669], #1275:In locker in diego's quarters rickenbacker_deck_C
+        ["placeaploc", "KeepDuplicates", [662], 1275, 669], #1275:In locker in diego's quarters rickenbacker_deck_C
+        ["destroy", "RemoveDuplicates", 669],
         ["placeaploc", "", vector(-731.49, -5.71, 268.79), 1276, 666], #1276:Under desk near front of bridge rickenbacker_deck_C
         ["placeaploc", "", vector(-603.05, -8.24, 301.31), 1277, 772], #1277:On ground around structure above using tall ladder rickenbacker_deck_C
         ["placeaploc", "", vector(-646.14, -74.77, 271.93), 1278, 667], #1278:On ground hidden behind circular structure across from replicator rickenbacker_deck_C
@@ -2512,7 +2553,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [135, 768], 1295, 138], #1295:In bodies in water near nerve cluster 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 138],
         ["placeaploc", "", vector(-119.56, -222.54, -51.54), 1296, 278], #1296:In water in large chamber of water on path to nerve cluster body_of_the_many
-        ["placeaploc", "", [275, 276], 1297, 1392], #1297:In bodies in large chamber of water on path to nerve cluster body_of_the_many
+        ["placeaploc", "KeepDuplicates", [275, 276], 1297, 1392], #1297:In bodies in large chamber of water on path to nerve cluster body_of_the_many
+        ["destroy", "RemoveDuplicates", 1392],
         ["placeaploc", "", vector(-174.96, -24.82, -3.23), 1298, 171], #1298:On ground near body near chemical storeroom body_of_the_many
         ["placeaploc", "", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1299, 23], #1299:In bodies on path with 4 rooms that have bodies in them body_of_the_many
         ["placeaploc", "KeepDuplicates", [226, 887, 214, 210, 1429, 770, 209, 1430, 958], 1300, 293], #1300:In bodies on path with 4 rooms that have bodies in them 2 body_of_the_many
@@ -2571,7 +2613,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [916], 1330, 959], #1330:In body in water under nerve cluster 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 959],
         ["placeaploc", "", vector(56.78, -267.91, -34.6), 1331, 309], #1331:At bottom of water under nerve cluster body_of_the_many
-        ["placeaploc", "", vector(62.04, -272.46, -32.53), 1332, 918], #1332:In body bag in water under nerve cluster body_of_the_many
+        ["placeaploc", "KeepDuplicates", vector(62.04, -272.46, -32.53), 1332, 918], #1332:In body bag in water under nerve cluster body_of_the_many
+        ["destroy", "RemoveDuplicates", 918],
         ["placeaploc", "", [279], 1333, 280], #1333:In body in air pocket above large chamber of water on path to nerve cluster area body_of_the_many
         ["placeaploc", "KeepDuplicates", [279], 1334, 281], #1334:In body in air pocket above large chamber of water on path to nerve cluster area 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 281],
@@ -2602,7 +2645,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [1414], 1352, 1415], #1352:In security crate near first replicator 3 body_of_the_many
         ["destroy", "RemoveDuplicates", 1415],
         ["placeaploc", "Chemicals", vector(119.73, -119.12, -1.08), 1353, 509], #1353:On ground near first replicator 5 body_of_the_many
-        ["placeaploc", "", [80], 1354, 983], #1354:In body nearish start of level body_of_the_many
+        ["placeaploc", "KeepDuplicates", [80], 1354, 983], #1354:In body nearish start of level body_of_the_many
+        ["destroy", "RemoveDuplicates", 983],
         ["placeaploc", "KeepDuplicates", [80], 1355, 96], #1355:In body nearish start of level 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 96],
         ["placeaploc", "", vector(31.49, -115.64, -1.53), 1356, 757], #1356:On ground near start of body nearish start of level body_of_the_many
@@ -2617,10 +2661,12 @@ mapinstructions =
         ["placeaploc", "", [245], 1363, 384], #1363:In body in piece of rickenbacker near start of level body_of_the_many
         ["placeaploc", "KeepDuplicates", [245], 1364, 257], #1364:In body in piece of rickenbacker near start of level 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 257],
-        ["placeaploc", "", [140], 1365, 122], #1365:In desk in water on path to first nerve cluster body_of_the_many
+        ["placeaploc", "KeepDuplicates", [140], 1365, 122], #1365:In desk in water on path to first nerve cluster body_of_the_many
+        ["destroy", "RemoveDuplicates", 122],
         ["placeaploc", "KeepDuplicates", [140], 1366, 123], #1366:In desk in water on path to first nerve cluster 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 123],
-        ["placeaploc", "", [686], 1367, 120], #1367:In body in water on path to first nerve cluster body_of_the_many
+        ["placeaploc", "KeepDuplicates", [686], 1367, 120], #1367:In body in water on path to first nerve cluster body_of_the_many
+        ["destroy", "RemoveDuplicates", 120],
         ["placeaploc", "KeepDuplicates", [686], 1368, 687], #1368:In body in water on path to first nerve cluster 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 687],
         ["placeaploc", "KeepDuplicates", [686], 1369, 116], #1369:In body in water on path to first nerve cluster 3 body_of_the_many
@@ -2633,7 +2679,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [919], 1374, 920], #1374:In body near chemical storage 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 920],
         ["placeaploc", "", vector(-29.54, 82.14, 3.41), 1375, 332], #1375:On ground near body near first nerve cluster door body_of_the_many
-        ["placeaploc", "", [328], 1376, 984], #1376:In body near first nerve cluster door body_of_the_many
+        ["placeaploc", "KeepDuplicates", [328], 1376, 984], #1376:In body near first nerve cluster door body_of_the_many
+        ["destroy", "RemoveDuplicates", 984],
         ["placeaploc", "KeepDuplicates", [328], 1377, 386], #1377:In body near first nerve cluster door 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 386],
         ["placeaploc", "", vector(-126.65, 104.85, 26.78), 1378, 310], #1378:Under broken doors after first nerve cluster door body_of_the_many
@@ -2641,7 +2688,8 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 982],
         ["placeaploc", "KeepDuplicates", vector(-121.38, 110.09, 26.55), 1380, 311], #1380:Under broken doors after first nerve cluster door 3 body_of_the_many
         ["destroy", "RemoveDuplicates", 311],
-        ["placeaploc", "", [312], 1381, 313], #1381:In body under broken doors after first nerve cluster door body_of_the_many
+        ["placeaploc", "KeepDuplicates", [312], 1381, 313], #1381:In body under broken doors after first nerve cluster door body_of_the_many
+        ["destroy", "RemoveDuplicates", 313],
         ["placeaploc", "", [294], 1382, 303], #1382:In body in pool after first nerve cluster door body_of_the_many
         ["placeaploc", "", vector(-117.2, 131.23, 23.39), 1383, 333], #1383:On ground near tooth after first nerve cluster door body_of_the_many
         ["placeaploc", "", [331], 1384, 923], #1384:In body near first chamber after nerve cluster is destroyed body_of_the_many
@@ -2659,10 +2707,12 @@ mapinstructions =
         ["placeaploc", "", [1485], 1392, 1586], #1392:In body hidden above in hub room connected to path with 4 rooms that have bodies in them body_of_the_many
         ["placeaploc", "KeepDuplicates", [1485], 1393, 1587], #1393:In body hidden above in hub room connected to path with 4 rooms that have bodies in them 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 1587],
-        ["placeaploc", "", [283], 1394, 387], #1394:In body in hub room connected to path with 4 rooms that have bodies in them body_of_the_many
+        ["placeaploc", "KeepDuplicates", [283], 1394, 387], #1394:In body in hub room connected to path with 4 rooms that have bodies in them body_of_the_many
+        ["destroy", "RemoveDuplicates", 387],
         ["placeaploc", "KeepDuplicates", [283], 1395, 284], #1395:In body in hub room connected to path with 4 rooms that have bodies in them 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 284],
-        ["placeaploc", "", [759], 1396, 760], #1396:In desk in hub room connected to path with 4 rooms that have bodies in them body_of_the_many
+        ["placeaploc", "KeepDuplicates", [759], 1396, 760], #1396:In desk in hub room connected to path with 4 rooms that have bodies in them body_of_the_many
+        ["destroy", "RemoveDuplicates", 760],
         ["placeaploc", "", [921], 1397, 922], #1397:In waste barrel in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them body_of_the_many
         ["placeaploc", "KeepDuplicates", [921], 1398, 1432], #1398:In waste barrel in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 1432],
@@ -2676,7 +2726,8 @@ mapinstructions =
         ["placeaploc", "KeepDuplicates", [69, 47, 71, 746], 1403, 779], #1403:In crates or desk in rickenbacker room connected to hub connected to path with 4 rooms that have bodies in them 5 body_of_the_many
         ["destroy", "RemoveDuplicates", 779],
         ["placeaploc", "", [763], 1404, 762], #1404:In crate in room before jump into water body_of_the_many
-        ["placeaploc", "", [299], 1405, 301], #1405:In body in room before jump into water body_of_the_many
+        ["placeaploc", "KeepDuplicates", [299], 1405, 301], #1405:In body in room before jump into water body_of_the_many
+        ["destroy", "RemoveDuplicates", 301],
         ["placeaploc", "KeepDuplicates", [299], 1406, 300], #1406:In body in room before jump into water 2 body_of_the_many
         ["destroy", "RemoveDuplicates", 300],
         ["placeaploc", "", vector(-389.66, 393.24, 66.2), 1407, 761], #1407:On ground in room before jump into water body_of_the_many
