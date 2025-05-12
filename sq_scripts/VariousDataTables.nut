@@ -2019,13 +2019,10 @@ mapinstructions =
         ["destroy", "RemoveDuplicates", 1528],
         ["placeaploc", "", [1419], 1034, 1415], #1034:In body in room under resurrection station command_B
         ["placeaploc", "", vector(24.86, -139.75, -26.15), 1035, 188], #1035:On ground in shower in bathroom connected to area under officers' quarters command_B
-        ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1036, 2163], #1036:In lockers in rooms in officers' area command_B
-        ["destroy", "RemoveDuplicates", 2163],
-        ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1037, 2162], #1037:In lockers in rooms in officers' area 2 command_B
-        ["destroy", "RemoveDuplicates", 2162],
-        ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1038, 2290], #1038:In lockers in rooms in officers' area 3 command_B
-        ["destroy", "RemoveDuplicates", 2290],
-        ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1039, 2161], #1039:In lockers in rooms in officers' area 4 command_B
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1036, 2163], #1036:In lockers in rooms in officers' area command_B
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1037, 2162], #1037:In lockers in rooms in officers' area 2 command_B
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1038, 2290], #1038:In lockers in rooms in officers' area 3 command_B
+        ["placeaploc", "", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1039, 2161], #1039:In lockers in rooms in officers' area 4 command_B
         ["destroy", "RemoveDuplicates", 2161],
         ["placeaploc", "KeepDuplicates", [1489, 1501, 1505, 1485, 1481, 80, 1497, 1517, 1015, 1893, 1885, 1897, 1901, 1877, 1881, 1817, 1845, 1849, 1765, 1020, 1789, 1793, 1797, 1773, 1777], 1040, 2387], #1040:In lockers in rooms in officers' area 5 command_B
         ["destroy", "RemoveDuplicates", 2387],
