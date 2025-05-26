@@ -22,3 +22,8 @@ FINGERPRINT
 }
 
 -ObjProp 1233 "DiffDestroy"
+
++ObjProp 136 "Position"
+{
+	"Location" "-67.6, 121.1, 2.8"
+}
