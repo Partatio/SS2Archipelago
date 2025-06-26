@@ -1,15 +1,5 @@
 class PlayerScripts extends SqRootScript
 {
-	function OnEndAttack()
-	{
-		things()
-	}
-
-	function things()
-	{
-
-	}
-
 	function FirstLoad(mapname) #runs on the first time a map is loaded in a save.
 	{
 		local NewTracker = Object.Create("APLocationTracker");
