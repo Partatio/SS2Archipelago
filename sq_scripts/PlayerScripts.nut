@@ -637,8 +637,7 @@ class PlayerScripts extends SqRootScript
 				Property.SetSimple(self, "RsrchTime", curosslot);
 				if (item[1][0] == 6)
 					ShockGame.AddExp(self, 8, false);
-				if (item[1][0] == 8 || item[1][0] == 3)
-					ShockGame.RecalcStats(self);
+				ShockGame.RecalcStats(self);
 				ShockGame.AddText("Got " + item[1][1] + " OS upgrade!", self);
 				break;
 				}
