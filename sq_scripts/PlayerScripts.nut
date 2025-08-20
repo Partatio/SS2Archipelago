@@ -1,23 +1,27 @@
 class PlayerScripts extends SqRootScript
 {
+	OpenFilesTable = {}
+
 	function FirstLoad(mapname) #runs on the first time a map is loaded in a save.
 	{
 		local NewTracker = Object.Create("APLocationTracker");
 		local CommandListTable = VariousDataTables.mapinstructions.rawget(mapname);
-		local settings = Property.Get(self, "Modify1")
+		local settings = Property.Get(self, "Modify1");
 		foreach(command in CommandListTable)
 		{
-			if (command[1].len() != 0 && !settings.find(command[1])) #check if settings doesn 't contain the appropriate setting for the command
+			if (command[1].len() != 0 && !settings.find(command[1])) #check if settings doesn't contain the appropriate setting for the command
 				continue;
 			switch (command[0])
 				{
 				case "placeaploc":
 					{
 					local NewAPLocation = Object.Create("APLocation");
-					Property.Set(NewAPLocation, "VoiceIdx", "", command[3]);
+					Property.SetSimple(NewAPLocation, "VoiceIdx", command[3]);
 					if (type(command[2]) == type([]))
 					{
 						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
+						Property.Remove(NewAPLocation, "MapObjIcon");
+						Property.SetSimple(chosencontainer, "MapObjIcon", "locs");
 						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  vector());
 						Property.SetSimple(NewAPLocation, "HasRefs", false);
 						Link.Create(linkkind("Contains"), chosencontainer, NewAPLocation);
@@ -51,37 +55,35 @@ class PlayerScripts extends SqRootScript
 					Object.Destroy(command[2]);
 					continue;
 					}
-				case "slayvictoryprop": #add script to last script slot on many or shodan that on slay sends a victory location out.  both bosses have scripts in slot 0 and 1.
-					{
-					Property.Set(command[2], "Scripts", "Script 3", "OnSlayVictory");
-					continue;
-					}
 				case "randomizerepl": #randomize a repl with random items and costs.
 					{
-					local ReplItem = PickUnhackedReplItem();
-					Property.Set(command[2], "RepContents", "Obj 1 Name", ReplItem[0]);
-					Property.Set(command[2], "RepContents", "Obj 1 Cost", ReplItem[1]);
-					ReplItem = PickUnhackedReplItem();
-					Property.Set(command[2], "RepContents", "Obj 2 Name", ReplItem[0]);
-					Property.Set(command[2], "RepContents", "Obj 2 Cost", ReplItem[1]);
-					ReplItem = PickUnhackedReplItem();
-					Property.Set(command[2], "RepContents", "Obj 3 Name", ReplItem[0]);
-					Property.Set(command[2], "RepContents", "Obj 3 Cost", ReplItem[1]);
-					ReplItem = PickUnhackedReplItem();
-					Property.Set(command[2], "RepContents", "Obj 4 Name", ReplItem[0]);
-					Property.Set(command[2], "RepContents", "Obj 4 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(command[2], "RepHacked", "Obj 1 Name", ReplItem[0]);
-					Property.Set(command[2], "RepHacked", "Obj 1 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(command[2], "RepHacked", "Obj 2 Name", ReplItem[0]);
-					Property.Set(command[2], "RepHacked", "Obj 2 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(command[2], "RepHacked", "Obj 3 Name", ReplItem[0]);
-					Property.Set(command[2], "RepHacked", "Obj 3 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(command[2], "RepHacked", "Obj 4 Name", ReplItem[0]);
-					Property.Set(command[2], "RepHacked", "Obj 4 Cost", ReplItem[1]);
+					local ReplItems = PickUnhackedReplItems();
+					local HackedReplItems = PickHackedReplItems();
+
+					Property.Set(command[2], "RepContents", "Obj 1 Name", ReplItems[0]);
+					Property.Set(command[2], "RepContents", "Obj 1 Cost", ReplItems[1]);
+
+					Property.Set(command[2], "RepContents", "Obj 2 Name", ReplItems[2]);
+					Property.Set(command[2], "RepContents", "Obj 2 Cost", ReplItems[3]);
+
+					Property.Set(command[2], "RepContents", "Obj 3 Name", ReplItems[4]);
+					Property.Set(command[2], "RepContents", "Obj 3 Cost", ReplItems[5]);
+
+					Property.Set(command[2], "RepContents", "Obj 4 Name", ReplItems[6]);
+					Property.Set(command[2], "RepContents", "Obj 4 Cost", ReplItems[7]);
+
+
+					Property.Set(command[2], "RepHacked", "Obj 1 Name", HackedReplItems[0]);
+					Property.Set(command[2], "RepHacked", "Obj 1 Cost", HackedReplItems[1]);
+
+					Property.Set(command[2], "RepHacked", "Obj 2 Name", HackedReplItems[2]);
+					Property.Set(command[2], "RepHacked", "Obj 2 Cost", HackedReplItems[3]);
+
+					Property.Set(command[2], "RepHacked", "Obj 3 Name", HackedReplItems[4]);
+					Property.Set(command[2], "RepHacked", "Obj 3 Cost", HackedReplItems[5]);
+
+					Property.Set(command[2], "RepHacked", "Obj 4 Name", HackedReplItems[6]);
+					Property.Set(command[2], "RepHacked", "Obj 4 Cost", HackedReplItems[7]);
 					continue;
 					}
 				case "ssu": #changes ssu objects to aplocations with set ids.  ids can be changed in the gamesys
@@ -134,41 +136,79 @@ class PlayerScripts extends SqRootScript
 					Property.Set(NewAPLocation, "Scripts", "Script 0", "ItemUnrestrict");
 					continue;
 					}
-				case "medsci1replpsihypo": #put a psi hypo in the security crate in the circular room with xerxes in both the unhacked and hacked.  This is to avoid softlocks where psi is required to get a location.
+				case "medsci1replpsihypo": #put a psi hypo in the replicator in the circular room with xerxes in both the unhacked and hacked.  This is to avoid softlocks where psi is required to get a location.
 					{
-					Property.Set(300, "RepContents", "Obj 1 Name", "Psi Booster");
-					Property.Set(300, "RepContents", "Obj 1 Cost", ShockGame.RandRange(50, 90));
-					Property.Set(300, "RepHacked", "Obj 1 Name", "Psi Booster");
-					Property.Set(300, "RepHacked", "Obj 1 Cost", ShockGame.RandRange(35, 65));
-					local ReplItem = PickUnhackedReplItem();
-					Property.Set(300, "RepContents", "Obj 2 Name", ReplItem[0]);
-					Property.Set(300, "RepContents", "Obj 2 Cost", ReplItem[1]);
-					ReplItem = PickUnhackedReplItem();
-					Property.Set(300, "RepContents", "Obj 3 Name", ReplItem[0]);
-					Property.Set(300, "RepContents", "Obj 3 Cost", ReplItem[1]);
-					ReplItem = PickUnhackedReplItem();
-					Property.Set(300, "RepContents", "Obj 4 Name", ReplItem[0]);
-					Property.Set(300, "RepContents", "Obj 4 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(300, "RepHacked", "Obj 2 Name", ReplItem[0]);
-					Property.Set(300, "RepHacked", "Obj 2 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(300, "RepHacked", "Obj 3 Name", ReplItem[0]);
-					Property.Set(300, "RepHacked", "Obj 3 Cost", ReplItem[1]);
-					ReplItem = PickHackedReplItem();
-					Property.Set(300, "RepHacked", "Obj 4 Name", ReplItem[0]);
-					Property.Set(300, "RepHacked", "Obj 4 Cost", ReplItem[1]);
+					local ReplItems = PickUnhackedReplItems();
+					local HackedReplItems = PickHackedReplItems();
+
+					if (ReplItems.find("Psi Booster"))
+					{
+						Property.Set(300, "RepContents", "Obj 1 Name", ReplItems[0]);
+						Property.Set(300, "RepContents", "Obj 1 Cost", ReplItems[1]);
+
+						Property.Set(300, "RepHacked", "Obj 1 Name", HackedReplItems[0]);
+						Property.Set(300, "RepHacked", "Obj 1 Cost", HackedReplItems[1]);
+					}
+					else
+					{
+						Property.Set(300, "RepContents", "Obj 1 Name", "Psi Booster");
+						Property.Set(300, "RepContents", "Obj 1 Cost", ShockGame.RandRange(50, 90));
+
+						Property.Set(300, "RepHacked", "Obj 1 Name", "Psi Booster");
+						Property.Set(300, "RepHacked", "Obj 1 Cost", ShockGame.RandRange(35, 65));
+					}
+
+					Property.Set(300, "RepContents", "Obj 2 Name", ReplItems[2]);
+					Property.Set(300, "RepContents", "Obj 2 Cost", ReplItems[3]);
+
+					Property.Set(300, "RepContents", "Obj 3 Name", ReplItems[4]);
+					Property.Set(300, "RepContents", "Obj 3 Cost", ReplItems[5]);
+
+					Property.Set(300, "RepContents", "Obj 4 Name", ReplItems[6]);
+					Property.Set(300, "RepContents", "Obj 4 Cost", ReplItems[7]);
+
+
+					Property.Set(300, "RepHacked", "Obj 2 Name", HackedReplItems[2]);
+					Property.Set(300, "RepHacked", "Obj 2 Cost", HackedReplItems[3]);
+
+					Property.Set(300, "RepHacked", "Obj 3 Name", HackedReplItems[4]);
+					Property.Set(300, "RepHacked", "Obj 3 Cost", HackedReplItems[5]);
+
+					Property.Set(300, "RepHacked", "Obj 4 Name", HackedReplItems[6]);
+					Property.Set(300, "RepHacked", "Obj 4 Cost", HackedReplItems[7]);
 					continue;
 					}
 				case "skipearth": #skip the first level of the game by teleporting the player to a tripwire
 					{
-					Quest.Set("SCPVersion", 7, eQuestDataType.kQuestDataCampaign) #Gets rid of mid - game activation message from scp.  Needs to be updated with scp updates, is setting the same qb as object 15
-					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0))
+					Link.Create("SwitchLink", 309, 15); #connects exit tripwire to scp qb setter
+					Object.Teleport(self, vector(6.8, 170.5, 64.6), vector(0, 0, 0));
+					continue;
+					}
+				case "randomizeart": #checks if any code art array[2] or art array[3] should be code art, anything in array[2] that didnt change should turn into art.
+					{
+					local codeart = command[2];
+					local art = command[3];
+					local artcodeidarray = split(Property.Get(self, "Modify2"), ",");
+					foreach (idstr in artcodeidarray)
+						{
+						local id = idstr.tointeger();
+						local codeartmatchindex = codeart.find(id);
+						local artmatchindex = art.find(id);
+						if (codeartmatchindex != null)
+						{
+							ReplaceWithCodeArt(id, codeartmatchindex);
+							codeart.remove(codeartmatchindex);
+						}
+						if (artmatchindex != null)
+							ReplaceWithCodeArt(id, artmatchindex);
+						}
+					foreach (idstr in codeart)
+						ReplaceWithArt(idstr.tointeger());
 					continue;
 					}
 				case "randomizeenemy": #destroy command[2] enemy if that field isnt set to 0.  Get the correct tier array based on command[3].  choose a random enemy from that, then create it and teleport it to command[4] with the original enemies properties if there was one.
 					{
-					local enemytier = command[3]
+					local enemytier = command[3];
 					local chosenenemy = PickEnemy(enemytier, IsSpecialEnemy(command[2]));#dont want eggs, turrets, or overlords teleporting or replacing enemies with special scripts
 					local newenemy = Object.Create(chosenenemy);
 					local enemyfacing = vector();
@@ -305,6 +345,62 @@ class PlayerScripts extends SqRootScript
 		}
 	}
 
+	function ReplaceWithCodeArt(id, codenum)
+	{
+		local codeartobj = Object.Create("Code Pic " + codenum.tostring());
+		Property.SetSimple(codeartobj, "DesignNoteSS", "ArtCode=" + codenum.tostring());
+		Property.Set(codeartobj, "Scripts", "Script 0", "scpAddArtCodeQB");
+		local firstpic = Property.Get(id, "CfgTweqModels", "Model 0");
+		Property.SetSimple(codeartobj, "ModelName", firstpic);
+		Property.Set(codeartobj, "CfgTweqModels", "Model 0", firstpic);
+		Property.Set(codeartobj, "CfgTweqModels", "Model 2", Property.Get(id, "CfgTweqModels", "Model 2"));
+		local pos = Object.Position(id);
+		local fac = Object.Facing(id);
+		Object.Destroy(id);
+		Object.Teleport(codeartobj, pos, fac);
+	}
+
+	function ReplaceWithArt(id)
+	{
+		local codenum = Property.Get(id, "DesignNoteSS").slice(-1);
+		local artobj = null;
+		switch(codenum)
+			{
+			case "0":
+			{
+				artobj = Object.Create("Pic 04");
+				Property.Set(artobj, "CfgTweqModels", "Model 2", "pic10");
+				Property.Set(artobj, "CfgTweqModels", "Model 4", "pic06");
+				break;
+			}
+			case "1":
+			{
+				artobj = Object.Create("Pic 05");
+				Property.Set(artobj, "CfgTweqModels", "Model 2", "pic03");
+				Property.Set(artobj, "CfgTweqModels", "Model 4", "pic07");
+				break;
+			}
+			case "2":
+			{
+				artobj = Object.Create("Pic 02");
+				Property.Set(artobj, "CfgTweqModels", "Model 2", "pic09");
+				Property.Set(artobj, "CfgTweqModels", "Model 4", "pic05");
+				break;
+			}
+			case "3":
+			{
+				artobj = Object.Create("Pic 01");
+				Property.Set(artobj, "CfgTweqModels", "Model 2", "pic08");
+				Property.Set(artobj, "CfgTweqModels", "Model 4", "pic02");
+				break;
+			}
+			}
+		local pos = Object.Position(id);
+		local fac = Object.Facing(id);
+		Object.Destroy(id);
+		Object.Teleport(artobj, pos, fac);
+		}
+
 	function OnItemsUnrestricted()
 	{
 		Property.SetSimple(self, "AI_PtrlRnd", false);
@@ -343,38 +439,70 @@ class PlayerScripts extends SqRootScript
 		return special;
 	}
 
-	function PickUnhackedReplItem()
+	function PickUnhackedReplItems()
 	{
-		local randitemnum = ShockGame.RandRange(0, 105);
-		local price = 0;
-		if (randitemnum >= 0 && randitemnum <= 19)
-			price = ShockGame.RandRange(2, 6);
-		if (randitemnum >= 20 && randitemnum <= 42)
-			price = ShockGame.RandRange(25, 40);
-		if (randitemnum >= 43 && randitemnum <= 75)
-			price = ShockGame.RandRange(50, 90);
-		if (randitemnum >= 76 && randitemnum <= 89)
-			price = ShockGame.RandRange(80, 120);
-		if (randitemnum >= 90 && randitemnum <= 105)
-			price = ShockGame.RandRange(90, 150);
-		return [VariousDataTables.UnhackedReplItems[randitemnum], price];
+		local selecteditems = [];
+		for (local i = 0; i < 4; i++)
+		{
+			local randitemnum = 0;
+			local price = 0;
+			local itemname = "";
+			local attempts = 0;
+
+			while ((selecteditems.find(itemname) != null && attempts < 15) || attempts == 0)
+			{
+				randitemnum = ShockGame.RandRange(0, 105);
+				itemname = VariousDataTables.UnhackedReplItems[randitemnum];
+				attempts += 1;
+			}
+
+			if (randitemnum >= 0 && randitemnum <= 19)
+				price = ShockGame.RandRange(2, 6);
+			if (randitemnum >= 20 && randitemnum <= 42)
+				price = ShockGame.RandRange(25, 40);
+			if (randitemnum >= 43 && randitemnum <= 75)
+				price = ShockGame.RandRange(50, 90);
+			if (randitemnum >= 76 && randitemnum <= 89)
+				price = ShockGame.RandRange(80, 120);
+			if (randitemnum >= 90 && randitemnum <= 105)
+				price = ShockGame.RandRange(90, 150);
+
+			selecteditems.extend([itemname, price]);
+		}
+		return selecteditems;
 	}
 
-	function PickHackedReplItem()
+	function PickHackedReplItems()
 	{
-		local randitemnum = ShockGame.RandRange(0, 115);
-		local price = 0;
-		if (randitemnum >= 0 && randitemnum <= 26)
-			price = ShockGame.RandRange(15, 35);
-		if (randitemnum >= 27 && randitemnum <= 64)
-			price = ShockGame.RandRange(35, 65);
-		if (randitemnum >= 65 && randitemnum <= 96)
-			price = ShockGame.RandRange(55, 105);
-		if (randitemnum >= 97 && randitemnum <= 110)
-			price = ShockGame.RandRange(75, 140);
-		if (randitemnum >= 112 && randitemnum <= 115)
-			price = ShockGame.RandRange(125, 175);
-		return [VariousDataTables.HackedReplItems[randitemnum], price];
+		local selecteditems = [];
+		for (local i = 0; i < 4; i++)
+		{
+			local randitemnum = 0;
+			local price = 0;
+			local itemname = "";
+			local attempts = 0;
+
+			while ((selecteditems.find(itemname) != null && attempts < 15) || attempts == 0)
+			{
+				randitemnum = ShockGame.RandRange(0, 115);
+				itemname = VariousDataTables.HackedReplItems[randitemnum];
+				attempts += 1;
+			}
+
+			if (randitemnum >= 0 && randitemnum <= 26)
+				price = ShockGame.RandRange(15, 35);
+			if (randitemnum >= 27 && randitemnum <= 64)
+				price = ShockGame.RandRange(35, 65);
+			if (randitemnum >= 65 && randitemnum <= 96)
+				price = ShockGame.RandRange(55, 105);
+			if (randitemnum >= 97 && randitemnum <= 110)
+				price = ShockGame.RandRange(75, 140);
+			if (randitemnum >= 112 && randitemnum <= 115)
+				price = ShockGame.RandRange(125, 175);
+
+			selecteditems.extend([itemname, price]);
+		}
+		return selecteditems;
 	}
 
 	function OnBeginScript()
@@ -389,7 +517,7 @@ class PlayerScripts extends SqRootScript
 			local curmap = string();
 			Version.GetMap(curmap);
 			curmap = curmap.tostring().tolower();
-			local settings = ParseFile("DMM\\Archipelago\\data\\Settings.txt");
+			local settings = ParseFile("APcommunications\\Settings.txt");
 			if (!settings)
 				{
 				ShockGame.AddText("You aren't connected to a slot with the client.  Open the client, connect, and reload.  If you are connected then the settings file failed to be read.", self);
@@ -397,34 +525,7 @@ class PlayerScripts extends SqRootScript
 				}
 			local runseed = split(settings, ",")[0].tointeger();
 			if ((curmap == "earth.mis" && !Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker")) || Version.IsEditor())
-				{
-				Property.SetSimple(self, "Modify1", settings); #store the settings
-				Property.SetSimple(self, "CurWpnDmg", runseed); #storedseed
-				Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
-				Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
-				Property.SetSimple(self, "RsrchTime", 1); #current osupgrade slot
-
-				Property.SetSimple(self, "AI_NGOBB", false)#Psi Tier Unlock status
-				Property.SetSimple(self, "AI_TrackM", false)
-				Property.SetSimple(self, "AI_UseWater", false)
-				Property.SetSimple(self, "AI_IsBig", false)
-				Property.SetSimple(self, "AI_IgCam", false)
-				Property.SetSimple(self, "AI_Standtags", "")#Psi ability queues
-				Property.SetSimple(self, "AI_SndTags", "")
-				Property.SetSimple(self, "AI_MotTags", "")
-				Property.SetSimple(self, "ModeChangeMeta", "")
-				Property.SetSimple(self, "ModeUnchngeMeta", "")
-
-				if (settings.find("StatsSkillsPsi"))
-					{
-					local shoparray = "";
-					for (local i = 1481; i < 1628; i++)
-						{
-						shoparray += i + "," + 6 + ","; #The list of items purchasable from the location shop.  i is the locid.
-						}
-					Property.SetSimple(self, "LockMsg", shoparray);
-					}
-				}
+				SetupVars(settings, runseed)
 			local storedseed = Property.Get(self, "CurWpnDmg");
 			if (runseed != storedseed)
 				{
@@ -433,15 +534,15 @@ class PlayerScripts extends SqRootScript
 				}
 			if (!Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"))
 				FirstLoad(curmap);
-			if (!(curmap == "earth.mis" || curmap == "station.mis" || curmap == "medsci1.mis" && Property.Get(self,"AI_PtrlRnd"))) #cant let items spawn in places you can't backtrack to.
+			if (!(curmap == "earth.mis" || curmap == "station.mis" || curmap == "medsci1.mis" && Property.Get(self, "AI_PtrlRnd"))) #cant let items spawn in places you can't backtrack to.
 				SetOneShotTimer("ItemReceiver", 1);
-			Link.BroadcastOnAllLinksData(Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"), "CollectedItemsUpdate", "Mutate", ParseFile("DMM\\Archipelago\\data\\SentItems.txt"));
+			Link.BroadcastOnAllLinksData(Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"), "CollectedItemsUpdate", "Mutate", ParseFile("APcommunications\\SentItems.txt"));
 			# ^ tells APLocations to delete themselves if they have already been collected.
 		}
 
 		if (message().name == "ItemReceiver")
 		{
-			local ReceivedItemsfile = ParseFile("DMM\\Archipelago\\data\\ReceivedItems.txt");
+			local ReceivedItemsfile = ParseFile("APcommunications\\ReceivedItems.txt");
 			if (ReceivedItemsfile == null)
 				{
 				ShockGame.AddText("RecievedItemsfile could not be read or is empty.  Open the client and connect to a slot.", self);
@@ -453,16 +554,29 @@ class PlayerScripts extends SqRootScript
 				ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, Connect to the correct slot or load the correct save.", self);
 				return;
 				}
+			if (itemsreceived.find(500) != null)
+				{
+				local NewAPLocation = Object.Create("APLocation");
+                Property.SetSimple(NewAPLocation, "VoiceIdx", 1999); #ack DeathLink
+                SendMessage(NewAPLocation, "FrobWorldEnd");
+				Property.Remove(self, "AI_NtcBody"); #avoiding triggering deathlink off the deathlink
+				Damage.Slay(self, self);
+				Property.SetSimple(self, "AI_NtcBody", true);
+				ShockGame.AddText("Death received (:", self);
+				SetOneShotTimer("ItemReceiver", 2.0);
+				return;
+				}
 			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
 			local newitems = itemsreceived.slice(storeditemsreceivedcount); #check if length of itemsreceived is larger than storeditemsreceivedcount, if so spawn the new items.
-			if (newitems.len() != 0)
+			local newitemcount = newitems.len()
+			if (newitemcount != 0)
 				{
 				Sound.PlaySchemaAmbient(self, "btabs");
-				Property.SetSimple(self, "BaseWpnDmg", Property.Get(self, "BaseWpnDmg") + newitems.len());
-				}
-			if (newitems.len() > 100) #avoiding crashing when spawning too many items by combining as many as possible and not spawning extras of items the player needs 1 or 2 of
+				Property.SetSimple(self, "BaseWpnDmg", storeditemsreceivedcount + newitemcount);
+				if (newitemcount > 100) #avoiding crashing when spawning too many items by combining as many as possible and not spawning extras of items the player needs 1 or 2 of
 				{
-				newitems = HandleExcessItems(newitems);
+					newitems = HandleExcessItems(newitems);
+				}
 				}
 			foreach (itemid in newitems)
 				ItemReceived(itemid);
@@ -479,6 +593,79 @@ class PlayerScripts extends SqRootScript
             Object.Teleport(podtrip, Object.Position(egg), vector());
 			Property.Set(egg, "PhysControl", "Controls Active", 11000);
         }
+
+		if (message().name == "CloseIdFile")
+		{
+			local closefilelocid = message().data;
+			OpenFilesTable[closefilelocid].close();
+			delete OpenFilesTable[closefilelocid];
+		}
+	}
+
+	function OnOpenIdFile() #in ae python client is checking what files we have open every 0.5 secs.
+		{
+		if (Property.Get(self, "AI_IsSmall"))
+			{
+			local filelocid = message().data.tostring();
+			OpenFilesTable[filelocid] <- file("APcommunications\\LocIdFiles\\LocId" + filelocid + ".txt", "rb");
+			SetOneShotTimer("CloseIdFile", 2.0, filelocid);
+			}
+		}
+
+	function SetupVars(settings, seed)
+	{
+		local fname = string();
+		local LocIdFilesExist = false;
+		if (Engine.FindFileInPath("resname_base", "APcommunications\\LocIdFiles\\LocId1.txt", fname))
+			LocIdFilesExist = true;
+
+		Property.SetSimple(self, "AI_IsSmall", LocIdFilesExist); #If AE this is true
+		Property.SetSimple(self, "Modify1", settings); #store the settings
+		Property.SetSimple(self, "CurWpnDmg", seed); #storedseed
+		Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
+		Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
+		Property.SetSimple(self, "RsrchTime", 1); #current osupgrade slot
+
+		Property.SetSimple(self, "AI_NGOBB", false)#Psi Tier Unlock status
+		Property.SetSimple(self, "AI_TrackM", false)
+		Property.SetSimple(self, "AI_UseWater", false)
+		Property.SetSimple(self, "AI_IsBig", false)
+		Property.SetSimple(self, "AI_IgCam", false)
+		Property.SetSimple(self, "AI_Standtags", "")#Psi ability queues
+		Property.SetSimple(self, "AI_SndTags", "")
+		Property.SetSimple(self, "AI_MotTags", "")
+		Property.SetSimple(self, "ModeChangeMeta", "")
+		Property.SetSimple(self, "ModeUnchngeMeta", "")
+
+		if (settings.find("DeathLink"))
+			Property.SetSimple(self, "AI_NtcBody", true)
+
+		if (settings.find("ArtCodes"))
+			{
+				local ArtCodePlacements = "";
+
+				local placementids = ["689","835","78","79","164","211","250","251","252","253","117"];
+
+				for (local i = 0; i < 4; i++)
+					{
+					local SelectedPlacementIndex = ShockGame.RandRange(0, placementids.len() - 1);
+					ArtCodePlacements += (placementids[SelectedPlacementIndex]);
+					if (i != 3)
+						ArtCodePlacements += ",";
+					placementids.remove(SelectedPlacementIndex);
+					}
+				Property.SetSimple(self, "Modify2", ArtCodePlacements);
+			}
+
+		if (settings.find("StatsSkillsPsi"))
+			{
+			local shopstr = "";
+			for (local i = 1481; i < 1628; i++)
+				{
+				shopstr += i.tostring() + ","; #The table of items purchasable from the location shop.  i is the locid.
+				}
+			Property.SetSimple(self, "LockMsg", shopstr);
+			}
 	}
 
 	static function CopyMetaProp(oldenemy, newenemy, metaprop)#From Sarge945s Rando
@@ -707,7 +894,7 @@ class PlayerScripts extends SqRootScript
 
 	function ParseFile(path) #reads a file and returns it as a string
 	{
-		local file = file(path, "r")
+		local file = file(path, "rb")
 		if (file.eos() != null)
 			{
 			return null;
@@ -721,6 +908,12 @@ class PlayerScripts extends SqRootScript
 		}
 		file.close();
 		return output;
+	}
+
+	function OnSlain()
+	{
+		if (Property.Possessed(self, "AI_NtcBody") && Propety.Get(self, "AI_IsSmall"))
+			SendMessage(self, "OpenIdFile", 2000);
 	}
 
 	function HandleExcessItems(newitems)

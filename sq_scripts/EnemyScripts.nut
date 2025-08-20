@@ -2,21 +2,12 @@ class OnSlayVictory extends SqRootScript
 {
     function OnSlain()#attached to many or shodan
     {
-        Debug.Command("dump_cmds", "pylocid2.txt");#victory id
-    }
-}
-
-class EggScript extends SqRootScript
-{
-    function OnTimer()
-    {
-        if (message().name == "CreateTripwire")
-        {
-            local podtrip = Object.Create("Floor Egg Tripwire");
-            Property.SetSimple(podtrip, "Scale", vector(3, 3, 2));
-            Link.Create("SwitchLink", podtrip, self);
-            Object.Teleport(podtrip, Object.Position(self), vector(0, 0, 0));
-        }
+        if (!(Object.GetName(self) == "ManyBossBrain" && Property.Get(Networking.FirstPlayer(), "Modify1").find("Many")))#Always want shodan to do this, only want many to do this if it is enabled in settings
+            {
+            	local NewAPLocation = Object.Create("APLocation");
+            	Property.SetSimple(NewAPLocation, "VoiceIdx", 2);
+            	SendMessage(NewAPLocation, "FrobWorldEnd");
+            }
     }
 }
 
@@ -32,9 +23,11 @@ class EnemyWithLocation extends SqRootScript
                     {
                     Object.Teleport(containeditem, Object.Position(self), vector());
                     Property.SetSimple(containeditem, "HasRefs", TRUE);
+                    Property.SetSimple(containeditem, "MapObjIcon", "locs");
                     Link.Destroy(link);
                     }
                 }
         }
+        Property.Remove(self, "MapObjIcon");
     }
 }

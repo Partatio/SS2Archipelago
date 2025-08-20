@@ -1,5 +1,6 @@
 DML1
 
+#script "APScript"
 #script "squirrel"
 
 TagBlock "DIFFPARAM"
@@ -15,6 +16,7 @@ CreateArch "Misc Metaprops" "APPlayerScripts"
 	+ObjProp "Scripts" 
 	{
 	"Script 0" "PlayerScripts"
+	"Script 1" "APDeathLink"
 	"Don't Inherit" false
 	}
 }
@@ -94,7 +96,8 @@ CreateArch "Misc Metaprops" "APLocationScripts"
 {
 	+ObjProp "Scripts"
 	{
-	"Script 0" "APLocationFuncs"
+	"Script 0" "APLocation"
+	"Script 1" "APLocationFuncs"
 	}
 }
 +MetaProp "APLocation" "APLocationScripts"
@@ -221,6 +224,16 @@ CreateArch "Trainers" "CybModShop"
 	"" "locshop"
 	}
 }
+
+CreateArch "Misc Metaprops" "BossSlayScripts"
+{
+	+ObjProp "Scripts"
+	{
+	"Script 0" "OnSlayVictory"
+	}
+}
++MetaProp "Shodan Head" "BossSlayScripts"
++MetaProp "ManyBossBrain" "BossSlayScripts"
 
 CreateArch "Misc Metaprops" "CybModShopScripts"
 {

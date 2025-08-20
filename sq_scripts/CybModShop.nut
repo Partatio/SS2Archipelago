@@ -2,39 +2,39 @@ class CybModShop extends SqRootScript
 {
     function OnFrobWorldEnd()
     {
-        local cybmodshopstr = Property.Get(Networking.FirstPlayer(), "LockMsg");
-        if (cybmodshopstr.len() == 0)
+        local p = Networking.FirstPlayer();
+        local cybmodshoparray = split(Property.Get(p, "LockMsg"), ",");
+        if (cybmodshoparray.len() == 0)
             {
-            ShockGame.AddText("All locations already purchased.", Networking.FirstPlayer());
+            ShockGame.AddText("All locations already purchased.", p);
             return;
             }
-        local cybmodshoplist = split(cybmodshopstr, ",")
-        local price = cybmodshoplist[1].tointeger();
-        local cybmodholder = Object.FindClosestObjectNamed(Networking.FirstPlayer(), "FakeCookie")
+        local cybmodholder = Object.FindClosestObjectNamed(p, "FakeCookie");
         local playercybmodcount = Property.Get(cybmodholder, "StackCount");
+        local price = 6;
         if (playercybmodcount >= price)
             {
             local amountbought = 0
             local totalprice = 0
-            while (playercybmodcount >= price && cybmodshoplist.len() > 0)
+            while (playercybmodcount >= price && cybmodshoparray.len() > 0)
                 {
-                Debug.Command("dump_cmds", "pylocid" + cybmodshoplist[0] + ".txt");#send out location
+                local NewAPLocation = Object.Create("APLocation");
+                Property.SetSimple(NewAPLocation, "VoiceIdx", cybmodshoparray[0]);
+                SendMessage(NewAPLocation, "FrobWorldEnd");
                 playercybmodcount -= price;
                 totalprice += price;
                 amountbought += 1;
-                cybmodshoplist.remove(0);#remove id and price of just purchased location
-                cybmodshoplist.remove(0);
-                if (!cybmodshoplist.len() == 0)
-                    price = cybmodshoplist[1].tointeger();
+                cybmodshoparray.remove(0)
                 }
             Property.SetSimple(cybmodholder, "StackCount", playercybmodcount);#reduce player cyber modules
             local newcybmodshoplist = "";
-            foreach(element in cybmodshoplist)#recreate stored shop string then restore it
-                newcybmodshoplist = newcybmodshoplist + element + ",";
-            Property.SetSimple(Networking.FirstPlayer(), "LockMsg", newcybmodshoplist);
-            ShockGame.AddText("Bought " + amountbought + " location(s) for " + totalprice + " Cyber Modules.", Networking.FirstPlayer());
+            foreach(id in cybmodshoparray)
+                newcybmodshoplist += id + ",";
+            Property.SetSimple(self, "LockMsg", cybmodshoparray);
+            Sound.PlaySchemaAmbient(p, "hitspark");
+            ShockGame.AddText("Bought " + amountbought + " location(s) for " + totalprice + " Cyber Modules.", p);
             }
         else
-            ShockGame.AddText("You do not have enough Cyber Modules to buy locations, they cost 6 each.", Networking.FirstPlayer());
+            ShockGame.AddText("You do not have enough Cyber Modules to buy locations, they cost 6 each.", p);
     }
 }
