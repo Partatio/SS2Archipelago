@@ -22,7 +22,7 @@ class PlayerScripts extends SqRootScript
 						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
 						Property.Remove(NewAPLocation, "MapObjIcon");
 						Property.SetSimple(chosencontainer, "MapObjIcon", "locs");
-						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  vector());
+						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  Object.Facing(chosencontainer));
 						Property.SetSimple(NewAPLocation, "HasRefs", false);
 						Link.Create(linkkind("Contains"), chosencontainer, NewAPLocation);
 					}

@@ -12,7 +12,7 @@ class APLocationFuncs extends SqRootScript
             }
     	local locid = Property.Get(self, "VoiceIdx");
     	SendMessage(Networking.FirstPlayer(), "OpenIdFile", locid);
-    	if ((locid < 1481 || locid > 1627) && locid != 2) #dont want to play noise if shop or victory
+    	if ((locid < 1481 || 1627 < locid < 1800) && locid != 2) #dont want to play noise if shop or victory
             Sound.PlaySchemaAtLocation(self, "hitspark", Object.Position(self));
         Object.Destroy(self);
 
@@ -21,7 +21,17 @@ class APLocationFuncs extends SqRootScript
     function OnCollectedItemsUpdate()
     {
         if (split(message().data, ",").find(Property.Get(self, "VoiceIdx").tostring()))
+            {
+            if (Link.AnyExist(linkkind("~Contains"), self))
+                {
+                local containlink = Link.GetOne(linkkind("~Contains"), self);
+                local container = LinkDest(containlink);
+                Link.Destroy(containlink);
+                #if (!Link.AnyExist(linkkind("Contains"), container)) #this is failing for some reason in classic but not in shocked.  Guess we'll just assume if one loc was gotten out of a container they all were
+                Property.Remove(container, "MapObjIcon");
+                }
             Object.Destroy(self);
+            }
     }
 }
 
