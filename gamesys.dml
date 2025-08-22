@@ -9,6 +9,7 @@ TagBlock "DIFFPARAM"
 	"Upgrade Mult: Normal" 1.8
 	"Upgrade Mult: Hard" 1.8
 	"Upgrade Mult: Imposs" 1.8
+	"Upgrade Mult: Multi" 1.8
 }
 
 CreateArch "Misc Metaprops" "APPlayerScripts" 
@@ -85,10 +86,6 @@ CreateArch "Goodies" "APLocation"
 	+ObjProp "Scale"
 	{
 	"" "0.25, 0.25, 0.25"
-	}
-	+ObjProp "MapObjIcon"
-	{
-	"" "locs"
 	}
 }
 

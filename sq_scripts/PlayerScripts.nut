@@ -20,7 +20,6 @@ class PlayerScripts extends SqRootScript
 					if (type(command[2]) == type([]))
 					{
 						local chosencontainer = command[2][ShockGame.RandRange(0, command[2].len() - 1)];
-						Property.Remove(NewAPLocation, "MapObjIcon");
 						Property.SetSimple(chosencontainer, "MapObjIcon", "locs");
 						Object.Teleport(NewAPLocation, Object.Position(chosencontainer),  Object.Facing(chosencontainer));
 						Property.SetSimple(NewAPLocation, "HasRefs", false);
@@ -28,6 +27,7 @@ class PlayerScripts extends SqRootScript
 					}
 					else
 						{
+						Property.SetSimple(NewAPLocation, "MapObjIcon", "locs");
 						local raisedpos = command[2] + vector(0, 0, 0.5);
 						Object.Teleport(NewAPLocation, raisedpos, vector());
 						}
@@ -132,6 +132,7 @@ class PlayerScripts extends SqRootScript
 					{
 					local NewAPLocation = Object.Create("APLocation");
 					Property.Set(NewAPLocation, "VoiceIdx", "", command[3]);
+					Property.SetSimple(NewAPLocation, "MapObjIcon", "locs");
 					Object.Teleport(NewAPLocation, command[2], vector());
 					Property.Set(NewAPLocation, "Scripts", "Script 0", "ItemUnrestrict");
 					continue;
@@ -188,21 +189,26 @@ class PlayerScripts extends SqRootScript
 					{
 					local codeart = command[2];
 					local art = command[3];
-					local artcodeidarray = split(Property.Get(self, "Modify2"), ",");
-					foreach (idstr in artcodeidarray)
+					local artcodeidstrarray = split(Property.Get(self, "Modify2"), ",");
+					local artcodeidarray = []
+					foreach (idstr in artcodeidstrarray)
+						artcodeidarray.append(idstr.tointeger())
+					local unchangedcodeart = []
+					foreach (id in codeart)
 						{
-						local id = idstr.tointeger();
-						local codeartmatchindex = codeart.find(id);
-						local artmatchindex = art.find(id);
-						if (codeartmatchindex != null)
+						local matchindex = artcodeidarray.find(id)
+						if (matchindex != null)
+							ReplaceWithCodeArt(id, matchindex);
+						else
+							unchangedcodeart.append(id)
+						}
+					foreach (id in art)
 						{
-							ReplaceWithCodeArt(id, codeartmatchindex);
-							codeart.remove(codeartmatchindex);
+						local matchindex = artcodeidarray.find(id)
+						if (matchindex != null)
+							ReplaceWithCodeArt(id, matchindex);
 						}
-						if (artmatchindex != null)
-							ReplaceWithCodeArt(id, artmatchindex);
-						}
-					foreach (idstr in codeart)
+					foreach (idstr in unchangedcodeart)
 						ReplaceWithArt(idstr.tointeger());
 					continue;
 					}
@@ -262,6 +268,8 @@ class PlayerScripts extends SqRootScript
 						CopyMetaProp(command[2], newenemy, "Deaf");
 						CopyMetaProp(command[2], newenemy, "Posing");
 						CopyMetaProp(command[2], newenemy, "Blind");
+
+						Property.CopyFrom(newenemy, "MapObjIcon", command[2]);
 
 						Property.CopyFrom(newenemy, "EcoType", command[2]);
 
@@ -649,10 +657,7 @@ class PlayerScripts extends SqRootScript
 				for (local i = 0; i < 4; i++)
 					{
 					local SelectedPlacementIndex = ShockGame.RandRange(0, placementids.len() - 1);
-					ArtCodePlacements += (placementids[SelectedPlacementIndex]);
-					if (i != 3)
-						ArtCodePlacements += ",";
-					placementids.remove(SelectedPlacementIndex);
+					ArtCodePlacements += placementids.remove(SelectedPlacementIndex) + ",";
 					}
 				Property.SetSimple(self, "Modify2", ArtCodePlacements);
 			}
@@ -660,7 +665,7 @@ class PlayerScripts extends SqRootScript
 		if (settings.find("StatsSkillsPsi"))
 			{
 			local shopstr = "";
-			for (local i = 1481; i < 1628; i++)
+			for (local i = 1627; i > 1480; i--)
 				{
 				shopstr += i.tostring() + ","; #The table of items purchasable from the location shop.  i is the locid.
 				}

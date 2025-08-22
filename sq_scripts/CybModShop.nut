@@ -19,18 +19,17 @@ class CybModShop extends SqRootScript
             while (playercybmodcount >= price && cybmodshoparray.len() > 0)
                 {
                 local NewAPLocation = Object.Create("APLocation");
-                Property.SetSimple(NewAPLocation, "VoiceIdx", cybmodshoparray[0]);
+                Property.SetSimple(NewAPLocation, "VoiceIdx", cybmodshoparray.pop());
                 SendMessage(NewAPLocation, "FrobWorldEnd");
                 playercybmodcount -= price;
                 totalprice += price;
                 amountbought += 1;
-                cybmodshoparray.remove(0)
                 }
             Property.SetSimple(cybmodholder, "StackCount", playercybmodcount);#reduce player cyber modules
             local newcybmodshoplist = "";
             foreach(id in cybmodshoparray)
                 newcybmodshoplist += id + ",";
-            Property.SetSimple(self, "LockMsg", cybmodshoparray);
+            Property.SetSimple(p, "LockMsg", newcybmodshoplist);
             Sound.PlaySchemaAmbient(p, "hitspark");
             ShockGame.AddText("Bought " + amountbought + " location(s) for " + totalprice + " Cyber Modules.", p);
             }
