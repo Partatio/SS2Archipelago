@@ -17,7 +17,6 @@ CreateArch "Misc Metaprops" "APPlayerScripts"
 	+ObjProp "Scripts" 
 	{
 	"Script 0" "PlayerScripts"
-	"Script 1" "APDeathLink"
 	"Don't Inherit" false
 	}
 }

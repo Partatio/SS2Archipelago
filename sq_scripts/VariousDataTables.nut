@@ -2993,7 +2993,6 @@ enemytables =
     "Midwife",
     "Maintenance",
     "Maintenance",
-    "Maintenance",
     ],
 
     "2Ranged": [
@@ -3030,7 +3029,6 @@ enemytables =
     "Midwife",
     "Midwife",
     "Maintenance",
-    "Security",
     "Security",
     "Security",
     "Laser Turret",
@@ -3076,7 +3074,6 @@ enemytables =
     "Red Monkey",
     "Red Monkey",
     "Red Monkey",
-    "Security",
     "Security",
     "Security",
     "Security",
@@ -3128,7 +3125,6 @@ enemytables =
     "Maintenance",
     "Security",
     "Security",
-    "Assault",
     "Assault",
     "Assault",
     "Assault",
@@ -3239,7 +3235,6 @@ enemytables =
     "Assault",
     "Assault",
     "Assault",
-    "Assault",
     "Assault"
     ],
 
@@ -3298,7 +3293,6 @@ enemytables =
     "Invisibile Arachnid",
     "Invisibile Arachnid",
     "Invisibile Arachnid",
-    "Assault",
     "Assault",
     "Assault",
     "Assault",
@@ -3374,7 +3368,6 @@ enemytables =
     "OG-Grenade",
     "Invisibile Arachnid",
     "Invisibile Arachnid",
-    "Assault",
     "Assault",
     "Assault",
     "Assault",
@@ -3467,7 +3460,6 @@ enemytables =
     "Blast Turret",
     "Blast Turret",
     "Blast Turret",
-    "Assault",
     "Assault",
     "Assault",
     "Assault",

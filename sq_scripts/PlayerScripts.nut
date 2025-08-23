@@ -546,6 +546,7 @@ class PlayerScripts extends SqRootScript
 				SetOneShotTimer("ItemReceiver", 1);
 			Link.BroadcastOnAllLinksData(Object.FindClosestObjectNamed(Networking.FirstPlayer(), "APLocationTracker"), "CollectedItemsUpdate", "Mutate", ParseFile("APcommunications\\SentItems.txt"));
 			# ^ tells APLocations to delete themselves if they have already been collected.
+			ClearData("DeathLinked"); #just making sure nothing weird happens where this doesn't get cleared
 		}
 
 		if (message().name == "ItemReceiver")
@@ -562,16 +563,21 @@ class PlayerScripts extends SqRootScript
 				ShockGame.AddText("Seed mismatch between save file and ReceivedItemsFile, Connect to the correct slot or load the correct save.", self);
 				return;
 				}
-			if (itemsreceived.find(500) != null)
+			if (itemsreceived.find("500") != null)
 				{
-				local NewAPLocation = Object.Create("APLocation");
-                Property.SetSimple(NewAPLocation, "VoiceIdx", 1999); #ack DeathLink
-                SendMessage(NewAPLocation, "FrobWorldEnd");
-				Property.Remove(self, "AI_NtcBody"); #avoiding triggering deathlink off the deathlink
-				Damage.Slay(self, self);
-				Property.SetSimple(self, "AI_NtcBody", true);
-				ShockGame.AddText("Death received (:", self);
-				SetOneShotTimer("ItemReceiver", 2.0);
+				if (!IsDataSet("DeathLinked"))
+					{
+					Property.Remove(self, "AI_NtcBody"); #avoiding triggering deathlink off the deathlink
+					Damage.Slay(self, self);
+					Property.SetSimple(self, "AI_NtcBody", true);
+					ShockGame.AddText("Death received (:", self);
+					SetData("DeathLinked")
+					SetOneShotTimer("ClearDeathLinkedData", 4.0)
+					local NewAPLocation = Object.Create("APLocation");
+					Property.SetSimple(NewAPLocation, "VoiceIdx", 1999); #ack DeathLink
+					SendMessage(NewAPLocation, "FrobWorldEnd");
+					}
+				SetOneShotTimer("ItemReceiver", 4.0);
 				return;
 				}
 			local storeditemsreceivedcount = Property.Get(self, "BaseWpnDmg");
@@ -608,6 +614,11 @@ class PlayerScripts extends SqRootScript
 			OpenFilesTable[closefilelocid].close();
 			delete OpenFilesTable[closefilelocid];
 		}
+
+		if (message().name == "ClearDeathLinkedData")
+		{
+			ClearData("DeathLinked");
+		}
 	}
 
 	function OnOpenIdFile() #in ae python client is checking what files we have open every 0.5 secs.
@@ -633,6 +644,7 @@ class PlayerScripts extends SqRootScript
 		Property.SetSimple(self, "BaseWpnDmg", 1); #StoredItemsReceived
 		Property.SetSimple(self, "AI_PtrlRnd", true); #Whether player has not left airlock
 		Property.SetSimple(self, "RsrchTime", 1); #current osupgrade slot
+		Property.SetSimple(self, "SoftLevel", 0); #cybmods received
 
 		Property.SetSimple(self, "AI_NGOBB", false)#Psi Tier Unlock status
 		Property.SetSimple(self, "AI_TrackM", false)
@@ -836,6 +848,7 @@ class PlayerScripts extends SqRootScript
 			case "CyberModules":
 				{
 					ShockGame.AddExp(self, item[1], true);
+					Property.SetSimple(self, "SoftLevel", Property.Get(self, "SoftLevel") + item[1]);
 					break;
 				}
 			case "Nanites":
@@ -917,8 +930,10 @@ class PlayerScripts extends SqRootScript
 
 	function OnSlain()
 	{
-		if (Property.Possessed(self, "AI_NtcBody") && Propety.Get(self, "AI_IsSmall"))
-			SendMessage(self, "OpenIdFile", 2000);
+		if (Property.Possessed(self, "AI_NtcBody"))
+			local NewAPLocation = Object.Create("APLocation");
+			Property.SetSimple(NewAPLocation, "VoiceIdx", 2000);
+			SendMessage(NewAPLocation, "FrobWorldEnd");
 	}
 
 	function HandleExcessItems(newitems)
